@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Muli&display=swap");
 
-/* -- HEADER -- */
+/* -- HEADER/FOOTER -- */
 .navbar-style,
 .footer {
     background-color: #629490;
 }
 
+.over-green-color {
+    color: #e0e0e0;
+}
+
+/* -- NAVBAR -- */
 .navbar {
     padding: 0;
 }
@@ -14,7 +19,6 @@
 .navbar-style h1 {
     font-family: Lobster;
     font-size: 3.4rem;
-    color: #e0e0e0;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     padding-left: 20px;
 }
@@ -27,7 +31,6 @@
 .nav-menu a {
     font-family: Muli;
     font-size: 1.4rem;
-    color: #e0e0e0;
 }
 
 .nav-menu li {
@@ -46,14 +49,35 @@
     text-shadow: none;
 }
 
+/* -- FOOTER -- */
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 72px;
   }
 
-h2 {
-    font-family: Lobster;
-    
+/* ------------ All footer text */
+.footer-text {
+    font-family: Muli;
+    font-size: 1.2rem;
+}
+
+/* ------------ Footer icons */
+.over-green-color i {
+    font-size: 1.4rem;
+}
+
+/* ------------ Footer placement */
+.footer-nav-links {
+    margin: 0;
+}
+
+.footer-nav-links li {
+    padding: 0 2px 0;
+}
+
+.socials {
+    padding: 0 10px 0;
 }
