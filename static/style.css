@@ -81,3 +81,12 @@
 .socials {
     padding: 0 10px 0;
 }
+
+.banner-img {
+    background-image: url(../static/images/glasgow-clyde.jpeg);
+    background-position-y: -562px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 40vh;
+}
