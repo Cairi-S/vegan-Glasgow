@@ -27,8 +27,17 @@
     color: #e0e0e0;
 }
 
-.nav-menu .active {
+.nav-menu li {
+    padding: 8px 12px;
+}
+
+.nav-menu a:hover {
     color: #243119;
+}
+
+.nav-menu .active {
+    text-decoration: underline;
+    text-underline-position: under;
     text-shadow: none;
 }
 
