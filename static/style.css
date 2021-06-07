@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Muli&display=swap");
+
+body {
+    background-color: red;
+}
+
+h1 {
+    font-family: Lobster;
+}
+
+h2 {
+    font-family: Muli;
+}
