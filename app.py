@@ -18,10 +18,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_restaurants")
-def get_restaurants():
+@app.route("/get_home")
+def get_home():
     restaurants = mongo.db.restaurants.find()
-    return render_template("home.html", restaurants=restaurants)
+    return render_template("index.html", restaurants=restaurants)
 
 
 if __name__ == "__main__":
