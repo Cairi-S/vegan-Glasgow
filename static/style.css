@@ -15,7 +15,7 @@
     background-color: #629490;
 }
 
-.over-green-color{
+#over-green-color {
     color: #e0e0e0;
 }
 
@@ -46,10 +46,9 @@
     padding: 8px 12px;
 }
 
-/* ------------ Menu items hover */
-.nav-menu a:hover,
-.over-green-color li:hover,
-.over-green-color a:hover {
+/* ------------ HOVER FUNCTION */
+#over-green-color li:hover,
+#over-green-color a:hover {
     color: #243119;
 }
 
@@ -76,7 +75,7 @@
 }
 
 /* ------------ Footer icons */
-.over-green-color i {
+#over-green-color i {
     font-size: 1.4rem;
 }
 
