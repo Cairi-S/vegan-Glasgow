@@ -47,7 +47,9 @@
 }
 
 /* ------------ Menu items hover */
-.nav-menu a:hover {
+.nav-menu a:hover,
+.over-green-color li:hover,
+.over-green-color a:hover {
     color: #243119;
 }
 
