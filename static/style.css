@@ -2,7 +2,7 @@
 
 .banner-img {
     background-image: url(../static/images/glasgow-clyde.jpeg);
-    background-position-y: -562px;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
