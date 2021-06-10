@@ -27,6 +27,23 @@ def get_home():
 
 @app.route("/create_account", methods=["GET", "POST"])
 def create_account():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username already exists, please choose another")
+            return redirect(url_for('create_account'))
+
+        create_account = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(create_account)
+
+
+        session["user"] = request.form.get("username").lower()
+        flash("Welcome to vegan Glasgow!")
     return render_template("create_account.html")
 
 
