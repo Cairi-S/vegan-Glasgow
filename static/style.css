@@ -92,6 +92,7 @@
     padding: 0 10px 0;
 }
 
+/* ------------ SUBHEADER tagline */
 .tagline {
     padding: 0 6px 0;
     font-family: Lobster;
@@ -102,3 +103,27 @@
     text-align: center;
 }
 
+/* -- FORMS -- */
+.form-container {
+    margin: 52px 52px 124px 52px;
+    border: 2px solid #243119;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+.form-header{
+    font-family: Lobster;
+    color: #243119;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.form-instructions {
+    font-family: Muli;
+    color: #243119;
+}
+
+.form-button {
+    margin-bottom: 10px;
+    background-color: #96BE8C;
+}
