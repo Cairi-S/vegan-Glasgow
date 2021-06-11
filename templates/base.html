@@ -37,16 +37,28 @@
             </div>
           </div>
         </nav>
+        <div class="banner-img d-flex justify-content-center align-items-end">
+          <h2 class="tagline">Vegan recommendations for Glasgows lively culinary scene.</h2>
+        </div>
     </header>
 
     <section>
-      <div class="banner-img d-flex justify-content-center align-items-end">
-          <h2 class="tagline">Vegan recommendations for Glasgows lively culinary scene.</h2>
-      </div>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <div class="row g-0 flash-prompts">
+              <h5>{{ message }}</h5>
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+    </section>
+
+    <main class="container">
       {% block content %}
 
       {% endblock %}
-    </section>
+    </main>
 
     <footer class="footer row g-0">
           <div class="col-md-3 d-flex justify-content-center align-items-center">
