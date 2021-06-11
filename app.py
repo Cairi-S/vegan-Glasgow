@@ -8,7 +8,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
-
+# Flask set up
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -18,6 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# index.html page
 @app.route("/")
 @app.route("/get_home")
 def get_home():
@@ -25,23 +26,27 @@ def get_home():
     return render_template("index.html", restaurants=restaurants)
 
 
+# create_account.html page
 @app.route("/create_account", methods=["GET", "POST"])
 def create_account():
     if request.method == "POST":
+        # Checks to see if unique username
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
+        # Prompt notifying user to select another username
         if existing_user:
             flash("Username already exists, please choose another")
             return redirect(url_for('create_account'))
 
+        # Gathers and inserts new user data to db
         create_account = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(create_account)
 
-
+        # Creates session cookie for user and gives a prompt
         session["user"] = request.form.get("username").lower()
         flash("Welcome to vegan Glasgow!")
     return render_template("create_account.html")
