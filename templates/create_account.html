@@ -8,22 +8,22 @@
         <form class="col-md-6 offset-md-3 col-sm-8 offset-sm-2" method="POST" action="{{ url_for('create_account') }}">
             <div class="mb-3">
                 <label for="username" class="form-label form-instructions"><i class="fas fa-user"></i>  Username</label>
-                <input type="text" class="form-control" id="username" name="username" aria-describedby="usernameHelp">
+                <input type="text" class="form-control" id="username" name="username" aria-describedby="usernameHelp" required>
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label form-instructions"><i class="fas fa-user-lock"></i> Password</label>
-                <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp">
+                <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp" required>
                 <div id="passwordHelpBlock" class="form-text form-instructions">
                     Your password must be 8-20 characters long.
                 </div>
               </div>
               <div class="mb-3">
                 <label for="confirm-password" class="form-label form-instructions"><i class="fas fa-check-double"></i> Confirm Password</label>
-                <input type="password" class="form-control" id="confirm-password" name="confirm-password" aria-describedby="confirmPasswordHelp">
+                <input type="password" class="form-control" id="confirm-password" name="confirm-password" aria-describedby="confirmPasswordHelp" required>
               </div>
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="human-check">
-                <label class="form-check-label form-instructions" for="human-check" name="human-check">I am not a robot</label>
+                <label class="form-check-label form-instructions" for="human-check" name="human-check" required>I am not a robot</label>
               </div>
               <button type="submit" class="btn form-instructions form-button"><i class="fas fa-plus-circle"></i> Create My Account</button>
         </form>
