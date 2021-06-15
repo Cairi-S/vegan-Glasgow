@@ -54,6 +54,28 @@ def create_account():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    if request.method == "POST":
+        # Checks for existing user
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        # If existing user checks to make sure user password correct
+        if existing_user:
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Hungry {}? Let's find somewhere to eat!".format(
+                        request.form.get("username")))
+            # If existing user but password incorrect gives a prompt
+            # Returns to log in page
+            else:
+                flash("Sorry, that username and password combo doesnt exist")
+                return redirect(url_for("login"))
+        # If username not registered gives a prompt and returns to log in page
+        else:
+            flash("Sorry, that username and password combo doesnt exist")
+            return redirect(url_for("login"))
+
     return render_template("login.html")
 
 
