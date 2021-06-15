@@ -118,9 +118,20 @@
     text-align: center;
 }
 
-.form-instructions {
+.form-instructions,
+.form-instructions a {
     font-family: Muli;
     color: #243119;
+    text-decoration: none;
+}
+
+.form-instructions p {
+    text-align: center;
+}
+
+.form-instructions a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 .form-button {
