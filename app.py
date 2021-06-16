@@ -64,12 +64,12 @@ def login():
         # If existing user checks to make sure user password correct
         if existing_user:
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Hungry {}? Let's find somewhere to eat!".format(
-                        request.form.get("username")))
-                    return redirect(
-                        url_for("user_profile", username=session["user"]))
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Hungry {}? Let's find somewhere to eat!".format(
+                    request.form.get("username")))
+                return redirect(
+                    url_for("user_profile", username=session["user"]))
             # If existing user but password incorrect gives a prompt
             # Returns to log in page
             else:
