@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Muli&display=swap");
+
+.banner-img {
+    /*background: url(../static/images/glasgow-clyde.jpeg);*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 40vh;
+}
+
+/* -- HEADER/FOOTER -- */
+.navbar-style,
+.footer {
+    background-color: #629490;
+}
+
+#over-green-color {
+    color: #e0e0e0;
+}
+
+/* -- NAVBAR -- */
+.navbar {
+    padding: 0;
+}
+
+/* ------------ Logo */
+.navbar-style h1 {
+    font-family: Lobster;
+    font-size: 3.4rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding-left: 20px;
+}
+
+/* ------------ Menu items */
+.navbar-style .nav-menu {
+    padding-right: 20px;
+}
+
+.nav-menu a {
+    font-family: Muli;
+    font-size: 1.4rem;
+}
+
+.nav-menu li {
+    padding: 8px 12px;
+}
+
+/* ------------ HOVER FUNCTION */
+#over-green-color li:hover,
+#over-green-color a:hover {
+    color: #243119;
+}
+
+/* ------------ Menu items active */
+.nav-menu .active {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-shadow: none;
+}
+
+/* -- FOOTER -- */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+  }
+
+/* ------------ All footer text */
+.footer-text {
+    font-family: Muli;
+    font-size: 1.2rem;
+}
+
+/* ------------ Footer icons */
+#over-green-color i {
+    font-size: 1.4rem;
+}
+
+/* ------------ Footer placement */
+.footer-nav-links {
+    margin: 0;
+}
+
+.footer-nav-links li {
+    padding: 0 2px 0;
+}
+
+.socials {
+    padding: 0 10px 0;
+}
+
+/* ------------ SUBHEADER */
+.tagline {
+    padding: 0 6px 0;
+    font-family: Lobster;
+    font-size: 2.4rem;
+    color: #243119;
+    background-color: rgba(224, 224, 224, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.flash-prompts h5 {
+    line-height: 3;
+    font-family: Muli;
+    color: #243119;
+    background-color: #96BE8C;
+    text-align: center;
+}
+
+
+/* -- FORMS -- */
+.form-container {
+    margin: 52px 52px 124px 52px;
+    border: 2px solid #243119;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+}
+
+.form-header{
+    font-family: Lobster;
+    color: #243119;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.form-instructions,
+.form-instructions a {
+    font-family: Muli;
+    color: #243119;
+    text-decoration: none;
+}
+
+.form-instructions p {
+    padding-top: 14px;
+    text-align: center;
+}
+
+.form-instructions a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.form-button {
+    margin-bottom: 10px;
+    background-color: #96BE8C;
+    border: 2px solid #a0c497;
+}
