@@ -49,9 +49,11 @@ def create_account():
         # Creates session cookie for user and gives a prompt
         session["user"] = request.form.get("username").lower()
         flash("Welcome to vegan Glasgow!")
+        return redirect(url_for("user_profile", username=session["user"]))
     return render_template("create_account.html")
 
 
+# login.html page
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -66,6 +68,8 @@ def login():
                     session["user"] = request.form.get("username").lower()
                     flash("Hungry {}? Let's find somewhere to eat!".format(
                         request.form.get("username")))
+                    return redirect(
+                        url_for("user_profile", username=session["user"]))
             # If existing user but password incorrect gives a prompt
             # Returns to log in page
             else:
@@ -77,6 +81,15 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
+
+# user_profile.html page
+@app.route("/user_profile/<username>", methods=["GET", "POST"])
+def user_profile(username):
+    # Retrieves the session user's username from the database
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("user_profile.html", username=username)
 
 
 if __name__ == "__main__":
