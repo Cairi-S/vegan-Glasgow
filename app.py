@@ -98,6 +98,14 @@ def user_profile(username):
     return redirect(url_for('login'))
 
 
+@app.route("/logout")
+def logout():
+    # Removes session cookie and redirects to login
+    flash("You have been logged out, enjoy your meal!")
+    session.pop('user')
+    return redirect(url_for('login'))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
