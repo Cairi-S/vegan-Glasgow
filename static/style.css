@@ -92,7 +92,7 @@
     padding: 0 10px 0;
 }
 
-/* ------------ SUBHEADER tagline */
+/* ------------ SUBHEADER */
 .tagline {
     padding: 0 6px 0;
     font-family: Lobster;
@@ -102,6 +102,15 @@
     border-radius: 10px;
     text-align: center;
 }
+
+.flash-prompts h5 {
+    line-height: 3;
+    font-family: Muli;
+    color: #243119;
+    background-color: #96BE8C;
+    text-align: center;
+}
+
 
 /* -- FORMS -- */
 .form-container {
@@ -126,6 +135,7 @@
 }
 
 .form-instructions p {
+    padding-top: 14px;
     text-align: center;
 }
 
@@ -138,12 +148,4 @@
     margin-bottom: 10px;
     background-color: #96BE8C;
     border: 2px solid #a0c497;
-}
-
-.flash-prompts h5 {
-    line-height: 3;
-    font-family: Muli;
-    color: #243119;
-    background-color: #96BE8C;
-    text-align: center;
 }
