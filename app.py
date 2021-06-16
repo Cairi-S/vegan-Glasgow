@@ -89,7 +89,13 @@ def user_profile(username):
     # Retrieves the session user's username from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("user_profile.html", username=username)
+
+    # Makes sure the users page is only accessible if login details correct
+    if session["user"]:
+        return render_template("user_profile.html", username=username)
+
+    # Redirects back to login if login details correct
+    return redirect(url_for('login'))
 
 
 if __name__ == "__main__":
