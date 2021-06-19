@@ -1,9 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
     
-    <h2>Top recommendations</h2>
+<h2 class="">Top recommendations</h2>
+<div class="row d-flex justify-content-evenly">
     {% for restaurant in restaurants %}
-        {{ restaurant.name }}
+    <div class="card restaurant-card-style" style="width: 18rem;">
+        <img src="" class="card-img-top" alt="">
+        <h5 class="restaurant-card-title">{{ restaurant.name }}</h5>
+        <p class="restaurant-card-text">{{ restaurant.website }}</p>
+        <p class="restaurant-card-text">{{ restaurant.phone_number }}</p>
+        <p class="restaurant-card-text">{{ restaurant.address }}</p>
+        <p class="restaurant-card-text">{{ restaurant.price_range }}</p>
+        <p class="restaurant-card-text">{{ restaurant.cuisine }}</p>
+        <p class="restaurant-card-text">{{ restaurant.open_times }}</p>
+        <h6 class="restaurant-card-title">The Scoop...</h6>
+        <p class="restaurant-card-text">{{ restaurant.summary }}</p>
+      </div>
     {% endfor %}
+</div>
 
 {% endblock %}
