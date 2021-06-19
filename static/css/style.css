@@ -9,6 +9,36 @@
     min-height: 40vh;
 }
 
+/* ------------ Text color */
+
+.tagline,
+.flash-prompts h5,
+.form-header,
+.restaurant-card-title,
+.form-instructions,
+.form-instructions a,
+.restaurant-card-text {
+    color: #243119;
+}
+
+/* ------------ Fonts */
+
+.navbar-style h1,
+.tagline,
+.form-header,
+.restaurant-card-title {
+    font-family: Lobster;
+}
+
+.nav-menu a,
+.footer-text,
+.flash-prompts h5,
+.form-instructions,
+.form-instructions a,
+.restaurant-card-text  {
+    font-family: Muli;
+}
+
 /* -- HEADER/FOOTER -- */
 .navbar-style,
 .footer {
@@ -26,7 +56,6 @@
 
 /* ------------ Logo */
 .navbar-style h1 {
-    font-family: Lobster;
     font-size: 3.4rem;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     padding-left: 20px;
@@ -38,7 +67,6 @@
 }
 
 .nav-menu a {
-    font-family: Muli;
     font-size: 1.4rem;
 }
 
@@ -50,6 +78,11 @@
 #over-green-color li:hover,
 #over-green-color a:hover {
     color: #243119;
+}
+
+.form-instructions a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 /* ------------ Menu items active */
@@ -70,7 +103,6 @@
 
 /* ------------ All footer text */
 .footer-text {
-    font-family: Muli;
     font-size: 1.2rem;
 }
 
@@ -95,9 +127,7 @@
 /* ------------ SUBHEADER */
 .tagline {
     padding: 0 6px 0;
-    font-family: Lobster;
     font-size: 2.4rem;
-    color: #243119;
     background-color: rgba(224, 224, 224, 0.5);
     border-radius: 10px;
     text-align: center;
@@ -105,8 +135,6 @@
 
 .flash-prompts h5 {
     line-height: 3;
-    font-family: Muli;
-    color: #243119;
     background-color: #96BE8C;
     text-align: center;
 }
@@ -117,20 +145,17 @@
     margin: 52px 52px 124px 52px;
     border: 2px solid #243119;
     border-radius: 10px;
-    background-color: #e0e0e0;
+    background-color: rgba(224, 224, 224, 0.5);
 }
 
-.form-header{
-    font-family: Lobster;
-    color: #243119;
+.form-header,
+.restaurant-card-title {
     padding-top: 10px;
     text-align: center;
 }
 
 .form-instructions,
 .form-instructions a {
-    font-family: Muli;
-    color: #243119;
     text-decoration: none;
 }
 
@@ -139,13 +164,15 @@
     text-align: center;
 }
 
-.form-instructions a:hover {
-    text-decoration: underline;
-    text-underline-position: under;
-}
-
 .form-button {
     margin-bottom: 10px;
     background-color: #96BE8C;
     border: 2px solid #a0c497;
+}
+
+.restaurant-card-style {
+    margin-bottom: 124px;
+    border: 2px solid #243119;
+    border-radius: 10px;
+    background-color: rgba(224, 224, 224, 0.5);
 }
