@@ -39,6 +39,15 @@ def create_account():
             flash("Username already exists, please choose another")
             return redirect(url_for('create_account'))
 
+        # Checks password against password confirmation,
+        # returns to create_account if don't match
+        password = request.form.get("password")
+        confirm_password = request.form.get("confirm-password")
+
+        if confirm_password != password:
+            flash("Confirmation and password do not match, please try again.")
+            return render_template("create_account.html")
+
         # Gathers and inserts new user data to db
         create_account = {
             "username": request.form.get("username").lower(),
