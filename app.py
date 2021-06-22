@@ -107,6 +107,12 @@ def user_profile(username):
     return redirect(url_for('login'))
 
 
+@app.route("/restaurants", methods=["GET", "POST"])
+def restaurants():
+    restaurants = mongo.db.restaurants.find()
+    return render_template("restaurants.html", restaurants=restaurants)
+
+
 @app.route("/logout")
 def logout():
     # Removes session cookie and redirects to login
