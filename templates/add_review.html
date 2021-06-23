@@ -4,33 +4,37 @@
 
 <h2 class="page-title">Add a Review</h2>
 
-<form>
-    <select class="custom-select">
-        <option selected>Select a restaurant to review</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-    </select>
-    <select class="custom-select">
-        <option selected>Choose your rating</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-        <option value="4">Four</option>
-        <option value="5">Five</option>
-    </select>
-    <div class="form-group">
-      <label for="formGroupExampleInput2">Review Title</label>
-      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-    </div>
-    <div class="form-group">
-        <label for="formGroupExampleInput2">Review Title</label>
+<div class="form-container">
+    <form class="review-form">
+        <div>
+            <label class="form-instructions review-form-items" for="formGroupExampleInput2">Which restaurant will you review?</label>
+            <select class="custom-select">
+                <option class="form-instructions" disabled selected >Select restaurant</option>
+                {% for restaurant in restaurants %}
+                    <option value="{{ restaurant.name }}">{{ restaurant.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <select class="custom-select review-form-items">
+            <option class="form-instructions" selected>Choose your rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <div class="form-group ">
+        <label class="form-instructions review-form-items" for="formGroupExampleInput2">Review Title</label>
         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-    </div>
-    <div class="form-group">
-        <label for="formGroupExampleInput2">What do you think?</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-      </div>
-  </form>
+        </div>
+        <div class="form-group">
+            <label class="form-instructions review-form-items" for="formGroupExampleInput2">What do you think?</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+        </div>
+        <button type="submit" class="btn btn-success review-form-items">Submit</button>
+        <button type="submit" class="btn btn-danger review-form-items">Cancel</button>
+    </form>
+</div>
 
 {% endblock %}
