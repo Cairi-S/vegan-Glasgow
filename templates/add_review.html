@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="page-title">Add a Review</h2>
+
+<form>
+    <select class="custom-select">
+        <option selected>Select a restaurant to review</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+    <select class="custom-select">
+        <option selected>Choose your rating</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+    </select>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Review Title</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Review Title</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">What do you think?</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+      </div>
+  </form>
+
+{% endblock %}
