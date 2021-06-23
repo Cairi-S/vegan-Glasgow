@@ -121,8 +121,20 @@ def logout():
     return redirect(url_for('login'))
 
 
-@app.route("/add_review")
+@app.route("/add_review", methods=["GET", "POST"])
 def add_review():
+    if request.method == "POST":
+        new_review = {
+            "restaurant_name": request.form.get("restaurant_name"),
+            "restaurant_rating": request.form.get("restaurant_rating"),
+            "review_name": request.form.get("review_name"),
+            "review": request.form.get("review"),
+            "created_by": session["user"]
+        }
+        mongo.db.reviews.insert_one(new_review)
+        flash("Thanks! Your review has been added.")
+        return redirect(url_for('add_review'))
+
     restaurants = mongo.db.restaurants.find()
     return render_template("add_review.html", restaurants=restaurants)
 
