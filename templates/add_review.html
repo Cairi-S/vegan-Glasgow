@@ -1,40 +1,58 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<!-- Page title -->
 <h2 class="page-title">Add a Review</h2>
 
+<!-- Container for form -->
 <div class="form-container">
+    <!-- Add review form -->
     <form class="review-form">
-        <div>
-            <label class="form-instructions review-form-items" for="formGroupExampleInput2">Which restaurant will you review?</label>
-            <select class="custom-select">
+        <!-- Select restaurant to review -->
+        <div class="row">
+            <label class="form-instructions review-form-items" for="reviewRestaurant">
+                Which restaurant will you review?
+            </label>
+            <!-- Select restaurant dropdown -->
+            <select class="custom-select form-spacing col-sm-4" required>
                 <option class="form-instructions" disabled selected >Select restaurant</option>
+                <!-- Select restaurant iteration for dropdown -->
                 {% for restaurant in restaurants %}
                     <option value="{{ restaurant.name }}">{{ restaurant.name }}</option>
                 {% endfor %}
             </select>
         </div>
-        <br>
-        <select class="custom-select review-form-items">
-            <option class="form-instructions" selected>Choose your rating</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
+        <!-- Restaurant rating -->
+        <div class="row">
+            <label class="form-instructions review-form-items" for="reviewRating">
+                How would you rate this restaurant?
+            </label>
+            <!-- Restaurant rating dropdown -->
+            <select class="custom-select form-spacing col-sm-4 review-form-items" required>
+                <option class="form-instructions" disabled selected>Choose your rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <!-- Restaurant review title -->
         <div class="form-group ">
-        <label class="form-instructions review-form-items" for="formGroupExampleInput2">Review Title</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+        <label class="form-instructions review-form-items" for="reviewTitle">Review title</label>
+        <input type="text" class="form-control form-spacing" id="reviewTitle" name="reviewTitle" placeholder="Review title..." required>
         </div>
+        <!-- Restaurant review body -->
         <div class="form-group">
-            <label class="form-instructions review-form-items" for="formGroupExampleInput2">What do you think?</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+            <label class="form-instructions review-form-items form-spacing" for="reviewBody">What do you think?</label>
+            <input type="text" class="form-control form-spacing" id="reviewBody" name="reviewBody" placeholder="Tell us your highs and lows..." required>
         </div>
+        <!-- Restaurant review buttons submit and cancel -->
         <button type="submit" class="btn btn-success review-form-items">Submit</button>
         <button type="submit" class="btn btn-danger review-form-items">Cancel</button>
     </form>
+    <!-- end of form -->
 </div>
+<!-- end of container -->
 
 {% endblock %}
