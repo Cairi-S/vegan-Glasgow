@@ -18,7 +18,8 @@
 .form-instructions,
 .form-instructions a,
 .restaurant-card-text,
-.page-title {
+.page-title,
+.page-subtitle {
     color: #243119;
 }
 
@@ -28,7 +29,8 @@
 .tagline,
 .form-header,
 .restaurant-card-title,
-.page-title {
+.page-title,
+.page-subtitle {
     font-family: Lobster;
 }
 
@@ -141,6 +143,13 @@
     text-align: center;
 }
 
+.page-subtitle {
+    padding-top: 10px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 2.4rem;
+}
+
 /* -- CARDS FOR RESTAURANTS -- */
 
 .restaurant-card-style {
@@ -209,4 +218,8 @@
 
 .btn-success {
     margin-right: 12px;
+}
+
+.profile-btn {
+    margin-bottom: 16px;
 }
