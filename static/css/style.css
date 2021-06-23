@@ -188,3 +188,11 @@
 .restaurant-card-title {
     font-size: 2rem;
 }
+
+.review-form {
+    margin: 40px 20px;
+}
+
+.review-form-items {
+    margin-top: 14px;
+}
