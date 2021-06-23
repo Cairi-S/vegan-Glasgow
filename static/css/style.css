@@ -141,6 +141,14 @@
     text-align: center;
 }
 
+/* -- CARDS FOR RESTAURANTS -- */
+
+.restaurant-card-style {
+    margin-bottom: 124px;
+    border: 2px solid #243119;
+    border-radius: 10px;
+    background-color: rgba(224, 224, 224, 0.5);
+}
 
 /* -- FORMS -- */
 .form-container {
@@ -172,13 +180,6 @@
     border: 2px solid #a0c497;
 }
 
-.restaurant-card-style {
-    margin-bottom: 124px;
-    border: 2px solid #243119;
-    border-radius: 10px;
-    background-color: rgba(224, 224, 224, 0.5);
-}
-
 .page-title {
     margin: 30px 0;
     font-size: 2.4rem;
@@ -189,10 +190,23 @@
     font-size: 2rem;
 }
 
+/* -------------------- Add a review page -- */
 .review-form {
     margin: 40px 20px;
 }
 
+.custom-select {
+    margin: 10px 0 0 12px;
+}
+
 .review-form-items {
     margin-top: 14px;
+}
+
+.form-control {
+    margin-top: 10px;
+}
+
+.btn-success {
+    margin-right: 12px;
 }
