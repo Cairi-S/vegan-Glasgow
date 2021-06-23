@@ -7,25 +7,34 @@
     
 <h2 class="page-title">Restaurants</h2>
 <div class="row d-flex justify-content-evenly">
+    <!-- Generates a card for each restaurant in 'restaurants' db -->
     {% for restaurant in restaurants %}
-
-            <div class="card restaurant-card-style" style="width: 18rem;">
-                <img src="" class="card-img-top" alt="">
-                <h5 class="restaurant-card-title"> {{ restaurant.name }}</h5>
-                <p class="restaurant-card-text"> {{ restaurant.website }}</p>
-                <p class="restaurant-card-text">
-                    <i class="fas fa-phone-alt"></i> {{ restaurant.phone_number }}</p>
-                <p class="restaurant-card-text">
-                    <i class="fas fa-map-marker-alt"></i> {{ restaurant.address }}</p>
-                <p class="restaurant-card-text">
-                    <i class="fas fa-money-bill"></i> {{ restaurant.price_range }}</p>
-                <p class="restaurant-card-text">
-                    <i class="fas fa-utensils"></i> {{ restaurant.cuisine }}</p>
-                <p class="restaurant-card-text">
-                    <i class="fas fa-clock"></i> {{ restaurant.open_times }}</p>
-                <h6 class="restaurant-card-title">The Scoop...</h6>
-                <p class="restaurant-card-text"> {{ restaurant.summary }}</p>
-            </div>
+    <div class="card restaurant-card-style" style="width: 18rem;">
+        <!-- Restaurant img -->
+        <img src="" class="card-img-top" alt="">
+        <!-- Restaurant name -->
+        <h5 class="restaurant-card-title"> {{ restaurant.name }}</h5>
+        <!-- Restaurant website address -->
+        <p class="restaurant-card-text"> {{ restaurant.website }}</p>
+        <!-- Restaurant telephone number -->
+        <p class="restaurant-card-text">
+            <i class="fas fa-phone-alt"></i> {{ restaurant.phone_number }}</p>
+        <!-- Restaurant address -->
+        <p class="restaurant-card-text">
+            <i class="fas fa-map-marker-alt"></i> {{ restaurant.address }}</p>
+        <!-- Restaurant price range -->
+        <p class="restaurant-card-text">
+            <i class="fas fa-money-bill"></i> {{ restaurant.price_range }}</p>
+        <!-- Restaurant cuisine -->
+        <p class="restaurant-card-text">
+            <i class="fas fa-utensils"></i> {{ restaurant.cuisine }}</p>
+        <!-- Restaurant opening times -->
+        <p class="restaurant-card-text">
+            <i class="fas fa-clock"></i> {{ restaurant.open_times }}</p>
+        <!-- Restaurant summary -->
+        <h6 class="restaurant-card-title">The Scoop...</h6>
+        <p class="restaurant-card-text"> {{ restaurant.summary }}</p>
+        </div>
     {% endfor %}
 </div>
 
