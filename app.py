@@ -98,10 +98,15 @@ def user_profile(username):
     # Retrieves the session user's username from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    reviews = list(mongo.db.reviews.find(
+        {"created_by": session["user"]}))
 
     # Makes sure the users page is only accessible if login details correct
     if session["user"]:
-        return render_template("user_profile.html", username=username)
+        return render_template(
+            "user_profile.html",
+            username=username,
+            reviews=reviews)
 
     # Redirects back to login if login details correct
     return redirect(url_for('login'))
