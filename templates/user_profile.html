@@ -46,9 +46,9 @@
                         </div>
                     {% endfor %}
             {% else %}
-                    <div>
-                        <p>You haven't left any reviews yet</p>
-                        <p>Why not <a href="{{ url_for('add_review') }}">leave a review?</a>
+                    <div class="row g-0">
+                        <p class="no-review-text">Sorry, you haven't left any reviews yet.
+                            Why not <a href="{{ url_for('add_review') }}">leave a review?</a>
                         </p>
                     </div>
                 </div>
