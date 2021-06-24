@@ -15,20 +15,23 @@
                 </a>
             </div>
             <div class="row justify-content-center">
-                <h4>Existing reviews</h4>
+                <h4 class="profile-subheading">Existing reviews</h4>
             </div>
             {% if reviews|length > 0 %}
                 <div class="row justify-content-evenly">
                     {% for review in reviews if session.user|lower == review.created_by|lower %}
-                        <div class="card restaurant-card-style" style="width: 18rem;">
+                        <div class="card review-card-style" style="width: 18rem;">
                             <!-- Restaurant name -->
                             <h5 class="restaurant-card-title"> {{ review.restaurant_name }}</h5>
                             <!-- Restaurant rating -->
-                            <p class="restaurant-card-text"> {{ review.restaurant_rating }}</p>
+                            <p class="review-card-title">Rating: </p>
+                            <p class="restaurant-card-text"> {{ review.restaurant_rating }} /5</p>
                             <!-- Restaurant review title -->
+                            <p class="review-card-title">Review Title: </p>
                             <p class="restaurant-card-text">
                                  {{ review.review_name }}</p>
                             <!-- Restaurant review body -->
+                            <p class="review-card-title">Review: </p>
                             <p class="restaurant-card-text">
                                  {{ review.review }}</p>
                             <!-- Edit and delete reviews -->
