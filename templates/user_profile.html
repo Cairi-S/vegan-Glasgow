@@ -5,8 +5,18 @@
 <h2 class="page-title">{{ username }}'s Profile</h2>
     
 <div class="row g-0 form-container">
-    <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
-        <h3 class="page-subtitle">My Reviews</h4>
+    <h3 class="profile-search-prompt">Hungry? Let's <a href="{{ url_for('restaurants') }}"> find somewhere to eat!</a></h3>
+    <div class="row g-0 align-items-center">
+        <h3 class="page-subtitle">My Reviews</h3>
+            <div class="row justify-content-center">
+                <a href="{{ url_for('add_review') }}" class="btn btn-success profile-btn col-sm-2">
+                    <i class="fas fa-plus-circle"></i> 
+                    Add a new review
+                </a>
+            </div>
+            <div class="row justify-content-center">
+                <h4>Existing reviews</h4>
+            </div>
             {% if reviews|length > 0 %}
                 <div class="row justify-content-evenly">
                     {% for review in reviews if session.user|lower == review.created_by|lower %}
@@ -30,12 +40,12 @@
                                     <i class="fas fa-user-edit"></i> Edit
                                 </button>
                             </div>
-                        </div>    
+                        </div>
                     {% endfor %}
             {% else %}
                     <div>
                         <p>You haven't left any reviews yet</p>
-                        <p>Why not <a href="#">leave a review?</a>
+                        <p>Why not <a href="{{ url_for('add_review') }}">leave a review?</a>
                         </p>
                     </div>
                 </div>
