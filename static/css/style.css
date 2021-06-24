@@ -23,7 +23,9 @@
 .review-card-title,
 .profile-search-prompt,
 .profile-search-prompt a,
-.profile-subheading {
+.profile-subheading,
+.no-review-text,
+.no-review-text a {
     color: #243119;
 }
 
@@ -46,7 +48,9 @@
 .form-instructions,
 .form-instructions a,
 .restaurant-card-text,
-.profile-search-prompt {
+.profile-search-prompt,
+.no-review-text,
+.no-review-text a {
     font-family: Muli;
 }
 
@@ -96,7 +100,8 @@
     text-underline-position: under;
 }
 
-.profile-search-prompt a:hover {
+.profile-search-prompt a:hover,
+.no-review-text a:hover {
     text-decoration: none;
 }
 
@@ -255,6 +260,18 @@
 .profile-search-prompt {
     margin:50px 0;
     text-align: center;
+}
+
+.no-review-text {
+    padding-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.profile-search-prompt a,
+.no-review-text a {
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 .profile-btn {
