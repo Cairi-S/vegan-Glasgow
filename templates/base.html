@@ -88,16 +88,22 @@
           <!-- Footer menu -->
           <div class="col-md-3 d-flex justify-content-center align-items-center">
             <ul id="over-green-color" class="list-inline footer-nav-links">
-              <li class="list-inline-item footer-text"><a id="over-green-color" href="{{ url_for('restaurants') }}">Restaurants</a></li>
-              <li class="list-inline-item footer-text"><a id="over-green-color" 
-                href="{{ url_for('create_account') }}">Create Account</a></li>
+              <li class="list-inline-item footer-text">
+                <a id="over-green-color" href="{{ url_for('restaurants') }}">Restaurants</a>
+              </li>
               <!-- Logged in user specific footer menu items -->
               {% if session.user %}
+                <li class="list-inline-item footer-text">
+                  <a id="over-green-color" href="{{ url_for('user_profile', username=session['user']) }}">My Profile</a>
+                </li>
                 <li class="list-inline-item footer-text">
                   <a id="over-green-color" href="{{ url_for('logout') }}">Log Out</a>
                 </li>
               {% else %}
               <!-- Not logged in user specific footer menu items -->
+                <li class="list-inline-item footer-text">
+                  <a id="over-green-color" href="{{ url_for('create_account') }}">Create Account</a>
+                </li>
                 <li class="list-inline-item footer-text">
                   <a id="over-green-color" href="{{ url_for('login') }}">Log In</a>
                 </li>
