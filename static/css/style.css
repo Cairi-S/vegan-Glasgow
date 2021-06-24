@@ -20,8 +20,10 @@
 .restaurant-card-text,
 .page-title,
 .page-subtitle,
+.review-card-title,
 .profile-search-prompt,
-.profile-search-prompt a {
+.profile-search-prompt a,
+.profile-subheading {
     color: #243119;
 }
 
@@ -31,8 +33,10 @@
 .tagline,
 .form-header,
 .restaurant-card-title,
+.review-card-title,
 .page-title,
-.page-subtitle {
+.page-subtitle,
+.profile-subheading {
     font-family: Lobster;
 }
 
@@ -161,6 +165,12 @@
     text-align: center;
 }
 
+.profile-subheading {
+    margin: 0 0 40px;
+    font-size: 2rem;
+    text-align: center;
+}
+
 /* -- CARDS FOR RESTAURANTS -- */
 
 .restaurant-card-style {
@@ -168,6 +178,13 @@
     border: 2px solid #243119;
     border-radius: 10px;
     background-color: rgba(224, 224, 224, 0.5);
+}
+
+.review-card-style {
+    margin-bottom: 124px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #96BE8C;
 }
 
 /* -- FORMS -- */
@@ -210,6 +227,10 @@
     font-size: 2rem;
 }
 
+.review-card-title {
+    font-size: 18px;
+}
+
 /* -------------------- Add a review page -- */
 .review-form {
     margin: 40px 20px;
@@ -232,11 +253,11 @@
 }
 
 .profile-search-prompt {
-    margin:20px 0 20px;
+    margin:50px 0;
     text-align: center;
 }
 
 .profile-btn {
-    margin-bottom: 16px;
+    margin:40px 0;
     border: 2px solid #e0e0e0;
 }
