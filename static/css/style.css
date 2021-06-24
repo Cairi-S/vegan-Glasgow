@@ -19,7 +19,9 @@
 .form-instructions a,
 .restaurant-card-text,
 .page-title,
-.page-subtitle {
+.page-subtitle,
+.profile-search-prompt,
+.profile-search-prompt a {
     color: #243119;
 }
 
@@ -39,11 +41,12 @@
 .flash-prompts h5,
 .form-instructions,
 .form-instructions a,
-.restaurant-card-text  {
+.restaurant-card-text,
+.profile-search-prompt {
     font-family: Muli;
 }
 
-/* -- HEADER/FOOTER -- */
+/* -- HEADER/FOOTER/TITLES -- */
 .navbar-style,
 .footer {
     background-color: #629490;
@@ -87,6 +90,10 @@
 .form-instructions a:hover {
     text-decoration: underline;
     text-underline-position: under;
+}
+
+.profile-search-prompt a:hover {
+    text-decoration: none;
 }
 
 /* ------------ Menu items active */
@@ -144,10 +151,14 @@
 }
 
 .page-subtitle {
-    padding-top: 10px;
+    padding: 10px 0;
     margin-bottom: 16px;
     text-align: center;
     font-size: 2.4rem;
+    background-color: #96BE8C;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
 }
 
 /* -- CARDS FOR RESTAURANTS -- */
@@ -220,6 +231,12 @@
     margin-right: 12px;
 }
 
+.profile-search-prompt {
+    margin:20px 0 20px;
+    text-align: center;
+}
+
 .profile-btn {
     margin-bottom: 16px;
+    border: 2px solid #e0e0e0;
 }
