@@ -25,8 +25,16 @@
 .profile-search-prompt a,
 .profile-subheading,
 .no-review-text,
-.no-review-text a {
+.no-review-text a,
+.btn-warning a,
+.btn-warning i {
     color: #243119;
+}
+
+#over-green-color,
+.btn-danger a,
+.btn-danger i {
+    color: #e0e0e0;
 }
 
 /* ------------ Fonts */
@@ -58,10 +66,6 @@
 .navbar-style,
 .footer {
     background-color: #629490;
-}
-
-#over-green-color {
-    color: #e0e0e0;
 }
 
 /* -- NAVBAR -- */
@@ -253,10 +257,6 @@
     margin-top: 10px;
 }
 
-.btn-success {
-    margin-right: 12px;
-}
-
 .profile-search-prompt {
     margin:50px 0;
     text-align: center;
@@ -274,7 +274,17 @@
     text-underline-position: under;
 }
 
+/* --- BUTTONS -- */
+
 .profile-btn {
     margin:40px 0;
     border: 2px solid #e0e0e0;
+}
+
+.profile-btn a {
+    text-decoration: none;
+}
+
+.btn-success {
+    margin-right: 12px;
 }
