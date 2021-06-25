@@ -146,12 +146,27 @@ def add_review():
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
+    if request.method == "POST":
+        existing_review = {
+            "restaurant_name": request.form.get("restaurant_name"),
+            "restaurant_rating": request.form.get("restaurant_rating"),
+            "review_name": request.form.get("review_name"),
+            "review": request.form.get("review"),
+            "created_by": session["user"]
+        }
+        mongo.db.reviews.update({"_id": ObjectId(review_id)}, existing_review)
+        flash("Thanks! Your review has been updated.")
+        return redirect(url_for('user_profile', username=session['user']))
+
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     restaurants = mongo.db.restaurants.find()
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
     return render_template(
         "edit_review.html",
         review=review,
-        restaurants=restaurants)
+        restaurants=restaurants,
+        username=username)
 
 
 if __name__ == "__main__":
