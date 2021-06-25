@@ -37,7 +37,8 @@
             </label>
             <!-- Restaurant rating dropdown -->
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="restaurant_rating" name="restaurant_rating" required>
-                <option class="form-instructions" disabled selected>Choose your rating</option>
+                <option class="form-instructions" value="{{ review.restaurant_rating }}" disabled selected>
+                    {{ review.restaurant_rating }} or choose a new rating</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -61,7 +62,8 @@
         </div>
         <!-- Restaurant review buttons submit and cancel -->
         <button type="submit" class="btn btn-success review-form-items">Edit My Review</button>
-        <button type="submit" class="btn btn-danger review-form-items">Cancel</button>
+        <a href="{{ url_for('user_profile', username=session['user']) }}" 
+        class="btn btn-danger review-form-items">Cancel</a>
     </form>
     <!-- end of form -->
 </div>
