@@ -46,7 +46,7 @@
                                     <a href="#"><i class="fas fa-trash"></i> Delete</a>
                                 </div>
                                 <div class="btn btn-warning profile-btn col-sm-5">
-                                    <a href="#"><i class="fas fa-pen"></i> Edit</a>
+                                    <a href="{{ url_for('edit_review', review_id=review._id) }}"><i class="fas fa-pen"></i> Edit</a>
                                 </div>
                             </div>
                         </div>
