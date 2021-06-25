@@ -15,12 +15,18 @@
             </label>
             <!-- Select restaurant dropdown -->
             <select class="custom-select form-spacing col-sm-4" id="restaurant_name" name="restaurant_name" required>
-                <option class="form-instructions" disabled selected >Select restaurant</option>
+                <option class="form-instructions" disabled>Select restaurant</option>
                 <!-- Select restaurant iteration for dropdown -->
                 {% for restaurant in restaurants %}
-                    <option value="{{ restaurant.name }}">
+                    {% if restaurant.name == review.restaurant_name %}
+                    <option value="{{ restaurant.name }}" selected>
                         {{ restaurant.name }}
                     </option>
+                    {% else %}
+                        <option value="{{ restaurant.name }}" disabled>
+                            {{ restaurant.name }}
+                        </option>
+                    {% endif %}
                 {% endfor %}
             </select>
         </div>
@@ -42,12 +48,16 @@
         <!-- Restaurant review title -->
         <div class="form-group ">
         <label class="form-instructions review-form-items" for="review_name">Review title</label>
-        <input type="text" class="form-control form-spacing" id="review_name" name="review_name" placeholder="Review title..." required>
+        <input type="text" class="form-control form-spacing" id="review_name" name="review_name" 
+        value="{{ review.review_name }}" placeholder="Review title..." required>
         </div>
         <!-- Restaurant review body -->
         <div class="form-group">
             <label class="form-instructions review-form-items form-spacing" for="review">What do you think?</label>
-            <input type="text" class="form-control form-spacing" id="review" name="review" placeholder="Tell us your highs and lows..." required>
+            <textarea type="text" class="form-control form-spacing" id="review" name="review"  
+            placeholder="Tell us your highs and lows..." required>
+            {{- review.review -}}
+            </textarea>
         </div>
         <!-- Restaurant review buttons submit and cancel -->
         <button type="submit" class="btn btn-success review-form-items">Edit My Review</button>
