@@ -12,7 +12,8 @@
     <div class="card restaurant-card-style" style="width: 18rem;">
         <!-- Restaurant img -->
         <div class="col-sm-12">
-            <img src="{{ restaurant.restaurant_img_url }}" class="card-img-top card-img-size" alt="">
+            <img src="{{ restaurant.restaurant_img_url }}" class="card-img-top card-img-size" onerror="this.src='static/images/veggie_bowl.jpeg'" 
+            alt="{{ restaurant.name }}">
         </div>
         <!-- Restaurant name -->
         <h5 class="restaurant-card-title"> {{ restaurant.name }}</h5>
