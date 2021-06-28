@@ -63,38 +63,19 @@
                     </div>
                 {% endif %}
     {% else %}
-        <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
-        <label class="btn page-subtitle" for="btn-check-3">Admin Account</label>
+        <div class="btn page-subtitle" for="btn-check-3">Admin Account</div>
+        
+        <div class="row justify-content-center">
+            <a href="{{ url_for('add_restaurant') }}" class="btn btn-success profile-btn col-sm-2">
+                <i class="fas fa-plus-circle"></i> 
+                Add a Restaurant
+            </a>
+        </div>
 
-        {% if reviews|length > 0 %}
-        <div class="row justify-content-evenly">
-            {% for review in reviews %}
-                <div class="card review-card-style" style="width: 18rem;">
-                    <!-- Restaurant name -->
-                    <h5 class="restaurant-card-title"> {{ review.restaurant_name }}</h5>
-                    <!-- Restaurant rating -->
-                    <p class="review-card-title">Rating: </p>
-                    <p class="restaurant-card-text"> {{ review.restaurant_rating }} /5</p>
-                    <!-- Restaurant review title -->
-                    <p class="review-card-title">Review Title: </p>
-                    <p class="restaurant-card-text">
-                        {{ review.review_name }}</p>
-                    <!-- Restaurant review body -->
-                    <p class="review-card-title">Review: </p>
-                    <p class="restaurant-card-text">
-                        {{ review.review }}</p>
-                    <!-- Edit and delete reviews -->
-                    <div class="row justify-content-evenly">
-                        <div class="btn btn-danger profile-btn col-sm-5">
-                            <a href="{{ url_for('delete_review', review_id=review._id) }}"><i class="fas fa-trash"></i> Delete</a>
-                        </div>
-                        <div class="btn btn-warning profile-btn col-sm-5">
-                            <a href="{{ url_for('edit_review', review_id=review._id) }}"><i class="fas fa-pen"></i> Edit</a>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        {% endif %}
+        <div class="row justify-content-center ">
+            <h4 class="page-subtitle profile-subheading">Edit or Delete a users review</h4>
+        </div>
+
 
     {% endif %}
         </div>
