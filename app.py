@@ -178,6 +178,25 @@ def delete_review(review_id):
 
 @app.route("/add_restaurant", methods=["GET", "POST"])
 def add_restaurant():
+    if request.method == "POST":
+        our_recommendation = "true" if request.form.get(
+            "our_recommendation") else "false"
+        restaurant = {
+            "name": request.form.get("name"),
+            "phone_number": request.form.get("phone_number"),
+            "address": request.form.get("address"),
+            "website": request.form.get("website"),
+            "price_range": request.form.get("price_range"),
+            "cuisine": request.form.get("cuisine"),
+            "open_times": request.form.get("open_times"),
+            "summary": request.form.get("summary"),
+            "our_recommendation": our_recommendation,
+            "restaurant_img_url": request.form.get("restaurant_img_url")
+        }
+        mongo.db.restaurants.insert_one(restaurant)
+        flash("Restaurant added successfully")
+        return redirect(url_for('user_profile', username=session['user']))
+        
     return render_template("add_restaurant.html")
 
 
