@@ -196,7 +196,7 @@ def add_restaurant():
         mongo.db.restaurants.insert_one(restaurant)
         flash("Restaurant added successfully")
         return redirect(url_for('user_profile', username=session['user']))
-        
+
     return render_template("add_restaurant.html")
 
 
