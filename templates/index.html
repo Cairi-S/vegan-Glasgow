@@ -17,7 +17,10 @@
             {% if restaurant.our_recommendation == true %}
                             <div class="card restaurant-card-style" style="width: 18rem;">
                                 <!-- Restaurant img -->
-                                <img src="" class="card-img-top" alt="">
+                                <!-- Restaurant img -->
+                                <div class="col-sm-12">
+                                    <img src="{{ restaurant.restaurant_img_url }}" class="card-img-top card-img-size" alt="">
+                                </div>
                                 <!-- Restaurant name -->
                                 <h5 class="restaurant-card-title"> {{ restaurant.name }}</h5>
                                 <!-- Restaurant website address -->

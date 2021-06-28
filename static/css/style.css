@@ -9,6 +9,17 @@
     min-height: 40vh;
 }
 
+.card-img-size {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
 /* ------------ Text color */
 
 .tagline,
