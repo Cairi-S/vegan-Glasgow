@@ -10,8 +10,8 @@
     <form class="review-form" method="POST" action="{{ url_for('add_restaurant') }}">
         <!-- Restaurant name -->
         <div class="form-group ">
-            <label class="form-instructions review-form-items" for="restaurant_name">Restaurant Name</label>
-            <input type="text" class="form-control form-spacing" id="restaurant_name" name="Restaurant_name" placeholder="Restaurant name..." required>
+            <label class="form-instructions review-form-items" for="name">Restaurant Name</label>
+            <input type="text" class="form-control form-spacing" id="name" name="name" placeholder="Restaurant name..." required>
         </div>
         <!-- Restaurant phone number -->
         <div class="form-group ">
@@ -45,12 +45,19 @@
             <option class="form-instructions" disabled selected>When is this restaurant open?</option>
             <option value="Breakfast">Breakfast</option>
             <option value="Brunch">Brunch</option>
+            <option value="Breakfast">Breakfast and Lunch</option>
             <option value="Lunch">Lunch</option>
             <option value="Lunch and Dinner">Lunch and Dinner</option>
             <option value="Dinner">Dinner</option>
             <option value="All day">All day</option>
+            <option value="All day">Daytime hours</option>
             <option value="Late night">Late night</option>
         </select>
+        <!-- Restaurant summary -->
+        <div class="form-group">
+            <label class="form-instructions review-form-items form-spacing" for="summary">Whats the inside scoop on this restaurant?</label>
+            <textarea type="text" class="form-control form-spacing" id="summary" name="summary" placeholder="Give us the scoop..." required></textarea>
+        </div>
         <!-- Admin restaurant recommendation radio button -->
         <div class="form-group ">
             <input type="radio" name="our_recommendation" id="our_recommendation" autocomplete="off">
