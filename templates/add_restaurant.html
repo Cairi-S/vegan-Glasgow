@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Page title -->
+<h2 class="page-title">Add a Restaurant</h2>
+
+<!-- Container for form -->
+<div class="form-container">
+    <!-- Add restaurant form -->
+    <form class="review-form" method="POST" action="{{ url_for('add_restaurant') }}">
+        <!-- Restaurant name -->
+        <div class="form-group ">
+            <label class="form-instructions review-form-items" for="restaurant_name">Restaurant Name</label>
+            <input type="text" class="form-control form-spacing" id="restaurant_name" name="Restaurant_name" placeholder="Restaurant name..." required>
+        </div>
+        <!-- Restaurant phone number -->
+        <div class="form-group ">
+            <label class="form-instructions review-form-items" for="phone_number">Restaurant contact number</label>
+            <input type="tel" class="form-control form-spacing" id="phone_number" name="phone_number" placeholder="Restaurant contact telephone number..." required>
+        </div>
+        <!-- Restaurant street address -->
+        <div class="form-group ">
+            <label class="form-instructions review-form-items" for="address">Restaurant Street Address</label>
+            <input type="text" class="form-control form-spacing" id="address" name="address" placeholder="Restaurant street address..." required>
+        </div>
+        <!-- Restaurant web address -->
+        <div class="form-group ">
+            <label class="form-instructions review-form-items" for="website">Restaurant Website</label>
+            <input type="text" class="form-control form-spacing" id="website" name="website" placeholder="Restaurant website..." required>
+        </div>
+        <!-- Restaurant price range -->
+        <select class="custom-select form-spacing col-sm-4 review-form-items" id="price_range" name="price_range" required>
+            <option class="form-instructions" disabled selected>How expensive is this restaurant?</option>
+            <option value="£">£ Cheap</option>
+            <option value="££">££ Medium</option>
+            <option value="£££">£££ Expensive</option>
+        </select>
+        <!-- Restaurant cuisine -->
+        <div class="form-group ">
+            <label class="form-instructions review-form-items" for="cuisine">Cuisine</label>
+            <input type="text" class="form-control form-spacing" id="cuisine" name="cuisine" placeholder="Cuisine type..." required>
+        </div>
+        <!-- Restaurant opening hours -->
+        <select class="custom-select form-spacing col-sm-4 review-form-items" id="open_times" name="open_times" required>
+            <option class="form-instructions" disabled selected>When is this restaurant open?</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Brunch">Brunch</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Lunch and Dinner">Lunch and Dinner</option>
+            <option value="Dinner">Dinner</option>
+            <option value="All day">All day</option>
+            <option value="Late night">Late night</option>
+        </select>
+        <!-- Admin restaurant recommendation radio button -->
+        <div class="form-group ">
+            <input type="radio" name="our_recommendation" id="our_recommendation" autocomplete="off">
+            <label for="our_recommendation">veganGlasgow recommends this restaurant</label>
+        </div>
+        <!-- Restaurant image url -->
+        <div class="form-group ">
+            <label class="form-instructions review-form-items" for="restaurant_img_url">Restaurant Image</label>
+            <input type="text" class="form-control form-spacing" id="restaurant_img_url" name="restaurant_img_url" placeholder="Add the URL of the image to add...">
+        </div>
+        <!-- Restaurant review buttons submit and cancel -->
+        <button type="submit" class="btn btn-success review-form-items">Add This Restaurant</button>
+        <button type="submit" class="btn btn-danger review-form-items">Cancel</button>
+    </form>
+    <!-- end of form -->
+</div>
+<!-- end of container -->
+
+{% endblock %}
