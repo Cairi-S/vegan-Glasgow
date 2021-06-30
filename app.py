@@ -179,8 +179,19 @@ def delete_review(review_id):
 @app.route("/add_restaurant", methods=["GET", "POST"])
 def add_restaurant():
     if request.method == "POST":
+        # Checks for existing restaurant in db
+        existing_restaurant = mongo.db.restaurants.find_one(
+            {"name": request.form.get("name")})
+
+        # Prompt notifying admin for existing restaurant
+        if existing_restaurant:
+            flash("This page has already been created")
+            return redirect(url_for('add_restaurant'))
+
+        # Checks whether the recommendation box is checked
         our_recommendation = "on" if request.form.get(
             "our_recommendation") else "off"
+        # Creates an instance for all add_restaurant form data
         restaurant = {
             "name": request.form.get("name"),
             "phone_number": request.form.get("phone_number"),
@@ -193,8 +204,11 @@ def add_restaurant():
             "our_recommendation": our_recommendation,
             "restaurant_img_url": request.form.get("restaurant_img_url")
         }
+        # add_restaurant form data is added to db
         mongo.db.restaurants.insert_one(restaurant)
+        # flash message for successful add_restaurant
         flash("Restaurant added successfully")
+        # returns the admin to the profile page
         return redirect(url_for('user_profile', username=session['user']))
 
     return render_template("add_restaurant.html")
