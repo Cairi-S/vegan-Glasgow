@@ -37,6 +37,12 @@
                     <a id="over-green-color" class="nav-link" 
                     href="{{ url_for('user_profile', username=session['user']) }}">My Profile</a>
                   </li>
+                  {% if session.user == "admin"|lower %}
+                    <li class="nav-item">
+                      <a id="over-green-color" class="nav-link" 
+                      href="{{ url_for('add_restaurant') }}">Add Restaurant</a>
+                    </li>
+                  {% endif %}
                   <li class="nav-item">
                     <a id="over-green-color" class="nav-link" 
                     href="{{ url_for('add_review') }}">Add Review</a>
