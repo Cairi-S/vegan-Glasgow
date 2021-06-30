@@ -82,7 +82,8 @@
         </div>
         <!-- Restaurant review buttons submit and cancel -->
         <button type="submit" class="btn btn-success review-form-items">Add This Restaurant</button>
-        <button type="submit" class="btn btn-danger review-form-items">Cancel</button>
+        <a href="{{ url_for('user_profile', username=session['user']) }}" 
+        class="btn btn-danger review-form-items">Cancel</a>
     </form>
     <!-- end of form -->
 </div>
