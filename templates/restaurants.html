@@ -6,16 +6,16 @@
 <h2 class="tagline">Vegan recommendations for Glasgows lively culinary scene.</h2>
     
 <h2 class="page-title">Restaurants</h2>
-<div class="row g-0 row-cols-sm-2 row-cols-md-4 d-flex justify-content-between">
+<div class="row g-0 row-cols-sm-2 row-cols-md-4 d-flex justify-content-around">
     <!-- Generates a card for each restaurant in 'restaurants' db -->
     {% for restaurant in restaurants %}
-    <div class="col">
+    <div class="col d-flex justify-content-center">
         <div class="card restaurant-card-style" style="width: 18rem;">
             <!-- Restaurant img -->
-            <div class="col-sm-12 d-flex align-items-center img-col-height">
-                <img src="{{ restaurant.restaurant_img_url }}" class="card-img-top card-img-size" onerror="this.src='static/images/veggie_bowl.jpeg'" 
+            
+                <img src="{{ restaurant.restaurant_img_url }}" class="card-img-top card-img-size img-fluid" onerror="this.src='static/images/veggie_bowl.jpeg'" 
                 alt="{{ restaurant.name }}">
-            </div>
+
             <!-- Restaurant name -->
             <h5 class="restaurant-card-title"> {{ restaurant.name }}</h5>
             <!-- Restaurant website address -->
