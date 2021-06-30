@@ -14,7 +14,7 @@
         <!-- Generates a card for each restaurant in 'restaurants' db -->
         {% for restaurant in restaurants %}
             <!-- Displays restaurants that have our_recommendation set to true -->
-            {% if restaurant.our_recommendation == true %}
+            {% if restaurant.our_recommendation == "on" %}
                             <div class="card restaurant-card-style" style="width: 18rem;">
                                 <!-- Restaurant img -->
                                 <!-- Restaurant img -->

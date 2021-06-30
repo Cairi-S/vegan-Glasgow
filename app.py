@@ -179,8 +179,8 @@ def delete_review(review_id):
 @app.route("/add_restaurant", methods=["GET", "POST"])
 def add_restaurant():
     if request.method == "POST":
-        our_recommendation = "true" if request.form.get(
-            "our_recommendation") else "false"
+        our_recommendation = "on" if request.form.get(
+            "our_recommendation") else "off"
         restaurant = {
             "name": request.form.get("name"),
             "phone_number": request.form.get("phone_number"),
