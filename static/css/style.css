@@ -19,6 +19,16 @@
     margin: 10px 36px;
 }
 
+.img-size {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 50vh;
+    height: auto;
+    border: 1px solid #243119;
+    border-radius: 10px;
+}
+
 .img-col-height {
     height: 54vh;
 }
