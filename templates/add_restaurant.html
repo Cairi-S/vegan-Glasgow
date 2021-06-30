@@ -29,40 +29,52 @@
             <input type="text" class="form-control form-spacing" id="website" name="website" placeholder="Restaurant website..." required>
         </div>
         <!-- Restaurant price range -->
-        <select class="custom-select form-spacing col-sm-4 review-form-items" id="price_range" name="price_range" required>
-            <option class="form-instructions" disabled selected>How expensive is this restaurant?</option>
-            <option value="£">£ Cheap</option>
-            <option value="££">££ Medium</option>
-            <option value="£££">£££ Expensive</option>
-        </select>
+        <div class="row">
+            <label class="form-instructions review-form-items" for="price_range">
+                How expensive is this restaurant?
+            </label>
+            <select class="custom-select form-spacing col-sm-4 review-form-items" id="price_range" name="price_range" required>
+                <option class="form-instructions" disabled selected>Choose a price rating...</option>
+                <option value="£">£ Cheap</option>
+                <option value="££">££ Medium</option>
+                <option value="£££">£££ Expensive</option>
+            </select>
+        </div>
         <!-- Restaurant cuisine -->
         <div class="form-group ">
             <label class="form-instructions review-form-items" for="cuisine">Cuisine</label>
             <input type="text" class="form-control form-spacing" id="cuisine" name="cuisine" placeholder="Cuisine type..." required>
         </div>
         <!-- Restaurant opening hours -->
-        <select class="custom-select form-spacing col-sm-4 review-form-items" id="open_times" name="open_times" required>
-            <option class="form-instructions" disabled selected>When is this restaurant open?</option>
-            <option value="Breakfast">Breakfast</option>
-            <option value="Brunch">Brunch</option>
-            <option value="Breakfast">Breakfast and Lunch</option>
-            <option value="Lunch">Lunch</option>
-            <option value="Lunch and Dinner">Lunch and Dinner</option>
-            <option value="Dinner">Dinner</option>
-            <option value="All day">All day</option>
-            <option value="All day">Daytime hours</option>
-            <option value="Late night">Late night</option>
-        </select>
+        <div class="row">
+            <label class="form-instructions review-form-items" for="open_times">
+                What times is this restaurant open?
+            </label>
+            <select class="custom-select form-spacing col-sm-4 review-form-items" id="open_times" name="open_times" required>
+                <option class="form-instructions" disabled selected>Select a mealtime...</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Brunch">Brunch</option>
+                <option value="Breakfast">Breakfast and Lunch</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Lunch and Dinner">Lunch and Dinner</option>
+                <option value="Dinner">Dinner</option>
+                <option value="All day">Daytime hours only</option>
+                <option value="All day">All day</option>
+                <option value="Late night">Late night</option>
+            </select>
+        </div>
         <!-- Restaurant summary -->
         <div class="form-group">
             <label class="form-instructions review-form-items form-spacing" for="summary">Whats the inside scoop on this restaurant?</label>
             <textarea type="text" class="form-control form-spacing" id="summary" name="summary" placeholder="Give us the scoop..." required></textarea>
         </div>
         <!-- Admin restaurant recommendation radio button -->
-        <div class="form-group ">
-            <input type="radio" name="our_recommendation" id="our_recommendation" autocomplete="off">
-            <label for="our_recommendation">veganGlasgow recommends this restaurant</label>
+
+        <div class="form-check form-switch form-spacing">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="form-check-label form-instructions" for="flexSwitchCheckDefault"> Restaurant is a veganGlasgow recommendation</label>
         </div>
+
         <!-- Restaurant image url -->
         <div class="form-group ">
             <label class="form-instructions review-form-items" for="restaurant_img_url">Restaurant Image</label>
