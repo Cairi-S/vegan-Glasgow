@@ -2,6 +2,70 @@
 
 {% block content %}
 
-<h3>Hello world</h3>
+<div class="row g-0 form-container">
+    <div class="row g-0">
+        <h2 class="page-title">{{ restaurant.name }}</h2>
+    </div>
+    
+    <div class="row g-0">
+        <div class="col-sm-4">
+            <img src="{{ restaurant.restaurant_img_url }}" class="card-img-top img-size img-fluid" onerror="this.src='static/images/veggie_bowl.jpeg'" 
+                        alt="{{ restaurant.name }}">
+        </div>
+        <div class="col-sm-4">
+            <div class="row g-0">
+                <!-- Restaurant website address -->
+                <p class="restaurant-card-text"> {{ restaurant.website }}</p>
+                <!-- Restaurant telephone number -->
+                <p class="restaurant-card-text">
+                    <i class="fas fa-phone-alt"></i> {{ restaurant.phone_number }}</p>
+                <!-- Restaurant address -->
+                <p class="restaurant-card-text">
+                    <i class="fas fa-map-marker-alt"></i> {{ restaurant.address }}</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a class="socials" href="#">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="socials" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="socials" href="#">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <!-- Restaurant price range -->
+            <p class="restaurant-card-text">
+                <i class="fas fa-money-bill"></i> {{ restaurant.price_range }}</p>
+            <!-- Restaurant cuisine -->
+            <p class="restaurant-card-text">
+                <i class="fas fa-utensils"></i> {{ restaurant.cuisine }}</p>
+            <!-- Restaurant opening times -->
+            <p class="restaurant-card-text">
+                <i class="fas fa-clock"></i> {{ restaurant.open_times }}</p>
+            <!-- Restaurant summary -->
+            <h6 class="restaurant-card-title">The Scoop...</h6>
+            <p class="restaurant-card-text"> {{ restaurant.summary }}</p>
+        </div>
+    </div>
 
+    <div class="row g-0">
+        <div class="col-sm-12">
+            <!-- Reviews to go in here-->
+        </div>
+    </div>
+    
+    {% if session.username == "admin"}
+    <!-- Delete restaurant button to go here-->
+    {% endif %}
+
+</div>
 {% endblock %}
