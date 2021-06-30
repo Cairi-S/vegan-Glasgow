@@ -118,6 +118,13 @@ def restaurants():
     return render_template("restaurants.html", restaurants=restaurants)
 
 
+@app.route("/view_restaurant/<restaurant_id>", methods=["GET", "POST"])
+def view_restaurant(restaurant_id):
+    restaurant = mongo.db.restaurants.find_one(
+        {"_id": ObjectId(restaurant_id)})
+    return render_template("view_restaurant.html", restaurant=restaurant)
+
+
 @app.route("/logout")
 def logout():
     # Removes session cookie and redirects to login
