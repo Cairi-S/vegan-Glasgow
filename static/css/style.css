@@ -308,6 +308,10 @@
     margin: 0 30px 30px;
 }
 
+.restaurant-review-info {
+    padding-left: 30px;
+}
+
 /* --- VIEW_RESTAURANT STYLES -- */
 
 .restaurant-scoop-card,
@@ -319,6 +323,7 @@
 
 .restaurant-reviews-card {
     max-width: 96%;
+    margin-top: 60px;
 }
 
 .restaurant-reviews-card,
@@ -354,6 +359,11 @@
 .profile-btn {
     margin:40px 0;
     border: 2px solid #e0e0e0;
+    border: 2px solid #e0e0e0;
+}
+
+.restaurant-edit-btn {
+    margin: 40px 30px 40px 0;
 }
 
 .form-button {
@@ -362,7 +372,8 @@
     border: 2px solid #a0c497;
 }
 
-.profile-btn a {
+.profile-btn a,
+.restaurant-edit-btn a {
     text-decoration: none;
 }
 
