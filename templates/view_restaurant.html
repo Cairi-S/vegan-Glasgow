@@ -64,13 +64,26 @@
     </div>
 
     <div class="row g-0">
-        <div class="col-sm-12">
+        <div class="col-sm-12 restaurant-reviews-card">
+        <div class="row g-0">
+            <h6 class="restaurant-card-title">Reviews</h6>
+        </div>
             {% for review in reviews %}
                 {% if restaurant.name == review.restaurant_name %}
-                    <p>{{ review.created_by }}</p>
-                    <p>{{ review.restaurant_rating }}</p>
-                    <p>{{ review.review_name }}</p>
-                    <p>{{ review.review }}</p>
+                    <p><i class="fas fa-user"></i> {{ review.created_by }}</p>
+                    <p><i class="fas fa-star"></i> {{ review.restaurant_rating }}</p>
+                    <p><i class="fas fa-pen-square"></i> {{ review.review_name }}</p>
+                    <p><i class="fas fa-align-left"></i> {{ review.review }}</p>
+                    {% if review.created_by == session.user|lower %}
+                        <div class="row justify-content-evenly">
+                            <div class="btn btn-danger profile-btn col-sm-5">
+                                <a href="{{ url_for('delete_review', review_id=review._id) }}"><i class="fas fa-trash"></i> Delete</a>
+                            </div>
+                            <div class="btn btn-warning profile-btn col-sm-5">
+                                <a href="{{ url_for('edit_review', review_id=review._id) }}"><i class="fas fa-pen"></i> Edit</a>
+                            </div>
+                        </div>
+                    {% endif %}
                 {% endif %}
             {% endfor %}
         </div>
