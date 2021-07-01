@@ -114,17 +114,20 @@ def user_profile(username):
 
 @app.route("/restaurants", methods=["GET", "POST"])
 def restaurants():
+    # Retrieves all restaurants from the database
     restaurants = mongo.db.restaurants.find()
     return render_template("restaurants.html", restaurants=restaurants)
 
 
 @app.route("/view_restaurant/<restaurant_id>", methods=["GET", "POST"])
 def view_restaurant(restaurant_id):
+    # Retrieves restaurant id from the database
     restaurant = mongo.db.restaurants.find_one(
         {"_id": ObjectId(restaurant_id)})
+    # Retrieves all reviews from the database
     reviews = mongo.db.reviews.find()
     return render_template(
-        "view_restaurant.html", 
+        "view_restaurant.html",
         restaurant=restaurant,
         reviews=reviews)
 
@@ -140,6 +143,7 @@ def logout():
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
     if request.method == "POST":
+        # Creates a new instance of a review
         new_review = {
             "restaurant_name": request.form.get("restaurant_name"),
             "restaurant_rating": request.form.get("restaurant_rating"),
@@ -147,10 +151,13 @@ def add_review():
             "review": request.form.get("review"),
             "created_by": session["user"]
         }
+        # Adds the new review to the db
         mongo.db.reviews.insert_one(new_review)
+        # Confirmation flash msg
         flash("Thanks! Your review has been added.")
         return redirect(url_for('add_review'))
 
+    # Finds all restaurants listed in db for dropdown
     restaurants = mongo.db.restaurants.find()
     return render_template("add_review.html", restaurants=restaurants)
 
@@ -158,6 +165,7 @@ def add_review():
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     if request.method == "POST":
+        # Creates a new instance of an existing review
         existing_review = {
             "restaurant_name": request.form.get("restaurant_name"),
             "restaurant_rating": request.form.get("restaurant_rating"),
@@ -165,14 +173,20 @@ def edit_review(review_id):
             "review": request.form.get("review"),
             "created_by": session["user"]
         }
+        # Updates the existing_review with the corresponding id
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, existing_review)
+        # Confirmation flash msg
         flash("Thanks! Your review has been updated.")
         return redirect(url_for('user_profile', username=session['user']))
 
+    # Finds the review with the corresponding id
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+    # Finds all the restaurants
     restaurants = mongo.db.restaurants.find()
+    # Finds the session user
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    # Returns the edit page for chosen restaurant review if created by user
     return render_template(
         "edit_review.html",
         review=review,
@@ -182,7 +196,9 @@ def edit_review(review_id):
 
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
+    # Deletes the review with corresponding id from db
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
+    # Confirmation flash msg
     flash("Your review has been deleted")
     return redirect(url_for('user_profile', username=session['user']))
 
