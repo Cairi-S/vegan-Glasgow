@@ -304,16 +304,30 @@
     text-underline-position: under;
 }
 
+.restaurant-reviews-card {
+    margin: 0 30px 30px;
+}
+
 /* --- VIEW_RESTAURANT STYLES -- */
 
 .restaurant-scoop-card,
 .restaurant-contact-card,
 .restaurant-info-card {
     max-width: 84%;
-    border: 1px solid white;
-    border-radius: 10px;
     text-align: center;
-    background-color: #96BE8C;
+}
+
+.restaurant-reviews-card {
+    max-width: 96%;
+}
+
+.restaurant-reviews-card,
+.restaurant-scoop-card,
+.restaurant-contact-card,
+.restaurant-info-card {
+    background-color: white;
+    border: 1px solid #243119;
+    border-radius: 10px; 
 }
 
 .restaurant-contact-card {
