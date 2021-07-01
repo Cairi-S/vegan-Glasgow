@@ -29,6 +29,10 @@
     border-radius: 10px;
 }
 
+.img-margins {
+    margin: 0 30px 30px;
+}
+
 .img-col-height {
     height: 54vh;
 }
@@ -121,6 +125,10 @@
 #over-green-color li:hover,
 #over-green-color a:hover {
     color: #243119;
+}
+
+.socials i:hover{
+    color: #e0e0e0;
 }
 
 .form-instructions a:hover {
@@ -294,6 +302,37 @@
 .no-review-text a {
     text-decoration: underline;
     text-underline-position: under;
+}
+
+/* --- VIEW_RESTAURANT STYLES -- */
+
+.restaurant-scoop-card,
+.restaurant-contact-card,
+.restaurant-info-card {
+    max-width: 84%;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #96BE8C;
+}
+
+.restaurant-contact-card {
+    margin-top: 60px;
+}
+
+.restaurant-contact-card p,
+.restaurant-info-card p {
+    padding-top: 16px;
+}
+
+.restaurant-contact-card i,
+.restaurant-info-card i {
+    padding-right: 10px;
+}
+
+.socials i {
+    font-size: 1.75rem;
+    color: #243119;
 }
 
 /* --- BUTTONS -- */
