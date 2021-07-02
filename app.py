@@ -132,6 +132,13 @@ def view_restaurant(restaurant_id):
         reviews=reviews)
 
 
+@app.route("/edit_restaurant/<restaurant_id>", methods=["GET", "POST"])
+def edit_restaurant(restaurant_id):
+    restaurant = mongo.db.restaurants.find_one(
+        {"_id": ObjectId(restaurant_id)})
+    return render_template("edit_restaurant.html", restaurant=restaurant)
+
+
 @app.route("/logout")
 def logout():
     # Removes session cookie and redirects to login
