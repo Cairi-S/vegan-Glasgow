@@ -127,6 +127,11 @@
     color: #243119;
 }
 
+.restaurant-card-style a:hover,
+.restaurant-card-style a:focus {
+    text-decoration: none;
+}
+
 .socials i:hover{
     color: #e0e0e0;
 }
@@ -221,11 +226,21 @@
     background-color: rgba(224, 224, 224, 0.5);
 }
 
+.restaurant-card-style a {
+    color: #243119;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
 .review-card-style {
     margin-bottom: 124px;
     border: 2px solid #e0e0e0;
     border-radius: 10px;
     background-color: #96BE8C;
+}
+
+.restaurant-card-text {
+    padding: 0 10px;
 }
 
 /* -- FORMS -- */
