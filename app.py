@@ -134,6 +134,30 @@ def view_restaurant(restaurant_id):
 
 @app.route("/edit_restaurant/<restaurant_id>", methods=["GET", "POST"])
 def edit_restaurant(restaurant_id):
+    if request.method == "POST":
+        # Checks whether the recommendation box is checked
+        our_recommendation = "on" if request.form.get(
+            "our_recommendation") else "off"
+        # Harvests the information from the edit_restaurant form
+        existing_restaurant = {
+            "name": request.form.get("name"),
+            "phone_number": request.form.get("phone_number"),
+            "address": request.form.get("address"),
+            "website": request.form.get("website"),
+            "price_range": request.form.get("price_range"),
+            "cuisine": request.form.get("cuisine"),
+            "open_times": request.form.get("open_times"),
+            "summary": request.form.get("summary"),
+            "restaurant_img_url": request.form.get("restaurant_img_url"),
+            "our_recommendation": our_recommendation
+        }
+        # Updates the chosen restaurant with the new information
+        mongo.db.restaurants.update(
+            {"_id": ObjectId(restaurant_id)}, existing_restaurant)
+        # Confirmation flash msg
+        flash("Thanks for updating the restaurant info.")
+        return redirect(url_for('restaurants'))
+
     restaurant = mongo.db.restaurants.find_one(
         {"_id": ObjectId(restaurant_id)})
     return render_template("edit_restaurant.html", restaurant=restaurant)
@@ -172,7 +196,7 @@ def add_review():
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     if request.method == "POST":
-        # Creates a new instance of an existing review
+        # Harvests the information from the edit_review form
         existing_review = {
             "restaurant_name": request.form.get("restaurant_name"),
             "restaurant_rating": request.form.get("restaurant_rating"),
@@ -225,7 +249,7 @@ def add_restaurant():
         # Checks whether the recommendation box is checked
         our_recommendation = "on" if request.form.get(
             "our_recommendation") else "off"
-        # Creates an instance for all add_restaurant form data
+        # Harvests the add_restaurant form data
         restaurant = {
             "name": request.form.get("name"),
             "phone_number": request.form.get("phone_number"),
