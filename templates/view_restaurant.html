@@ -114,7 +114,32 @@
                 {% endfor %}
                 <!--End of review loop-->
             </div>
+            <!--If user=admin allows them to edit or delete the restaurants information-->
+            {% if session.user|lower ==  "admin" %}
+                <div class="row g-0 justify-content-center">
+                    <div class="row">
+                        <!--Title-->
+                        <h6 class="restaurant-card-title">Edit/Delete This Restaurant</h6>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row g-0 justify-content-center">
+                            <!--Edit btn link-->
+                            <div class="btn btn-warning restaurant-edit-btn col-sm-5">
+                                <a href="{{ url_for('edit_restaurant', restaurant_id=restaurant._id)}}"><i class="fas fa-pen"></i> Edit Info</a>
+                            </div>
+                            <!--Delete btn link-->
+                            <div class="btn btn-danger profile-btn col-sm-6">
+                                <a href="#"><i class="fas fa-trash"></i> Delete Restaurant</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            <!--End of Admin edit/delete statement-->
         </div>
     </div>
+    
+    
+
 </div>
 {% endblock %}
