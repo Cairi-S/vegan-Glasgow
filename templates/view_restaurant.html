@@ -89,15 +89,13 @@
                     </div>
                         <!--Allowing review to be edited/deleted if created by the session user-->
                         {% if review.created_by == session.user|lower %}
-                        <div class="col-sm-3">
-                            <div class="row justify-content-evenly">
+                        <div class="col-sm-3 d-flex align-items-center">
                                 <div class="btn btn-danger profile-btn col-sm-5">
                                     <a href="{{ url_for('delete_review', review_id=review._id) }}"><i class="fas fa-trash"></i> Delete</a>
                                 </div>
                                 <div class="btn btn-warning restaurant-edit-btn col-sm-5">
                                     <a href="{{ url_for('edit_review', review_id=review._id) }}"><i class="fas fa-pen"></i> Edit</a>
                                 </div>
-                            </div>
                         </div>
                         <!--Allowing review to be deleted by admin-->
                         {% elif session.user|lower ==  "admin" %}
