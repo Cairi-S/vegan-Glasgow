@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Page title -->
+<h2 class="page-title">Edit Restaurant</h2>
+
+<!-- Container for form -->
+<div class="form-container">
+    <!-- Add restaurant form -->
+    <form class="review-form" method="POST" action="{{ url_for('add_restaurant') }}">
+        <!-- Restaurant name -->
+        <div class="form-group ">
+            <label class="form-instructions review-form-items" for="name">Restaurant Name</label>
+            <input type="text" class="form-control form-spacing" id="name" name="name" placeholder="Restaurant name..." required>
+        </div>
+        <!-- Restaurant phone number -->
+        <div class="form-group ">
+            <label class="form-instructions review-form-items" for="phone_number">Restaurant contact number</label>
+            <input type="tel" class="form-control form-spacing" id="phone_number" name="phone_number" placeholder="Restaurant contact telephone number..." required>
+        </div>
+        <!-- Restaurant street address -->
+        <div class="form-group ">
+            <label class="form-instructions review-form-items" for="address">Restaurant Street Address</label>
+            <input type="text" class="form-control form-spacing" id="address" name="address" placeholder="Restaurant street address..." required>
+        </div>
+        <!-- Restaurant web address -->
+        <div class="form-group ">
+            <label class="form-instructions review-form-items" for="website">Restaurant Website</label>
+            <input type="text" class="form-control form-spacing" id="website" name="website" placeholder="Restaurant website..." required>
+        </div>
+        <!-- Restaurant price range -->
+        <div class="row">
+            <label class="form-instructions review-form-items" for="price_range">
+                How expensive is this restaurant?
+            </label>
+            <select class="custom-select form-spacing col-sm-4 review-form-items" id="price_range" name="price_range" required>
+                <option class="form-instructions" disabled selected>Choose a price rating...</option>
+                <option value="£">£ Cheap</option>
+                <option value="££">££ Medium</option>
+                <option value="£££">£££ Expensive</option>
+            </select>
+        </div>
+        <!-- Restaurant cuisine -->
+        <div class="form-group ">
+            <label class="form-instructions review-form-items" for="cuisine">Cuisine</label>
+            <input type="text" class="form-control form-spacing" id="cuisine" name="cuisine" placeholder="Cuisine type..." required>
+        </div>
+        <!-- Restaurant opening hours -->
+        <div class="row">
+            <label class="form-instructions review-form-items" for="open_times">
+                What times is this restaurant open?
+            </label>
+            <select class="custom-select form-spacing col-sm-4 review-form-items" id="open_times" name="open_times" required>
+                <option class="form-instructions" disabled selected>Select a mealtime...</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Brunch">Brunch</option>
+                <option value="Breakfast">Breakfast and Lunch</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Lunch and Dinner">Lunch and Dinner</option>
+                <option value="Dinner">Dinner</option>
+                <option value="All day">Daytime hours only</option>
+                <option value="All day">All day</option>
+                <option value="Late night">Late night</option>
+            </select>
+        </div>
+        <!-- Restaurant summary -->
+        <div class="form-group">
+            <label class="form-instructions review-form-items form-spacing" for="summary">Whats the inside scoop on this restaurant?</label>
+            <textarea type="text" class="form-control form-spacing" id="summary" name="summary" placeholder="Give us the scoop..." required></textarea>
+        </div>
+        <!-- Admin restaurant recommendation radio button -->
+
+        <div class="form-check form-switch form-spacing">
+            <label class="form-check-label form-instructions" for="our_recommendation"> is a veganGlasgow recommended restaurant</label>
+            <input class="form-check-input" type="checkbox" id="our_recommendation" name="our_recommendation">
+        </div>
+
+        <!-- Restaurant image url -->
+        <div class="form-group ">
+            <label class="form-instructions review-form-items" for="restaurant_img_url">Restaurant Image</label>
+            <input type="text" class="form-control form-spacing" id="restaurant_img_url" name="restaurant_img_url" placeholder="Add the URL of the image to add...">
+        </div>
+        <!-- Restaurant review buttons submit and cancel -->
+        <button type="submit" class="btn btn-success review-form-items">Confirm Edit</button>
+        <a href="{{ url_for('user_profile', username=session['user']) }}" 
+        class="btn btn-danger review-form-items">Cancel</a>
+    </form>
+    <!-- end of form -->
+</div>
+<!-- end of container -->
+
+{% endblock %}
