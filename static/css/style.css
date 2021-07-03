@@ -103,7 +103,7 @@
 
 /* ------------ Logo */
 .navbar-style h1 {
-    font-size: 3.4rem;
+    font-size: 2rem;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     padding-left: 20px;
 }
@@ -114,7 +114,7 @@
 }
 
 .nav-menu a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .nav-menu li {
