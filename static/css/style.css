@@ -9,14 +9,8 @@
 }
 
 .card-img-size {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 75%;
-    height: auto;
-    border: 1px solid #243119;
-    border-radius: 10px;
-    margin: 10px 36px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .img-size {
@@ -157,7 +151,7 @@
 
 /* -- FOOTER -- */
 .footer {
-    position: fixed;
+    margin-top: 60px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -171,7 +165,7 @@
 
 /* ------------ Footer icons */
 #over-green-color i {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 /* ------------ Footer placement */
@@ -223,7 +217,6 @@
 /* -- CARDS FOR RESTAURANTS -- */
 
 .restaurant-card-style {
-    margin-bottom: 124px;
     border: 2px solid #243119;
     border-radius: 10px;
     background-color: rgba(224, 224, 224, 0.5);
@@ -274,6 +267,8 @@
     margin: 30px 0;
     font-size: 2.4rem;
     text-align: center;
+    text-decoration: underline;
+    text-underline-position: below;
 }
 
 .restaurant-card-title {
