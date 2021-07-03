@@ -178,7 +178,6 @@ def add_review():
         new_review = {
             "restaurant_name": request.form.get("restaurant_name"),
             "restaurant_rating": request.form.get("restaurant_rating"),
-            "review_name": request.form.get("review_name"),
             "review": request.form.get("review"),
             "created_by": session["user"]
         }
@@ -200,7 +199,6 @@ def edit_review(review_id):
         existing_review = {
             "restaurant_name": request.form.get("restaurant_name"),
             "restaurant_rating": request.form.get("restaurant_rating"),
-            "review_name": request.form.get("review_name"),
             "review": request.form.get("review"),
             "created_by": session["user"]
         }
