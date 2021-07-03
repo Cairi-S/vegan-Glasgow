@@ -11,65 +11,74 @@
     <div class="row g-0">
         <!--LEFT COLUMN-->
          <!-- Restaurant image -->
-        <div class="col-sm-4">
+        <div class="col-4 view-rest-img-col">
             <img src="{{ restaurant.restaurant_img_url }}" class="card-img-top img-size img-fluid img-margins" onerror="this.src='static/images/veggie_bowl.jpeg'" alt="{{ restaurant.name }}">
         </div>
         <!--MIDDLE COLUMN-->
-        <div class="col-sm-4">
+        <div class="col-4 view-rest-text-col d-flex align-content-between">
             <div class="row g-0">
                 <!-- Restaurant summary -->
                 <div class="row g-0 restaurant-scoop-card">
                     <h6 class="restaurant-card-title">Here's The Scoop...</h6>
                     <p class="restaurant-card-text"> {{ restaurant.summary }}</p>
                 </div>
-                <div class="row g-0 restaurant-contact-card">
-                    <!-- Restaurant website address -->
-                    <p class="restaurant-card-text"> {{ restaurant.website }}</p>
-                    <!-- Restaurant telephone number -->
+                <div class="row g-0 restaurant-info-card">
+                    <!-- Restaurant price range -->
                     <p class="restaurant-card-text">
-                        <i class="fas fa-phone-alt"></i> {{ restaurant.phone_number }}</p>
-                    <!-- Restaurant address -->
+                        <i class="fas fa-money-bill"></i> {{ restaurant.price_range }}</p>
+                    <!-- Restaurant cuisine -->
                     <p class="restaurant-card-text">
-                        <i class="fas fa-map-marker-alt"></i> {{ restaurant.address }}</p>
-                    <!-- Restaurant social media - FUTURE FEATURE SOCIALS TO BE STORED/ACCESSED FROM DB -->
-                    <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <a class="socials" href="https://www.facebook.com">
-                                <i class="fab fa-facebook-square"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="socials" href="https://www.instagram.com">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="socials" href="https://www.twitter.com">
-                                <i class="fab fa-twitter-square"></i>
-                            </a>
-                        </li>
-                    </ul>
+                        <i class="fas fa-utensils"></i> {{ restaurant.cuisine }}</p>
+                    <!-- Restaurant opening times -->
+                    <p class="restaurant-card-text">
+                        <i class="fas fa-clock"></i> {{ restaurant.open_times }}</p>
                 </div>
             </div>
         </div>
         <!--RIGHT COLUMN-->
-        <div class="col-sm-4">
-            <div class="row g-0 restaurant-info-card">
-                <!-- Restaurant price range -->
+        <div class="col-4">
+            <div class="row g-0">
+            <div class="row g-0 restaurant-contact-card">
+                <!-- Restaurant website address -->
+                <p class="restaurant-card-text"> {{ restaurant.website }}</p>
+                <!-- Restaurant telephone number -->
                 <p class="restaurant-card-text">
-                    <i class="fas fa-money-bill"></i> {{ restaurant.price_range }}</p>
-                <!-- Restaurant cuisine -->
+                    <i class="fas fa-phone-alt"></i> {{ restaurant.phone_number }}</p>
+                <!-- Restaurant address -->
                 <p class="restaurant-card-text">
-                    <i class="fas fa-utensils"></i> {{ restaurant.cuisine }}</p>
-                <!-- Restaurant opening times -->
-                <p class="restaurant-card-text">
-                    <i class="fas fa-clock"></i> {{ restaurant.open_times }}</p>
+                    <i class="fas fa-map-marker-alt"></i> {{ restaurant.address }}</p>
+                <!-- Restaurant social media - FUTURE FEATURE SOCIALS TO BE STORED/ACCESSED FROM DB -->
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a class="socials" href="https://www.facebook.com">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="socials" href="https://www.instagram.com">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="socials" href="https://www.twitter.com">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
+            <div class="row g-0 justify-content-center">
+                <a href="{{ url_for('add_review') }}" class="btn btn-success profile-btn col-6">
+                    <i class="fas fa-plus-circle"></i> 
+                    Add a new review
+                </a>
+            </div>
+        </div>
+            
         </div>
     </div>
     <!--USER REVIEWS CONTAINER-->
     <div class="row g-0">
-        <div class="col-sm-12 restaurant-reviews-card">
+        <div class="col-sm-12 view-rest-reviews-card">
             <div class="row g-0">
                 <!--Container title-->
                 <h6 class="restaurant-card-title">Reviews</h6>
