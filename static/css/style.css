@@ -11,6 +11,7 @@
 .card-img-size {
     height: 300px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .img-size {
@@ -123,11 +124,6 @@
     color: #243119;
 }
 
-.restaurant-card-style a:hover,
-.restaurant-card-style a:focus {
-    text-decoration: none;
-}
-
 .socials i:hover{
     color: #e0e0e0;
 }
@@ -151,7 +147,7 @@
 
 /* -- FOOTER -- */
 .footer {
-    margin-top: 60px;
+    padding: 20px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -223,13 +219,18 @@
 }
 
 .restaurant-card-style a {
-    color: #243119;
-    text-decoration: underline;
-    text-underline-position: under;
+    text-decoration: none;
+}
+
+#info-card-cols {
+    padding: 50px 20px;
+}
+
+.card-info-group {
+    padding: 10px;
 }
 
 .review-card-style {
-    margin-bottom: 124px;
     border: 2px solid #e0e0e0;
     border-radius: 10px;
     background-color: #96BE8C;
@@ -330,12 +331,10 @@
 .restaurant-scoop-card,
 .restaurant-contact-card,
 .restaurant-info-card {
-    max-width: 84%;
     text-align: center;
 }
 
 .restaurant-reviews-card {
-    max-width: 96%;
     margin-top: 60px;
 }
 
