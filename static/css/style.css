@@ -237,7 +237,13 @@
 .restaurant-card-text {
     margin: 0;
     padding: 10px 10px 0 10px;
+    /* Many thanks to css-tricks.com for their info on line-clamp */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
+
 
 /* -- FORMS -- */
 .form-container {
@@ -273,7 +279,7 @@
 }
 
 .restaurant-card-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .review-card-title {
