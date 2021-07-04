@@ -8,6 +8,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
+ADMIN_USER = 'admin'
+
 # Flask set up
 app = Flask(__name__)
 
@@ -20,9 +22,9 @@ mongo = PyMongo(app)
 
 # index.html page
 @app.route("/")
-@app.route("/get_home")
-def get_home():
-    restaurants = mongo.db.restaurants.find()
+@app.route("/home")
+def home():
+    restaurants = mongo.db.restaurants.find({"our_recommendation": "on"})
     return render_template("index.html", restaurants=restaurants)
 
 
