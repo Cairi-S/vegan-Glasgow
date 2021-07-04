@@ -7,7 +7,6 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
-import re
 
 ADMIN_USER = 'admin'
 
@@ -68,7 +67,14 @@ def signup():
 # login.html page
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    if request.method == "POST":
+
+    if "user" in session:
+        return redirect(url_for("profile"))
+
+    elif request.method != "POST":
+        return render_template("login.html")
+
+    else:
         # Checks for existing user
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -96,8 +102,8 @@ def login():
 
 
 # user_profile.html page
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
+@app.route("/profile/", methods=["GET", "POST"])
+def profile():
     if not session['user']:
         return redirect(url_for('login'))
 
@@ -118,14 +124,14 @@ def profile(username):
     return redirect(url_for('login'))
 
 
-@app.route("/restaurants", methods=["GET", "POST"])
+@app.route("/restaurants")
 def restaurants():
     # Retrieves all restaurants from the database
     restaurants = mongo.db.restaurants.find()
     return render_template("restaurants.html", restaurants=restaurants)
 
 
-@app.route("/view_restaurant/<restaurant_id>", methods=["GET", "POST"])
+@app.route("/restaurant/<restaurant_id>/view")
 def view_restaurant(restaurant_id):
     # Retrieves restaurant id from the database
     restaurant = mongo.db.restaurants.find_one(
@@ -138,14 +144,14 @@ def view_restaurant(restaurant_id):
         reviews=reviews)
 
 
-@app.route("/edit_restaurant/<restaurant_id>", methods=["GET", "POST"])
+@app.route("/restaurant/<restaurant_id>/edit", methods=["GET", "POST"])
 def edit_restaurant(restaurant_id):
     if request.method == "POST":
         # Checks whether the recommendation box is checked
         our_recommendation = "on" if request.form.get(
             "our_recommendation") else "off"
         # Harvests the information from the edit_restaurant form
-        existing_restaurant = {
+        updated_restaurant = {
             "name": request.form.get("name"),
             "phone_number": request.form.get("phone_number"),
             "address": request.form.get("address"),
@@ -159,7 +165,7 @@ def edit_restaurant(restaurant_id):
         }
         # Updates the chosen restaurant with the new information
         mongo.db.restaurants.update(
-            {"_id": ObjectId(restaurant_id)}, existing_restaurant)
+            {"_id": ObjectId(restaurant_id)}, updated_restaurant)
         # Confirmation flash msg
         flash("Thanks for updating the restaurant info.")
         return redirect(url_for('restaurants'))
