@@ -29,8 +29,8 @@ def home():
 
 
 # create_account.html page
-@app.route("/create_account", methods=["GET", "POST"])
-def create_account():
+@app.route("/signup", methods=["GET", "POST"])
+def signup():
     if request.method == "POST":
         # Checks to see if unique username
         existing_user = mongo.db.users.find_one(
@@ -39,7 +39,7 @@ def create_account():
         # Prompt notifying user to select another username
         if existing_user:
             flash("Username already exists, please choose another")
-            return redirect(url_for('create_account'))
+            return redirect(url_for('signup'))
 
         # Checks password against password confirmation,
         # returns to create_account if don't match
