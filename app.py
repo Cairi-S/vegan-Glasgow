@@ -7,6 +7,7 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
+import re
 
 ADMIN_USER = 'admin'
 
@@ -60,7 +61,7 @@ def signup():
         # Creates session cookie for user and gives a prompt
         session["user"] = request.form.get("username").lower()
         flash("Welcome to vegan Glasgow!")
-        return redirect(url_for("user_profile", username=session["user"]))
+        return redirect(url_for("profile", username=session["user"]))
     return render_template("create_account.html")
 
 
@@ -80,7 +81,7 @@ def login():
                 flash("Hungry {}? Let's find somewhere to eat!".format(
                     request.form.get("username")))
                 return redirect(
-                    url_for("user_profile", username=session["user"]))
+                    url_for("profile", username=session["user"]))
             # If existing user but password incorrect gives a prompt
             # Returns to log in page
             else:
@@ -95,8 +96,8 @@ def login():
 
 
 # user_profile.html page
-@app.route("/user_profile/<username>", methods=["GET", "POST"])
-def user_profile(username):
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
     # Retrieves the session user's username from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -208,7 +209,7 @@ def edit_review(review_id):
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, existing_review)
         # Confirmation flash msg
         flash("Thanks! Your review has been updated.")
-        return redirect(url_for('user_profile', username=session['user']))
+        return redirect(url_for('profile', username=session['user']))
 
     # Finds the review with the corresponding id
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
@@ -231,7 +232,7 @@ def delete_review(review_id):
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     # Confirmation flash msg
     flash("Your review has been deleted")
-    return redirect(url_for('user_profile', username=session['user']))
+    return redirect(url_for('profile', username=session['user']))
 
 
 @app.route("/add_restaurant", methods=["GET", "POST"])
@@ -267,7 +268,7 @@ def add_restaurant():
         # flash message for successful add_restaurant
         flash("Restaurant added successfully")
         # returns the admin to the profile page
-        return redirect(url_for('user_profile', username=session['user']))
+        return redirect(url_for('profile', username=session['user']))
 
     return render_template("add_restaurant.html")
 
