@@ -35,7 +35,7 @@
                 {% if session.user %}
                   <li class="nav-item">
                     <a id="over-green-color" class="nav-link" 
-                    href="{{ url_for('profile', username=session['user']) }}">My Profile</a>
+                    href="{{ url_for('profile') }}">My Profile</a>
                   </li>
                   {% if session.user == "admin"|lower %}
                     <li class="nav-item">
