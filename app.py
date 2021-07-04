@@ -98,6 +98,9 @@ def login():
 # user_profile.html page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    if not session['user']:
+        return redirect(url_for('login'))
+
     # Retrieves the session user's username from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -271,6 +274,11 @@ def add_restaurant():
         return redirect(url_for('profile', username=session['user']))
 
     return render_template("add_restaurant.html")
+
+
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('404.html', error=error), 404
 
 
 if __name__ == "__main__":

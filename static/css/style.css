@@ -21,6 +21,17 @@
     border-radius: 10px;
 }
 
+.error-img {
+    height: auto; 
+    width: 100%;
+}
+
+.error-text {
+    text-align: center;
+    font-family: Muli;
+    color: #243119;
+}
+
 .view-rest-text-col { 
     padding: 0 20px 0;
 }
