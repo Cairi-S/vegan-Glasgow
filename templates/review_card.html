@@ -1,0 +1,16 @@
+<div class="col-sm-9 restaurant-review-info">
+    <!--Review data from DB-->
+    <hr>
+    <p><i class="fas fa-user"></i> {{ review.created_by }}</p>
+    <p><i class="fas fa-star"></i> {{ review.restaurant_rating }}</p>
+    <p><i class="fas fa-align-left"></i> {{ review.review }}</p>
+    <!-- Edit and delete reviews -->
+    <div class="row justify-content-evenly">
+        <div class="btn btn-danger profile-btn col-sm-5">
+            <a href="{{ url_for('delete_review', review_id=review._id) }}"><i class="fas fa-trash"></i> Delete</a>
+        </div>
+        <div class="btn btn-warning profile-btn col-sm-5">
+            <a href="{{ url_for('edit_review', review_id=review._id) }}"><i class="fas fa-pen"></i> Edit</a>
+        </div>
+    </div>
+</div>

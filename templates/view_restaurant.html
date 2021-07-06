@@ -88,13 +88,7 @@
                 {% for review in reviews %}
                     <!--Checking if restaurant name matches review resturant name from db-->
                     {% if restaurant.name == review.restaurant_name %}
-                    <div class="col-sm-9 restaurant-review-info">
-                        <!--Review data from DB-->
-                        <hr>
-                        <p><i class="fas fa-user"></i> {{ review.created_by }}</p>
-                        <p><i class="fas fa-star"></i> {{ review.restaurant_rating }}</p>
-                        <p><i class="fas fa-align-left"></i> {{ review.review }}</p>
-                    </div>
+                        {% include "review_card.html" %}
                         <!--Allowing review to be edited/deleted if created by the session user-->
                         {% if review.created_by == session.user|lower %}
                         <div class="col-sm-3 d-flex align-items-center">

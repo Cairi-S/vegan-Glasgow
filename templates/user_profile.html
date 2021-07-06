@@ -27,25 +27,7 @@
                 {% if reviews|length > 0 %}
                     <div class="row justify-content-evenly">
                         {% for review in reviews if session.user|lower == review.created_by|lower %}
-                            <div class="card review-card-style" style="width: 18rem;">
-                                <!-- Restaurant name -->
-                                <h5 class="restaurant-card-title"> {{ review.restaurant_name }}</h5>
-                                <!-- Restaurant rating -->
-                                <p class="review-card-title">Rating: </p>
-                                <p class="restaurant-card-text"> {{ review.restaurant_rating }} /5</p>
-                                <!-- Restaurant review body -->
-                                <p class="review-card-title">Review: </p>
-                                <p class="restaurant-card-text">
-                                    {{ review.review }}</p>
-                                <!-- Edit and delete reviews -->
-                                <div class="row justify-content-evenly">
-                                    <div class="btn btn-danger profile-btn col-sm-5">
-                                        <a href="{{ url_for('delete_review', review_id=review._id) }}"><i class="fas fa-trash"></i> Delete</a>
-                                    </div>
-                                    <div class="btn btn-warning profile-btn col-sm-5">
-                                        <a href="{{ url_for('edit_review', review_id=review._id) }}"><i class="fas fa-pen"></i> Edit</a>
-                                    </div>
-                                </div>
+                            {% include "review_card.html" %}
                             </div>
                         {% endfor %}
                     </div>
