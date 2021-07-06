@@ -8,7 +8,7 @@
 </div>
 <div class="col-sm-3 d-flex align-items-center">
     <div class="btn btn-success profile-btn">
-        <a href="#">
+        <a href="{{ url_for('delete_message', message_id=message._id) }}">
             <i class="fas fa-check"></i> Restaurant added
         </a>
     </div>
