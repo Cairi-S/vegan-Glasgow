@@ -1,0 +1,30 @@
+<div class="btn page-subtitle" for="btn-check-3">Admin Account</div>
+    
+    <div class="row justify-content-center ">
+        <h4 class="page-subtitle profile-subheading">User messages</h4>
+    </div>
+
+    <div class="col-sm-9 restaurant-review-info">
+        <!--Select user messages (contact page) from db and display here-->
+    </div>
+
+
+    <div class="row justify-content-center ">
+        <h4 class="page-subtitle profile-subheading">Add a Restaurant</h4>
+    </div>  
+    <div class="row justify-content-center">
+        <a href="{{ url_for('add_restaurant') }}" class="btn btn-success profile-btn col-sm-2">
+            <i class="fas fa-plus-circle"></i> 
+            Add a Restaurant
+        </a>
+    </div>
+
+    <div class="row justify-content-center ">
+        <h4 class="page-subtitle profile-subheading">Delete a Restaurant</h4>
+    </div>
+    
+    <div>
+        <button class="btn btn-danger profile-btn"><i class="fas fa-trash"></i> Delete</button>
+    </div>
+
+</div>
