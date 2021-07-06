@@ -3,9 +3,9 @@
     <div class="row g-0 justify-content-center ">
         <h4 class="page-subtitle profile-subheading">User messages</h4>
     </div>
-
-    <div class="col-sm-9 restaurant-review-info">
-        <!--Select user messages (contact page) from db and display here-->
+        {% for message in messages %}
+            {% include "message_card.html" %}
+        {% endfor %}
     </div>
 
 

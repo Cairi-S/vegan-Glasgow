@@ -1,0 +1,15 @@
+<div class="col-sm-9 restaurant-review-info">
+    <!--Review data from DB-->
+    <hr>
+    <p><i class="fas fa-user"></i> {{ message.created_by }}</p>
+    <p><i class="fas fa-home"></i> {{ message.restaurant_name }}</p>
+    <p><i class="fas fa-map-marker-alt"></i> {{ message.location }}</p>
+    <p><i class="fas fa-align-left"></i> {{ message.message }}</p>
+</div>
+<div class="col-sm-3 d-flex align-items-center">
+    <div class="btn btn-success profile-btn">
+        <a href="#">
+            <i class="fas fa-check"></i> Restaurant added
+        </a>
+    </div>
+</div>
