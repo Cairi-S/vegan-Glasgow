@@ -112,13 +112,15 @@ def profile():
         {"username": session["user"]})["username"]
     reviews = list(mongo.db.reviews.find(
         {"created_by": session["user"]}))
+    messages = mongo.db.messages.find()
 
     # Makes sure the users page is only accessible if login details correct
     if session["user"]:
         return render_template(
             "user_profile.html",
             username=username,
-            reviews=reviews)
+            reviews=reviews,
+            messages=messages)
 
     # Redirects back to login if login details correct
     return redirect(url_for('login'))
