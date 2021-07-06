@@ -301,6 +301,34 @@ def delete_review(review_id):
     return redirect(url_for('profile', username=session['user']))
 
 
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    if not session["user"]:
+        flash("Admin, how did you get here? Don't send a message to yourself!")
+    else:
+        if request.method == "POST":
+            existing_restaurant = mongo.db.restaurants.find_one(
+                {"name": request.form.get("restaurant_name")})
+            if existing_restaurant:
+                flash("Thanks, we've already added that restaurant")
+                return redirect(url_for('contact'))
+
+            # Creates a new instance of a message
+            new_message = {
+                "created_by": session["user"],
+                "restaurant_name": request.form.get("new_restaurant_name"),
+                "location": request.form.get("new_restaurant_location"),
+                "message": request.form.get("message")
+            }
+            # Adds the new message to the db
+            mongo.db.messages.insert_one(new_message)
+            # Confirmation flash msg
+            flash("Thanks! Your message has been sent.")
+            return redirect(url_for('contact'))
+
+    return render_template("contact.html")
+
+
 @app.errorhandler(404)
 def not_found(error):
     return render_template('404.html', error=error), 404
