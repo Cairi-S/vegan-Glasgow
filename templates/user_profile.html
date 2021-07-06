@@ -25,9 +25,17 @@
                     <h4 class="profile-subheading">Existing reviews</h4>
                 </div>
                 {% if reviews|length > 0 %}
-                    <div class="row justify-content-evenly">
+                    <div class="row g-0 justify-content-evenly">
                         {% for review in reviews if session.user|lower == review.created_by|lower %}
                             {% include "review_card.html" %}
+                            <!-- Edit and delete reviews -->
+                            <div class="col-sm-3 d-flex justify-content-around align-items-center">
+                                <div class="btn btn-danger profile-btn">
+                                    <a href="{{ url_for('delete_review', review_id=review._id) }}"><i class="fas fa-trash"></i> Delete</a>
+                                </div>
+                                <div class="btn btn-warning profile-btn">
+                                    <a href="{{ url_for('edit_review', review_id=review._id) }}"><i class="fas fa-pen"></i> Edit</a>
+                                </div>
                             </div>
                         {% endfor %}
                     </div>
@@ -41,23 +49,7 @@
                     </div>
                 {% endif %}
     {% else %}
-        <div class="btn page-subtitle" for="btn-check-3">Admin Account</div>
-        
-        <div class="row justify-content-center">
-            <a href="{{ url_for('add_restaurant') }}" class="btn btn-success profile-btn col-sm-2">
-                <i class="fas fa-plus-circle"></i> 
-                Add a Restaurant
-            </a>
-        </div>
-
-        <div class="row justify-content-center ">
-            <h4 class="page-subtitle profile-subheading">Delete a Restaurant</h4>
-        </div>
-        
-        <div>
-            <button class="btn btn-danger profile-btn"><i class="fas fa-trash"></i> Delete</button>
-        </div>
-        </div>
+        {% include "admin_profile.html" %}
 
 
     {% endif %}
