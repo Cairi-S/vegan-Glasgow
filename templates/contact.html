@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Page title -->
+<h2 class="page-title">Send us a message</h2>
+
+<!-- Container for form -->
+<div class="form-container">
+    <!-- Add review form -->
+    <form class="review-form" method="POST" action="#">
+        <!-- Add restaurant name -->
+        <div class="row g-0">
+            <label class="form-instructions review-form-items" for="new_restaurant_name">
+                What restaurant would you like to be added to Vegan Glasgow?
+            </label>
+            <input type="text" class="form-control" id="new_restaurant_name" name="new_restaurant_name" 
+            aria-describedby="Ask us to add a new restaurant" placeholder="Restaurants name" required>
+        </div>
+        <div class="row g-0">
+            <label class="form-instructions review-form-items" for="new_restaurant_area">
+                Where in Glasgow is this restaurant? (so we add the right one!)
+            </label>
+            <select class="custom-select form-spacing col-sm-4 review-form-items" id="open_times" name="open_times" required>
+                <option class="form-instructions" disabled selected>So we find the right restaurant, select an area</option>
+                <option value="choose a popular location" disabled>Choose a popular location...</option>
+                <option value="City Center">City Center</option>
+                <option value="Merchant City">Merchant City</option>
+                <option value="West End">West End</option>
+                <option value="Finnieston">Finnieston</option>
+                <option value="Southside">Southside</option>
+                <option value="...or a general area" disabled>...or a general area</option>
+                <option value="NORTH">NORTH</option>
+                <option value="EAST">EAST</option>
+                <option value="WEST">WEST</option>
+                <option value="SOUTH EAST">SOUTH EAST</option>
+                <option value="SOUTH WEST">SOUTH WEST</option>
+            </select>
+        </div>
+        <!-- Say why the new restaurant should be added -->
+        <div class="row g-0">
+            <label class="form-instructions review-form-items form-spacing" for="review">Why do you think this restaurant should be added?</label>
+            <textarea type="text" class="form-control form-spacing" id="review" name="review" placeholder="Tell us why you think vegans in Glasgow should know about this restaurant" required></textarea>
+        </div>
+        <!-- Restaurant review buttons submit and cancel -->
+        <button type="submit" class="btn btn-success review-form-items"> <i class="fas fa-paper-plane"> Send my message</i></button>
+        <button type="submit" class="btn btn-danger review-form-items">Cancel</button>
+    </form>
+    <!-- end of form -->
+</div>
+<!-- end of container -->
+
+{% endblock %}
