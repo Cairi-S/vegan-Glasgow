@@ -331,6 +331,20 @@ def contact():
     return render_template("contact.html")
 
 
+@app.route("/contact/<message_id>/delete")
+def delete_message(message_id):
+    if not session['user'] == ADMIN_USER:
+        flash("Whoops, the page you are looking for is for Admin only")
+        return redirect(url_for('profile', username=session['user']))
+    else:
+        # Deletes the review with corresponding id from db
+        mongo.db.messages.remove({"_id": ObjectId(message_id)})
+        # Confirmation flash msg
+        flash(
+            "Task complete, thanks for adding the restaurant to our database")
+        return redirect(url_for('profile', username=session['user']))
+
+
 @app.errorhandler(404)
 def not_found(error):
     return render_template('404.html', error=error), 404
