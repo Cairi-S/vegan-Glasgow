@@ -11,60 +11,65 @@
   </head>
   <body>
     <header>
-      <!-- Navbar -->
+      <!-- NAVBAR -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid navbar-style">
-            <!-- Logo -->
-            <a class="navbar-brand" href="{{ url_for('home') }}">
-                <h1 id="over-green-color">Vegan Glasgow</h1>
-              </a>
-            <!-- Dropdown menu for mobile devices -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-lg-flex justify-content-end nav-menu" id="navbarNav">
-              <!-- Navbar menu -->
-              <ul id="over-green-color" class="navbar-nav">
+        <div class="container-fluid navbar-style">
+          <!-- Logo -->
+          <a class="navbar-brand" href="{{ url_for('home') }}">
+            <h1 id="logo">Vegan Glasgow</h1>
+          </a>
+
+          <!-- Dropdown menu for mobile devices -->
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <div class="collapse navbar-collapse d-lg-flex justify-content-end nav-menu" id="navbarNav">
+
+            <!-- Navbar menu -->
+            <ul id="navbar-menu-items" class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('restaurants') }}">Restaurants</a>
+              </li>
+
+              <!-- Logged in user specific Navbar menu items -->
+              {% if session.user %}
                 <li class="nav-item">
-                  <a id="over-green-color" class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                  <a class="nav-link" href="{{ url_for('profile') }}">My Profile
+                  </a>
                 </li>
-                <li class="nav-item">
-                  <a id="over-green-color" class="nav-link" href="{{ url_for('restaurants') }}">Restaurants</a>
-                </li>
-                <!-- Logged in user specific Navbar menu items -->
-                {% if session.user %}
+                {% if session.user == "admin"|lower %}
                   <li class="nav-item">
-                    <a id="over-green-color" class="nav-link" 
-                    href="{{ url_for('profile') }}">My Profile</a>
+                    <a class="nav-link" href="{{ url_for('add_restaurant') }}">Add Restaurant</a>
                   </li>
-                  {% if session.user == "admin"|lower %}
-                    <li class="nav-item">
-                      <a id="over-green-color" class="nav-link" 
-                      href="{{ url_for('add_restaurant') }}">Add Restaurant</a>
-                    </li>
-                  {% else %}
-                    <li class="nav-item">
-                      <a id="over-green-color" class="nav-link" 
-                      href="{{ url_for('add_review') }}">Add Review</a>
-                    </li>
-                  {% endif %}
-                  <li class="nav-item">
-                    <a id="over-green-color" class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
-                  </li>
-                <!-- Not logged in user specific Navbar menu items -->
                 {% else %}
                   <li class="nav-item">
-                    <a id="over-green-color" class="nav-link" href="{{ url_for('signup') }}">Create Account</a>
-                  </li>
-                  <li class="nav-item">
-                    <a id="over-green-color" class="nav-link" href="{{ url_for('login') }}">Log In</a>
+                    <a class="nav-link" href="{{ url_for('add_review') }}">Add Review</a>
                   </li>
                 {% endif %}
-              </ul>
-            </div>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+                  </li>
+
+              <!-- Not logged in user specific Navbar menu items -->
+              {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('signup') }}">Create Account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
+                </li>
+              {% endif %}
+            </ul>
           </div>
-        </nav>
-        
+        </div>
+      </nav>
+        <!--END OF NAVBAR-->
     </header>
     
     <!-- Flashed messages -->
@@ -88,30 +93,32 @@
     </main>
     <!-- Footer -->
     <footer class="footer row g-0 d-flex justify-content-between">
-          <!-- Copyright Statement -->
-          <div class="col-md-3 d-flex justify-content-center align-items-center">
-            <span id="over-green-color" class="footer-text"><i class="far fa-copyright"></i> Copyright 2021</span>
-          </div>
-          <!-- Contact page link -->
-          <div class="col-md-3 d-flex justify-content-center align-items-center">
-            <span>
-              <a id="over-green-color" href="{{ url_for('contact') }}"><i class="fas fa-comment"></i></a>
-            </span>
-          </div>
-          <!-- Socials -->
-          <div class="col-md-3 d-flex justify-content-center align-items-center">
-            <span>
-              <a id="over-green-color" class="footer-socials" href="https://www.facebook.com/">
-                <i class="fab fa-facebook-square"></i>
-              </a>
-              <a id="over-green-color" class="footer-socials" href="https://www.instagram.com/">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a id="over-green-color" class="footer-socials" href="https://twitter.com/">
-                <i class="fab fa-twitter-square"></i>
-              </a>
-            </span>
-          </div>
+      <!-- Copyright Statement -->
+      <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <span class="footer-text"><i class="far fa-copyright"></i> Copyright 2021</span>
+      </div>
+      <!-- Contact page link -->
+      <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <span>
+          <a class="footer-icons" href="{{ url_for('contact') }}">
+            <i class="fas fa-comment"></i>
+          </a>
+        </span>
+      </div>
+      <!-- Socials -->
+      <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <span class="social-links">
+          <a class="footer-icons footer-socials" href="https://www.facebook.com/">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a class="footer-icons footer-socials" href="https://www.instagram.com/">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a class="footer-icons footer-socials" href="https://twitter.com/">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+        </span>
+      </div>
 
     </footer>
 
