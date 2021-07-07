@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Muli&display=swap");
 
 .banner-img {
@@ -10,19 +17,21 @@
 
 .card-img-size {
     height: 300px;
+    -o-object-fit: cover;
     object-fit: cover;
     border-radius: 10px;
 }
 
 .img-size {
     height: 300px;
+    -o-object-fit: cover;
     object-fit: cover;
     border: 1px solid #243119;
     border-radius: 10px;
 }
 
 .error-img {
-    height: auto; 
+    height: auto;
     width: 100%;
 }
 
@@ -32,10 +41,9 @@
     color: #243119;
 }
 
-.view-rest-text-col { 
+.view-rest-text-col {
     padding: 0 20px 0;
 }
-
 
 /*.img-col-height {
     height: 54vh;
@@ -66,6 +74,7 @@
 }
 
 #over-green-color,
+.btn-success a,
 .btn-danger a,
 .btn-danger i,
 .footer-socials {
@@ -136,8 +145,7 @@
     color: #243119;
 }
 
-.socials i:hover,
-.profile-btn a {
+.socials i:hover {
     color: #e0e0e0;
 }
 
@@ -165,7 +173,7 @@
     bottom: 0;
     width: 100%;
     height: 72px;
-  }
+}
 
 /* ------------ All footer text */
 .footer-text,
@@ -203,7 +211,7 @@
 
 .flash-prompts h5 {
     line-height: 3;
-    background-color: #96BE8C;
+    background-color: #96be8c;
     text-align: center;
 }
 
@@ -212,7 +220,7 @@
     margin-bottom: 16px;
     text-align: center;
     font-size: 2.4rem;
-    background-color: #96BE8C;
+    background-color: #96be8c;
     border: 2px solid #e0e0e0;
     border-radius: 10px;
     text-align: center;
@@ -256,7 +264,7 @@
 .review-card-style {
     border: 2px solid #e0e0e0;
     border-radius: 10px;
-    background-color: #96BE8C;
+    background-color: #96be8c;
 }
 
 .restaurant-card-text {
@@ -268,7 +276,6 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-
 
 /* -- FORMS -- */
 .form-container {
@@ -300,7 +307,7 @@
     font-size: 2.4rem;
     text-align: center;
     text-decoration: underline;
-    text-underline-position: below;
+    text-underline-position: under;
 }
 
 .restaurant-card-title {
@@ -333,7 +340,7 @@
 }
 
 .profile-search-prompt {
-    margin:50px 0;
+    margin: 50px 0;
     text-align: center;
 }
 
@@ -376,7 +383,7 @@
 .restaurant-info-card {
     background-color: white;
     border: 1px solid #243119;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .restaurant-contact-card i,
@@ -392,7 +399,7 @@
 /* --- BUTTONS -- */
 
 .profile-btn {
-    margin:40px 0;
+    margin: 40px 0;
     border: 2px solid #e0e0e0;
     border: 2px solid #e0e0e0;
 }
@@ -403,7 +410,7 @@
 
 .form-button {
     margin-bottom: 10px;
-    background-color: #96BE8C;
+    background-color: #96be8c;
     border: 2px solid #a0c497;
 }
 
@@ -419,7 +426,7 @@
 }
 
 .modal-header {
-    background-color: #96BE8C;
+    background-color: #96be8c;
 }
 
 .modal-footer {
