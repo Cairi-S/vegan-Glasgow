@@ -1,47 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
 <!-- Create account container -->
-    <div class="row g-0 form-container">
-      <!-- Header -->
-        <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
-            <h3 class="form-header">Create Account</h3>
-        </div>
-        <!-- FORM STARTS - CREATE ACCOUNT -->
-        <form class="col-md-6 offset-md-3 col-sm-8 offset-sm-2" method="POST" action="{{ url_for('signup') }}">
-          <!-- Username input -->
-            <div class="mb-3">
-              <label for="username" class="form-label form-instructions"><i class="fas fa-user-plus"></i>  Username</label>
-              <input type="text" class="form-control" id="username" name="username" minlength="5" maxlength="12" aria-describedby="usernameHelp" required>
-              <div id="usernameHelpBlock" class="form-text form-instructions">
-                Your Username must be 5-12 characters long.
-              </div>
+  <div class="row g-0 form-container">
+    <!-- Header -->
+      <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+          <h3 class="form-header">Create Account</h3>
+      </div>
+      <!-- FORM STARTS - CREATE ACCOUNT -->
+      <form class="col-md-6 offset-md-3 col-sm-8 offset-sm-2" method="POST" action="{{ url_for('signup') }}">
+        <!-- Username input -->
+          <div class="mb-3">
+            <label for="username" class="form-label form-instructions"><i class="fas fa-user-plus"></i>  Username</label>
+            <input type="text" class="form-control" id="username" name="username" minlength="5" maxlength="12" aria-describedby="usernameHelp" required>
+            <div id="usernameHelp" class="form-text form-instructions">
+              Your Username must be 5-12 characters long.
             </div>
-            <!-- Password input -->
-            <div class="mb-3">     
-              <label for="password" class="form-label form-instructions"><i class="fas fa-user-lock"></i> Password</label>
-              <input type="password" class="form-control" id="password" name="password" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" aria-describedby="passwordHelp" required>
-              <div id="passwordHelpBlock" class="form-text form-instructions">
-                  Your Password must be at least 6 characters long and contain one number, one uppercase and one lowercase letter.
-              </div>
-            </div>
-            <!-- Confirm Password input -->
-            <div class="mb-3">
-              <label for="confirm-password" class="form-label form-instructions"><i class="fas fa-check-double"></i> Confirm Password</label>
-              <input type="password" class="form-control" id="confirm-password" name="confirm-password" aria-describedby="confirmPasswordHelp" required>
-            </div>
-            <!-- Submit button input -->
-            <button type="submit" class="btn form-instructions form-button"><i class="fas fa-plus-circle"></i> 
-              Create My Account
-            </button>
-        </form>
-        <!-- FORM ENDS -->
-        <div class="row">
-          <!-- Link to Login page for pre-existing members -->
-          <div class="col-sm-12 form-instructions">
-            <p>Already a member? <a href="{{ url_for('login') }}"> Log In!</a></p>
           </div>
+          <!-- Password input -->
+          <div class="mb-3">     
+            <label for="password" class="form-label form-instructions"><i class="fas fa-user-lock"></i> Password</label>
+            <input type="password" class="form-control" id="password" name="password" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" aria-describedby="passwordHelp" required>
+            <div id="passwordHelp" class="form-text form-instructions">
+                Your Password must be at least 6 characters long and contain one number, one uppercase and one lowercase letter.
+            </div>
+          </div>
+          <!-- Confirm Password input -->
+          <div class="mb-3">
+            <label for="confirm-password" class="form-label form-instructions"><i class="fas fa-check-double"></i> Confirm Password</label>
+            <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+          </div>
+          <!-- Submit button input -->
+          <button type="submit" class="btn form-instructions form-button">
+            <i class="fas fa-plus-circle"></i> Create My Account
+          </button>
+      </form>
+      <!-- FORM ENDS -->
+      <div class="row">
+        <!-- Link to Login page for pre-existing members -->
+        <div class="col-sm-12 form-instructions">
+          <p>Already a member? 
+            <a href="{{ url_for('login') }}"> Log In!</a>
+          </p>
         </div>
-    </div>
+      </div>
+  </div>
     
 
 {% endblock %}
