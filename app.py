@@ -227,8 +227,8 @@ def delete_restaurant(restaurant_id):
         flash("Whoops, the page you are looking for is for Admin only")
         return redirect(url_for('profile', username=session['user']))
     else:
-        # Deletes the review with corresponding id from db
-        mongo.db.reviews.remove({"_id": ObjectId(restaurant_id)})
+        # Deletes the restaurant with corresponding id from db
+        mongo.db.restaurants.remove({"_id": ObjectId(restaurant_id)})
         # Confirmation flash msg
         flash("This restaurant has been deleted")
         return redirect(url_for('profile', username=session['user']))
