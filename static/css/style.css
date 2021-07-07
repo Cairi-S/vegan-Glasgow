@@ -56,6 +56,8 @@
 .profile-search-prompt,
 .profile-search-prompt a,
 .profile-subheading,
+.admin-profile-text,
+.admin-profile-text a,
 .no-review-text,
 .no-review-text a,
 .btn-warning a,
@@ -90,6 +92,7 @@
 .form-instructions a,
 .restaurant-card-text,
 .profile-search-prompt,
+.admin-profile-text,
 .no-review-text,
 .no-review-text a {
     font-family: Muli;
@@ -133,7 +136,8 @@
     color: #243119;
 }
 
-.socials i:hover{
+.socials i:hover,
+.profile-btn a {
     color: #e0e0e0;
 }
 
@@ -164,7 +168,8 @@
   }
 
 /* ------------ All footer text */
-.footer-text {
+.footer-text,
+.admin-profile-text {
     font-size: 1.2rem;
 }
 
@@ -217,6 +222,15 @@
     margin: 0 0 40px;
     font-size: 2rem;
     text-align: center;
+}
+
+.admin-profile-text {
+    text-align: center;
+}
+
+.admin-profile-text a {
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 /* -- CARDS FOR RESTAURANTS -- */
