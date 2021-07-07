@@ -7,9 +7,34 @@
     <p><i class="fas fa-align-left"></i> {{ message.message }}</p>
 </div>
 <div class="col-sm-3 d-flex align-items-center">
-    <div class="btn btn-success profile-btn">
-        <a href="{{ url_for('delete_message', message_id=message._id) }}">
-            <i class="fas fa-check"></i> Restaurant added
-        </a>
+    <!-- Modal launch - code adapted from Bootstrap 5 -->
+    <button type="button" class="btn btn-success profile-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="fas fa-check"></i> Restaurant added
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Please confirm you have added this restaurant.
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                    <div class="btn btn-success profile-btn modal-btn">
+                        <a href="{{ url_for('delete_message', message_id=message._id) }}">
+                            <i class="fas fa-check"></i> Restaurant added
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!--end modal-->
 </div>
