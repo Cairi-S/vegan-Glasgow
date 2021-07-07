@@ -411,3 +411,22 @@
 .restaurant-edit-btn a {
     text-decoration: none;
 }
+
+/* --- MODALS -- */
+
+.modal-content {
+    border: 2px solid #e0e0e0;
+}
+
+.modal-header {
+    background-color: #96BE8C;
+}
+
+.modal-footer {
+    background-color: #e0e0e0;
+}
+
+.modal-btn {
+    margin: 40px 6px;
+    border: 1px solid #e0e0e0;
+}

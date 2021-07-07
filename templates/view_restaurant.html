@@ -130,7 +130,7 @@
                                 <a href="{{ url_for('edit_restaurant', restaurant_id=restaurant._id)}}"><i class="fas fa-pen"></i> Edit Info</a>
                             </div>
                             <!--Delete btn link-->
-                            <!-- Modal launch-->
+                            <!-- Modal launch - code adapted from Bootstrap 5 -->
                             <button type="button" class="btn btn-danger profile-btn col-sm-6" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <i class="fas fa-trash"></i> Delete Restaurant
                               </button>
@@ -146,11 +146,11 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                         </button>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    <div class="modal-footer justify-content-center">
+                                        <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">
                                             Close
                                         </button>
-                                        <div class="btn btn-danger profile-btn">
+                                        <div class="btn btn-danger profile-btn modal-btn">
                                             <a href="{{ url_for('delete_restaurant', restaurant_id=restaurant._id) }}">
                                                 <i class="fas fa-trash"></i> Confirm Delete
                                             </a>
