@@ -1,23 +1,23 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
 {% block content %}
 
-    <!-- Image -->
-    <div class="d-flex justify-content-center align-items-end">
-        <img class="banner-img" src="{{ url_for('static', filename='images/glasgow-clyde.jpeg') }}" alt="">
+<!-- Image -->
+<div class="d-flex justify-content-center align-items-end">
+    <img class="banner-img" src="{{ url_for('static', filename='images/glasgow-clyde.jpeg') }}" alt="Ariel view of the River Clyde and City of Glasgow" />
+</div>
+<!-- Tagline -->
+<h2 class="tagline">Vegan recommendations for Glasgows lively culinary scene.</h2>
+
+<h3 class="page-title">Our recommendations</h3>
+<div class="row g-0 row-cols-sm-2 row-cols-md-4 d-flex justify-content-evenly">
+    <!-- Generates a card for each restaurant in 'restaurants' db -->
+    {% for restaurant in restaurants if restaurant.our_recommendation == "on" %}
+    <div class="col-4 d-flex justify-content-center info-card-cols">
+        <!-- Displays restaurants that have our_recommendation set to "on"(true) -->
+        {% include "info_card.html" %}
     </div>
-    <!-- Tagline -->
-    <h2 class="tagline">Vegan recommendations for Glasgows lively culinary scene.</h2>
-        
-    <h2 class="page-title">Our recommendations</h2>
-    <div class="row g-0 row-cols-sm-2 row-cols-md-4 d-flex justify-content-evenly">
-        <!-- Generates a card for each restaurant in 'restaurants' db -->
-        {% for restaurant in restaurants if restaurant.our_recommendation == "on" %}
-            <div id="info-card-cols" class="col-4 d-flex justify-content-center">
-                <!-- Displays restaurants that have our_recommendation set to "on"(true) -->
-                {% include "info_card.html" %}
-            </div>
-        {% endfor %}
-    </div>
+    {% endfor %}
+</div>
 
 {% endblock %}
