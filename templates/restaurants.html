@@ -5,11 +5,11 @@
 <!-- Tagline -->
 <h2 class="tagline">Vegan recommendations for Glasgows lively culinary scene.</h2>
     
-<h2 class="page-title">Restaurants</h2>
+<h3 class="page-title">Restaurants</h3>
 <div class="row g-0 row-cols-sm-2 row-cols-md-4 d-flex justify-content-around">
     <!-- Generates a card for each restaurant in 'restaurants' db -->
     {% for restaurant in restaurants %}
-    <div id="info-card-cols" class="col-4 d-flex justify-content-center">
+    <div class="col-4 d-flex justify-content-center info-card-cols">
         {% include "info_card.html" %}
     </div>
     {% endfor %}
