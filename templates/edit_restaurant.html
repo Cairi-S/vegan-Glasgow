@@ -16,7 +16,8 @@
         <!-- Restaurant phone number -->
         <div class="form-group ">
             <label class="form-instructions review-form-items" for="phone_number">Restaurant contact number</label>
-            <input type="tel" class="form-control form-spacing" id="phone_number" name="phone_number" value="{{ restaurant.phone_number }}" placeholder="Restaurant contact telephone number..." required>
+            <input type="tel" class="form-control form-spacing" id="phone_number" name="phone_number" 
+            value="{{ restaurant.phone_number }}" placeholder="Restaurant contact telephone number..." required>
         </div>
         <!-- Restaurant street address -->
         <div class="form-group ">
@@ -34,7 +35,7 @@
                 How expensive is this restaurant?
             </label>
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="price_range" name="price_range" required>
-                <option class="form-instructions" disabled selected>
+                <option class="form-instructions" value="" disabled selected>
                     Select {{ restaurant.price_range }} to confirm/Choose a new price range...
                 </option>
                 <option value="£">£ Cheap</option>
@@ -53,7 +54,7 @@
                 What times is this restaurant open?
             </label>
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="open_times" name="open_times" required>
-                <option class="form-instructions" disabled selected>
+                <option class="form-instructions" value="" disabled selected>
                     Select {{ restaurant.open_times }} to confirm hours/Choose a new mealtime...
                 </option>
                 <option value="Breakfast">Breakfast</option>
@@ -69,8 +70,12 @@
         </div>
         <!-- Restaurant summary -->
         <div class="form-group">
-            <label class="form-instructions review-form-items form-spacing" for="summary">Whats the inside scoop on this restaurant?</label>
-            <textarea type="text" class="form-control form-spacing" id="summary" name="summary" value="{{ restaurant.summary }}" placeholder="Give us the scoop..." required></textarea>
+            <label class="form-instructions review-form-items form-spacing" for="summary">
+                Whats the inside scoop on this restaurant?
+            </label>
+            <textarea class="form-control form-spacing" id="summary" name="summary" placeholder="Give us the scoop..." required> 
+                {{- restaurant.summary -}} 
+            </textarea>
         </div>
         <!-- Admin restaurant recommendation radio button -->
 
@@ -82,12 +87,12 @@
         <!-- Restaurant image url -->
         <div class="form-group ">
             <label class="form-instructions review-form-items" for="restaurant_img_url">Restaurant Image</label>
-            <input type="text" class="form-control form-spacing" id="restaurant_img_url" name="restaurant_img_url" value="{{ restaurant.restaurant_img_url }}" placeholder="Add the URL of the image to add...">
+            <input type="text" class="form-control form-spacing" id="restaurant_img_url" name="restaurant_img_url" 
+            value="{{ restaurant.restaurant_img_url }}" placeholder="Add the URL of the image to add...">
         </div>
         <!-- Restaurant review buttons submit and cancel -->
         <button type="submit" class="btn btn-success review-form-items">Confirm Edit</button>
-        <a href="{{ url_for('profile') }}" 
-        class="btn btn-danger review-form-items">Cancel</a>
+        <a href="{{ url_for('profile') }}" class="btn btn-danger review-form-items">Cancel</a>
     </form>
     <!-- end of form -->
 </div>
