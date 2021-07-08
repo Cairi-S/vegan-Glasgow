@@ -15,7 +15,7 @@
             </label>
             <!-- Select restaurant dropdown -->
             <select class="custom-select form-spacing col-sm-4" id="restaurant_name" name="restaurant_name" required>
-                <option class="form-instructions" disabled selected >Select restaurant</option>
+                <option class="form-instructions" value="" disabled selected >Select restaurant</option>
                 <!-- Select restaurant iteration for dropdown -->
                 {% for restaurant in restaurants %}
                     <option value="{{ restaurant.name }}">
@@ -31,7 +31,7 @@
             </label>
             <!-- Restaurant rating dropdown -->
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="restaurant_rating" name="restaurant_rating" required>
-                <option class="form-instructions" disabled selected>Choose your rating</option>
+                <option class="form-instructions" value="" disabled selected>Choose your rating</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -42,7 +42,7 @@
         <!-- Restaurant review body -->
         <div class="form-group">
             <label class="form-instructions review-form-items form-spacing" for="review">What do you think?</label>
-            <textarea type="text" class="form-control form-spacing" id="review" name="review" placeholder="Tell us your highs and lows..." required></textarea>
+            <textarea class="form-control form-spacing" id="review" name="review" placeholder="Tell us your highs and lows..." required></textarea>
         </div>
         <!-- Restaurant review buttons submit and cancel -->
         <button type="submit" class="btn btn-success review-form-items">Add My Review</button>
