@@ -15,14 +15,14 @@
                 What restaurant would you like to be added to Vegan Glasgow?
             </label>
             <input type="text" class="form-control" id="new_restaurant_name" name="new_restaurant_name" 
-            aria-describedby="Ask us to add a new restaurant" placeholder="Restaurants name" required>
+            placeholder="Restaurants name" required>
         </div>
         <div class="row g-0">
             <label class="form-instructions review-form-items" for="new_restaurant_location">
                 Where in Glasgow is this restaurant? (so we add the right one!)
             </label>
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="new_restaurant_location" name="new_restaurant_location" required>
-                <option class="form-instructions" disabled selected>So we find the right restaurant, select an area</option>
+                <option class="form-instructions" value="" disabled selected>So we find the right restaurant, select an area</option>
                 <option value="choose a popular location" disabled>Choose a popular location...</option>
                 <option value="City Center">City Center</option>
                 <option value="Merchant City">Merchant City</option>
@@ -39,12 +39,16 @@
         </div>
         <!-- Say why the new restaurant should be added -->
         <div class="row g-0">
-            <label class="form-instructions review-form-items form-spacing" for="message">Why do you think this restaurant should be added?</label>
-            <textarea type="text" class="form-control form-spacing" id="message" name="message" 
+            <label class="form-instructions review-form-items form-spacing" for="message">
+                Why do you think this restaurant should be added?
+            </label>
+            <textarea class="form-control form-spacing" id="message" name="message" 
             placeholder="Tell us why you think vegans in Glasgow should know about this restaurant" required></textarea>
         </div>
         <!-- Restaurant review buttons submit and cancel -->
-        <button type="submit" class="btn btn-success review-form-items"> <i class="fas fa-paper-plane"> Send my message</i></button>
+        <button type="submit" class="btn btn-success review-form-items"> 
+            <i class="fas fa-paper-plane"> Send my message</i>
+        </button>
         <button type="submit" class="btn btn-danger review-form-items">Cancel</button>
     </form>
     <!-- end of form -->
