@@ -34,7 +34,7 @@
                 How expensive is this restaurant?
             </label>
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="price_range" name="price_range" required>
-                <option class="form-instructions" disabled selected>Choose a price rating...</option>
+                <option class="form-instructions" value="" selected disabled>Choose a price rating...</option>
                 <option value="£">£ Cheap</option>
                 <option value="££">££ Medium</option>
                 <option value="£££">£££ Expensive</option>
@@ -51,7 +51,7 @@
                 What times is this restaurant open?
             </label>
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="open_times" name="open_times" required>
-                <option class="form-instructions" disabled selected>Select a mealtime...</option>
+                <option class="form-instructions" value="" disabled selected>Select a mealtime...</option>
                 <option value="Breakfast">Breakfast</option>
                 <option value="Brunch">Brunch</option>
                 <option value="Breakfast">Breakfast and Lunch</option>
@@ -65,16 +65,17 @@
         </div>
         <!-- Restaurant summary -->
         <div class="form-group">
-            <label class="form-instructions review-form-items form-spacing" for="summary">Whats the inside scoop on this restaurant?</label>
-            <textarea type="text" class="form-control form-spacing" id="summary" name="summary" placeholder="Give us the scoop..." required></textarea>
+            <label class="form-instructions review-form-items form-spacing" for="summary">
+                Whats the inside scoop on this restaurant?
+            </label>
+            <textarea class="form-control form-spacing" id="summary" name="summary" placeholder="Give us the scoop..." required>
+            </textarea>
         </div>
         <!-- Admin restaurant recommendation radio button -->
-
         <div class="form-check form-switch form-spacing">
             <label class="form-check-label form-instructions" for="our_recommendation"> is a veganGlasgow recommended restaurant</label>
             <input class="form-check-input" type="checkbox" id="our_recommendation" name="our_recommendation">
         </div>
-
         <!-- Restaurant image url -->
         <div class="form-group ">
             <label class="form-instructions review-form-items" for="restaurant_img_url">Restaurant Image</label>
@@ -82,8 +83,7 @@
         </div>
         <!-- Restaurant review buttons submit and cancel -->
         <button type="submit" class="btn btn-success review-form-items">Add This Restaurant</button>
-        <a href="{{ url_for('profile') }}" 
-        class="btn btn-danger review-form-items">Cancel</a>
+        <a href="{{ url_for('profile') }}" class="btn btn-danger review-form-items">Cancel</a>
     </form>
     <!-- end of form -->
 </div>
