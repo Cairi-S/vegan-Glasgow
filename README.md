@@ -1,59 +1,254 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Cairi-S,
+## Vegan Glasgow ##
+I love food. So as a vegetarian with a dairy allergy I’m an enforced vegan and am always on the look out for restaurant recommendations in my local area that can cater to my dietary requirements. I’ll be honest, when dining out vegetarian options can be limited - we’ve all been served a mushy risotto or, my hands down worst meal, a plate of boiled cauliflower and potatoes (which the restaurant charged £10 for).
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+These personal experiences inspired me to create (insert name here), for locals and visitors to my home city of Glasgow, to share their experiences and help take the guess work out of finding a great vegan meal.
 
-## Gitpod Reminders
+### GOALS ###
+#### VISITOR GOALS ####
+Target audience:
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- Vegans, vegetarians or people who would like to eat a more plant-based diet. - Self-proclaimed ‘foodies’.
+- People who live in the Glasgow area.
+- People who are visiting Glasgow or are planning a trip to the city.
 
-`python3 -m http.server`
+#### USER GOALS ####
+- Have somewhere to search for restaurant recommendations. - Explore the amazing food scene of the city of Glasgow.
+- Be able to leave reviews for other users to help them.
 
-A blue button should appear to click: _Make Public_,
+Specific user goals:
 
-Another blue button should appear to click: _Open Browser_.
+- Find recommendations on menu items.
+- Find information on the Type of food served ie/ Italian, Traditional Scottish, Japanese, Fusion. - Find out whether the kitchen is purely vegan.
+- Find out whether there is a full vegan menu or only a few options.
+- Find out whether vegan alcoholic drinks are available.
+- Find whether the restaurant is family friendly.
+- Find out the price range.
+- Find out whether vegan options are offered across 3 courses, as vegan desserts can be rare. - Find out the restaurant style ie/ fast food, casual, formal.
+- Find the area of the city the restaurant is located.
+- Find out whether large groups be catered for.
+- Will I find meat options for my meat eating friends and family.
+- Find information on restaurants options close to me.
+- Be able to leave recommendations for others.
+- Be able to Edit my reviews if my opinions change.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Why does Vegan Glasgow meet these user needs:
 
-A blue button should appear to click: _Make Public_,
+- As an enforced vegan dining out can be stressful so I spend a lot of time searching for
+restaurant menu’s and possible food options so have a good understanding of potential users
+needs.
+- The design of the site is clear and accessbile and information is laid out in a user friendly way.
+- The site allows visitors to leave reviews meaning experiences are continuously updated and
+remain relevant.
 
-Another blue button should appear to click: _Open Browser_.
+#### WEBSITE GOALS ####
+- A user friendly site that allows foodies to quickly find recommendations of places to eat based on their tystes.
+- An opportunity for the developer to further develop their frontend programming skills using HTML CSS Bootstrap and JavaScript.
+- An opportunity for the developer to practice their new found backend programming skills using Python, MongoDB, Flask and Jinja.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### USER STORIES ### 
+Visitor Stories:
 
-To log into the Heroku toolbelt CLI:
+As a visitor to Vegan Glasgow I would like:
+- To find menu item recommendations quickly and easily.
+- To quickly see what type of food is served so I can choose a restaurant based on my tastes. - To find eateries that are purely vegan so I know whether my meal may come into contact with
+dairy and/or Meat products in the kitchen.
+- To know how much of a choice on menu options I will have while dining.
+- To know whether I will be able to purchase drinks (both soft and alcoholic) that also cater to my
+dietary choices.
+- To quickly find restaurants that have a childrens menu available.
+- To have quick access to price points so I know that I will be dining out within my vacation
+budget.
+- To know which restaurants have a selection of appetizers and desserts on the menu, should I
+choose to have more than one course.
+- To know which restaurants would be able to cater for my upcoming family event (a graduation
+meal).
+- To know where I can grab a ‘cheap and cheerful’ bite to eat while maintaining my dietary
+choices.
+- To know where I can dine out locally when I am too tired to cook a meal at home.
+- To know which restaurants close to my hotel will suit my dietary choices.
+- To quickly find restaurants close to the area of the city I am exploring when hunger hits. - Tofind restaurant recommendations that will be able to seat my extended family for an
+upcoming celebration (a 50th wedding anniversary)
+- To find restaurants that can also cater for my friends who choose to eat meat and dairy as I
+appreciate a plant-based lifestyle is my choice but is not for everyone.
+- To find opening times of eateries so I know what will be open when and where
+- To be able to express my thoughts on a restaurant and it’s menu.
+- To be able to change my mind and update an earlier review if I return to a restaurant and the
+service and quality of food has changed.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+ADD BUSINESS STORIES TO FUTURE FEATURES? ADVERTISING? WAY OF CONTACTING BUSINESS? LINKS TO SOCIALS? CREATE ACCOUNT FOR ADMIN/SUPER USER?
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
+### DESIGN CHOICES ### 
+#### FONTS ####
 
-## Updates Since The Instructional Video
+Lobster - All Logos, titles, subtitles and headers.
+*insert example image*
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Muli - Font used for all other text items.
+*insert example image*
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### ICONS ####
+Thanks to Font Awesome the website utilises lots of icons to make the large amount of information available quick to identify and absord:
+Plus sign = Add an item
+Trash can = Delete an item
+Pencil = Edit an item
+Location marker = address
+Telephone = contact number
+Cheese = dairy options Meat(drumstick) = Meat options
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+#### COLOR ####
+After researching colors, shades of green were selected to suggest nature, freshness and safety.  Green is synonomous with veganism and, of course, we always want our food to be fresh.  Finally, the origins of the name 'Glasgow' are widely believed to be 'green hollow' or (dear)'green place'.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Coolors and Color Tool Material design were used to select the color palette
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+••insert color palette image**
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Core color (Navbar, footer) #629490
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Main Background
+Off White #e0e0e0
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Text against off white background #243119
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Cards
+#e0e0e0
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Buttons
+Positive actions (e.g. submit) - Green 
+Negative actions (e.g. cancel) - Red
+Editing actions - Amber
 
----
+### FEATURES ###
 
-Happy coding!
+#### Existing features ####
+
+All pages:
+
+Navbar - standard on desktop/tablet. Burger menu on mobile.
+Vegan Glasgow logo top left corner, standard UX design.
+Users not logged in will see the following navbar links: 
+- Home
+- Restaurants
+- Create Account
+- Log In
+- Contact
+Users logged in will see the following navbar links: 
+- Home
+- Restaurants
+- Add review 
+- My Account 
+- Log Out
+- Contact Footer
+- Copyright information
+- Links to most interesting website pages 
+- restaurants / create account / log in.
+- veGlasgow socials OR contact page (remove link from navbar)
+
+Home Page:
+
+- Hero image - arial shot of the iconic river clyde sweeping through glasgow which is an identifiable representation of the city.
+- Slogan - Laid over Hero image to clearly show the websites purpose
+- Top recommendations cards - Users are immediately able to see Vegan Glasgows top recommendations.
+- Each card will feature a photograph of the restaurant and the restaurants name.
+- Quick ‘smash and grab’ information will be displayed using icons Price point (£££), Address (location marker).
+- Additional information of interest will be text.
+- Link to restaurant search page - Underneath the cards users will be given the chance to “Find more options” which links to the full restaurants page so they don’t have to scroll back to the top.
+- Restaurants search page
+- Page title - Laid over Hero image to clearly show the pages purpose.
+- Restaurant cards - Each card will feature a photograph of the restaurant and the restaurants name. The restaurant name will link to the full restaurant page.
+Quick ‘smash and grab’ information will be displayed using icons e.g average reviews (*****), Price point (£££), Group size (people).
+Additional information of interest will be text.
+Individual restaurant page
+This page breaks with the standard website style and does not have the Hero image/page title so as not to distract from the Restaurants information.
+
+This page features:
+             
+- Restaurant and/or food images where available. - Website and socials links
+- Icons to display ‘smash and grab’ info
+- Full address
+- A table with the restaurants opening hours
+- A full restaurant description.
+- User reviews
+- The option to leave your own review (for logged in users) via a button which links to the
+“And a review” page.
+Create Account page
+Hero image - As home page
+Page title - Laid over Hero image to clearly show the pages purpose.
+   Users are prompted to enter their details to create an account via a form. Information required is:
+- email address to minimise the chance of fake reviews.
+- Username
+- Password and confirm password which will be hashed for password protection - Select whether they are local to the area or tourists.
+- Confirm that they are not a robot.
+Log in page
+Dat
+Hero image - As home page
+Page title - Laid over Hero image to clearly show the pages purpose.
+Users are prompted to enter their username and password to log in to their account via a form.
+Users will have the option to reset their password if theirs has been forgotten via a link to the my account page.
+My Account page
+Hero image - As home page
+Page title - Laid over Hero image to clearly show the pages purpose.
+Logged in users can see their username and have the option to reset their password.
+They can see their reviews that they have already submitted.
+Users can also create a new review by clicking the link to the “Add a review” page or Edit an existing review.
+Add a review page
+Hero image - As home page
+Page title - Laid over Hero image to clearly show the pages purpose.
+         
+ Logged in users are prompted to create a new review via a form. The information they will be required to input is:
+Restaurant name, Stars out of 5, Review title and review body. This form is inputted by a ‘Submit’ button or has the user also has the option to cancel.
+Edit a review page
+Hero image - As home page
+Page title - Laid over Hero image to clearly show the pages purpose.
+Users can select their previous review from a dropdown. They must explain WHY they are changing their review and then update the Star rating/main body of the review.
+
+### FUTURE FEATURES ###
+Pagination - The page will display 8 cards (2x4, desktop), 4 cards (2x2, tablet, 1x4, mobile). Users will be able to move through pages using the bottom page function, this minimises information overload, and scroll, on a single page.
+- Email authentication
+- Ability to ‘favourite’ restaurants which show on ‘my account’ page
+- Ability to and own photographs to reviews.
+- Edit profile option
+- Delete account
+- Map API plotting restaurants location
+- Further information on restaurants
+- Have Super User ability for restaurants to have/host their own page (paid feature) - With superuser - advertise offers, online ordering, Direct business contact.
+Body bar - Will show the total Number of search Results and give the user the option to filter their search results.
+Filter menu option - Users will have the option to filter their search Results by the most popular filter choices e.g. location, food category, group type, price and average reviews.
+
+### DATABASE MODEL ###
+As this database will be unstructured and additional requirements may be added in future MongoDB’s non-relational database has been chosen to create this site. Also using MongoDB as mySQL is recommended for final project so using chance to practice this here.
+Restaurants collection
+Key
+-restaurant_name (unchangeable)
+-category_name (unchangeable)
+-restaurant_description
+-restaurant_summary
+-restaurant_category (need to think of id as not entirely clear on purpose) -food_type
+-vegan_only -vegan_menu -vegan_drinks -family_restaurant -price_range -full_menu -restaurant_location -large_groups
+
+Review collection
+Key
+-review_title
+     
+ -review_body -date_added -created_by
+User collection
+Key
+-username -password -email_address
+
+### Technologies Used ###
+
+Font
+
+This project uses HTML, CSS, JavaScript, Python, Flask
+MongoDB
+JQuery
+Bootstrap Google Fonts Awesome GitHub AutoPrefixer
+Testing
+Deployment
+Credits Content
+Media
+Images
+
+Code
+
+Acknowledgements
