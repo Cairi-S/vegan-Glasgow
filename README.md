@@ -105,23 +105,23 @@ If Vegan Glasgow were to be monetised, businesses may want to:
 All chosen fonts were taken from [Google Fonts](https://fonts.google.com/?preview.text=Vegan%20Glasgow&preview.text_type=custom)
 
 [Lobster](https://fonts.google.com/specimen/Lobster?preview.text=Vegan%20Glasgow&preview.text_type=custom)
-All Logos, titles, subtitles and headers.
+- All Logos, titles, subtitles and headers.
 ![Google Fonts - Lobster](/static/images/readme/Lobster.png)
 
 [Mulish](https://fonts.google.com/specimen/Mulish?query=muli&preview.text=Vegan%20Glasgow&preview.text_type=custom)
-Font used for all other text items.
+- Font used for all other text items.
 ![Google Fonts - Mulish](/static/images/readme/Mullish.png)
 
 #### ICONS ####
 Thanks to [Font Awesome](https://fontawesome.com/), the website utilises lots of icons to make a large amount of information is quickly identifiable and easy to absorb:
 
 e.g/
-Plus sign = Add an item
-Trash can = Delete an item
-Pencil = Edit an item
-Location marker = address
-Telephone = contact number
-Cheese = dairy options Meat(drumstick) = Meat options
+- Plus sign = Add an item
+- Trash can = Delete an item
+- Pencil = Edit an item
+- Location marker = address
+- Telephone = contact number
+- Cheese = dairy options Meat(drumstick) = Meat options
 
 #### COLOR ####
 After researching color theory, shades of green were selected to suggest nature, freshness and safety.  
@@ -132,19 +132,15 @@ Green is synonomous with veganism and, of course, we always want our food to be 
 
 ![Coolors color palette](/static/images/readme/color-palette.png)
 
-Core color (Navbar, footer): #629490
-
-Main Background: White
-
-Cards: #e0e0e0
-
-Text against off white background: #243119
+- Navbar, footer, internal sub-headings: #629490
+- Main Background: White
+- Cards: #e0e0e0
+- Text against off white background, borders: #243119
 
 Buttons use the easily identifiable traffic light system:
-
-Positive actions (e.g. submit) - Green 
-Negative actions (e.g. cancel) - Red
-Editing actions - Amber
+- Positive actions (e.g. submit) - Green 
+- Negative actions (e.g. cancel) - Red
+- Editing actions - Amber
 
 ### FEATURES ###
 
