@@ -1,36 +1,39 @@
 
-## Vegan Glasgow ##
+# Vegan Glasgow #
+![Vegan Glasgow Site Mockup](/static/images/readme/vg-mockup.png)
+
+*TOC here*
+
 I love food. So as a vegetarian with a dairy allergy I’m an enforced vegan and am always on the look out for restaurant recommendations in my local area that can cater to my dietary requirements. I’ll be honest, when dining out vegetarian options can be limited - we’ve all been served a mushy risotto or, my hands down worst meal, a plate of boiled cauliflower and potatoes (which the restaurant charged £10 for).
 
-These personal experiences inspired me to create (insert name here), for locals and visitors to my home city of Glasgow, to share their experiences and help take the guess work out of finding a great vegan meal.
+These personal experiences inspired me to create *Vegan Glasgow*, for locals and visitors to my home city of Glasgow, to share their experiences and help take the guess work out of finding a great vegan meal.
 
 ### GOALS ###
 #### VISITOR GOALS ####
 Target audience:
 
-- Vegans, vegetarians or people who would like to eat a more plant-based diet. - Self-proclaimed ‘foodies’.
+- Vegans, vegetarians or people who would like to eat a more plant-based diet. 
+- Self-proclaimed ‘foodies’.
 - People who live in the Glasgow area.
 - People who are visiting Glasgow or are planning a trip to the city.
 
 #### USER GOALS ####
-- Have somewhere to search for restaurant recommendations. - Explore the amazing food scene of the city of Glasgow.
+- Have somewhere to search for restaurant recommendations. 
+- Explore the amazing food scene of the city of Glasgow.
 - Be able to leave reviews for other users to help them.
 
 Specific user goals:
 
-- Find recommendations on menu items.
-- Find information on the Type of food served ie/ Italian, Traditional Scottish, Japanese, Fusion. - Find out whether the kitchen is purely vegan.
-- Find out whether there is a full vegan menu or only a few options.
-- Find out whether vegan alcoholic drinks are available.
-- Find whether the restaurant is family friendly.
+- Find out contact information for individual restaurants.
+- Find exteral links to restaurants homepages and social media where appropriate.
+- See attractive images of the restaurant so I can judge whether I might enjoy the food and atmosphere.
+- Find information on the cuisine ie/ Italian, Traditional Scottish, Japanese, Fusion.
 - Find out the price range.
-- Find out whether vegan options are offered across 3 courses, as vegan desserts can be rare. - Find out the restaurant style ie/ fast food, casual, formal.
-- Find the area of the city the restaurant is located.
-- Find out whether large groups be catered for.
-- Will I find meat options for my meat eating friends and family.
-- Find information on restaurants options close to me.
-- Be able to leave recommendations for others.
+- Find what mealtimes restaurants are open.
+- Be able to create an account and have an individual profile.
+- Be able to leave reviews to help advise others.
 - Be able to Edit my reviews if my opinions change.
+- Be able to add restaurants to the website if I find somewhere which is not already listed.
 
 Why does Vegan Glasgow meet these user needs:
 
@@ -40,10 +43,26 @@ needs.
 - The design of the site is clear and accessbile and information is laid out in a user friendly way.
 - The site allows visitors to leave reviews meaning experiences are continuously updated and
 remain relevant.
+- The website features the designers own favourite recommendations. In future this would be changed to an average of the users rating.
+
+### BUSINESS STORIES ###
+Vegan Glasgow is currently only for private recommendations, however there could be future scope to monetise the site.
+
+If this were the case the target businesses for Vegan Glasgow would be:
+- Vegan restaurants in the area.
+- Restaurants wanting to reach a wider audience.
+- Restaurants advertising that they are fully vegan or have transitioned to fully vegan.
+- Restaurants advertising the vegan options on their menu
+
+Business user goals are:
+
+- A well designed website which is easy for the public to navigate that will benefit my business to be a part of.
+- A design that allows me to input and update my own restaurants data easily and efficiently.
+- Value for money.
 
 #### WEBSITE GOALS ####
-- A user friendly site that allows foodies to quickly find recommendations of places to eat based on their tystes.
-- An opportunity for the developer to further develop their frontend programming skills using HTML CSS Bootstrap and JavaScript.
+- A user friendly site that allows foodies to quickly find recommendations of places to eat based on their tastes.
+- An opportunity for the developer to further develop their frontend programming skills using HTML, CSS, Bootstrap and JavaScript.
 - An opportunity for the developer to practice their new found backend programming skills using Python, MongoDB, Flask and Jinja.
 
 ### USER STORIES ### 
@@ -51,32 +70,33 @@ Visitor Stories:
 
 As a visitor to Vegan Glasgow I would like:
 - To find menu item recommendations quickly and easily.
-- To quickly see what type of food is served so I can choose a restaurant based on my tastes. - To find eateries that are purely vegan so I know whether my meal may come into contact with
-dairy and/or Meat products in the kitchen.
-- To know how much of a choice on menu options I will have while dining.
+- To quickly see what type of food is served so I can choose a restaurant based on my tastes. 
+- To find restaurants that are purely vegan so I know whether my meal may come into contact with
+dairy and/or meat products in the kitchen.
 - To know whether I will be able to purchase drinks (both soft and alcoholic) that also cater to my
 dietary choices.
-- To quickly find restaurants that have a childrens menu available.
-- To have quick access to price points so I know that I will be dining out within my vacation
-budget.
-- To know which restaurants have a selection of appetizers and desserts on the menu, should I
-choose to have more than one course.
-- To know which restaurants would be able to cater for my upcoming family event (a graduation
-meal).
+- To have quick access to price points so I know that I will be dining out within my budget.
 - To know where I can grab a ‘cheap and cheerful’ bite to eat while maintaining my dietary
 choices.
 - To know where I can dine out locally when I am too tired to cook a meal at home.
-- To know which restaurants close to my hotel will suit my dietary choices.
-- To quickly find restaurants close to the area of the city I am exploring when hunger hits. - Tofind restaurant recommendations that will be able to seat my extended family for an
-upcoming celebration (a 50th wedding anniversary)
+- To quickly find restaurants close to the area of the city I am exploring when hunger hits. 
 - To find restaurants that can also cater for my friends who choose to eat meat and dairy as I
 appreciate a plant-based lifestyle is my choice but is not for everyone.
-- To find opening times of eateries so I know what will be open when and where
+- To find rough mealtimes of restaurants so I know what will be open when I am looking to dine.
+- To be able to find cafe options as well as restaurants for those times I just want coffee and a cake.
 - To be able to express my thoughts on a restaurant and it’s menu.
 - To be able to change my mind and update an earlier review if I return to a restaurant and the
 service and quality of food has changed.
+- To be able to contact the site about exciting new restaurants I have discovered.
 
-ADD BUSINESS STORIES TO FUTURE FEATURES? ADVERTISING? WAY OF CONTACTING BUSINESS? LINKS TO SOCIALS? CREATE ACCOUNT FOR ADMIN/SUPER USER?
+### BUSINESS STORIES ###
+
+If Vegan Glasgow were to be monetised, businesses may want to:
+- Quickly and clearly see information about competitors.
+- See that the various methods of contacting my restaurant are clearly displayed.
+- Have the ability to edit my own restaurants page to keep all information up to date.
+- Use forms to quickly and efficiently log information.
+- Be able to advertise special offers and deals.
 
 ### DESIGN CHOICES ### 
 #### FONTS ####
