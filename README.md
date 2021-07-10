@@ -46,15 +46,16 @@ remain relevant.
 - The website features the designers own favourite recommendations. In future this would be changed to an average of the users rating.
 
 ### BUSINESS STORIES ###
-Vegan Glasgow is currently only for private recommendations, however there could be future scope to monetise the site.
+Vegan Glasgow is currently only for private recommendations, however there could be future scope to monetise the site and would be a future feature.
 
 If this were the case the target businesses for Vegan Glasgow would be:
+
 - Vegan restaurants in the area.
 - Restaurants wanting to reach a wider audience.
 - Restaurants advertising that they are fully vegan or have transitioned to fully vegan.
 - Restaurants advertising the vegan options on their menu
 
-Business user goals are:
+Business user goals would be:
 
 - A well designed website which is easy for the public to navigate that will benefit my business to be a part of.
 - A design that allows me to input and update my own restaurants data easily and efficiently.
@@ -69,6 +70,7 @@ Business user goals are:
 Visitor Stories:
 
 As a visitor to Vegan Glasgow I would like:
+
 - To find menu item recommendations quickly and easily.
 - To quickly see what type of food is served so I can choose a restaurant based on my tastes. 
 - To find restaurants that are purely vegan so I know whether my meal may come into contact with
@@ -100,15 +102,20 @@ If Vegan Glasgow were to be monetised, businesses may want to:
 
 ### DESIGN CHOICES ### 
 #### FONTS ####
+All chosen fonts were taken from [Google Fonts](https://fonts.google.com/?preview.text=Vegan%20Glasgow&preview.text_type=custom)
 
-Lobster - All Logos, titles, subtitles and headers.
-*insert example image*
+[Lobster](https://fonts.google.com/specimen/Lobster?preview.text=Vegan%20Glasgow&preview.text_type=custom)
+All Logos, titles, subtitles and headers.
+![Google Fonts - Lobster](/static/images/readme/Lobster.png)
 
-Muli - Font used for all other text items.
-*insert example image*
+[Mulish](https://fonts.google.com/specimen/Mulish?query=muli&preview.text=Vegan%20Glasgow&preview.text_type=custom)
+Font used for all other text items.
+![Google Fonts - Mulish](/static/images/readme/Mullish.png)
 
 #### ICONS ####
-Thanks to Font Awesome the website utilises lots of icons to make the large amount of information available quick to identify and absord:
+Thanks to [Font Awesome](https://fontawesome.com/), the website utilises lots of icons to make a large amount of information is quickly identifiable and easy to absorb:
+
+e.g/
 Plus sign = Add an item
 Trash can = Delete an item
 Pencil = Edit an item
@@ -117,23 +124,24 @@ Telephone = contact number
 Cheese = dairy options Meat(drumstick) = Meat options
 
 #### COLOR ####
-After researching colors, shades of green were selected to suggest nature, freshness and safety.  Green is synonomous with veganism and, of course, we always want our food to be fresh.  Finally, the origins of the name 'Glasgow' are widely believed to be 'green hollow' or (dear)'green place'.
+After researching color theory, shades of green were selected to suggest nature, freshness and safety.  
 
-Coolors and Color Tool Material design were used to select the color palette
+Green is synonomous with veganism and, of course, we always want our food to be fresh.  Finally, the origins of the name 'Glasgow' are widely believed to be 'green hollow' or (dear)'green place'.
 
-••insert color palette image**
+[Coolors](https://coolors.co/) and [Color Tool Material Design](https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=560027&secondary.color=E0E0E0) were used to select the color palette.
 
-Core color (Navbar, footer) #629490
+![Coolors color palette](/static/images/readme/color-palette.png)
 
-Main Background
-Off White #e0e0e0
+Core color (Navbar, footer): #629490
 
-Text against off white background #243119
+Main Background: White
 
-Cards
-#e0e0e0
+Cards: #e0e0e0
 
-Buttons
+Text against off white background: #243119
+
+Buttons use the easily identifiable traffic light system:
+
 Positive actions (e.g. submit) - Green 
 Negative actions (e.g. cancel) - Red
 Editing actions - Amber
