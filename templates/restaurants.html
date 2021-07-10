@@ -9,7 +9,7 @@
 <div class="row g-0 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 d-flex justify-content-around">
     <!-- Generates a card for each restaurant in 'restaurants' db -->
     {% for restaurant in restaurants %}
-    <div class="col-4 d-flex justify-content-center info-card-cols">
+    <div class=" col-sm-12 col-md-3 d-flex justify-content-center info-card-cols">
         {% include "info_card.html" %}
     </div>
     {% endfor %}
