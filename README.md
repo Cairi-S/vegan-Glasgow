@@ -132,10 +132,14 @@ Green is synonomous with veganism and, of course, we always want our food to be 
 
 ![Coolors color palette](/static/images/readme/color-palette.png)
 
-- Navbar, footer, internal sub-headings: #629490
-- Main Background: White
-- Cards: #e0e0e0
-- Text against off white background, borders: #243119
+1. Navbar, footer, internal sub-headings: #629490. 
+- A green evoking natural and freshness.
+2. Main Background: White.
+- Providing contrast and depth.
+3. Cards and navbar/footer text: #e0e0e0. 
+- Providing depth and clearly sections information areas. 
+4. Card text and borders: #243119.
+- Clearly stands out against all other colors used.
 
 Buttons use the easily identifiable traffic light system:
 - Positive actions (e.g. submit) - Green 
@@ -148,42 +152,121 @@ Buttons use the easily identifiable traffic light system:
 
 All pages:
 
-Navbar - standard on desktop/tablet. Burger menu on mobile.
-Vegan Glasgow logo top left corner, standard UX design.
++ Navbar - standard on desktop/tablet. 
++ Burger menu on mobile.
++ Vegan Glasgow logo top left corner as per standard UX design.
++ Footer
++ Flashed messages to confirm actions or give the user additional information.
+
 Users not logged in will see the following navbar links: 
 - Home
 - Restaurants
 - Create Account
 - Log In
-- Contact
+
 Users logged in will see the following navbar links: 
 - Home
 - Restaurants
-- Add review 
-- My Account 
+- My Profile
+- Add Review  
 - Log Out
-- Contact Footer
+
+Admin users will see the option to 'Add Restaurant' instead of 'Add review'.
+
+The footer will contain:
 - Copyright information
-- Links to most interesting website pages 
-- restaurants / create account / log in.
-- veGlasgow socials OR contact page (remove link from navbar)
+- Contact link
+- Vegan Glasgow socials
 
 Home Page:
 
 - Hero image - arial shot of the iconic river clyde sweeping through glasgow which is an identifiable representation of the city.
-- Slogan - Laid over Hero image to clearly show the websites purpose
-- Top recommendations cards - Users are immediately able to see Vegan Glasgows top recommendations.
-- Each card will feature a photograph of the restaurant and the restaurants name.
-- Quick ‘smash and grab’ information will be displayed using icons Price point (£££), Address (location marker).
-- Additional information of interest will be text.
-- Link to restaurant search page - Underneath the cards users will be given the chance to “Find more options” which links to the full restaurants page so they don’t have to scroll back to the top.
-- Restaurants search page
-- Page title - Laid over Hero image to clearly show the pages purpose.
-- Restaurant cards - Each card will feature a photograph of the restaurant and the restaurants name. The restaurant name will link to the full restaurant page.
-Quick ‘smash and grab’ information will be displayed using icons e.g average reviews (*****), Price point (£££), Group size (people).
-Additional information of interest will be text.
-Individual restaurant page
-This page breaks with the standard website style and does not have the Hero image/page title so as not to distract from the Restaurants information.
+- Slogan positioned directly underneath the Hero image to clearly show the websites purpose
+- Top recommendations cards: Users are immediately able to see Vegan Glasgows top recommendations. Cards will link directly to the individual restaurants page.
+- Cards will feature an image of either the restaurants interior, exterior or a dish they serve.Important information about the restaurant will also be displayed such as contact details, price range, mealtime opening hours and a short synopsis of the restaurant written by the admin team.
+
+All Restaurants page:
+
+- As per the Home page restaurants will be displayed on cards which link directly to the individual restaurants page.
+- Information displayed will be the same as on the Home page cards.
+
+Individual Restaurants page:
+
+- The information on the restaurants cards will be displayed claerly.
+- Users will be presented with a button prompting them to 'Add a review'.
+- User's are also presented with reviews that have been left for that restaurant.  If the review is written by the logged in user they also have the opportunity to edit or delete that review.
+- The admin team are also able to add reviews, in addition they are presented with buttons to edit the restaurants information or delete the restaurant entirely.
+- The edit button takes users to the corresponding edit page - most of the data will be prefilled from the database allowing the user to fully update their review or the restaurant information (depending on whether standard user or admin) or extend the information that has already been left.
+- The delete button prompts a modal which asks the user to confirm the deletion of that item.  They are able to close or cancel the request if preferred.
+
+Create Account page:
+
+- When users create an account they will be asked to enter a username, password and to confirm their password via a form.
+- The Create Account page utilises the icons user-plus, user-lock and user-check-double to clearly show the input areas purpose.
+- The username will be checked to ensure the chosen username does not exist in the database and that it adheres to the chosen username requirements.
+- The password will be checked to ensure that it meets the chosen regex requirements.  In addition the user is required to enter the password again and both passwords are checked to ensure a match.
+- Any issues will be flagged via flashed messages as detailed above.
+- A clearly displayed 'create account' button makes use of the '+' icon to prompt the user to create their account.  Once clicked this takes the user to the their own account page, provided there are no issues with their inputted information.
+- Should the user have an account already there is an additional link to the 'Log In' page.  When the user hovers over the words 'Log In!' the text becomes underlined to clearly show a clickable element.
+- All information is displayed upon a large card which is similar in styling to the restaurant cards for continuity and enhanced UXD.
+
+Login page:
+
+- A simple Log In page which is similar in style to that of the 'Create Account' page.
+- Users are required to enter their Username and Password via a form.
+- The Log In page utilises the icons user-cog and user-lock to clearly show the input areas purpose.
+- Similar to the Create Account page, the Log In page has a clearly displayed 'Log In' button which makes use of the '+' icon to prompt the user to log in to their account.  Once clicked this takes the user to the their own account page, provided there are no issues with their inputted information.
+- Should the user not yet have an account  there is an additional link to the 'Create Account' page.  When the user hovers over the words 'Sign Up!' the text becomes underlined to clearly show a clickable element.
+- Any issues will be flagged to the user via flashed messages.
+
+Logout link:
+
+- Once the user has clicked the 'Log Out' button they will be redirected to the Log In page and a flashed messaged confirms the log out and wishes them well.
+
+My Account page (users):
+
+- A simple Account page which is similar in style to that of the 'Create Account' page.
+- On initial Log In the user is presented with a flashed message confirming their username and prompting them to find somewhere to eat.
+- At all points during the session user's name is displayed as a header.
+- Users are immediately provided with a link to the restaurants page.
+- Users are given a link to the contact page should rhwy have discovered a new restaurant.
+- Users are able to see all their own reviews via a sectioned off 'My reviews' section.  Here they will find:
+ * The 'add a review' button, which redirects the user to the add a review form.
+ * Details of their own existing reviews.
+ * Buttons to allow the user to edit and delete their existing reviews - as with all instances of the edit button it redirects the user to the corresponding 'Edit' page where some of the information will have been prefilled via database access.  Clicking the delete button prompts a modal asking the user to confirm the action.
+
+My Account page (admin):
+
+- Similar to regular users, on initial log in admin are presented with a flashed message confirming their username and at all points the Admins username is displayed as the header.
+- The first section the admin team are presented with is users messages where admin can see requests of restaurants to be added to the site.  Displayed information is:
+ * User who has made the request
+ * Name of the restaurant to add
+ * The rough location of that restaurant
+ * Why the user feels it would be a good addition to the side.
+ * A 'Restaurant added' button to remove the message once complete.  Clicking this button prompts a modal display asking the admin team to confirm the action.
+- Underneath User Messages the Add restaurant button is displayed to quickly take the admin to the add restaurant page.
+- Finally the admin team are able to visit the Restaurants page to edit or delete a restaurants information. A future feature would be for the admin team to be able to do this directly from their account page.
+
+Add review page:
+
+- Upon clicking any 'Add a review' link users will be redirected to that page.  The link will be styled link a button.
+- On this page users are able to select the restaurant they would like to review, a rating out of 5 for the restaurant and leave their thoughts on the restaurant.
+- Their review can be added to the database via clicking the 'Add My Review' button or the action is able to be cancelled should they change their mind.
+- Once a review has been added a flashed message thanks them for adding a review and the user is redirected to the Add review page in case they wish to review another restaurant.
+
+Edit review page:
+
+- Similar to the Add a review page.
+- Upon clicking any 'Edit My Review' button users will be redirected to the edit a review page.
+- Previously inputted information is pulled from the database to allow the review to be easily updated.
+- The updated review can be added to the database via clicking the 'Edit My Review' button or the action is able to be cancelled should they change their mind.
+- On clicking the 'Edit My Review' button the user is redirected to their own account page.
+
+Add restaurant page:
+
+Edit restaurant page:
+
+Contact page:
 
 This page features:
              
