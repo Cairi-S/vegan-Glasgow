@@ -345,12 +345,35 @@ Messages collection
 
 ### Technologies Used ###
 
-Font
+This project uses the following programming languages:
+- HTML
+- CSS
+- Python
+- Jinja
 
-This project uses HTML, CSS, JavaScript, Python, Flask
-MongoDB
-JQuery
-Bootstrap Google Fonts Awesome GitHub AutoPrefixer
+This project was built using [Gitpod](https://gitpod.io/).
+
+The creation of this website would not have been possible without:
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Balsamiq](https://balsamiq.com/)
+- [GitHub](https://github.com/)
+- [GitPod](https://gitpod.io/)
+- [Heroku](https://www.heroku.com/)
+- [MongoDB](https://www.mongodb.com/atlas)
+- [Google Fonts](https://fonts.google.com/) 
+- [Font Awesome](https://fontawesome.com/) 
+- [AutoPrefixer](http://autoprefixer.github.io/)
+- [cdnjs](https://cdnjs.com/)
+- [W3C HTML Markup Valication service](https://validator.w3.org/)
+- [W3C CSS valication service](https://jigsaw.w3.org/css-validator/)
+- [TinyPNG](https://tinypng.com/)
+- [Coolors](https://coolors.co/)
+- [Color Tool - Material Design](https://material.io/)
+- [HTML Formatter](https://webformatter.com/html)
+- [Multi Device Website Mockup Generator](http://techsini.com/multi-mockup/index.php)
+- [markdown-toc](https://ecotrust-canada.github.io/markdown-toc/) 
+
 Testing
 Deployment
 Credits Content
