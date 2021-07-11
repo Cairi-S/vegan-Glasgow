@@ -230,7 +230,7 @@ My Account page (users):
 - At all points during the session user's name is displayed as a header.
 - Users are immediately provided with a link to the restaurants page.
 - Users are given a link to the contact page should rhwy have discovered a new restaurant.
-- Users are able to see all their own reviews via a sectioned off 'My reviews' section.  Here they will find:
+* Users are able to see all their own reviews via a sectioned off 'My reviews' section.  Here they will find:
  * The 'add a review' button, which redirects the user to the add a review form.
  * Details of their own existing reviews.
  * Buttons to allow the user to edit and delete their existing reviews - as with all instances of the edit button it redirects the user to the corresponding 'Edit' page where some of the information will have been prefilled via database access.  Clicking the delete button prompts a modal asking the user to confirm the action.
@@ -238,7 +238,7 @@ My Account page (users):
 My Account page (admin):
 
 - Similar to regular users, on initial log in admin are presented with a flashed message confirming their username and at all points the Admins username is displayed as the header.
-- The first section the admin team are presented with is users messages where admin can see requests of restaurants to be added to the site.  Displayed information is:
+* The first section the admin team are presented with is users messages where admin can see requests of restaurants to be added to the site.  Displayed information is:
  * User who has made the request
  * Name of the restaurant to add
  * The rough location of that restaurant
@@ -258,13 +258,22 @@ Edit review page:
 
 - Similar to the Add a review page.
 - Upon clicking any 'Edit My Review' button users will be redirected to the edit a review page.
-- Previously inputted information is pulled from the database to allow the review to be easily updated.
+- Previously inputted form information is pulled from the database to allow the review to be easily updated.
 - The updated review can be added to the database via clicking the 'Edit My Review' button or the action is able to be cancelled should they change their mind.
 - On clicking the 'Edit My Review' button the user is redirected to their own account page.
 
 Add restaurant page:
 
+- Similar to the Add a review page but only accessible to the admin users.
+- A form guides the admin user through adding a restaurant, required inputs include text input, dropdown menus for items such as mealtimes and pricepoints, a checkbox for identifying recommended restaurants and a URL for the admin team to choose the image representing the restaurant.
+- In future an external database would be used for hosting images, such as Cloudinary.
+- Admin add the restaurant by clicking the 'Add a restaurant' button, this flashes a message confirming the addition of that restaurant and redirects admin back to their profile page for easy access to removing tasks.
+- Should the admin change their mind about adding the restaurant they are able to cancel the action.
+
 Edit restaurant page:
+- Similar to the Edit a review page but only accessible to the admin users.
+- The updated restaurants can be added to the database via clicking the 'Edit Restaurant' button or the action is able to be cancelled should they change their mind.
+- On clicking the 'Edit My Review' button the user is redirected to the restaurants page and a message is flashed thanking them for editing the information.
 
 Contact page:
 
