@@ -386,11 +386,11 @@ The creation of this website would not have been possible without:
 
 To run this project you will require your own IDE, e.g [GitPod]((https://gitpod.io/))
 
-You will also need to install the followin:
+You will also need to install the following:
 
-[PIP](https://pip.pypa.io/en/stable/)
-[Python 3](https://www.python.org/)
-[Git](https://git-scm.com/)
+- [PIP](https://pip.pypa.io/en/stable/)
+- [Python 3](https://www.python.org/)
+- [Git](https://git-scm.com/)
 
 In addition, you will need an account with [MongoDB Atlas](https://www.mongodb.com/atlas).  You can learn more about setting up an account with the [MongoDb documentation](https://docs.atlas.mongodb.com/).
 
@@ -421,7 +421,38 @@ os.environ.setdefault("MONGO_DBNAME", "<db_name>")
 python3 app.py
 ````
 
-
+#### Deploy to Heroku ####
+1. Create a requirements.txt file by typing the following into the terminal:
+````console
+pip3 freeze --local > requirements.txt
+````
+2. Create a Procfile by typing the following into the terminal:
+````console
+echo web: python app.py > Procfile
+````
+3. Add these files to GitHub via the usual methods: git add, git commit and git push.
+4. Log in to your [Heroku](https://id.heroku.com/login) account.
+5. Click the 'New' dropdown menu on your dashboard.
+6. Select 'Create New App'
+7. Select a unique name for your app.
+8. Choose the location closest to you (in the developers instance this was Europe) and click 'Create App'.
+9. From the app dashboard select the 'Deploy' tab and under 'Deployment Method' select GitHub.
+10. Navigate to the section 'Connect to GitHub', enter your GitHub and the name of the repository you wish to connect to and click 'search'.
+11. Once found click 'Connect'.
+12. Return to the top of the Heroku dashboard and click the 'Settings' tab.
+13. On the Settings page navigate to 'Config Vars' and then click 'Reveal Config Vars'.
+14. Enter the Key Value pairs, matching those created in the previously mentioned env.py file:
+|KEY|VALUE|
+|---|-----|
+|IP|0.0.0.0|
+|PORT|5000|
+|SECRET_KEY|<secret_key>|
+|MONGO_URI|mongodb+srv://<username>:<password>@myfirstcluster.8s17w.mongodb.net/<db_name>?retryWrites=true&w=majority|
+|MONGO_DBNAME|<db_name>|
+15. Click 'Hide Config Vars' and return to the top of the dashboard navigating back to the 'Deploy' tab.
+16. Navigate to the 'Manual Deployment' section.
+17. Under 'Select branch to deploy' click 'master' before clicking 'Deploy Branch' and wait for the build to be completed.
+18. Once completed return to the top of the dashboard and click 'Open App'.  The site has now been successfully deployed.
 
 Credits Content
 Media
