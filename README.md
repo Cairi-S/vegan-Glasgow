@@ -276,80 +276,72 @@ Edit restaurant page:
 - On clicking the 'Edit My Review' button the user is redirected to the restaurants page and a message is flashed thanking them for editing the information.
 
 Contact page:
-
-This page features:
-             
-- Restaurant and/or food images where available. - Website and socials links
-- Icons to display ‘smash and grab’ info
-- Full address
-- A table with the restaurants opening hours
-- A full restaurant description.
-- User reviews
-- The option to leave your own review (for logged in users) via a button which links to the
-“And a review” page.
-Create Account page
-Hero image - As home page
-Page title - Laid over Hero image to clearly show the pages purpose.
-   Users are prompted to enter their details to create an account via a form. Information required is:
-- email address to minimise the chance of fake reviews.
-- Username
-- Password and confirm password which will be hashed for password protection - Select whether they are local to the area or tourists.
-- Confirm that they are not a robot.
-Log in page
-Dat
-Hero image - As home page
-Page title - Laid over Hero image to clearly show the pages purpose.
-Users are prompted to enter their username and password to log in to their account via a form.
-Users will have the option to reset their password if theirs has been forgotten via a link to the my account page.
-My Account page
-Hero image - As home page
-Page title - Laid over Hero image to clearly show the pages purpose.
-Logged in users can see their username and have the option to reset their password.
-They can see their reviews that they have already submitted.
-Users can also create a new review by clicking the link to the “Add a review” page or Edit an existing review.
-Add a review page
-Hero image - As home page
-Page title - Laid over Hero image to clearly show the pages purpose.
-         
- Logged in users are prompted to create a new review via a form. The information they will be required to input is:
-Restaurant name, Stars out of 5, Review title and review body. This form is inputted by a ‘Submit’ button or has the user also has the option to cancel.
-Edit a review page
-Hero image - As home page
-Page title - Laid over Hero image to clearly show the pages purpose.
-Users can select their previous review from a dropdown. They must explain WHY they are changing their review and then update the Star rating/main body of the review.
+- The contact page is to allow users request new restaurants be added to the site.
+- The contact page uses a form to harvest data which is stored in the database and posted on the admin account page.
+- Form data includes text inputs for the restaurant to be added such as restaurant name and why the user thinks Vegan Glasgow should be aware of the restaurant.  A dropdown menu asks users to select the area of Glasgow where the restaurant is based to ensure the correct restaurant is added (where perhaps more than one restaurant with the same name could exist).
+- The green 'send my message' button adds the message to the database and a message is flashed to the user to confirm it's submission.  Users also have the option to cancel should they change their mind.
 
 ### FUTURE FEATURES ###
-Pagination - The page will display 8 cards (2x4, desktop), 4 cards (2x2, tablet, 1x4, mobile). Users will be able to move through pages using the bottom page function, this minimises information overload, and scroll, on a single page.
-- Email authentication
-- Ability to ‘favourite’ restaurants which show on ‘my account’ page
-- Ability to and own photographs to reviews.
+- Pagination - The page will display 8 cards (2x4, desktop), 4 cards (2x2, tablet, 1x4, mobile). Users will be able to move through pages using the bottom page function, this minimises information overload, and scroll, on a single page.
+- Email authentication.
+- Ability for users to ‘favourite’ restaurants which show on ‘my account’ page.
+- Ability to add own photographs to reviews.
 - Edit profile option
 - Delete account
-- Map API plotting restaurants location
-- Further information on restaurants
-- Have Super User ability for restaurants to have/host their own page (paid feature) - With superuser - advertise offers, online ordering, Direct business contact.
-Body bar - Will show the total Number of search Results and give the user the option to filter their search results.
-Filter menu option - Users will have the option to filter their search Results by the most popular filter choices e.g. location, food category, group type, price and average reviews.
+- Map API plotting the location of restaurants.
+- Additional information on restaurants
+- Have Superuser ability for restaurants to have/host their own page (paid feature). Superusers being able to advertise offers, online ordering and have direct business contact.
+- Filter menu option - Users will have the option to filter restaurant results by the most popular filter choices e.g. location, food category, group type, price and average reviews.
+- Remove 'our recommendation' option from admin and instead display the top 3 restaurants based off average user rating.
 
 ### DATABASE MODEL ###
 As this database will be unstructured and additional requirements may be added in future MongoDB’s non-relational database has been chosen to create this site. Also using MongoDB as mySQL is recommended for final project so using chance to practice this here.
+
 Restaurants collection
-Key
--restaurant_name (unchangeable)
--category_name (unchangeable)
--restaurant_description
--restaurant_summary
--restaurant_category (need to think of id as not entirely clear on purpose) -food_type
--vegan_only -vegan_menu -vegan_drinks -family_restaurant -price_range -full_menu -restaurant_location -large_groups
+
+|Key|Type|Notes|
+|---|----|-----|
+|_id|ObjectId|
+|name|String|
+|phone_number|String|
+|address|String|
+|website|String|
+|price_range|String|As this key uses £, ££ and £££ as options it felt necessary to use string type.|
+|cuisine|String|
+|open_times|String|
+|summary|String|
+|restaurant_img_url|String|
+|our_recommendation|String|
 
 Review collection
-Key
--review_title
+
+|Key|Type|Notes|
+|---|----|-----|
+|_id|ObjectId|
+|restaurant_name|String|
+|restaurant_rating|String|
+|review|String|
+|created_by|String|
      
- -review_body -date_added -created_by
+
 User collection
-Key
--username -password -email_address
+
+|Key|Type|Notes|
+|---|----|-----|
+|_id|ObjectId|
+|username|String|
+|password|String|
+|message|String|
+
+Messages collection
+
+|Key|Type|Notes|
+|---|----|-----|
+|_id|ObjectId|
+|created_by|String|
+|restaurant_name|String|
+|location|String|
+|message|String|
 
 ### Technologies Used ###
 
