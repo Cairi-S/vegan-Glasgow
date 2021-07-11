@@ -442,7 +442,8 @@ echo web: python app.py > Procfile
 12. Return to the top of the Heroku dashboard and click the 'Settings' tab.
 13. On the Settings page navigate to 'Config Vars' and then click 'Reveal Config Vars'.
 14. Enter the Key Value pairs, matching those created in the previously mentioned env.py file:
-|KEY|VALUE|
+
+|Key|Value|
 |---|-----|
 |IP|0.0.0.0|
 |PORT|5000|
@@ -454,10 +455,25 @@ echo web: python app.py > Procfile
 17. Under 'Select branch to deploy' click 'master' before clicking 'Deploy Branch' and wait for the build to be completed.
 18. Once completed return to the top of the dashboard and click 'Open App'.  The site has now been successfully deployed.
 
-Credits Content
-Media
-Images
+### Credits ###
 
-Code
+#### Content ####
+I will forever be thankful to [Tim Nelson](https://github.com/TravelTimN) and his Task Manager mini project as part of the Code Institute coursework.  Elements of this tutorial were used and expanded upon throughout the project.
 
-Acknowledgements
+#### Images ####
+Many of the restaurant images used in this project were found using [Google Images](https://www.google.com/imghp?hl=en) and are used for educational purposes only.
+
+**HERO**
+The arial image of the River Clyde winding it's way through Glasgow City Center is a [photo by Adam Marikar](https://unsplash.com/photos/7vJX8cIgLao) taken from [Unsplash](https://unsplash.com/).
+
+**ALT IMG**
+The image of a veggie bowl is a [photo by Luisa Brimble](https://unsplash.com/photos/2RrBE90w0T8) taken from [Unsplash](https://unsplash.com/).
+
+**404**
+The image of a dropped ice-cream cone is a [photo by Sarah Kilian](https://unsplash.com/photos/52jRtc2S_VE) taken from [Unsplash](https://unsplash.com/).
+
+### Acknowledgements ###
+As always this project would not have been possible without the fine people of Code Institute and Slack.  In particular:
+- My mentor who has been a fantastic guide through this project.
+- Slackers BenKav, who has been an exceptional lead, and Christopher Undritz, who has been a huge help.
+- The CI Tutor support team.
