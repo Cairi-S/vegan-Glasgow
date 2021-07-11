@@ -281,7 +281,11 @@ Contact page:
 - Form data includes text inputs for the restaurant to be added such as restaurant name and why the user thinks Vegan Glasgow should be aware of the restaurant.  A dropdown menu asks users to select the area of Glasgow where the restaurant is based to ensure the correct restaurant is added (where perhaps more than one restaurant with the same name could exist).
 - The green 'send my message' button adds the message to the database and a message is flashed to the user to confirm it's submission.  Users also have the option to cancel should they change their mind.
 
+404 page:
+- The custom 404 Page shows a cute image of a dropped ice-cream, a link is clearly displayed to return the user back to the home page.
+
 ### FUTURE FEATURES ###
+Features left to impliment:
 - Pagination - The page will display 8 cards (2x4, desktop), 4 cards (2x2, tablet, 1x4, mobile). Users will be able to move through pages using the bottom page function, this minimises information overload, and scroll, on a single page.
 - Email authentication.
 - Ability for users to ‘favourite’ restaurants which show on ‘my account’ page.
@@ -349,7 +353,7 @@ This project uses the following programming languages:
 - HTML
 - CSS
 - Python
-- Jinja
+- JavaScript
 
 This project was built using [Gitpod](https://gitpod.io/).
 
@@ -361,6 +365,8 @@ The creation of this website would not have been possible without:
 - [GitPod](https://gitpod.io/)
 - [Heroku](https://www.heroku.com/)
 - [MongoDB](https://www.mongodb.com/atlas)
+- [PyMongo](https://pypi.org/project/pymongo/)
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
 - [Google Fonts](https://fonts.google.com/) 
 - [Font Awesome](https://fontawesome.com/) 
 - [AutoPrefixer](http://autoprefixer.github.io/)
@@ -374,8 +380,49 @@ The creation of this website would not have been possible without:
 - [Multi Device Website Mockup Generator](http://techsini.com/multi-mockup/index.php)
 - [markdown-toc](https://ecotrust-canada.github.io/markdown-toc/) 
 
-Testing
-Deployment
+### Testing ###
+
+### Deployment ###
+
+To run this project you will require your own IDE, e.g [GitPod]((https://gitpod.io/))
+
+You will also need to install the followin:
+
+[PIP](https://pip.pypa.io/en/stable/)
+[Python 3](https://www.python.org/)
+[Git](https://git-scm.com/)
+
+In addition, you will need an account with [MongoDB Atlas](https://www.mongodb.com/atlas).  You can learn more about setting up an account with the [MongoDb documentation](https://docs.atlas.mongodb.com/).
+
+#### Clone the repo ####
+
+1. Navigate to the 'Vegan Glasgow' repository.
+2. Click the Code dropdown menu next to the green Gitpod button.
+3. In the dropdown copy the URL displayed under the header CLONE with the HTTPS title underlined (in this instance https://github.com/Cairi-S/vegan-glasgow.git).
+4. Open your local IDE and launch Git Bash.
+5. Create a new folder or navigate to the folder where you want the clone to be stored.
+6. Once opened type 'git clone' and HTTPS URL copied earlier (e.g. git clone https://github.com/Cairi-S/vegan-glasgow.git)
+7. Once you press enter the clone will be created.
+8. Created a new file to store your environmental variables named env.py.
+9. To the env.py file add the following environmental variables:
+
+````console
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "<secret_key>")
+os.environ.setdefault("MONGO_URI", "mongodb+srv://<username>:<password>@myfirstcluster.8s17w.mongodb.net/<db_name>?retryWrites=true&w=majority")
+os.environ.setdefault("MONGO_DBNAME", "<db_name>")
+````
+10. Add the env.py file to your .gitignore file.  ** THIS IS EXREMILY IMPORTANT TO ENSURE YOUR ENVIRONMENTAL VARIABLES ARE NOT PUSHED PUBLICALLY **.
+11. Run your app locally using 
+````console
+python3 app.py
+````
+
+
+
 Credits Content
 Media
 Images
