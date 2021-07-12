@@ -65,3 +65,52 @@ The most common path through the website would be:
     - Admin are able to 'Add' restaurants from their 'My Account' page.  To edit and delete restaurants admin must visit the individual restaurants page which is accessible via the restaurants link on their profile page or navbar.
 - Be able to recieve notifications from users on new restaurants in the area.
     - To help the growth of Vegan Glasgow users are able to message the admin via the contact page.  New messages are displayed on the admin profile page and once the admin have finished added the restaurant recommended by the user the message can by deleted by clicking 'Restaurant added'.
+
+MANUAL TESTING
+
+FAVICON
+
+Check that Favicon shows on all pages.  Pages checked:
+|Shows|Doesn't|
+|-----|-------|
+|Home|My Profile|
+|Restaurants|Individual Restaurant|
+|Log Out|Add Review|
+|Create Account|Edit Review|
+|Log In|Add Restaurant|
+|Contact|Edit Restaurant|
+
+ALL PAGES
+
+Navigation Bar
+
+Hover over navigation items, and speach bubble/social media icons in the footer ensuring there is no discernable change other than the pointer turning to a hand and the item changing color from off white to dark green.
+
+Logged out users:
+*Header*
+
+- Confirm the visible navbar items are Home, Restaurant, Create Account and Log In.
+- Clicking the logo and Home items and ensure they reload the Home page.
+- Clicking the Restaurant item and ensure it loads the all restaurants page.
+- Clicking the Create Account item and ensure it loads the Create account page.
+- Clicking the Log In item and ensure it loads the Log In page.
+
+*Footer*
+
+- Clicking the speech bubble icon and ensure it does not load the Contact page, redirecting the user to the Log In screen.
+
+Logged in users:
+*Header*
+
+- Confirm the visible navbar items are Home, Restaurant, My Profile, Add Review and Log In.
+- Clicking the logo and Home items and ensure they reload the Home page.
+- Clicking the Restaurant item and ensure it loads the all restaurants page.
+- Clicking the My Profile item and ensure it loads the My Profile page.
+- Clicking the Add Review item and ensure it loads the Add Review page.
+- Clicking the Log Out item and ensure it loads the Log Out page.
+
+*Footer*
+
+- Clicking the speech bubble icon and ensure it loads the Contact page.
+
+Change the screen size to various mobile devices using devTools to verify that the navigation bar and footer are responsive.  With the navbar becoming a burger menu and footer items stacking at the appropriate breakpoints.
