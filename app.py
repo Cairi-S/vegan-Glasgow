@@ -329,9 +329,8 @@ def delete_review(review_id):
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
-    if not session["user"]:
-        flash("Admin, how did you get here? Don't send a message to yourself!")
-    else:
+    loggedIn = True if 'user' in session else False
+    if loggedIn:
         if request.method == "POST":
             existing_restaurant = mongo.db.restaurants.find_one(
                 {"name": request.form.get("restaurant_name")})
@@ -351,8 +350,12 @@ def contact():
             # Confirmation flash msg
             flash("Thanks! Your message has been sent.")
             return redirect(url_for('contact'))
-
-    return render_template("contact.html")
+    else:
+        flash("Whoops, you need to log in to leave a message")
+        return redirect(url_for('login'))
+    return render_template(
+        "contact.html",
+        loggedIn=loggedIn)
 
 
 @app.route("/contact/<message_id>/delete")
