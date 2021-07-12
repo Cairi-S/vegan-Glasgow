@@ -37,7 +37,7 @@
 
 .error-text {
     text-align: center;
-    font-family: Muli;
+    font-family: "Muli", sans-serif;
     color: #243119;
 }
 
@@ -94,7 +94,7 @@
 .page-title,
 .page-subtitle,
 .profile-subheading {
-    font-family: Lobster;
+    font-family: "Lobster", sans-serif;
 }
 
 .nav-menu a,
@@ -107,7 +107,7 @@
 .admin-profile-text,
 .no-review-text,
 .no-review-text a {
-    font-family: Muli;
+    font-family: "Muli", sans-serif;
 }
 
 /* -- HEADER/FOOTER/TITLES -- */
