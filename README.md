@@ -22,7 +22,7 @@ Target audience:
 - Explore the amazing food scene of the city of Glasgow.
 - Be able to leave reviews for other users to help them.
 
-Specific user goals:
+User Specific Goals:
 
 - Find out contact information for individual restaurants.
 - Find exteral links to restaurants homepages and social media where appropriate.
@@ -46,21 +46,11 @@ needs.
 remain relevant.
 - The website features the designers own favourite recommendations. In future this would be changed to an average of the users rating.
 
-### BUSINESS STORIES ###
-Vegan Glasgow is currently only for private recommendations, however there could be future scope to monetise the site and would be a future feature.
+Admin Specific Goals:
 
-If this were the case the target businesses for Vegan Glasgow would be:
-
-- Vegan restaurants in the area.
-- Restaurants wanting to reach a wider audience.
-- Restaurants advertising that they are fully vegan or have transitioned to fully vegan.
-- Restaurants advertising the vegan options on their menu
-
-Business user goals would be:
-
-- A well designed website which is easy for the public to navigate that will benefit my business to be a part of.
-- A design that allows me to input and update my own restaurants data easily and efficiently.
-- Value for money.
+- Be able to delete user reviews if inappropriate.
+- Be able to add, edit restaurant info or delete a restaurant should it close
+- Be able to recieve notifications from users on new restaurants in the area.
 
 #### WEBSITE GOALS ####
 - A user friendly site that allows foodies to quickly find recommendations of places to eat based on their tastes.
@@ -286,9 +276,27 @@ Contact page:
 - The custom 404 Page shows a cute image of a dropped ice-cream, a link is clearly displayed to return the user back to the home page.
 
 ### FUTURE FEATURES ###
-Features left to impliment:
+Unfortunately, due to time contraints the initial design of the website was not able to be fully realised.  The features left to impliment are:
 - Pagination - The page will display 8 cards (2x4, desktop), 4 cards (2x2, tablet, 1x4, mobile). Users will be able to move through pages using the bottom page function, this minimises information overload, and scroll, on a single page.
 - Email authentication.
+
+Vegan Glasgow is currently only for private recommendations, however there could be future scope to monetise the site and would be a future feature.
+
+If this were the case the target businesses for Vegan Glasgow would be:
+
+- Vegan restaurants in the area.
+- Restaurants wanting to reach a wider audience.
+- Restaurants advertising that they are fully vegan or have transitioned to fully vegan.
+- Restaurants advertising the vegan options on their menu
+
+Business user goals would be:
+
+- A well designed website which is easy for the public to navigate that will benefit my business to be a part of.
+- A design that allows me to input and update my own restaurants data easily and efficiently.
+- Value for money.
+
+Additional future features might be:
+
 - Ability for users to ‘favourite’ restaurants which show on ‘my account’ page.
 - Ability to add own photographs to reviews.
 - Edit profile option
