@@ -1,6 +1,6 @@
 
 # Vegan Glasgow #
-![Vegan Glasgow Site Mockup](/static/images/readme/vg-mockup.png)
+![Vegan Glasgow Site Mockup](/documentation/images/vg-mockup.png)
 
 *TOC here*
 
@@ -106,11 +106,11 @@ All chosen fonts were taken from [Google Fonts](https://fonts.google.com/?previe
 
 [Lobster](https://fonts.google.com/specimen/Lobster?preview.text=Vegan%20Glasgow&preview.text_type=custom)
 - All Logos, titles, subtitles and headers.
-![Google Fonts - Lobster](/static/images/readme/Lobster.png)
+![Google Fonts - Lobster](/documentation/images/lobster.png)
 
 [Mulish](https://fonts.google.com/specimen/Mulish?query=muli&preview.text=Vegan%20Glasgow&preview.text_type=custom)
 - Font used for all other text items.
-![Google Fonts - Mulish](/static/images/readme/Mullish.png)
+![Google Fonts - Mulish](/documentation/images/mulish.png)
 
 #### ICONS ####
 Thanks to [Font Awesome](https://fontawesome.com/), the website utilises lots of icons to make a large amount of information is quickly identifiable and easy to absorb:
@@ -130,7 +130,7 @@ Green is synonomous with veganism and, of course, we always want our food to be 
 
 [Coolors](https://coolors.co/) and [Color Tool Material Design](https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=560027&secondary.color=E0E0E0) were used to select the color palette.
 
-![Coolors color palette](/static/images/readme/color-palette.png)
+![Coolors color palette](/documentation/images/color-palette.png)
 
 1. Navbar, footer, internal sub-headings: #629490. 
 - A green evoking natural and freshness.
@@ -216,7 +216,7 @@ Login page:
 - Users are required to enter their Username and Password via a form.
 - The Log In page utilises the icons user-cog and user-lock to clearly show the input areas purpose.
 - Similar to the Create Account page, the Log In page has a clearly displayed 'Log In' button which makes use of the '+' icon to prompt the user to log in to their account.  Once clicked this takes the user to the their own account page, provided there are no issues with their inputted information.
-- Should the user not yet have an account  there is an additional link to the 'Create Account' page.  When the user hovers over the words 'Sign Up!' the text becomes underlined to clearly show a clickable element.
+- Should the user not yet have an account  there is an additional link to the 'Create Account' page.  When the user hovers over the words 'Sign Up' the text becomes underlined to clearly show a clickable element.
 - Any issues will be flagged to the user via flashed messages.
 
 Logout link:
@@ -458,22 +458,24 @@ echo web: python app.py > Procfile
 ### Credits ###
 
 #### Content ####
-I will forever be thankful to [Tim Nelson](https://github.com/TravelTimN) and his Task Manager mini project as part of the Code Institute coursework.  Elements of this tutorial were used and expanded upon throughout the project.
+- I will forever be thankful to [Tim Nelson](https://github.com/TravelTimN) and his Task Manager mini project which is part of the Code Institute coursework.  Elements of this tutorial were used and expanded upon throughout the project.
+
+- Many thanks to [geeksforgeeks.org](https://www.geeksforgeeks.org/) and their guide to [Python pattern matching](https://www.geeksforgeeks.org/pattern-matching-python-regex/).
 
 #### Images ####
-Many of the restaurant images used in this project were found using [Google Images](https://www.google.com/imghp?hl=en) and are used for educational purposes only.
+Individal restaurant images used in this project were found using [Google Images](https://www.google.com/imghp?hl=en) and typing in the restaurants name. These images are used for educational purposes only and full credit goes to the original owner.
 
-**HERO**
-The arial image of the River Clyde winding it's way through Glasgow City Center is a [photo by Adam Marikar](https://unsplash.com/photos/7vJX8cIgLao) taken from [Unsplash](https://unsplash.com/).
+**Hero**
+- The arial image of the River Clyde winding it's way through Glasgow City Center is a [photo by Adam Marikar](https://unsplash.com/photos/7vJX8cIgLao) taken from [Unsplash](https://unsplash.com/).
 
-**ALT IMG**
-The image of a veggie bowl is a [photo by Luisa Brimble](https://unsplash.com/photos/2RrBE90w0T8) taken from [Unsplash](https://unsplash.com/).
+**Alt img**
+- The image of a veggie bowl is a [photo by Luisa Brimble](https://unsplash.com/photos/2RrBE90w0T8) taken from [Unsplash](https://unsplash.com/).
 
 **404**
-The image of a dropped ice-cream cone is a [photo by Sarah Kilian](https://unsplash.com/photos/52jRtc2S_VE) taken from [Unsplash](https://unsplash.com/).
+- The image of a dropped ice-cream cone is a [photo by Sarah Kilian](https://unsplash.com/photos/52jRtc2S_VE) taken from [Unsplash](https://unsplash.com/).
 
 ### Acknowledgements ###
 As always this project would not have been possible without the fine people of Code Institute and Slack.  In particular:
 - My mentor who has been a fantastic guide through this project.
-- Slackers BenKav, who has been an exceptional lead, and Christopher Undritz, who has been a huge help.
+- Slackers BenKav, who has been an exceptional lead, and Christopher Undritz, who has been working on this Python journey at the same time.
 - The CI Tutor support team.

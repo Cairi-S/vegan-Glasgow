@@ -50,6 +50,7 @@ def signup():
             flash("Confirmation and password do not match, please try again.")
             return render_template("create_account.html")
 
+        #  Many thanks to geeksforgeeks.org for Python pattern matching guide
         def password_check(password):
             val = True
             if len(password) < 6:
