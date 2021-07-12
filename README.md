@@ -18,7 +18,7 @@ Target audience:
 - People who are visiting Glasgow or are planning a trip to the city.
 
 #### USER GOALS ####
-- Have somewhere to search for restaurant recommendations. 
+- Have somewhere to find restaurant recommendations. 
 - Explore the amazing food scene of the city of Glasgow.
 - Be able to leave reviews for other users to help them.
 
@@ -33,6 +33,7 @@ Specific user goals:
 - Be able to create an account and have an individual profile.
 - Be able to leave reviews to help advise others.
 - Be able to Edit my reviews if my opinions change.
+- Be able to Delete my review if I no longer wish to comment on a restaurant.
 - Be able to add restaurants to the website if I find somewhere which is not already listed.
 
 Why does Vegan Glasgow meet these user needs:
