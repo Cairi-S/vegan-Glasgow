@@ -465,6 +465,9 @@ echo web: python app.py > Procfile
 #### Images ####
 Individal restaurant images used in this project were found using [Google Images](https://www.google.com/imghp?hl=en) and typing in the restaurants name. These images are used for educational purposes only and full credit goes to the original owner.
 
+**Favicon**
+- Taken from [favicon.io](https://favicon.io/) and the open-source project [Twemoji](https://twemoji.twitter.com/).
+
 **Hero**
 - The arial image of the River Clyde winding it's way through Glasgow City Center is a [photo by Adam Marikar](https://unsplash.com/photos/7vJX8cIgLao) taken from [Unsplash](https://unsplash.com/).
 
