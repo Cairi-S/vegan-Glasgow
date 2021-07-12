@@ -50,6 +50,29 @@ def signup():
             flash("Confirmation and password do not match, please try again.")
             return render_template("create_account.html")
 
+        def password_check(password):
+            val = True
+            if len(password) < 6:
+                print('Password length should be at least 6')
+                val = False
+            if not any(char.isdigit() for char in password):
+                print('Password must have one number')
+                val = False
+            if not any(char.isupper() for char in password):
+                print('Password must have one uppercase letter')
+                val = False
+            if not any(char.islower() for char in password):
+                print('Password must have one lowercase letter')
+                val = False
+            if val:
+                return val
+            print(val)
+
+        if (password_check(password)):
+            print("Password is valid")
+        else:
+            print("Invalid Password !!")
+
         # Gathers and inserts new user data to db
         create_account = {
             "username": request.form.get("username").lower(),
