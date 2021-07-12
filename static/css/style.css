@@ -445,3 +445,20 @@
     margin: 40px 6px;
     border: 1px solid #e0e0e0;
 }
+
+/* --------- Media Queries ----------*/
+
+@media (min-width: 311px) and (max-width: 540px) and (orientation:portrait) {
+    /*----------Footer--------*/
+    .footer {
+        height: 138px;
+    }
+
+    .mobile-padding {
+        padding: 10px 0 10px;
+    }
+
+    .footer-icons {
+        padding-bottom: 20px;
+    }
+}
