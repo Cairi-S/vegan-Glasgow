@@ -185,6 +185,13 @@ CONTACT
 - Complete the form as expected and click cancel to ensure the page reloads - cross check with 'messages' collection in database to make sure the message has not sent.
 - Complete the form as expected and click 'Send message' to ensure the page reloads and a developer written message is flashed confirming the message has been sent - cross check with 'messages' collection in database to make sure the message was succesfully sent.
 
+404
+
+- Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
+- Hover over the 'home' link to ensure change of color and cursor turns to a hand.
+- Click 'home' link to ensure user is returned to index.html.
+
+
 MY PROFILE - *USER*
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
