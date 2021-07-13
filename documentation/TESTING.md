@@ -150,6 +150,23 @@ LOG OUT
 
 - Click 'Log Out' navbar item ensuring the user is redirected to the 'Log In' page and a developer written message is flashed confirming that the user has been logged out.
 
+MY PROFILE - *USER*
+
+- On initial log in ensure a message is flashed welcoming the user to the site.
+- Make sure the username is displayed at the top of the page confirming that users profile.
+- Click the 'Let's find somewhere to eat' link and ensure it redirects the user to the restaurants page.
+- Click the 'Let us know' link and ensure it redirects the user to the contact page.
+- Click the 'Add a review' button and ensure it redirects the user to the Add a review page.
+- Check that the users existing reviews are visible, cross referencing with the database 'reviews' collection to make sure that none are missing.
+- Click the 'Edit' button in the existing review section ensuring it redirects the user to the edit a review page and that the restaurant name and review body is pre-completed.
+- Click the 'Delete' button in the existing review section ensuring it triggers a modal prompting the user to confirm that they want to delete that review.
+- Re-open the 'Delete' modal and click the 'x' and 'Close' buttons to ensure that the modal is closed and no action is taken.
+- Re-open the 'Delete' modal and click the 'Delete' button making sure the user is redirected back to their profile page.
+- Cross check on the 'reviews' collection that the review no longer exists.
+- When the user has no written reviews check that a suitable message is displayed in the Existing Reviews section.
+- Click the visible 'leave a review' link and ensure it redirects the user to the 'Add a review' page.
+- Try editing the site address to exclude the users username and instead inputting admin, e.g. /profile/?username=admin or /profile/admin, making sure only the users own profile page is displayed or the custom 404 page is displayed.
+
 
 
 BUGS
