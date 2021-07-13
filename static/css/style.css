@@ -290,6 +290,25 @@
     overflow: hidden;
 }
 
+.view-rest-socials {
+    margin: 0;
+    padding: 10px;
+}
+
+.view-rest-scoop-title {
+    margin-bottom: 0;
+}
+
+.view-rest-text {
+    margin: 0;
+    padding: 0px 10px;
+    /* Many thanks to css-tricks.com for their info on line-clamp */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 /* -- FORMS -- */
 .form-container {
     margin: 52px;
@@ -383,6 +402,10 @@
 .restaurant-contact-card,
 .restaurant-info-card {
     text-align: center;
+}
+
+.info-card-margin {
+    margin-top: 16px;
 }
 
 .restaurant-info-card,

@@ -20,10 +20,10 @@
             <div class="row g-0">
                 <!-- Restaurant summary -->
                 <div class="row g-0 restaurant-scoop-card">
-                    <h6 class="restaurant-card-title">Here's The Scoop...</h6>
-                    <p class="restaurant-card-text"> {{ restaurant.summary }}</p>
+                    <h6 class="restaurant-card-title view-rest-scoop-title">Here's The Scoop...</h6>
+                    <p class="restaurant-card-text view-rest-text"> {{ restaurant.summary }}</p>
                 </div>
-                <div class="row g-0 restaurant-info-card">
+                <div class="row g-0 restaurant-info-card info-card-margin">
                     <!-- Restaurant price range -->
                     <p class="restaurant-card-text">
                         <i class="fas fa-money-bill"></i> {{ restaurant.price_range }}</p>
@@ -53,7 +53,7 @@
                         <i class="fas fa-map-marker-alt"></i> {{ restaurant.address }}
                     </p>
                     <!-- Restaurant social media - FUTURE FEATURE SOCIALS TO BE STORED/ACCESSED FROM DB -->
-                    <ul class="list-inline">
+                    <ul class="list-inline view-rest-socials">
                         <li class="list-inline-item">
                             <a class="socials" href="https://www.facebook.com">
                                 <i class="fab fa-facebook-square"></i>
