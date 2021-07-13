@@ -134,10 +134,25 @@ INDIVIDUAL RESTAURANTS (view_restaurant.html)
 - Click all social links to ensure open in seperate tab (Future feature will include restaurants individual social pages).
 - Click 'Add Review' button and check it redirects to 'Add a Review' page when logged in and to 'Log In' page with appropriate flashed message if user not in session.
 - Check reviews are displayed clearly with all information displayed appropriately.
+*For logged in users only:*
+- Check that edit/delete buttons are only visible for users own reviews.
 - In review section click 'Edit' button and check in redirects to the edit review button with the correct restaurant name and review body displayed.
 - In review section click 'Delete' button and check it triggers a modal prompting the user to confirm that they want to delete that review.
 - Re-open the 'Delete' modal and click the 'x' and 'Close' buttons to ensure that the modal is closed and no action is taken.
 - Re-open the 'Delete' modal and click the 'Delete' button making sure the user is redirected back to their profile page and the review has been removed.
+
+ADD REVIEW
+
+- Test that only logged in users can access the review page by manually typing in the route e.g. /review/add
+- Change the screen size manually and to various mobile device sizes using devTools to verify that the form is responsive.
+- Click the 'select restaurant' dropdown and ensure all restaurants in the database 'restaurants' collection are listed. Selecting each restaurant individually.
+- Click the 'select rating' dropdown and ensure all options are available and able to be selected.
+- Add text to the 'What do you think?' box ensuring that the box size is adjustable for larger reviews.
+- Leave the 'select restaurant' and 'select rating' boxes blank and ensure a warning is triggered when the 'Add review' button is clicked.
+- Fill in all details correctly and click the 'Add review' button making sure the 'Add a review' page reloads and a developer written message is flashed confirming the action.
+- Write a review and click the 'Cancel' button making sure that the page reloads and the form is blank.
+
+
 
 CREATE ACCOUNT
 
