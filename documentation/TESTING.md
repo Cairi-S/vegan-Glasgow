@@ -126,6 +126,19 @@ RESTAURANTS
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the images and cards are responsive.  With cards stacking at the appropriate breakpoints.
 - Click each individual restaurant card to make sure it takes you to the relevant individual restaurant page.
 
+INDIVIDUAL RESTAURANTS (view_restaurant.html)
+
+*This page is accessible to all so tests were repeated for when users were both logged in and logged out*
+
+- Change the screen size manually and to various mobile device sizes using devTools to verify that the images and cards are responsive.  With cards stacking at the appropriate breakpoints.
+- Click all social links to ensure open in seperate tab (Future feature will include restaurants individual social pages).
+- Click 'Add Review' button and check it redirects to 'Add a Review' page when logged in and to 'Log In' page with appropriate flashed message if user not in session.
+- Check reviews are displayed clearly with all information displayed appropriately.
+- In review section click 'Edit' button and check in redirects to the edit review button with the correct restaurant name and review body displayed.
+- In review section click 'Delete' button and check it triggers a modal prompting the user to confirm that they want to delete that review.
+- Re-open the 'Delete' modal and click the 'x' and 'Close' buttons to ensure that the modal is closed and no action is taken.
+- Re-open the 'Delete' modal and click the 'Delete' button making sure the user is redirected back to their profile page and the review has been removed.
+
 CREATE ACCOUNT
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the form is responsive.
@@ -167,6 +180,8 @@ MY PROFILE - *USER*
 - When the user has no written reviews check that a suitable message is displayed in the Existing Reviews section.
 - Click the visible 'leave a review' link and ensure it redirects the user to the 'Add a review' page.
 - Try editing the site address to exclude the users username and instead inputting admin, e.g. /profile/?username=admin or /profile/admin, making sure only the users own profile page is displayed or the custom 404 page is displayed.
+
+
 
 MY PROFILE - *ADMIN*
 
