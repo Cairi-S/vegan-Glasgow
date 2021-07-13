@@ -215,10 +215,6 @@ EDIT REVIEW
 - Edit review details and click the 'Cancel' button making sure that the user is redirected to their profile page and that the review remains unchanged.
 - Edit review details and click 'Edit my review' ensuring the user is redirected to their profile page and the corresponding review has been updated.
 
-
-
-
-
 MY PROFILE - *ADMIN*
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
@@ -232,6 +228,18 @@ MY PROFILE - *ADMIN*
 - Re-open the 'Restaurant Added' modal and click the 'Restaurant Added' button making sure the user is redirected back to their profile page and the message has been removed - cross check with the 'messages' collection in the database.
 - Click the 'Restaurants' link to ensure the admin are redirected to the restaurants page when wanting to edit/delete a restaurant.
 - Try editing the site address to exclude the admin username and instead inputting an existing username, e.g. /profile/?username=test01 or /profile/test01, making sure only the users own profile page is displayed or the custom 404 page is displayed.
+
+ADD RESTAURANT - *ADMIN ONLY*
+
+- Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
+- Log in as a standard user and attempt to navigate to the add restaurant page by manually adding /restaurant/add to the address.  Ensure that the user is not able and an appropriate response is given.
+- Check that admin are able to access the 'Add Restaurant' page via the navbar link and button on their profile page.
+- Click the 'how expensive' and 'mealtime' dropdowns and ensure all options are available and able to be selected.
+- Leave the 'how expensive' and 'mealtime' dropdowns blank and ensure a warning is triggered when the 'Add restaurant' button is clicked.
+- Complete the form ensuring that the form requires all fields to be completed, except the URL, before the form can be submitted. If a required field is left blank the user is given a prompt.
+- On form submission ensure admin is redirected to their own profile page and a message is flashed confirming the addition of the restaurant.
+- Check the successful addition of the new restaurant on the 'restaurants' page.
+- Complete the form and hit the cancel button ensuring the admin user is redirected to their home page.
 
 BUGS
 
