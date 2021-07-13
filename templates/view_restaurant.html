@@ -9,14 +9,14 @@
         <h2 class="page-title">{{ restaurant.name }}</h2>
     </div>
     
-    <div class="row g-0">
+    <div class="row g-0 ">
         <!--LEFT COLUMN-->
          <!-- Restaurant image -->
-        <div class="col-4 view-rest-img-col">
+        <div class="col-sm-12 col-md-4 view-rest-img-col">
             <img src="{{ restaurant.restaurant_img_url }}" class="card-img-top img-size img-fluid img-margins" onerror="this.src='static/images/veggie_bowl.jpeg'" alt="{{ restaurant.name }}">
         </div>
         <!--MIDDLE COLUMN-->
-        <div class="col-4 view-rest-text-col d-flex align-content-between">
+        <div class="col-sm-12 col-md-4 view-rest-text-col d-flex align-content-between">
             <div class="row g-0">
                 <!-- Restaurant summary -->
                 <div class="row g-0 restaurant-scoop-card">
@@ -37,7 +37,7 @@
             </div>
         </div>
         <!--RIGHT COLUMN-->
-        <div class="col-4">
+        <div class="col-sm-12 col-md-4">
             <div class="row g-0">
                 <div class="row g-0 restaurant-contact-card">
                     <!-- Restaurant website address -->
