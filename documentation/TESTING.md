@@ -66,7 +66,7 @@ The most common path through the website would be:
 - Be able to recieve notifications from users on new restaurants in the area.
     - To help the growth of Vegan Glasgow users are able to message the admin via the contact page.  New messages are displayed on the admin profile page and once the admin have finished added the restaurant recommended by the user the message can by deleted by clicking 'Restaurant added'.
 
-MANUAL TESTING
+### MANUAL TESTING ###
 
 ALL PAGES
 
@@ -145,6 +145,11 @@ LOG IN
 - Complete form filling using the incorrect password.  When an incorrect format is used a warning is flagged, if an incorrect password is used a developer written message is flashed notifying the user that that username or password does not exist 
 - Complete the form using the admin log in details ensuring that they are redirected to the admin specific profile page.
 - Click the 'Sign Up' link at the bottom of the page making sure the user is redirected to the 'Create Account' page.
+
+LOG OUT
+
+- Click 'Log Out' navbar item ensuring the user is redirected to the 'Log In' page and a developer written message is flashed confirming that the user has been logged out.
+
 
 
 BUGS
