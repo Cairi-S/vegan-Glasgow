@@ -195,7 +195,7 @@ MY PROFILE - *USER*
 
 ADD REVIEW
 
-- Test that only logged in users can access the review page by manually typing in the route e.g. /review/add
+- Test that only logged in users can access the add review page by manually typing in the route e.g. /review/add STILL TO TEST WITH FAKE REST_ID
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the form is responsive.
 - Click the 'select restaurant' dropdown and ensure all restaurants in the database 'restaurants' collection are listed. Selecting each restaurant individually.
 - Click the 'select rating' dropdown and ensure all options are available and able to be selected.
@@ -205,6 +205,18 @@ ADD REVIEW
 - Write a review and click the 'Cancel' button making sure that the page reloads and the form is blank.
 
 EDIT REVIEW
+
+- Test that only logged in users can access the add review page by manually typing in the route e.g. /review/edit STILL TO TEST WITH FAKE REST_ID
+- Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
+- Check that clicking edit buttons on individual restaurant page and My Profile page re-routes user to the 'Edit Review' page and that the restaurant name and review body are autofilled.
+- Click the 'select restaurant' dropdown and make sure only the active restaurant is selectable.
+- Click the 'select rating' dropdown.  Bug reported as not yet able to pre-fill this information.
+- Edit text in the 'What do you think?' box ensuring that the box size is adjustable for larger reviews.
+- Edit review details and click the 'Cancel' button making sure that the user is redirected to their profile page and that the review remains unchanged.
+- Edit review details and click 'Edit my review' ensuring the user is redirected to their profile page and the corresponding review has been updated.
+
+
+
 
 
 MY PROFILE - *ADMIN*
@@ -226,6 +238,9 @@ BUGS
 - *FOOTER* not sticky on bottom of page on iPad/iPad Pro - showing quite a lot of whitespace.
 ![Footer whitespace](/documentation/images/bugs/footer-bug.png).
     - FIX - Search on Slack directed me towards two resources [css-tricks sticky footer guide](https://css-tricks.com/couple-takes-sticky-footer/) and a [js Bin](https://jsbin.com/wokututopu/1/edit?html,css,output).  Testing both options I settled on the JS Bin, utilising flex, as it fitted with my existing code more succinctly.
+
+- *EDIT REVIEW* page, 'select rating' dropdown is not pre-filling the previously selected rating.
+    - FIX - Not yet found.  For now text has been added reminding the user of their previous rating and prompting them to confirm their rating or select another.
 
 
 
