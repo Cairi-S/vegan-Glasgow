@@ -175,6 +175,16 @@ LOG OUT
 
 - Click 'Log Out' navbar item ensuring the user is redirected to the 'Log In' page and a developer written message is flashed confirming that the user has been logged out.
 
+CONTACT
+
+- Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
+- Load the contact page via the link in the footer and 'let us know' link on the user profile.
+- Click the location dropdown and ensure all expected options are available and able to be selected.
+- Leave the location dropdown blank and ensure a warning is triggered when the 'Send Message' button is clicked.
+- Check other required form fields trigger a warning when the 'Send message' button is clicked but an input is left empty.
+- Complete the form as expected and click cancel to ensure the page reloads - cross check with 'messages' collection in database to make sure the message has not sent.
+- Complete the form as expected and click 'Send message' to ensure the page reloads and a developer written message is flashed confirming the message has been sent - cross check with 'messages' collection in database to make sure the message was succesfully sent.
+
 MY PROFILE - *USER*
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
@@ -234,7 +244,7 @@ ADD RESTAURANT - *ADMIN ONLY*
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
 - Log in as a standard user and attempt to navigate to the add restaurant page by manually adding /restaurant/add to the address.  Ensure that the user is not able and an appropriate response is given.
 - Check that admin are able to access the 'Add Restaurant' page via the navbar link and button on their profile page.
-- Click the 'how expensive' and 'mealtime' dropdowns and ensure all options are available and able to be selected.
+- Click the 'how expensive' and 'mealtime' dropdowns and ensure all expected options are available and able to be selected.
 - Leave the 'how expensive' and 'mealtime' dropdowns blank and ensure a warning is triggered when the 'Add restaurant' button is clicked.
 - Complete the form ensuring that the form requires all fields to be completed, except the URL, before the form can be submitted. If a required field is left blank the user is given a prompt.
 - On form submission ensure admin is redirected to their own profile page and a message is flashed confirming the addition of the restaurant.
@@ -248,7 +258,6 @@ EDIT RESTAURANT - *ADMIN ONLY*
 - Check that clicking edit buttons on individual restaurant pages re-routes user to the 'Edit Restaurant' page and that the majority of form information is autofilled.  See bugs for exception to this.
 - Edit restaurant details and click the 'Cancel' button making sure that the user is redirected to their profile page and that the restaurant information remains unchanged.
 - Edit restaurant details and click 'Edit' ensuring the user is redirected to the all restaurants page page and the corresponding restaurant info has been updated.
-
 
 BUGS
 
