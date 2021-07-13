@@ -129,7 +129,6 @@ RESTAURANTS
 CREATE ACCOUNT
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the form is responsive.
-- BUG reported regarding responsive footer on iPad/iPad Pro devices.
 - Complete form filling in the username outside of the username requirements e.g. only 4 characters or over 12 characters, ensuring a warning is flagged on submission.
 - Complete form filling in the passwords outside of the password requirements e.g. not including uppercase, lowercase and a number, ensuring a warning is flagged on submission.
 - Cross check that attempted account creations using invalid data have not been registered to the database.
@@ -137,6 +136,16 @@ CREATE ACCOUNT
 - Create an account for a new username making sure the user is redirected to the My Profile page on form submission and a developer written message is flashed welcoming the user to the site.
 - Cross check that the newly created account has been added to the 'users' collection of the database.
 - Click the 'Log In' link at the bottom of the page making sure the user is redirected to the 'Log In' page.
+
+LOG IN
+
+- Change the screen size manually and to various mobile device sizes using devTools to verify that the form is responsive.
+- Complete form with a username that is not registered in the 'users' collection ensuring a developer written message is flashed notifying the user that that username or password does not exist.
+- Complete form where the username uses all lowercase letters ensuring that on form completion the username is recognised and user is redirected to their profile page. 
+- Complete form filling using the incorrect password.  When an incorrect format is used a warning is flagged, if an incorrect password is used a developer written message is flashed notifying the user that that username or password does not exist 
+- Complete the form using the admin log in details ensuring that they are redirected to the admin specific profile page.
+- Click the 'Sign Up' link at the bottom of the page making sure the user is redirected to the 'Create Account' page.
+
 
 BUGS
 
