@@ -391,6 +391,8 @@ The creation of this website would not have been possible without:
 
 ### Testing ###
 
+Testing infomation can be found in a separate [TESTING.md document](/documentation/TESTING.md)
+
 ### Deployment ###
 
 To run this project you will require your own IDE, e.g [GitPod]((https://gitpod.io/))
