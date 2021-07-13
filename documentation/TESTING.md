@@ -152,6 +152,7 @@ LOG OUT
 
 MY PROFILE - *USER*
 
+- Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
 - On initial log in ensure a message is flashed welcoming the user to the site.
 - Make sure the username is displayed at the top of the page confirming that users profile.
 - Click the 'Let's find somewhere to eat' link and ensure it redirects the user to the restaurants page.
@@ -161,13 +162,25 @@ MY PROFILE - *USER*
 - Click the 'Edit' button in the existing review section ensuring it redirects the user to the edit a review page and that the restaurant name and review body is pre-completed.
 - Click the 'Delete' button in the existing review section ensuring it triggers a modal prompting the user to confirm that they want to delete that review.
 - Re-open the 'Delete' modal and click the 'x' and 'Close' buttons to ensure that the modal is closed and no action is taken.
-- Re-open the 'Delete' modal and click the 'Delete' button making sure the user is redirected back to their profile page.
+- Re-open the 'Delete' modal and click the 'Delete' button making sure the user is redirected back to their profile page and the review has been removed.
 - Cross check on the 'reviews' collection that the review no longer exists.
 - When the user has no written reviews check that a suitable message is displayed in the Existing Reviews section.
 - Click the visible 'leave a review' link and ensure it redirects the user to the 'Add a review' page.
 - Try editing the site address to exclude the users username and instead inputting admin, e.g. /profile/?username=admin or /profile/admin, making sure only the users own profile page is displayed or the custom 404 page is displayed.
 
+MY PROFILE - *ADMIN*
 
+- Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
+- On initial log in ensure a message is flashed welcoming the admin to the site.
+- Make sure admin username is displayed at the top of the page confirming that admin profile.
+- In 'User Messages' section check that all current messages are displayed - cross checked with the 'messages' collection in the database.
+- Send a new message via the contact page checking that the message is newly displayed in the 'User Messages' section.
+- Click the 'Add a Restaurant' button and ensure admin are redirected to the 'Add a Restaurant' page.
+- Click the 'Restaurant Added' button to ensure it triggers a modal prompting the admin to confirm that they have added that restaurant.
+- Re-open the 'Restaurant Added' modal and click the 'x' and 'Close' buttons to ensure that the modal is closed and no action is taken.
+- Re-open the 'Restaurant Added' modal and click the 'Restaurant Added' button making sure the user is redirected back to their profile page and the message has been removed - cross check with the 'messages' collection in the database.
+- Click the 'Restaurants' link to ensure the admin are redirected to the restaurants page when wanting to edit/delete a restaurant.
+- Try editing the site address to exclude the admin username and instead inputting an existing username, e.g. /profile/?username=test01 or /profile/test01, making sure only the users own profile page is displayed or the custom 404 page is displayed.
 
 BUGS
 
