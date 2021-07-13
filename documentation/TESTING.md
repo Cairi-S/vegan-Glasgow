@@ -68,19 +68,11 @@ The most common path through the website would be:
 
 MANUAL TESTING
 
-FAVICON
-
-Check that Favicon shows on all pages.  Pages checked:
-|Shows|Doesn't|
-|-----|-------|
-|Home|My Profile|
-|Restaurants|Individual Restaurant|
-|Log Out|Add Review|
-|Create Account|Edit Review|
-|Log In|Add Restaurant|
-|Contact|Edit Restaurant|
-
 ALL PAGES
+
+Favicon
+
+Check that Favicon shows on all pages
 
 Navigation Bar
 
@@ -113,4 +105,17 @@ Logged in users:
 
 - Clicking the speech bubble icon and ensure it loads the Contact page.
 
-Change the screen size to various mobile devices using devTools to verify that the navigation bar and footer are responsive.  With the navbar becoming a burger menu and footer items stacking at the appropriate breakpoints.
+- Change the screen size to various mobile devices using devTools to verify that the navigation bar and footer are responsive.  With the navbar becoming a burger menu and footer items stacking at the appropriate breakpoints.
+
+HOME PAGE
+
+- Change the screen size to various mobile device sizes using devTools to verify that the images and cards are responsive.  With cards stacking at the appropriate breakpoints.
+- Click each individual restaurant card to make sure it takes you to the relevant individual restaurant page.
+- Cross check with the database to make sure that the restaurant's listed have "our_recommendation" marked as "on".
+
+RESTAURANTS
+
+
+
+
+
