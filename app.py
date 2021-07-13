@@ -268,19 +268,23 @@ def logout():
 
 @app.route("/review/add", methods=["GET", "POST"])
 def add_review():
-    if request.method == "POST":
-        # Creates a new instance of a review
-        new_review = {
-            "restaurant_name": request.form.get("restaurant_name"),
-            "restaurant_rating": request.form.get("restaurant_rating"),
-            "review": request.form.get("review"),
-            "created_by": session["user"]
-        }
-        # Adds the new review to the db
-        mongo.db.reviews.insert_one(new_review)
-        # Confirmation flash msg
-        flash("Thanks! Your review has been added.")
-        return redirect(url_for('add_review'))
+    if "user" in session:
+        if request.method == "POST":
+            # Creates a new instance of a review
+            new_review = {
+                "restaurant_name": request.form.get("restaurant_name"),
+                "restaurant_rating": request.form.get("restaurant_rating"),
+                "review": request.form.get("review"),
+                "created_by": session["user"]
+            }
+            # Adds the new review to the db
+            mongo.db.reviews.insert_one(new_review)
+            # Confirmation flash msg
+            flash("Thanks! Your review has been added.")
+            return redirect(url_for('add_review'))
+    else:
+        flash("Sorry, you must log in to add a review")
+        return redirect(url_for("login"))
 
     # Finds all restaurants listed in db for dropdown
     restaurants = mongo.db.restaurants.find()
