@@ -14,7 +14,7 @@
       <!-- Internal CSS link -->
       <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
   </head>
-  <body>
+  <body class="content">
     <header>
       <!-- NAVBAR -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -91,7 +91,7 @@
     </section>
 
     <!-- Page content -->
-    <main>
+    <main class="content-main">
       {% block content %}
 
       {% endblock %}

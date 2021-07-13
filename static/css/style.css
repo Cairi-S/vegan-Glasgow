@@ -44,9 +44,15 @@
     padding: 0 20px 0;
 }
 
-/*.img-col-height {
-    height: 54vh;
-}*/
+.content {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .content-main {
+    flex: 1;
+  }
 
 /* ------------ Text color */
 

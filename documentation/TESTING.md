@@ -138,12 +138,11 @@ CREATE ACCOUNT
 - Cross check that the newly created account has been added to the 'users' collection of the database.
 - Click the 'Log In' link at the bottom of the page making sure the user is redirected to the 'Log In' page.
 
-
-
 BUGS
 
 - *FOOTER* not sticky on bottom of page on iPad/iPad Pro - showing quite a lot of whitespace.
-![Footer whitespace](/documentation/images/bugs/footer-bug.png)
+![Footer whitespace](/documentation/images/bugs/footer-bug.png).
+    - FIX - Search on Slack directed me towards two resources [css-tricks sticky footer guide](https://css-tricks.com/couple-takes-sticky-footer/) and a [js Bin](https://jsbin.com/wokututopu/1/edit?html,css,output).  Testing both options I settled on the JS Bin, utilising flex, as it fitted with my existing code more succinctly.
 
 
 
