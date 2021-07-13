@@ -91,7 +91,10 @@ Logged out users:
 
 - Clicking the speech bubble icon and ensure it does not load the Contact page, redirecting the user to the Log In screen.
 
+
+
 Logged in users:
+
 *Header*
 
 - Confirm the visible navbar items are Home, Restaurant, My Profile, Add Review and Log In.
@@ -109,11 +112,38 @@ Logged in users:
 
 HOME PAGE
 
-- Change the screen size to various mobile device sizes using devTools to verify that the images and cards are responsive.  With cards stacking at the appropriate breakpoints.
+*This page is accessible to all so tests were repeated for when users were both logged in and logged out*
+
+- Change the screen size manually and to various mobile device sizes using devTools to verify that the images and cards are responsive.  With cards stacking at the appropriate breakpoints.
 - Click each individual restaurant card to make sure it takes you to the relevant individual restaurant page.
+- Cross check with the database to make sure that restaurant's information is being correctly taken from the database.
 - Cross check with the database to make sure that the restaurant's listed have "our_recommendation" marked as "on".
 
 RESTAURANTS
+
+*This page is accessible to all so tests were repeated for when users were both logged in and logged out*
+
+- Change the screen size manually and to various mobile device sizes using devTools to verify that the images and cards are responsive.  With cards stacking at the appropriate breakpoints.
+- Click each individual restaurant card to make sure it takes you to the relevant individual restaurant page.
+
+CREATE ACCOUNT
+
+- Change the screen size manually and to various mobile device sizes using devTools to verify that the form is responsive.
+- BUG reported regarding responsive footer on iPad/iPad Pro devices.
+- Complete form filling in the username outside of the username requirements e.g. only 4 characters or over 12 characters, ensuring a warning is flagged on submission.
+- Complete form filling in the passwords outside of the password requirements e.g. not including uppercase, lowercase and a number, ensuring a warning is flagged on submission.
+- Cross check that attempted account creations using invalid data have not been registered to the database.
+- Create an account for a username already in the database 'users' collection, making sure the create account page is reloaded on form submission and a developer written message is flashed notifying the user that that name is not available.
+- Create an account for a new username making sure the user is redirected to the My Profile page on form submission and a developer written message is flashed welcoming the user to the site.
+- Cross check that the newly created account has been added to the 'users' collection of the database.
+- Click the 'Log In' link at the bottom of the page making sure the user is redirected to the 'Log In' page.
+
+
+
+BUGS
+
+- *FOOTER* not sticky on bottom of page on iPad/iPad Pro - showing quite a lot of whitespace.
+![Footer whitespace](/documentation/images/bugs/footer-bug.png)
 
 
 
