@@ -34,26 +34,6 @@
     width: 100%;
 }
 
-.error-text {
-    text-align: center;
-    font-family: "Muli", sans-serif;
-    color: #243119;
-}
-
-.view-rest-text-col {
-    padding: 0 20px 0;
-}
-
-.content {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-  
-  .content-main {
-    flex: 1;
-  }
-
 /* ------------ Text color */
 
 .tagline,
@@ -115,7 +95,7 @@
     font-family: "Muli", sans-serif;
 }
 
-/* -- HEADER/FOOTER/TITLES -- */
+/* -- HEADER/FOOTER color -- */
 .navbar-style,
 .footer {
     background-color: #629490;
@@ -169,11 +149,12 @@
 }
 
 /* ------------ Menu items active */
+/* poss remove?
 .nav-menu .active {
     text-decoration: underline;
     text-underline-position: under;
     text-shadow: none;
-}
+}*/
 
 /* -- FOOTER -- */
 .footer {
@@ -183,6 +164,17 @@
     width: 100%;
     height: 72px;
 }
+
+/* ------------ Sticky footer */
+.content {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .content-main {
+    flex: 1;
+  }
 
 /* ------------ All footer text */
 .footer-text,
@@ -213,7 +205,7 @@
     padding: 0 10px 0;
 }
 
-/* ------------ SUBHEADER */
+/* ------------ SUBHEADERS */
 .tagline {
     padding: 20px 6px;
     font-size: 2.4rem;
@@ -307,6 +299,10 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.view-rest-text-col {
+    padding: 0 20px 0;
 }
 
 /* -- FORMS -- */
@@ -472,6 +468,14 @@
 .modal-btn {
     margin: 40px 6px;
     border: 1px solid #e0e0e0;
+}
+
+/* --- 404 page -- */
+
+.error-text {
+    text-align: center;
+    font-family: "Muli", sans-serif;
+    color: #243119;
 }
 
 /* --------- Media Queries ----------*/
