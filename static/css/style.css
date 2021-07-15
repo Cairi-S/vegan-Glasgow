@@ -62,6 +62,7 @@
 #navbar-menu-items a,
 .footer-text,
 .footer-icons i,
+.footer-contact,
 .btn-success a,
 .btn-danger a,
 .btn-danger i,
@@ -129,6 +130,8 @@
 /* ------------ HOVER FUNCTION */
 #navbar-menu-items a:hover,
 #logo a:hover,
+.footer-contact:hover,
+.footer-contact:focus
 .footer-icons i:hover,
 .footer-icons i:focus {
     color: #243119;
@@ -138,7 +141,8 @@
     color: #e0e0e0;
 }
 
-.form-instructions a:hover {
+.form-instructions a:hover,
+.footer-contact:hover {
     text-decoration: underline;
     text-underline-position: under;
 }
@@ -180,6 +184,10 @@
 .footer-text,
 .admin-profile-text {
     font-size: 1.2rem;
+}
+
+.footer-contact {
+    text-decoration: none;
 }
 
 /* ------------ Footer icons */
