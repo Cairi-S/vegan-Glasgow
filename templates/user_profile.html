@@ -16,15 +16,15 @@
         <div class="row g-0 align-items-center">
             <h4 class="page-subtitle">My Reviews</h4>
                 <div class="row justify-content-center">
-                    <a href="{{ url_for('add_review') }}" class="btn btn-success profile-btn col-sm-2">
-                        <i class="fas fa-plus-circle"></i> 
-                        Add a new review
-                    </a>
-                </div>
-                <div class="row justify-content-center">
                     <h4 class="profile-subheading">Existing reviews</h4>
                 </div>
                 {% if reviews|length > 0 %}
+                    <div class="row justify-content-center">
+                        <a href="{{ url_for('add_review') }}" class="btn btn-success profile-btn col-sm-2">
+                            <i class="fas fa-plus-circle"></i> 
+                            Add a new review
+                        </a>
+                    </div>
                     <div class="row g-0 justify-content-evenly">
                         {% for review in reviews if session.user|lower == review.created_by|lower %}
                             {% include "review_card.html" %}
@@ -32,14 +32,14 @@
                                 <!-- Edit and delete reviews -->
 
                                 <!--EDIT BTN-->
-                                <div class="btn btn-warning profile-btn">
-                                    <a href="{{ url_for('edit_review', review_id=review._id) }}"><i class="fas fa-pen"></i> Edit</a>
+                                <div class="btn btn-warning profile-btn review-edit-btn">
+                                    <a href="{{ url_for('edit_review', review_id=review._id) }}"><i class="fas fa-pen"></i></a>
                                 </div>
 
                                 <!--DELETE BTN-->
                                 <!-- Modal launch - code adapted from Bootstrap 5 -->
-                                <button type="button" class="btn btn-danger profile-btn col-sm-6" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <i class="fas fa-trash"></i> Delete review
+                                <button type="button" class="btn btn-danger profile-btn review-edit-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <i class="fas fa-trash"></i>
                                 </button>
                                 
                                 <!-- Modal -->
