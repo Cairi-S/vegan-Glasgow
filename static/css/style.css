@@ -297,6 +297,7 @@
 .view-rest-socials {
     margin: 0;
     padding: 10px;
+    text-align: center;
 }
 
 .view-rest-scoop-title {
@@ -406,16 +407,20 @@
 
 /* --- VIEW_RESTAURANT STYLES -- */
 
-.restaurant-scoop-card,
+/*.restaurant-scoop-card,
 .restaurant-contact-card,
 .restaurant-info-card {
     text-align: center;
-}
+}*/
 
 .info-card-margin {
     margin-top: 16px;
 }
 
+.restaurant-info-card,
+.restaurant-contact-card {
+    padding: 0 10px 0;
+}
 .restaurant-info-card,
 .img-margins {
     margin-bottom: 16px;
@@ -442,10 +447,19 @@
 
 /* --- BUTTONS -- */
 
-.profile-btn {
+.profile-btn,
+.add-review-btn {
     margin: 40px 0;
     border: 2px solid #e0e0e0;
     border: 2px solid #e0e0e0;
+}
+
+.add-review-btn {
+    width: 180px;
+}
+
+.review-edit-btn {
+    border-radius: 50%;
 }
 
 .restaurant-edit-btn {

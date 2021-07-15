@@ -163,7 +163,7 @@ def view_restaurant(restaurant_id):
     restaurant = mongo.db.restaurants.find_one(
         {"_id": ObjectId(restaurant_id)})
     # Retrieves all reviews from the database
-    reviews = mongo.db.reviews.find()
+    reviews = list(mongo.db.reviews.find())
     return render_template(
         "view_restaurant.html",
         restaurant=restaurant,
