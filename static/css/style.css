@@ -290,6 +290,10 @@
     overflow: hidden;
 }
 
+.rest-card-spacing {
+    padding-right: 10px;
+}
+
 .view-rest-socials {
     margin: 0;
     padding: 10px;
