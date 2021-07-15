@@ -71,12 +71,6 @@
                         </li>
                     </ul>
                 </div>
-                <div class="row g-0 justify-content-center">
-                    <a href="{{ url_for('add_review') }}" class="btn btn-success profile-btn col-6">
-                        <i class="fas fa-plus-circle"></i> 
-                        Add a new review
-                    </a>
-                </div>
             </div>  
         </div>
     </div>
@@ -87,91 +81,101 @@
                 <!--Container title-->
                 <h6 class="restaurant-card-title">Reviews</h6>
             </div>
-            <div class="row g-0">
-                <!--Taking each review from db-->
-                {% for review in reviews %}
-                    <!--Checking if restaurant name matches review resturant name from db-->
-                    {% if restaurant.name == review.restaurant_name %}
-                        {% include "review_card.html" %}
-                        <!--Allowing review to be edited/deleted if created by the session user-->
-                        {% if review.created_by == session.user|lower %}
-                            <div class="col-sm-3 d-flex align-items-center">
-                            <!-- Modal launch - code adapted from Bootstrap 5 -->
-                            <button type="button" class="btn btn-danger profile-btn col-sm-6" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <i class="fas fa-trash"></i> Delete Review
-                            </button>
-                              
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">
-                                                Are you sure you want to delete this review?
-                                            </h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-footer justify-content-center">
-                                            <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">
-                                                Close
-                                            </button>
-                                            <div class="btn btn-danger profile-btn modal-btn">
-                                                <a href="{{ url_for('delete_review', review_id=review._id) }}">
-                                                    <i class="fas fa-trash"></i> Confirm Delete
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end modal-->
-                                <div class="btn btn-warning restaurant-edit-btn col-sm-5">
-                                    <a href="{{ url_for('edit_review', review_id=review._id) }}">
-                                        <i class="fas fa-pen"></i> Edit
-                                    </a>
-                                </div>
-                            </div>
-                        <!--Allowing review to be deleted by admin-->
-                        {% elif session.user|lower ==  "admin" %}
-                            <div class="col-sm-3">
-                            <!-- Modal launch - code adapted from Bootstrap 5 -->
-                            <button type="button" class="btn btn-danger profile-btn col-sm-6" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <i class="fas fa-trash"></i> Delete Review
-                            </button>
-                              
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">
-                                                Are you sure you want to delete this review?
-                                            </h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-footer justify-content-center">
-                                            <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">
-                                                Close
-                                            </button>
-                                            <div class="btn btn-danger profile-btn modal-btn">
-                                                <a href="{{ url_for('delete_review', review_id=review._id) }}">
-                                                    <i class="fas fa-trash"></i> Confirm Delete
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end modal-->
-                            </div>
-                        {% endif %}
-                        <!--End of edit/delete check-->
-                    {% endif %}
-                    <!--End of restaurant name matching review restaurant name check-->
-                    <br>
-                {% endfor %}
-                <!--End of review loop-->
+            <div class="row g-0 justify-content-center">
+                <a href="{{ url_for('add_review') }}" class="btn btn-success add-review-btn">
+                    <i class="fas fa-plus-circle"></i> 
+                    Add a new review
+                </a>
             </div>
+                <div class="row g-0">
+                    <!--Taking each review from db-->
+                {% for review in reviews %}
+                <!--Checking if restaurant name matches review resturant name from db-->
+                {% if restaurant.name == review.restaurant_name %}
+                    <div class="col-sm-9">
+                        {% include "review_card.html" %}
+                    </div>
+                    <!--Allowing review to be edited/deleted if created by the session user-->
+                    {% if review.created_by == session.user|lower %}
+                        <div class="col-sm-3 d-flex align-items-center">
+                            <!-- Edit btn -->
+                            <div class="btn btn-warning restaurant-edit-btn review-edit-btn">
+                                <a href="{{ url_for('edit_review', review_id=review._id) }}">
+                                    <i class="fas fa-pen"></i>
+                                </a>
+                            </div>
+                            <!-- Modal launch - code adapted from Bootstrap 5 -->
+                            <button type="button" class="btn btn-danger profile-btn review-edit-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                          
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">
+                                                Are you sure you want to delete this review?
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-footer justify-content-center">
+                                            <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">
+                                                Close
+                                            </button>
+                                            <div class="btn btn-danger profile-btn modal-btn">
+                                                <a href="{{ url_for('delete_review', review_id=review._id) }}">
+                                                    <i class="fas fa-trash"></i> Confirm Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end modal-->
+                        </div>
+                    <!--Allowing review to be deleted by admin-->
+                    {% elif session.user|lower ==  "admin" %}
+                        <div class="col-sm-3">
+                        <!-- Modal launch - code adapted from Bootstrap 5 -->
+                        <button type="button" class="btn btn-danger profile-btn review-edit-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                          
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">
+                                            Are you sure you want to delete this review?
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-footer justify-content-center">
+                                        <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">
+                                            Close
+                                        </button>
+                                        <div class="btn btn-danger profile-btn modal-btn">
+                                            <a href="{{ url_for('delete_review', review_id=review._id) }}">
+                                                <i class="fas fa-trash"></i> Confirm Delete
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end modal-->
+                        </div>
+                    {% endif %}
+                    <!--End of edit/delete check-->
+                {% endif %}
+                <!--End of restaurant name matching review restaurant name check-->
+                <br>
+            {% endfor %}
+            <!--End of review loop-->
+        </div>
+
             <!--If user=admin allows them to edit or delete the restaurants information-->
             {% if session.user|lower ==  "admin" %}
                 <div class="row g-0 justify-content-center">
