@@ -473,6 +473,8 @@ echo web: python app.py > Procfile
 
 - Many thanks to [geeksforgeeks.org](https://www.geeksforgeeks.org/) and their guide to [Python pattern matching](https://www.geeksforgeeks.org/pattern-matching-python-regex/).
 
+- Many thanks to [css-tricks.com](https://css-tricks.com) for their [guide to line-clamp](https://css-tricks.com/almanac/properties/l/line-clamp/).
+
 #### Images ####
 Individal restaurant images used in this project were found using [Google Images](https://www.google.com/imghp?hl=en) and typing in the restaurants name. These images are used for educational purposes only and full credit goes to the original owner.
 
