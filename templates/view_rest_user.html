@@ -1,0 +1,43 @@
+<div class="row g-0">
+    <!--Container title-->
+    <h6 class="profile-subheading">Reviews</h6>
+</div>
+<div class="row g-0 justify-content-center">
+    <a href="{{ url_for('add_review') }}" class="btn btn-success add-review-btn">
+        <i class="fas fa-plus-circle"></i> 
+        Add a new review
+    </a>
+</div>
+<div class="row g-0">
+        <!--Taking each review from db-->
+{% for review in reviews %}
+    <!--Checking if restaurant name matches review resturant name from db-->
+    {% if restaurant.name == review.restaurant_name %}
+        <div class="col-sm-9">
+            {% include "review_card.html" %}
+        </div>
+        <!--Allowing review to be edited/deleted if created by the session user-->
+        {% if review.created_by == session.user|lower %}
+            <div class="col-sm-3 d-flex align-items-center">
+                <!-- Edit btn -->
+                <div class="btn btn-warning restaurant-edit-btn review-edit-btn">
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}">
+                        <i class="fas fa-pen"></i>
+                    </a>
+                </div>
+            </div>
+        
+        {% endif %}
+        <!--End of edit/delete check-->
+    {% endif %}
+    <!--End of restaurant name matching review restaurant name check-->
+    <br>
+{% endfor %}
+<!--End of review loop-->
+</div>
+<div>
+    <h6 class="page-subtitle profile-subheading">Want to delete one of your reviews?</h6>
+    <p class="admin-profile-text">To help avoid accidents, please do this directly from your 
+        <a href=" {{url_for('profile')}}"> Profile</a> page.
+    </p>
+</div>
