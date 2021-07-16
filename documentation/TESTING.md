@@ -76,7 +76,7 @@ Check that Favicon shows on all pages
 
 Navigation Bar
 
-Hover over navigation items, and speach bubble/social media icons in the footer ensuring there is no discernable change other than the pointer turning to a hand and the item changing color from off white to dark green.
+Hover over navigation items, contact page link and social media icons in the footer ensuring there is no discernable change other than the pointer turning to a hand and the item changing color from off white to dark green.
 
 Logged out users:
 *Header*
@@ -89,7 +89,7 @@ Logged out users:
 
 *Footer*
 
-- Clicking the speech bubble icon and ensure it does not load the Contact page, redirecting the user to the Log In screen.
+- Clicking the contact link text and ensure it does not load the Contact page, redirecting the user to the Log In screen.
 
 
 
@@ -106,7 +106,7 @@ Logged in users:
 
 *Footer*
 
-- Clicking the speech bubble icon and ensure it loads the Contact page.
+- Clicking the contact link text and ensure it loads the Contact page.
 
 - Change the screen size to various mobile devices using devTools to verify that the navigation bar and footer are responsive.  With the navbar becoming a burger menu and footer items stacking at the appropriate breakpoints.
 
@@ -137,18 +137,15 @@ INDIVIDUAL RESTAURANTS (view_restaurant.html)
 
 *For logged in users only:*
 
-- Check that edit/delete buttons are only visible for users own reviews.
+- Check that edit button is only visible for users own reviews.
 - In review section click 'Edit' button and check in redirects to the edit review button with the correct restaurant name and review body displayed.
-- In review section click 'Delete' button and check it triggers a modal prompting the user to confirm that they want to delete that review.
-- Re-open the 'Delete' modal and click the 'x' and 'Close' buttons to ensure that the modal is closed and no action is taken.
-- Re-open the 'Delete' modal and click the 'Delete' button making sure the user is redirected back to their profile page and the review has been removed.
+- Check that 'delete a review' link is only visible for logged in users.  If no user or admin user are logged in the link does not displayed.
 
 *For admin users only:*
 
-- Check that the delete review button is visible for logged in admin users.  Repeat the modal checks for deleting reviews.
 - Check that the edit and delete restaurant buttons are visible for logged in admin users.
 - Click the 'Edit Info' button in the Edit/Delete restaurant section checking that admin are redirected to the edit info page and the information from the corresponding page is auto generated.
-- Repeat the modal checks for deleting restaurants.
+- Checks modal for deleting restaurants using the same methods as previously mentioned
 
 
 CREATE ACCOUNT
@@ -266,6 +263,15 @@ EDIT RESTAURANT - *ADMIN ONLY*
 - Edit restaurant details and click the 'Cancel' button making sure that the user is redirected to their profile page and that the restaurant information remains unchanged.
 - Edit restaurant details and click 'Edit' ensuring the user is redirected to the all restaurants page page and the corresponding restaurant info has been updated.
 
+DELETE RESTAURANT - *ADMIN ONLY*
+
+- Check that clicking delete button on individual restaurant pages triggers the 'Delete Restaurant' modal.
+prompting the user to confirm that they want to delete that review.
+- Re-open the 'Delete' modal and click the 'x' and 'Close' buttons to ensure that the modal is closed and no action is taken.
+- Re-open the 'Delete' modal and click the 'Delete' button making sure the user is redirected back to the admin profile page.
+- Cross check in database that the restaurant has been deleted.
+- *PLEASE NOTE* it is intentional that reviews for the deleted restaurant remain in the database. Should the restaurant be re-added to the site, e.g. the restaurant re-opens after a brief spell of closure, the existing reviews will automatically be generated for the listing 
+
 BUGS
 
 - *FOOTER* not sticky on bottom of page on iPad/iPad Pro - showing quite a lot of whitespace.
@@ -274,6 +280,8 @@ BUGS
 
 - *EDIT REVIEW* and *EDIT RESTAURANT* pages, dropdown menus are not pre-filling the previously selected rating.
     - FIX - Not yet found.  For now text has been added reminding the user of their previous rating and prompting them to confirm their rating or select another.
+
+
 
 
 
