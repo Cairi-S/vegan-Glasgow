@@ -131,7 +131,7 @@
 #navbar-menu-items a:hover,
 #logo a:hover,
 .footer-contact:hover,
-.footer-contact:focus
+.footer-contact:focus,
 .footer-icons i:hover,
 .footer-icons i:focus {
     color: #243119;
@@ -188,6 +188,7 @@
 
 .footer-contact {
     text-decoration: none;
+    text-align: center;
 }
 
 /* ------------ Footer icons */
@@ -509,7 +510,7 @@
 @media (min-width: 311px) and (max-width: 540px) and (orientation:portrait) {
     /*----------Footer--------*/
     .footer {
-        height: 138px;
+        height: 170px;
     }
 
     .mobile-padding {
@@ -518,5 +519,20 @@
 
     .footer-icons {
         padding-bottom: 20px;
+    }
+
+    .tagline {
+        font-size: 2rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 1024px) and (orientation:portrait) {
+    /*----------Footer--------*/
+    .footer {
+        height: 140px;
     }
 }
