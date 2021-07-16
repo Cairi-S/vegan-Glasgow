@@ -35,9 +35,11 @@
 {% endfor %}
 <!--End of review loop-->
 </div>
+{% if session.user %}
 <div>
     <h6 class="page-subtitle profile-subheading">Want to delete one of your reviews?</h6>
     <p class="admin-profile-text">To help avoid accidents, please do this directly from your 
         <a href=" {{url_for('profile')}}"> Profile</a> page.
     </p>
 </div>
+{% endif %}
