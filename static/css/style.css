@@ -320,12 +320,20 @@
 }
 
 /* -- FORMS -- */
-.form-container {
+.form-container,
+.profile-container {
     margin: 52px;
-    padding: 20px 20px;
     border: 2px solid #243119;
     border-radius: 10px;
     background-color: rgba(224, 224, 224, 0.5);
+}
+
+.form-container {
+    padding: 20px 20px;
+}
+
+.profile-container {
+    padding: 20px 6px;
 }
 
 .form-header,
@@ -403,7 +411,7 @@
 }
 
 .restaurant-review-info {
-    padding-left: 30px;
+    padding: 0 10px 0 10px
 }
 
 /* --- VIEW_RESTAURANT STYLES -- */
@@ -518,6 +526,11 @@
 
     .footer-icons {
         padding-bottom: 20px;
+    }
+
+    .form-container,
+    .profile-container {
+        margin: 38px;
     }
 
     .tagline {
