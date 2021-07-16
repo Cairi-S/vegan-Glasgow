@@ -4,23 +4,25 @@
 <!-- Page title -->
 <h2 class="page-title">{{ username }}'s Profile</h2>
 
-<div class="row g-0 form-container">
+<div class="row g-0 profile-container">
     {% if session.user|lower != "admin"|lower %}
-        <h3 class="profile-search-prompt">Hungry? Let's <a href="{{ url_for('restaurants') }}"> find somewhere to eat!</a></h3>
+        <h3 class="profile-search-prompt">Hungry? 
+            <p> 
+                <a href="{{ url_for('restaurants') }}"> Find somewhere to eat!</a>
+            </p>
+        </h3>
         <div class="row g-0">
             <h4 class="profile-search-prompt">Found a great new restaurant? 
-                <a href="{{ url_for('contact')}}">Let us know</a>
-                so we can add it to the list!
+                <p>
+                    <a href="{{ url_for('contact')}}">Let us know so we can add it to the list!</a>
+                </p>
             </h4>
         </div>
         <div class="row g-0 align-items-center">
             <h4 class="page-subtitle">My Reviews</h4>
-                <div class="row justify-content-center">
-                    <h4 class="profile-subheading">Existing reviews</h4>
-                </div>
                 {% if reviews|length > 0 %}
-                    <div class="row justify-content-center">
-                        <a href="{{ url_for('add_review') }}" class="btn btn-success profile-btn col-sm-2">
+                    <div class="row g-0 d-flex justify-content-center">
+                        <a href="{{ url_for('add_review') }}" class="btn btn-success profile-btn add-review-btn">
                             <i class="fas fa-plus-circle"></i> 
                             Add a new review
                         </a>
