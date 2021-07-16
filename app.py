@@ -1,7 +1,7 @@
 import os
 from flask import (
     Flask, flash, render_template,
-    redirect, request, session, url_for)
+    redirect, request, session, url_for, abort)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -9,6 +9,7 @@ if os.path.exists("env.py"):
     import env
 
 ADMIN_USER = 'admin'
+
 
 # Flask set up
 app = Flask(__name__)
@@ -54,20 +55,15 @@ def signup():
         def password_check(password):
             val = True
             if len(password) < 6:
-                print('Password length should be at least 6')
                 val = False
             if not any(char.isdigit() for char in password):
-                print('Password must have one number')
                 val = False
             if not any(char.isupper() for char in password):
-                print('Password must have one uppercase letter')
                 val = False
             if not any(char.islower() for char in password):
-                print('Password must have one lowercase letter')
                 val = False
             if val:
                 return val
-            print(val)
 
         if (password_check(password)):
             print("Password is valid")
@@ -159,22 +155,27 @@ def restaurants():
 
 @app.route("/restaurant/<restaurant_id>/view")
 def view_restaurant(restaurant_id):
-    # Retrieves restaurant id from the database
-    restaurant = mongo.db.restaurants.find_one(
-        {"_id": ObjectId(restaurant_id)})
-    # Retrieves all reviews from the database
-    reviews = list(mongo.db.reviews.find())
-    return render_template(
-        "view_restaurant.html",
-        restaurant=restaurant,
-        reviews=reviews)
+    try:
+        # Retrieves restaurant id from the database
+        restaurant = mongo.db.restaurants.find_one(
+            {"_id": ObjectId(restaurant_id)})
+
+        restaurants = mongo.db.restaurants.find()
+        # Retrieves all reviews from the database
+        reviews = list(mongo.db.reviews.find())
+        return render_template(
+            "view_restaurant.html",
+            restaurant=restaurant,
+            restaurants=restaurants,
+            reviews=reviews)
+    except Exception:
+        abort(404, description="Page not available")
 
 
 @app.route("/restaurant/add", methods=["GET", "POST"])
 def add_restaurant():
     if not session['user'] == ADMIN_USER:
-        flash("Whoops, the page you are looking for is for Admin only")
-        return redirect(url_for('profile', username=session['user']))
+        abort(404, description="Page not available")
     elif request.method == "POST":
         # Checks for existing restaurant in db
         existing_restaurant = mongo.db.restaurants.find_one(
