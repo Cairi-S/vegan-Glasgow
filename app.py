@@ -215,8 +215,7 @@ def add_restaurant():
 @app.route("/restaurant/<restaurant_id>/edit", methods=["GET", "POST"])
 def edit_restaurant(restaurant_id):
     if not session['user'] == ADMIN_USER:
-        flash("Whoops, the page you are looking for is for Admin only")
-        return redirect(url_for('profile', username=session['user']))
+        abort(404, description="Page not available")
     elif request.method == "POST":
         # Checks whether the recommendation box is checked
         our_recommendation = "on" if request.form.get(
@@ -249,8 +248,7 @@ def edit_restaurant(restaurant_id):
 @app.route("/restaurant/<restaurant_id>/delete")
 def delete_restaurant(restaurant_id):
     if not session['user'] == ADMIN_USER:
-        flash("Whoops, the page you are looking for is for Admin only")
-        return redirect(url_for('profile', username=session['user']))
+        abort(404, description="Page not available")
     else:
         # Deletes the restaurant with corresponding id from db
         mongo.db.restaurants.remove({"_id": ObjectId(restaurant_id)})
@@ -294,33 +292,37 @@ def add_review():
 
 @app.route("/review/<review_id>/edit", methods=["GET", "POST"])
 def edit_review(review_id):
-    if request.method == "POST":
-        # Harvests the information from the edit_review form
-        updated_review = {
-            "restaurant_name": request.form.get("restaurant_name"),
-            "restaurant_rating": request.form.get("restaurant_rating"),
-            "review": request.form.get("review"),
-            "created_by": session["user"]
-        }
-        # Updates the existing_review with the corresponding id
-        mongo.db.reviews.update({"_id": ObjectId(review_id)}, updated_review)
-        # Confirmation flash msg
-        flash("Thanks! Your review has been updated.")
-        return redirect(url_for('profile', username=session['user']))
+    try:
+        if request.method == "POST":
+            # Harvests the information from the edit_review form
+            updated_review = {
+                "restaurant_name": request.form.get("restaurant_name"),
+                "restaurant_rating": request.form.get("restaurant_rating"),
+                "review": request.form.get("review"),
+                "created_by": session["user"]
+            }
+            # Updates the existing_review with the corresponding id
+            mongo.db.reviews.update(
+                {"_id": ObjectId(review_id)}, updated_review)
+            # Confirmation flash msg
+            flash("Thanks! Your review has been updated.")
+            return redirect(url_for('profile', username=session['user']))
 
-    # Finds the review with the corresponding id
-    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
-    # Finds all the restaurants
-    restaurants = mongo.db.restaurants.find()
-    # Finds the session user
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    # Returns the edit page for chosen restaurant review if created by user
-    return render_template(
-        "edit_review.html",
-        review=review,
-        restaurants=restaurants,
-        username=username)
+        # Finds the review with the corresponding id
+        review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+        # Finds all the restaurants
+        restaurants = mongo.db.restaurants.find()
+        # Finds the session user
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        # Returns the edit page for chosen restaurant review if created by user
+        return render_template(
+            "edit_review.html",
+            review=review,
+            restaurants=restaurants,
+            username=username)
+    except Exception:
+        abort(404, description="Page doesn't exist")
 
 
 @app.route("/review/<review_id>/delete")
@@ -366,8 +368,7 @@ def contact():
 @app.route("/contact/<message_id>/delete")
 def delete_message(message_id):
     if not session['user'] == ADMIN_USER:
-        flash("Whoops, the page you are looking for is for Admin only")
-        return redirect(url_for('profile', username=session['user']))
+        abort(404, description="Page not available")
     else:
         # Deletes the review with corresponding id from db
         mongo.db.messages.remove({"_id": ObjectId(message_id)})
