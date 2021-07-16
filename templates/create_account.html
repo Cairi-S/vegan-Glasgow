@@ -4,7 +4,7 @@
   <div class="row g-0 form-container">
     <!-- Header -->
       <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
-          <h3 class="form-header">Create Account</h3>
+          <h3 class="form-header mobile-header-margin">Create Account</h3>
       </div>
       <!-- FORM STARTS - CREATE ACCOUNT -->
       <form class="col-md-6 offset-md-3 col-sm-8 offset-sm-2" method="POST" action="{{ url_for('signup') }}">
@@ -30,12 +30,12 @@
             <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
           </div>
           <!-- Submit button input -->
-          <button type="submit" class="btn form-instructions form-button">
-            <i class="fas fa-plus-circle"></i> Create My Account
+          <button type="submit" class="btn form-instructions btn-success form-button">
+            <i class="fas fa-user-plus"></i> Create My Account
           </button>
       </form>
       <!-- FORM ENDS -->
-      <div class="row">
+      <div class="row g-0 d-flex justify-content-center">
         <!-- Link to Login page for pre-existing members -->
         <div class="col-sm-12 form-instructions">
           <p>Already a member? 

@@ -469,8 +469,7 @@
 
 .form-button {
     margin-bottom: 10px;
-    background-color: #96be8c;
-    border: 2px solid #a0c497;
+    color:#e0e0e0;
 }
 
 .profile-btn a,
@@ -527,6 +526,10 @@
 
     .page-title {
         font-size: 2rem;
+    }
+
+    .mobile-header-margin {
+        margin-bottom: 20px;
     }
 }
 
