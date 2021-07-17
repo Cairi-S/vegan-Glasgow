@@ -30,13 +30,15 @@
             <input type="text" class="form-control form-spacing" id="website" name="website" value="{{ restaurant.website }}" placeholder="Restaurant website..." required>
         </div>
         <!-- Restaurant price range -->
-        <div class="row">
+        <div class="row g-0">
             <label class="form-instructions review-form-items" for="price_range">
-                How expensive is this restaurant?
+                How expensive is this restaurant? Please confirm your choice by reselecting or choose another option.
             </label>
+        </div>
+        <div class="row g-0">
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="price_range" name="price_range" required>
                 <option class="form-instructions" value="" disabled selected>
-                    Select {{ restaurant.price_range }} to confirm/Choose a new price range...
+                    Reselect {{ restaurant.price_range }} or choose a new price range...
                 </option>
                 <option value="£">£ Cheap</option>
                 <option value="££">££ Medium</option>
@@ -49,13 +51,15 @@
             <input type="text" class="form-control form-spacing" id="cuisine" name="cuisine" value="{{ restaurant.cuisine }}" placeholder="Cuisine type..." required>
         </div>
         <!-- Restaurant opening hours -->
-        <div class="row">
+        <div class="row g-0">
             <label class="form-instructions review-form-items" for="open_times">
-                What times is this restaurant open?
+                What times is this restaurant open? Please confirm your choice by reselecting or choose another option.
             </label>
+        </div>
+        <div class="row g-0">
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="open_times" name="open_times" required>
                 <option class="form-instructions" value="" disabled selected>
-                    Select {{ restaurant.open_times }} to confirm hours/Choose a new mealtime...
+                    Reselect {{ restaurant.open_times }} or choose a new mealtime...
                 </option>
                 <option value="Breakfast">Breakfast</option>
                 <option value="Brunch">Brunch</option>
@@ -91,7 +95,9 @@
             value="{{ restaurant.restaurant_img_url }}" placeholder="Add the URL of the image to add...">
         </div>
         <!-- Restaurant review buttons submit and cancel -->
-        <button type="submit" class="btn btn-success review-form-items">Confirm Edit</button>
+        <button type="submit" class="btn btn-success review-form-items">
+            <i class="fas fa-user-edit"></i> Confirm Edit
+        </button>
         <a href="{{ url_for('profile') }}" class="btn btn-danger review-form-items">Cancel</a>
     </form>
     <!-- end of form -->
