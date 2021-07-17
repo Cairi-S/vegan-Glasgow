@@ -6,16 +6,16 @@
         <h6 class="restaurant-card-title">Edit/Delete This Restaurant</h6>
     </div>
     <div class="col-sm-4">
-        <div class="row g-0 justify-content-center">
+        <div class="row g-0 justify-content-around">
             <!--Edit btn link-->
-            <div class="btn btn-warning restaurant-edit-btn col-sm-5">
+            <div class="btn btn-warning restaurant-edit-btn">
                 <a href="{{ url_for('edit_restaurant', restaurant_id=restaurant._id)}}">
                     <i class="fas fa-pen"></i> Edit Info
                 </a>
             </div>
             <!--Delete btn link-->
             <!-- Modal launch - code adapted from Bootstrap 5 -->
-            <button type="button" class="btn btn-danger profile-btn col-sm-6" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-danger profile-btn restaurant-delete-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <i class="fas fa-trash"></i> Delete Restaurant
             </button>
             
@@ -62,7 +62,7 @@
             </div>
             <!--Allowing review to be edited/deleted if created by the session user-->
             {% if review.created_by == session.user|lower %}
-                <div class="col-sm-3 d-flex align-items-center">
+                <div class="col-sm-3 d-flex align-items-center review-btn-padding">
                     <!-- Edit btn -->
                     <div class="btn btn-warning restaurant-edit-btn review-edit-btn">
                         <a href="{{ url_for('edit_review', review_id=review._id) }}">
