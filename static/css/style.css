@@ -389,7 +389,7 @@
 }
 
 .custom-select {
-    margin: 10px 0 0 12px;
+    margin: 10px 0;
 }
 
 .review-form-items {
@@ -578,6 +578,10 @@
 
     .restaurant-edit-btn {
         margin: 40px 0 0 0;
+    }
+
+    .review-form {
+        margin: 0 20px;
     }
 
     .tagline {
