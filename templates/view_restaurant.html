@@ -23,6 +23,7 @@
                     <h6 class="restaurant-card-title view-rest-scoop-title">Here's The Scoop...</h6>
                     <p class="restaurant-card-text view-rest-text"> {{ restaurant.summary }}</p>
                 </div>
+                <!-- Restaurant details -->
                 <div class="row g-0 restaurant-info-card info-card-margin">
                     <!-- Restaurant price range -->
                     <p class="restaurant-card-text">
@@ -31,15 +32,15 @@
                     <p class="restaurant-card-text">
                         <i class="fas fa-utensils rest-card-spacing"></i> {{ restaurant.cuisine }}</p>
                     <!-- Restaurant opening times -->
-                    <p class="restaurant-card-text">
+                    <p class="rest-card-text-btm">
                         <i class="fas fa-clock rest-card-spacing"></i> {{ restaurant.open_times }}</p>
                 </div>
             </div>
         </div>
         <!--RIGHT COLUMN-->
         <div class="col-sm-12 col-md-4">
-            <div class="row g-0">
-                <div class="row g-0 restaurant-contact-card">
+            <div class="row g-0 restaurant-contact-container">
+                <div class="row g-0 restaurant-contact-contents">
                     <!-- Restaurant website address -->
                     <p class="restaurant-card-text">
                         {{ restaurant.website }}
@@ -75,7 +76,7 @@
         </div>
     </div>
     <!--USER REVIEWS CONTAINER-->
-    <div class="row g-0">
+    <div class="row g-0 rest-reviews-container">
         <div class="col-sm-12 view-rest-reviews-card">
             <!--If user=admin allows them to edit or delete the restaurants information-->
             {% if session.user|lower ==  "admin" %}
