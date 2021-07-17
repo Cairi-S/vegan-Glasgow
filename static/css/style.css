@@ -283,9 +283,14 @@
     background-color: #96be8c;
 }
 
-.restaurant-card-text {
-    margin: 0;
+.restaurant-card-text,
+.restaurant-card-scoop {
     padding: 10px 10px 0 10px;
+}
+
+.restaurant-card-text,
+.restaurant-card-scoop {
+    margin: 0;
     /* Many thanks to css-tricks.com for their info on line-clamp */
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -305,7 +310,6 @@
 .view-rest-socials {
     margin: 0;
     padding: 10px;
-    text-align: center;
 }
 
 .view-rest-scoop-title {
@@ -565,7 +569,7 @@
         padding: 0;
     }
 
-    .restaurant-card-text {
+    .restaurant-card-scoop-txt {
         padding: 10px 10px 50px 10px;
     }
 
@@ -603,5 +607,13 @@
     /*----------Footer--------*/
     .footer {
         height: 140px;
+    }
+
+    .socials {
+        padding: 0;
+    }
+
+    .restaurant-card-scoop-txt {
+        padding: 10px 10px 50px 10px;
     }
 }
