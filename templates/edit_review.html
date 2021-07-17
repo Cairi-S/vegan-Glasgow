@@ -9,11 +9,13 @@
     <!-- Add review form -->
     <form class="review-form" method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
         <!-- Select restaurant to review -->
-        <div class="row">
+        <div class="row g-0">
             <label class="form-instructions review-form-items" for="restaurant_name">
                 Which restaurant will you review?
             </label>
+        </div>
             <!-- Select restaurant dropdown -->
+        <div class="row g-0">
             <select class="custom-select form-spacing col-sm-4" id="restaurant_name" name="restaurant_name" required>
                 <option class="form-instructions" value="" disabled>Select restaurant</option>
                 <!-- Select restaurant iteration for dropdown -->
@@ -31,11 +33,13 @@
             </select>
         </div>
         <!-- Restaurant rating -->
-        <div class="row">
+        <div class="row g-0">
             <label class="form-instructions review-form-items" for="restaurant_rating">
                 How would you rate this restaurant?
             </label>
+        </div>
             <!-- Restaurant rating dropdown -->
+        <div class="row g-0">
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="restaurant_rating" name="restaurant_rating" required>
                 <option class="form-instructions" value="" disabled selected>
                     {{ review.restaurant_rating }} or choose a new rating</option>
@@ -54,7 +58,9 @@
             </textarea>
         </div>
         <!-- Restaurant review buttons submit and cancel -->
-        <button type="submit" class="btn btn-success review-form-items">Edit My Review</button>
+        <button type="submit" class="btn btn-success review-form-items">
+            <i class="fas fa-edit"></i> Edit My Review
+        </button>
         <a href="{{ url_for('profile') }}" 
         class="btn btn-danger review-form-items">Cancel</a>
     </form>
