@@ -467,13 +467,13 @@
 
 /* --- BUTTONS -- */
 
-.profile-btn,
-.add-review-btn {
+.profile-btn {
     margin: 40px 0;
     border: 2px solid #e0e0e0;
 }
 
-.add-rest-btn {
+.add-rest-btn,
+.add-review-btn {
     margin: 14px 0 30px;
     border: 2px solid #e0e0e0;
 }
@@ -481,11 +481,14 @@
 .add-review-btn,
 .add-rest-btn,
 .restaurant-edit-btn,
-.restaurant-delete-btn {
+.restaurant-delete-btn,
+.review-edit-btn,
+.review-delete-btn {
     width: auto;
 }
 
-.review-edit-btn {
+.review-edit-btn,
+.review-delete-btn {
     border-radius: 50%;
 }
 
