@@ -43,6 +43,7 @@
 .form-instructions,
 .form-instructions a,
 .restaurant-card-text,
+.rest-card-text-btm,
 .page-title,
 .page-subtitle,
 .review-card-title,
@@ -89,6 +90,7 @@
 .form-instructions,
 .form-instructions a,
 .restaurant-card-text,
+.rest-card-text-btm,
 .profile-search-prompt,
 .admin-profile-text,
 .no-review-text,
@@ -291,6 +293,11 @@
     overflow: hidden;
 }
 
+.rest-card-text-btm {
+    margin: 0;
+    padding: 10px 10px 10px 10px;
+}
+
 .rest-card-spacing {
     padding-right: 10px;
 }
@@ -307,7 +314,7 @@
 
 .view-rest-text {
     margin: 0;
-    padding: 0px 10px;
+    padding: 10px 10px;
     /* Many thanks to css-tricks.com for their info on line-clamp */
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -427,7 +434,7 @@
 }
 
 .restaurant-info-card,
-.restaurant-contact-card {
+.restaurant-contact-contents {
     padding: 0 10px 0;
 }
 .restaurant-info-card,
@@ -437,14 +444,14 @@
 
 .view-rest-reviews-card,
 .restaurant-scoop-card,
-.restaurant-contact-card,
+.restaurant-contact-contents,
 .restaurant-info-card {
     background-color: white;
     border: 1px solid #243119;
     border-radius: 10px;
 }
 
-.restaurant-contact-card i,
+.restaurant-contact-contents i,
 .restaurant-info-card i {
     padding-right: 10px;
 }
@@ -468,16 +475,22 @@
 }
 
 .add-review-btn,
-.add-rest-btn {
-    width: 180px;
+.add-rest-btn,
+.restaurant-edit-btn,
+.restaurant-delete-btn {
+    width: auto;
 }
 
 .review-edit-btn {
     border-radius: 50%;
 }
 
+.review-btn-padding {
+    padding-left: 10px;
+}
+
 .restaurant-edit-btn {
-    margin: 40px 30px 40px 0;
+    margin: 40px 0 40px 0;
 }
 
 .form-button {
@@ -536,6 +549,28 @@
     .form-container,
     .profile-container {
         margin: 38px;
+    }
+
+    .restaurant-contact-container,
+    .rest-reviews-container {
+        margin-bottom: 16px;
+        /*padding: 0 20px 0;*/
+    }
+
+    .view-rest-text {
+        height: auto;
+    }
+
+    .view-rest-text-col {
+        padding: 0;
+    }
+
+    .restaurant-card-text {
+        padding: 10px 10px 50px 10px;
+    }
+
+    .restaurant-edit-btn {
+        margin: 40px 0 0 0;
     }
 
     .tagline {
