@@ -36,10 +36,11 @@ The most common path through the website would be:
     - Users are able to leave a review for a restaurant via each individual restaurants page or their own accounts page.
 - Find out contact information for individual restaurants.
     - Every restaurant is initially displayed on a card which includes restaurant contact information such as address and contact telephone number.
-- Find exteral links to restaurants homepages and social media where appropriate.
-    - On each restaurant card the restaurants web address is displayed.  Within the restaurants full page users are able to access the restaurants social media details.
+- Find external links to restaurants' homepages and social media where appropriate.
+    - On each restaurant card the restaurant's web address is displayed, in future this would be a clickable link.  
+    - Within the restaurants page users are able to access the restaurant's social media details.
 - See attractive images of the restaurant so I can judge whether I might enjoy the food and atmosphere.
-    - Each restaurant features an image of it's interior, exterior or a dish served the user a glimpse of the restaurants theme. 
+    - Each restaurant features an image of its interior, exterior or a dish served there, giving the user a glimpse of the restaurants theme. 
 - Find information on the cuisine ie/ Italian, Traditional Scottish, Japanese, Fusion.
     - Each restaurant card features a short breakdown of the type of food offered.
 - Find out the price range.
@@ -49,11 +50,11 @@ The most common path through the website would be:
 - Be able to create an account and have an individual profile.
     - Users who are not logged in have the Create Account tab clearly displayed in the navbar.  Once an account is created they are automatically directed to their 'My Account' page whose link replaces the 'Create Account' tab.
 - Be able to leave reviews to help advise others.
-    - All logged in users are able to leave a review quickly and easily by pressing the 'Add a review' button found on both the 'My Account' and individual restaurant pages, there users select a restaurant to review via dropdown menu.  To be clear that this is a positive action the button is green.
+    - All logged-in users can leave a review quickly and easily by pressing the 'Add a review' button found on both the 'My Account' and individual restaurant pages, there users select a restaurant to review via a dropdown menu.  To be clear that this is a positive action the button is green.
 - Be able to Edit my reviews if my opinions change.
-    - Individual restaurants pages show all the reviews left for that restaurant.  Should the session username match the name of the user who created the review they are greeted by 'Edit' and 'Delete buttons.  These options are also shown on the users reviews displayed on their 'My Account' page.  To be clear that this is an action the button is yellow. 
+    - Individual restaurants pages show all the reviews left for that restaurant.  Should the session username match the name of the user who created the review they are greeted by 'Edit' and 'Delete buttons.  These options are also shown on the user's reviews displayed on their 'My Account' page.  To be clear that this is an action the button is yellow. 
 - Be able to Delete my review if I no longer wish to comment on a restaurant.
-    - Logged in users are able to delete reviews that they have written but no longer wish to be seen via the 'Delete' button.  Clicking the delete button triggers a modal to ensure no accidental deletions of items.  To be clear that clicking this button will have a negative effect the button is red.
+    - Logged-in users can delete reviews that they have written via the 'Delete' button.  Clicking the delete button triggers a modal to ensure no accidental deletions of items.  To be clear that clicking this button will have a negative effect the button is red.
 - Be able to add restaurants to the website if I find somewhere which is not already listed.
     - Users are not yet able to add restaurants themselves, however, users are able to contact the admin team requesting a restaurant be added on their behalf.
 
@@ -62,9 +63,9 @@ The most common path through the website would be:
 - Be able to delete user reviews if inappropriate.
     - When logged in admin are met with a 'Delete' button in all areas where they encounter user reviews.  Like in all instances of the delete button it is red to show a negative effect and upon clicking it a modal is triggered to make sure the action is intentional.
 - Be able to add, edit restaurant info or delete a restaurant should it close.
-    - Admin are able to 'Add' restaurants from their 'My Account' page.  To edit and delete restaurants admin must visit the individual restaurants page which is accessible via the restaurants link on their profile page or navbar.
+    - Admin can 'Add' restaurants from their 'My Account' page.  To edit and delete restaurants admin must visit the individual restaurant's page which is accessible via the 'Restaurant' link on their profile page or navbar.
 - Be able to recieve notifications from users on new restaurants in the area.
-    - To help the growth of Vegan Glasgow users are able to message the admin via the contact page.  New messages are displayed on the admin profile page and once the admin have finished added the restaurant recommended by the user the message can by deleted by clicking 'Restaurant added'.
+    - To help the growth of Vegan Glasgow users are able to message the admin via the contact page.  New messages are displayed on the admin profile page and once the admin have finished adding the user recommended restaurant the message can by deleted by clicking 'Restaurant added'.
 
 ### MANUAL TESTING ###
 
@@ -82,10 +83,10 @@ Logged out users:
 *Header*
 
 - Confirm the visible navbar items are Home, Restaurant, Create Account and Log In.
-- Clicking the logo and Home items and ensure they reload the Home page.
-- Clicking the Restaurant item and ensure it loads the all restaurants page.
-- Clicking the Create Account item and ensure it loads the Create account page.
-- Clicking the Log In item and ensure it loads the Log In page.
+- Clicking the logo and 'Home' items and ensure they reload the Home page.
+- Clicking the 'Restaurant' item and ensure it loads the all restaurants page.
+- Clicking the 'Create Account' item and ensure it loads the Create account page.
+- Clicking the 'Log In' item and ensure it loads the Log In page.
 
 *Footer*
 
@@ -98,11 +99,11 @@ Logged in users:
 *Header*
 
 - Confirm the visible navbar items are Home, Restaurant, My Profile, Add Review and Log In.
-- Clicking the logo and Home items and ensure they reload the Home page.
-- Clicking the Restaurant item and ensure it loads the all restaurants page.
-- Clicking the My Profile item and ensure it loads the My Profile page.
-- Clicking the Add Review item and ensure it loads the Add Review page.
-- Clicking the Log Out item and ensure it loads the Log Out page.
+- Clicking the logo and 'Home' items and ensure they reload the Home page.
+- Clicking the 'Restaurant' item and ensure it loads the all restaurants page.
+- Clicking the 'My Profile' item and ensure it loads the My Profile page.
+- Clicking the 'Add Review' item and ensure it loads the Add Review page.
+- Clicking the 'Log Out' item and ensure it loads the Log Out page.
 
 *Footer*
 
@@ -116,8 +117,8 @@ HOME PAGE
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the images and cards are responsive.  With cards stacking at the appropriate breakpoints.
 - Click each individual restaurant card to make sure it takes you to the relevant individual restaurant page.
-- Cross check with the database to make sure that restaurant's information is being correctly taken from the database.
-- Cross check with the database to make sure that the restaurant's listed have "our_recommendation" marked as "on".
+- Cross-check with the database to make sure that the restaurant's information is being correctly taken from the database.
+- Cross-check with the database to make sure that the restaurants listed have "our_recommendation" marked as "on".
 
 RESTAURANTS
 
@@ -131,21 +132,21 @@ INDIVIDUAL RESTAURANTS (view_restaurant.html)
 *This page is accessible to all so tests were repeated for when users were both logged in and logged out*
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the images and cards are responsive.  With cards stacking at the appropriate breakpoints.
-- Click all social links to ensure open in seperate tab (Future feature will include restaurants individual social pages).
-- Click 'Add Review' button and check it redirects to 'Add a Review' page when logged in and to 'Log In' page with appropriate flashed message if user not in session.
+- Click all social links to ensure open in a seperate tab (Future feature will include restaurants individual social pages).
+- Click 'Add Review' button and check it redirects to 'Add a Review' page when logged in and to 'Log In' page with an appropriate flashed message if user not in session.
 - Check reviews are displayed clearly with all information displayed appropriately.
 
 *For logged in users only:*
 
-- Check that edit button is only visible for users own reviews.
-- In review section click 'Edit' button and check in redirects to the edit review button with the correct restaurant name and review body displayed.
-- Check that 'delete a review' link is only visible for logged in users.  If no user or admin user are logged in the link does not displayed.
+- Check that the 'Edit' button is only visible for user's own reviews.
+- In the review section click 'Edit' button and check in redirects to the edit review button with the correct restaurant name and review body displayed.
+- Check that the 'delete a review' link is only visible for logged-in users.  If no user or admin user are logged in the link is not displayed.
 
 *For admin users only:*
 
-- Check that the edit and delete restaurant buttons are visible for logged in admin users.
-- Click the 'Edit Info' button in the Edit/Delete restaurant section checking that admin are redirected to the edit info page and the information from the corresponding page is auto generated.
-- Checks modal for deleting restaurants using the same methods as previously mentioned
+- Check that the edit and delete restaurant buttons are visible for logged-in admin users.
+- Click the 'Edit Info' button in the Edit/Delete restaurant section checking that admin are redirected to the edit info page and the information from the corresponding page is auto-generated.
+- Checks modal for deleting restaurants using the same methods as previously mentioned.
 
 
 CREATE ACCOUNT
@@ -153,19 +154,19 @@ CREATE ACCOUNT
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the form is responsive.
 - Complete form filling in the username outside of the username requirements e.g. only 4 characters or over 12 characters, ensuring a warning is flagged on submission.
 - Complete form filling in the passwords outside of the password requirements e.g. not including uppercase, lowercase and a number, ensuring a warning is flagged on submission.
-- Cross check that attempted account creations using invalid data have not been registered to the database.
+- Cross-check that attempted account creations using invalid data have not been registered to the database.
 - Create an account for a username already in the database 'users' collection, making sure the create account page is reloaded on form submission and a developer written message is flashed notifying the user that that name is not available.
 - Create an account for a new username making sure the user is redirected to the My Profile page on form submission and a developer written message is flashed welcoming the user to the site.
-- Cross check that the newly created account has been added to the 'users' collection of the database.
+- Cross-check that the newly created account has been added to the 'users' collection of the database.
 - Click the 'Log In' link at the bottom of the page making sure the user is redirected to the 'Log In' page.
 
 LOG IN
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the form is responsive.
 - Complete form with a username that is not registered in the 'users' collection ensuring a developer written message is flashed notifying the user that that username or password does not exist.
-- Complete form where the username uses all lowercase letters ensuring that on form completion the username is recognised and user is redirected to their profile page. 
+- Complete form where the username uses all lowercase letters ensuring that on form completion the username is recognised and the user is redirected to their profile page. 
 - Complete form filling using the incorrect password.  When an incorrect format is used a warning is flagged, if an incorrect password is used a developer written message is flashed notifying the user that that username or password does not exist 
-- Complete the form using the admin log in details ensuring that they are redirected to the admin specific profile page.
+- Complete the form using the admin login details ensuring that they are redirected to the admin specific profile page.
 - Click the 'Sign Up' link at the bottom of the page making sure the user is redirected to the 'Create Account' page.
 
 LOG OUT
@@ -175,41 +176,41 @@ LOG OUT
 CONTACT
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
-- Load the contact page via the link in the footer and 'let us know' link on the user profile.
+- Load the contact page via the link in the footer and 'Let us know' link on the user profile.
 - Click the location dropdown and ensure all expected options are available and able to be selected.
 - Leave the location dropdown blank and ensure a warning is triggered when the 'Send Message' button is clicked.
-- Check other required form fields trigger a warning when the 'Send message' button is clicked but an input is left empty.
-- Complete the form as expected and click cancel to ensure the page reloads - cross check with 'messages' collection in database to make sure the message has not sent.
-- Complete the form as expected and click 'Send message' to ensure the page reloads and a developer written message is flashed confirming the message has been sent - cross check with 'messages' collection in database to make sure the message was succesfully sent.
+- Check other required form fields trigger a warning when the 'Send message' button is clicked if not completed.
+- Complete the form as expected and click cancel to ensure the page reloads - cross-check with 'messages' collection in the database to make sure the message has not been sent.
+- Complete the form as expected and click 'Send message' to ensure the page reloads and a developer written message is flashed confirming the message has been sent - cross-check with 'messages' collection in the database to make sure the message was successfully sent.
 
 404
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
-- Hover over the 'home' link to ensure change of color and cursor turns to a hand.
-- Click 'home' link to ensure user is returned to index.html.
+- Hover over the 'home' link to ensure a change of color and cursor turns to a hand.
+- Click the 'home' link to ensure the user is returned to index.html.
 
 
 MY PROFILE - *USER*
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
-- On initial log in ensure a message is flashed welcoming the user to the site.
-- Make sure the username is displayed at the top of the page confirming that users profile.
-- Click the 'Let's find somewhere to eat' link and ensure it redirects the user to the restaurants page.
+- On the initial log in ensure a message is flashed welcoming the user to the site.
+- Make sure the username is displayed at the top of the page confirming that user's profile.
+- Click the 'Let's find somewhere to eat' link and ensure it redirects the user to the restaurant's page.
 - Click the 'Let us know' link and ensure it redirects the user to the contact page.
 - Click the 'Add a review' button and ensure it redirects the user to the Add a review page.
-- Check that the users existing reviews are visible, cross referencing with the database 'reviews' collection to make sure that none are missing.
+- Check that the user's existing reviews are visible, cross-referencing with the database 'reviews' collection to make sure that none are missing.
 - Click the 'Edit' button in the existing review section ensuring it redirects the user to the edit a review page and that the restaurant name and review body is pre-completed.
 - Click the 'Delete' button in the existing review section ensuring it triggers a modal prompting the user to confirm that they want to delete that review.
 - Re-open the 'Delete' modal and click the 'x' and 'Close' buttons to ensure that the modal is closed and no action is taken.
 - Re-open the 'Delete' modal and click the 'Delete' button making sure the user is redirected back to their profile page and the review has been removed.
-- Cross check on the 'reviews' collection that the review no longer exists.
+- Cross-check on the 'reviews' collection that the review no longer exists.
 - When the user has no written reviews check that a suitable message is displayed in the Existing Reviews section.
 - Click the visible 'leave a review' link and ensure it redirects the user to the 'Add a review' page.
-- Try editing the site address to exclude the users username and instead inputting admin, e.g. /profile/?username=admin or /profile/admin, making sure only the users own profile page is displayed or the custom 404 page is displayed.
+- Try force way on to admin account making sure only the user's own profile page is displayed or the custom 404 page is displayed.
 
 ADD REVIEW
 
-- Test that only logged in users can access the add review page by manually typing in the route e.g. /review/add STILL TO TEST WITH FAKE REST_ID
+- Test that only logged in users can access the add review page by manually typing in the route e.g. /review/add
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the form is responsive.
 - Click the 'select restaurant' dropdown and ensure all restaurants in the database 'restaurants' collection are listed. Selecting each restaurant individually.
 - Click the 'select rating' dropdown and ensure all options are available and able to be selected.
@@ -220,9 +221,9 @@ ADD REVIEW
 
 EDIT REVIEW
 
-- Test that only logged in users can access the edit review page by manually typing in the route e.g. /review/edit STILL TO TEST WITH FAKE REST_ID
+- Test that only logged in users can access the edit review page by manually typing in the route e.g. /review/edit
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
-- Check that clicking edit buttons on individual restaurant page and My Profile page re-routes user to the 'Edit Review' page and that the restaurant name and review body are autofilled.
+- Check that clicking edit buttons on individual restaurant page and My Profile page re-routes user to the 'Edit Review' page and that the restaurant name and review body are auto-filled.
 - Click the 'select restaurant' dropdown and make sure only the active restaurant is selectable.
 - Click the 'select rating' dropdown.  Bug reported as not yet able to pre-fill this information.
 - Edit text in the 'What do you think?' box ensuring that the box size is adjustable for larger reviews.
@@ -232,22 +233,22 @@ EDIT REVIEW
 MY PROFILE - *ADMIN*
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
-- On initial log in ensure a message is flashed welcoming the admin to the site.
-- Make sure admin username is displayed at the top of the page confirming that admin profile.
-- In 'User Messages' section check that all current messages are displayed - cross checked with the 'messages' collection in the database.
+- On the initial log in ensure a message is flashed welcoming the admin to the site.
+- Make sure the admin username is displayed at the top of the page confirming that admin profile.
+- In the 'User Messages' section check that all current messages are displayed - cross-checked with the 'messages' collection in the database.
 - Send a new message via the contact page checking that the message is newly displayed in the 'User Messages' section.
-- Click the 'Add a Restaurant' button and ensure admin are redirected to the 'Add a Restaurant' page.
+- Click the 'Add a Restaurant' button and ensure admin is redirected to the 'Add a Restaurant' page.
 - Click the 'Restaurant Added' button to ensure it triggers a modal prompting the admin to confirm that they have added that restaurant.
 - Re-open the 'Restaurant Added' modal and click the 'x' and 'Close' buttons to ensure that the modal is closed and no action is taken.
-- Re-open the 'Restaurant Added' modal and click the 'Restaurant Added' button making sure the user is redirected back to their profile page and the message has been removed - cross check with the 'messages' collection in the database.
-- Click the 'Restaurants' link to ensure the admin are redirected to the restaurants page when wanting to edit/delete a restaurant.
-- Try editing the site address to exclude the admin username and instead inputting an existing username, e.g. /profile/?username=test01 or /profile/test01, making sure only the users own profile page is displayed or the custom 404 page is displayed.
+- Re-open the 'Restaurant Added' modal and click the 'Restaurant Added' button making sure the user is redirected back to their profile page and the message has been removed - cross-check with the 'messages' collection in the database.
+- Click the 'Restaurants' link to ensure the admin is redirected to the restaurant's page when wanting to edit/delete a restaurant.
+- Try forcing way on to a user profile page making sure only the admin profile page is displayed or the custom 404 page is displayed.
 
 ADD RESTAURANT - *ADMIN ONLY*
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
 - Log in as a standard user and attempt to navigate to the add restaurant page by manually adding /restaurant/add to the address.  Ensure that the user is not able and an appropriate response is given.
-- Check that admin are able to access the 'Add Restaurant' page via the navbar link and button on their profile page.
+- Check that admin can access the 'Add Restaurant' page via the navbar link and button on their profile page.
 - Click the 'how expensive' and 'mealtime' dropdowns and ensure all expected options are available and able to be selected.
 - Leave the 'how expensive' and 'mealtime' dropdowns blank and ensure a warning is triggered when the 'Add restaurant' button is clicked.
 - Complete the form ensuring that the form requires all fields to be completed, except the URL, before the form can be submitted. If a required field is left blank the user is given a prompt.
@@ -259,27 +260,29 @@ EDIT RESTAURANT - *ADMIN ONLY*
 
 - Test that only admin users can access the edit page by manually typing in the route e.g. /restaurant/edit STILL TO TEST WITH FAKE REST_ID
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
-- Check that clicking edit buttons on individual restaurant pages re-routes user to the 'Edit Restaurant' page and that the majority of form information is autofilled.  See bugs for exception to this.
+- Check that clicking edit buttons on individual restaurant pages re-routes user to the 'Edit Restaurant' page and that the majority of form information is auto-filled.  See bugs for exception to this.
 - Edit restaurant details and click the 'Cancel' button making sure that the user is redirected to their profile page and that the restaurant information remains unchanged.
-- Edit restaurant details and click 'Edit' ensuring the user is redirected to the all restaurants page page and the corresponding restaurant info has been updated.
+- Edit restaurant details and click 'Edit' ensuring the user is redirected to the all restaurants page and the corresponding restaurant info has been updated.
 
 DELETE RESTAURANT - *ADMIN ONLY*
 
-- Check that clicking delete button on individual restaurant pages triggers the 'Delete Restaurant' modal.
+- Check that clicking the 'delete' button on individual restaurant pages triggers the 'Delete Restaurant' modal.
 prompting the user to confirm that they want to delete that review.
 - Re-open the 'Delete' modal and click the 'x' and 'Close' buttons to ensure that the modal is closed and no action is taken.
 - Re-open the 'Delete' modal and click the 'Delete' button making sure the user is redirected back to the admin profile page.
-- Cross check in database that the restaurant has been deleted.
-- *PLEASE NOTE* it is intentional that reviews for the deleted restaurant remain in the database. Should the restaurant be re-added to the site, e.g. the restaurant re-opens after a brief spell of closure, the existing reviews will automatically be generated for the listing 
+- Cross-check in the database that the restaurant has been deleted.
+- *PLEASE NOTE* it is intentional that reviews for the deleted restaurant remain in the database. Should the restaurant be re-added to the site, e.g. the restaurant re-opens after a brief spell of closure, the existing reviews will automatically be generated for the listing. 
 
 BUGS
 
-- *FOOTER* not sticky on bottom of page on iPad/iPad Pro - showing quite a lot of whitespace.
+BUGS
+
+- *FOOTER* not sticky on the bottom of the page on iPad/iPad Pro - showing quite a lot of whitespace.
 ![Footer whitespace](/documentation/images/bugs/footer-bug.png).
     - FIX - Search on Slack directed me towards two resources [css-tricks sticky footer guide](https://css-tricks.com/couple-takes-sticky-footer/) and a [js Bin](https://jsbin.com/wokututopu/1/edit?html,css,output).  Testing both options I settled on the JS Bin, utilising flex, as it fitted with my existing code more succinctly.
 
 - *EDIT REVIEW* and *EDIT RESTAURANT* pages, dropdown menus are not pre-filling the previously selected rating.
-    - FIX - Not yet found.  For now text has been added reminding the user of their previous rating and prompting them to confirm their rating or select another.
+    - FIX - Not yet found.  For now, the text has been added reminding the user of their previous rating and prompting them to confirm their rating or select another.
 
 
 
