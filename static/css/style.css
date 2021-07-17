@@ -32,6 +32,7 @@
 .error-img {
     height: auto;
     width: 100%;
+    margin-top: 60px;
 }
 
 /* ------------ Text color */
@@ -536,6 +537,16 @@
     text-align: center;
     font-family: "Muli", sans-serif;
     color: #243119;
+}
+
+.error-text a {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.error-text a:hover {
+    color: #243119;
+    text-decoration: none;
 }
 
 /* --------- Media Queries ----------*/
