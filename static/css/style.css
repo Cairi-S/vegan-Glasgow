@@ -392,7 +392,8 @@
     margin: 10px 0;
 }
 
-.review-form-items {
+.review-form-items,
+.btn-margin {
     margin-top: 14px;
 }
 
