@@ -460,10 +460,15 @@
 .add-review-btn {
     margin: 40px 0;
     border: 2px solid #e0e0e0;
+}
+
+.add-rest-btn {
+    margin: 14px 0 30px;
     border: 2px solid #e0e0e0;
 }
 
-.add-review-btn {
+.add-review-btn,
+.add-rest-btn {
     width: 180px;
 }
 
@@ -541,8 +546,21 @@
         font-size: 2rem;
     }
 
+    .mob-admin-prof-subhead {
+        padding: 10px 4px;
+        text-align: center;
+        font-size: 1.5rem;
+        background-color: #96be8c;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+    }
+
     .mobile-header-margin {
         margin-bottom: 20px;
+    }
+
+    .mob-sign-up {
+        font-size: 14px;;
     }
 }
 
