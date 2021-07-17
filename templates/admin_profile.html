@@ -8,18 +8,17 @@
     
     <!-- Add a restaurant -->
     <div class="row g-0 justify-content-center ">
-        <h4 class="page-subtitle profile-subheading">Add a Restaurant</h4>
+        <h4 class="page-subtitle mob-admin-prof-subhead">Add a Restaurant</h4>
     </div>  
     <div class="row g-0 justify-content-center">
         <!-- link to add_restaurant -->
-        <a href="{{ url_for('add_restaurant') }}" class="btn btn-success profile-btn col-sm-2">
-            <i class="fas fa-plus-circle"></i> 
-            Add a Restaurant
+        <a href="{{ url_for('add_restaurant') }}" class="btn btn-success add-rest-btn">
+            <i class="fas fa-house-user"></i> Add a Restaurant
         </a>
     </div>
 
     <!-- Edit/delete restaurant - link to restaurants page -->
-    <h4 class="page-subtitle profile-subheading">Need to edit or delete a restaurant?</h4>
+    <h4 class="page-subtitle mob-admin-prof-subhead">Need to edit or delete a restaurant?</h4>
     <p class="admin-profile-text">To help avoid accidents, please select the restaurant to update directly from the 
         <a href=" {{url_for('restaurants')}}"> Restaurants</a> page.
     </p>
