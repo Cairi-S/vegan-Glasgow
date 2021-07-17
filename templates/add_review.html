@@ -9,12 +9,14 @@
     <!-- Add review form -->
     <form class="review-form" method="POST" action="{{ url_for('add_review') }}">
         <!-- Select restaurant to review -->
-        <div class="row">
+        <div class="row g-0">
             <label class="form-instructions review-form-items" for="restaurant_name">
                 Which restaurant will you review?
             </label>
+        </div>
             <!-- Select restaurant dropdown -->
-            <select class="custom-select form-spacing col-sm-4" id="restaurant_name" name="restaurant_name" required>
+        <div class="row g-0">
+            <select class="custom-select form-spacing col-sm-4 review-form-items" id="restaurant_name" name="restaurant_name" required>
                 <option class="form-instructions" value="" disabled selected >Select restaurant</option>
                 <!-- Select restaurant iteration for dropdown -->
                 {% for restaurant in restaurants %}
@@ -25,11 +27,13 @@
             </select>
         </div>
         <!-- Restaurant rating -->
-        <div class="row">
+        <div class="row g-0">
             <label class="form-instructions review-form-items" for="restaurant_rating">
                 How would you rate this restaurant?
             </label>
+        </div>
             <!-- Restaurant rating dropdown -->
+        <div class="row g-0">
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="restaurant_rating" name="restaurant_rating" required>
                 <option class="form-instructions" value="" disabled selected>Choose your rating</option>
                 <option value="1">1</option>
@@ -41,11 +45,17 @@
         </div>
         <!-- Restaurant review body -->
         <div class="form-group">
-            <label class="form-instructions review-form-items form-spacing" for="review">What do you think?</label>
-            <textarea class="form-control form-spacing" id="review" name="review" placeholder="Tell us your highs and lows..." required></textarea>
+            <div class="row g-0">
+                <label class="form-instructions review-form-items form-spacing" for="review">What do you think?</label>
+            </div>
+            <div class="row g-0">
+                <textarea class="form-control form-spacing" id="review" name="review" placeholder="Tell us your highs and lows..." required></textarea>
+            </div>
         </div>
         <!-- Restaurant review buttons submit and cancel -->
-        <button type="submit" class="btn btn-success review-form-items">Add My Review</button>
+        <button type="submit" class="btn btn-success review-form-items">
+            <i class="fas fa-plus-circle"></i> Add My Review
+        </button>
         <button type="submit" class="btn btn-danger review-form-items">Cancel</button>
     </form>
     <!-- end of form -->
