@@ -8,6 +8,8 @@ As a vegetarian with a dairy allergy I’m an enforced vegan. However, I love fo
 
 These personal experiences inspired me to create *Vegan Glasgow*, for locals and visitors to my home city of Glasgow, to share their experiences and help take the guesswork out of finding a great vegan meal.
 
+[A live preview of Vegan Glasgow is available here](https://vegan-glasgow.herokuapp.com/)
+
 ### GOALS ###
 #### VISITOR GOALS ####
 Target audience:
@@ -357,29 +359,31 @@ Additional future features might be:
 ### DATABASE MODEL ###
 As this database will be unstructured and additional requirements may be added in the future MongoDB’s non-relational database has been chosen to create this site. In addition, mySQL is recommended for the final project so I am taking the chance to practice using MongoDB just now.
 
+![DB diagram](/documentation/images/db-diagram/db-diagram.png)
+
 Restaurants collection
 
-|Key|Type|
-|---|----|
-|_id|ObjectId|
-|name|String|
-|phone_number|String|
-|address|String|
-|website|String|
-|price_range|String|
-|cuisine|String|
-|open_times|String|
-|summary|String|
-|restaurant_img_url|String|
-|our_recommendation|String|
+|Key|Type|Notes|
+|---|----|-----|
+|_id|ObjectId| |
+|name|String| |
+|phone_number|String| Research into MongoDB's storage system suggested that telephone numbers should be stored as strings to allow for extra characters, e.g. +44... in area codes.|
+|address|String| |
+|website|String| |
+|price_range|String| This utilises the £ symbol from the keyboard, whilst researching the best data-type for this string was decided upon as char is not listed as a possibility. |
+|cuisine|String| |
+|open_times|String| |
+|summary|String| |
+|restaurant_img_url|String| |
+|our_recommendation|String| TO BE UPDATED TO BOOLEAN |
 
 Review collection
 
-|Key|Type|
-|---|----|
-|_id|ObjectId|
-|restaurant_name|String|
-|restaurant_rating|String|
+|Key|Type|Notes|
+|---|----|-----|
+|_id|ObjectId| |
+|restaurant_name|String| |
+|restaurant_rating|String| In future this would be listed as an integer,  
 |review|String|
 |created_by|String|
      
@@ -434,7 +438,8 @@ The creation of this website would not have been possible without:
 - [Color Tool - Material Design](https://material.io/)
 - [HTML Formatter](https://webformatter.com/html)
 - [Multi Device Website Mockup Generator](http://techsini.com/multi-mockup/index.php)
-- [markdown-toc](https://ecotrust-canada.github.io/markdown-toc/) 
+- [markdown-toc](https://ecotrust-canada.github.io/markdown-toc/)
+- [dbdiagram.io](https://dbdiagram.io/home)
 
 ### Testing ###
 
