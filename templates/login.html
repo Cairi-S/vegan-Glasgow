@@ -1,30 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
-
+    <!-- Container -->
     <div class="row g-0 form-container">
         <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+          <!-- HEADER -->
             <h3 class="form-header mobile-header-margin">Log In</h3>
         </div>
+        <!-- FORM START -->
         <form class="col-md-6 offset-md-3 col-sm-8 offset-sm-2" method="POST" action="{{ url_for('login') }}">
             <div class="mb-3">
+                <!-- Username -->
                 <label for="username" class="form-label form-instructions">
                   <i class="fas fa-user-cog"></i>  Username
                 </label>
+                <!-- input -->
                 <input type="text" class="form-control" id="username" name="username" aria-describedby="usernameHelp" required>
               </div>
               <div class="mb-3">
+                <!-- Password -->
                 <label for="password" class="form-label form-instructions">
                   <i class="fas fa-user-lock"></i> Password
                 </label>
+                <!-- input -->
                 <input type="password" class="form-control" id="password" name="password" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" aria-describedby="passwordHelp" required>
               </div>
+              <!-- LogIn btn -->
               <button type="submit" class="btn btn-success form-instructions form-button">
                 <i class="fas fa-sign-in-alt"></i> Log In
               </button>
         </form>
-
+        <!-- FORM END -->
         <div class="row g-0 d-flex justify-content-center">
           <div class="col-sm-12 form-instructions">
+            <!-- Link for non-members to sign up -->
             <p class="mob-sign-up">Not yet a member? 
               <a href="{{ url_for('signup') }}"> Sign up!</a>
             </p>
@@ -32,6 +40,7 @@
         </div>
 
     </div>
+    <!-- container end -->
 
     
 

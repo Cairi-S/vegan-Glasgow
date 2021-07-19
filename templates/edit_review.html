@@ -6,7 +6,7 @@
 
 <!-- Container for form -->
 <div class="form-container">
-    <!-- Add review form -->
+    <!-- FORM START -->
     <form class="review-form" method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
         <!-- Select restaurant to review -->
         <div class="row g-0">
@@ -53,6 +53,7 @@
         <!-- Restaurant review body -->
         <div class="form-group">
             <label class="form-instructions review-form-items form-spacing" for="review">What do you think?</label>
+            <!-- input -->
             <textarea class="form-control form-spacing" id="review" name="review"  placeholder="Tell us your highs and lows..." required>
             {{- review.review -}}
             </textarea>
@@ -64,7 +65,7 @@
         <a href="{{ url_for('profile') }}" 
         class="btn btn-danger review-form-items">Cancel</a>
     </form>
-    <!-- end of form -->
+    <!-- FORM END -->
 </div>
 <!-- end of container -->
 

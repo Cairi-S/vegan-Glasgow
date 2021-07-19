@@ -7,12 +7,12 @@
     <p><i class="fas fa-align-left"></i> {{ message.message }}</p>
 </div>
 <div class="col-sm-3 d-flex align-items-center">
-    <!-- Modal launch - code adapted from Bootstrap 5 -->
+    <!-- TASK COMPLETED Modal launch - code adapted from Bootstrap 5 -->
     <button type="button" class="btn btn-success profile-btn" data-bs-toggle="modal" data-bs-target="#restaurantAdded">
         <i class="fas fa-check"></i> Restaurant added
     </button>
     
-    <!-- Modal -->
+    <!-- Modal for confirmation of added restaurant -->
     <div class="modal fade" id="restaurantAdded" tabindex="-1" aria-labelledby="#confirmRestaurantAdded" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -20,14 +20,17 @@
                     <h5 class="modal-title" id="confirmRestaurantAdded">
                         Please confirm you have added this restaurant.
                     </h5>
+                    <!-- Modal 'x' btn (no action taken) -->
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     </button>
                 </div>
                 <div class="modal-footer justify-content-center">
+                    <!-- Modal Close btn (no action taken) -->
                     <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">
                         Close
                     </button>
                     <div class="btn btn-success profile-btn modal-btn">
+                        <!-- Removes the message from the admin profile page -->
                         <a href="{{ url_for('delete_message', message_id=message._id) }}">
                             <i class="fas fa-check"></i> Restaurant added
                         </a>

@@ -1,4 +1,5 @@
 <div class="card restaurant-card-style">
+    <!-- Link to individual restaurant page -->
     <a href="{{ url_for('view_restaurant', restaurant_id=restaurant._id) }}">
     <!-- Restaurant img -->
         <img src="{{ restaurant.restaurant_img_url }}" class="card-img-top card-img-size img-fluid" onerror="this.src='static/images/veggie_bowl.jpeg'" 

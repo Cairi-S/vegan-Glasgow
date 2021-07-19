@@ -7,22 +7,25 @@
 
 <!-- Container for form -->
 <div class="form-container">
-    <!-- Add review form -->
+    <!-- FORM START -->
     <form class="review-form" method="POST" action="{{ url_for('contact') }}">
         <!-- Add restaurant name -->
         <div class="row g-0">
             <label class="form-instructions review-form-items" for="new_restaurant_name">
                 What restaurant would you like to be added to Vegan Glasgow?
             </label>
+            <!-- input -->
             <input type="text" class="form-control" id="new_restaurant_name" name="new_restaurant_name" 
             placeholder="Restaurants name" required>
         </div>
+        <!-- Restaurant location -->
         <div class="row g-0">
             <label class="form-instructions review-form-items" for="new_restaurant_location">
                 Where in Glasgow is this restaurant? (so we add the right one!)
             </label>
         </div>
         <div class="row g-0">
+            <!-- dropdown input -->
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="new_restaurant_location" name="new_restaurant_location" required>
                 <option class="form-instructions" value="" disabled selected>So we find the right restaurant, select an area</option>
                 <option value="choose a popular location" disabled>Choose a popular location...</option>
@@ -44,6 +47,7 @@
             <label class="form-instructions review-form-items form-spacing" for="message">
                 Why do you think this restaurant should be added?
             </label>
+            <!-- input -->
             <textarea class="form-control form-spacing" id="message" name="message" 
             placeholder="Tell us why you think vegans in Glasgow should know about this restaurant" required></textarea>
         </div>
@@ -53,7 +57,7 @@
         </button>
         <button type="submit" class="btn btn-danger btn-margin">Cancel</button>
     </form>
-    <!-- end of form -->
+    <!-- FORM END -->
 </div>
 <!-- end of container -->
 

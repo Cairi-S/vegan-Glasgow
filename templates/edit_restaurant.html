@@ -6,27 +6,31 @@
 
 <!-- Container for form -->
 <div class="form-container">
-    <!-- Add restaurant form -->
+    <!-- FORM START -->
     <form class="review-form" method="POST" action="{{ url_for('edit_restaurant', restaurant_id=restaurant._id) }}">
         <!-- Restaurant name -->
         <div class="form-group ">
             <label class="form-instructions review-form-items" for="name">Restaurant Name</label>
+            <!-- input -->
             <input type="text" class="form-control form-spacing" id="name" name="name" value="{{ restaurant.name }}" placeholder="Restaurant name..." required>
         </div>
         <!-- Restaurant phone number -->
         <div class="form-group ">
             <label class="form-instructions review-form-items" for="phone_number">Restaurant contact number</label>
+            <!-- input -->
             <input type="tel" class="form-control form-spacing" id="phone_number" name="phone_number" 
             value="{{ restaurant.phone_number }}" placeholder="Restaurant contact telephone number..." required>
         </div>
         <!-- Restaurant street address -->
         <div class="form-group ">
             <label class="form-instructions review-form-items" for="address">Restaurant Street Address</label>
+            <!-- input -->
             <input type="text" class="form-control form-spacing" id="address" name="address" value="{{ restaurant.address }}" placeholder="Restaurant street address..." required>
         </div>
         <!-- Restaurant web address -->
         <div class="form-group ">
             <label class="form-instructions review-form-items" for="website">Restaurant Website</label>
+            <!-- input -->
             <input type="text" class="form-control form-spacing" id="website" name="website" value="{{ restaurant.website }}" placeholder="Restaurant website..." required>
         </div>
         <!-- Restaurant price range -->
@@ -36,6 +40,7 @@
             </label>
         </div>
         <div class="row g-0">
+            <!-- input dropdown -->
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="price_range" name="price_range" required>
                 <option class="form-instructions" value="" disabled selected>
                     Reselect {{ restaurant.price_range }} or choose a new price range...
@@ -48,6 +53,7 @@
         <!-- Restaurant cuisine -->
         <div class="form-group ">
             <label class="form-instructions review-form-items" for="cuisine">Cuisine</label>
+            <!-- input -->
             <input type="text" class="form-control form-spacing" id="cuisine" name="cuisine" value="{{ restaurant.cuisine }}" placeholder="Cuisine type..." required>
         </div>
         <!-- Restaurant opening hours -->
@@ -57,6 +63,7 @@
             </label>
         </div>
         <div class="row g-0">
+            <!-- input dropdown -->
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="open_times" name="open_times" required>
                 <option class="form-instructions" value="" disabled selected>
                     Reselect {{ restaurant.open_times }} or choose a new mealtime...
@@ -77,6 +84,7 @@
             <label class="form-instructions review-form-items form-spacing" for="summary">
                 Whats the inside scoop on this restaurant?
             </label>
+            <!-- input -->
             <textarea class="form-control form-spacing" id="summary" name="summary" placeholder="Give us the scoop..." required> 
                 {{- restaurant.summary -}} 
             </textarea>
@@ -85,12 +93,14 @@
 
         <div class="form-check form-switch form-spacing">
             <label class="form-check-label form-instructions" for="our_recommendation"> is a veganGlasgow recommended restaurant</label>
+            <!-- input -->
             <input class="form-check-input" type="checkbox" id="our_recommendation" name="our_recommendation">
         </div>
 
         <!-- Restaurant image url -->
         <div class="form-group ">
             <label class="form-instructions review-form-items" for="restaurant_img_url">Restaurant Image</label>
+            <!-- input -->
             <input type="text" class="form-control form-spacing" id="restaurant_img_url" name="restaurant_img_url" 
             value="{{ restaurant.restaurant_img_url }}" placeholder="Add the URL of the image to add...">
         </div>
@@ -100,7 +110,7 @@
         </button>
         <a href="{{ url_for('profile') }}" class="btn btn-danger review-form-items">Cancel</a>
     </form>
-    <!-- end of form -->
+    <!-- FORM END -->
 </div>
 <!-- end of container -->
 

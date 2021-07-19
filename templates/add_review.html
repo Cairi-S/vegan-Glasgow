@@ -6,7 +6,7 @@
 
 <!-- Container for form -->
 <div class="form-container">
-    <!-- Add review form -->
+    <!-- FORM START -->
     <form class="review-form" method="POST" action="{{ url_for('add_review') }}">
         <!-- Select restaurant to review -->
         <div class="row g-0">
@@ -14,8 +14,8 @@
                 Which restaurant will you review?
             </label>
         </div>
-            <!-- Select restaurant dropdown -->
         <div class="row g-0">
+            <!-- Select restaurant dropdown -->
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="restaurant_name" name="restaurant_name" required>
                 <option class="form-instructions" value="" disabled selected >Select restaurant</option>
                 <!-- Select restaurant iteration for dropdown -->
@@ -49,16 +49,18 @@
                 <label class="form-instructions review-form-items form-spacing" for="review">What do you think?</label>
             </div>
             <div class="row g-0">
+                <!-- input -->
                 <textarea class="form-control form-spacing" id="review" name="review" placeholder="Tell us your highs and lows..." required></textarea>
             </div>
         </div>
-        <!-- Restaurant review buttons submit and cancel -->
+        <!-- Add review buttons submit -->
         <button type="submit" class="btn btn-success review-form-items">
             <i class="fas fa-plus-circle"></i> Add My Review
         </button>
+        <!-- Cancel -->
         <button type="submit" class="btn btn-danger review-form-items">Cancel</button>
     </form>
-    <!-- end of form -->
+    <!-- FORM END -->
 </div>
 <!-- end of container -->
 

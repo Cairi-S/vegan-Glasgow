@@ -13,6 +13,7 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
       <!-- Internal CSS link -->
       <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+      <!-- Page description -->
       <meta name="description" content="Vegan restaurant recommendations for the City of Glasgow. Hompage image by Adam Marikar on Unsplash" />
   </head>
   <body class="content">
@@ -25,7 +26,7 @@
             <h1 id="logo">Vegan Glasgow</h1>
           </a>
 
-          <!-- Dropdown menu for mobile devices -->
+          <!-- Dropdown menu btn for mobile devices -->
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -91,12 +92,13 @@
       {% endwith %}
     </section>
 
-    <!-- Page content -->
+    <!-- Page main content -->
     <main class="content-main">
       {% block content %}
 
       {% endblock %}
     </main>
+    
     <!-- Footer -->
     <footer class="footer row g-0 d-flex justify-content-between">
       <!-- Copyright Statement -->

@@ -8,10 +8,12 @@
       </div>
       <!-- FORM STARTS - CREATE ACCOUNT -->
       <form class="col-md-6 offset-md-3 col-sm-8 offset-sm-2" method="POST" action="{{ url_for('signup') }}">
-        <!-- Username input -->
+        <!-- Username -->
           <div class="mb-3">
             <label for="username" class="form-label form-instructions"><i class="fas fa-user-plus"></i>  Username</label>
+            <!-- input -->
             <input type="text" class="form-control" id="username" name="username" minlength="5" maxlength="12" aria-describedby="usernameHelp" required>
+            <!-- input description -->
             <div id="usernameHelp" class="form-text form-instructions">
               Your Username must be 5-12 characters long.
             </div>
@@ -19,7 +21,9 @@
           <!-- Password input -->
           <div class="mb-3">     
             <label for="password" class="form-label form-instructions"><i class="fas fa-user-lock"></i> Password</label>
+            <!-- input -->
             <input type="password" class="form-control" id="password" name="password" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" aria-describedby="passwordHelp" required>
+            <!-- input description -->
             <div id="passwordHelp" class="form-text form-instructions">
                 Your Password must be at least 6 characters long and contain one number, one uppercase and one lowercase letter.
             </div>
@@ -27,6 +31,7 @@
           <!-- Confirm Password input -->
           <div class="mb-3">
             <label for="confirm-password" class="form-label form-instructions"><i class="fas fa-check-double"></i> Confirm Password</label>
+            <!-- input -->
             <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
           </div>
           <!-- Submit button input -->
