@@ -2,14 +2,14 @@
 
 All code has been run through validation services such as:
 - [W3C HTML Markup Valication service](https://validator.w3.org/) which returned the result:
-![HTML validator result](/documentation/images/html-validator.png)
+![HTML validator result](/documentation/images/validation/html-validator.png)
 
 This result was present across all pages despite an h5 element being present within the documented section.
 
 - [W3C CSS valication service](https://jigsaw.w3.org/css-validator/) which returned the result:
-![CSS validator result](/documentation/images/css-validator.png)
+![CSS validator result](/documentation/images/validation/css-validator.png)
 - [PEP8 Online Checker](http://pep8online.com/checkresult) which returned the result:
-![PEP8 check result](/documentation/images/pep8.png)
+![PEP8 check result](/documentation/images/validation/pep8.png)
 
 The most common path through the website would be:
 
@@ -271,9 +271,62 @@ prompting the user to confirm that they want to delete that review.
 - Re-open the 'Delete' modal and click the 'x' and 'Close' buttons to ensure that the modal is closed and no action is taken.
 - Re-open the 'Delete' modal and click the 'Delete' button making sure the user is redirected back to the admin profile page.
 - Cross-check in the database that the restaurant has been deleted.
-- *PLEASE NOTE* it is intentional that reviews for the deleted restaurant remain in the database. Should the restaurant be re-added to the site, e.g. the restaurant re-opens after a brief spell of closure, the existing reviews will automatically be generated for the listing. 
+- *PLEASE NOTE* it is intentional that reviews for the deleted restaurant remain in the database. Should the restaurant be re-added to the site, e.g. the restaurant re-opens after a brief spell of closure, the existing reviews will automatically be generated for the listing.
 
-BUGS
+ADDITIONAL TESTING
+
+Throughout production this site has been tested using [Google Chrome's DevTools](https://developer.chrome.com/docs/devtools/).
+
+In addition the Lighthouse feature has been used to test the Performance, Accessibility, Best Practices and SEO.  The following results were returned for laptop devices.
+
+Home
+
+![Lighthouse Home Page Desktop results](/documentation/images/lighthouse/home-desk.png)
+
+All Restaurants
+
+![Lighthouse Restaurants Page Desktop results](/documentation/images/lighthouse/restaurants-desk.png)
+
+Individual Restaurants
+
+![Lighthouse Individual Restaurants Page Desktop results](/documentation/images/lighthouse/indrest-desk.png)
+
+Create Account
+
+![Lighthouse Create Account Page Desktop results](/documentation/images/lighthouse/create-desk.png)
+
+Log In
+
+![Lighthouse Log In Page Desktop results](/documentation/images/lighthouse/login-desk.png)
+
+Contact
+
+![Lighthouse Contact Page Desktop results](/documentation/images/lighthouse/contact-desk.png)
+
+Profile Page - User
+
+![Lighthouse User Profile Page Desktop results](/documentation/images/lighthouse/user-prof-desk.png)
+
+Add Review
+
+![Lighthouse Add Review Page Desktop results](/documentation/images/lighthouse/add-review-desk.png)
+
+Edit Review
+
+![Lighthouse Edit Reivew Page Desktop results](/documentation/images/lighthouse/edit-review-desk.png)
+
+Profile Page - Admin
+
+![Lighthouse Admin Profile Page Desktop results](/documentation/images/lighthouse/admin-prof-desk.png)
+
+Add Restaurant
+
+![Lighthouse Add Restaurant Page Desktop results](/documentation/images/lighthouse/add-rest-desk.png)
+
+Edit Restaurant
+
+![Lighthouse Edit Restaurant Page Desktop results](/documentation/images/lighthouse/edit-rest-desk.png)
+
 
 BUGS
 
@@ -283,10 +336,3 @@ BUGS
 
 - *EDIT REVIEW* and *EDIT RESTAURANT* pages, dropdown menus are not pre-filling the previously selected rating.
     - FIX - Not yet found.  For now, the text has been added reminding the user of their previous rating and prompting them to confirm their rating or select another.
-
-
-
-
-
-
-
