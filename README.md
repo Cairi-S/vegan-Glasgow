@@ -134,6 +134,56 @@ Buttons use the easily identifiable traffic light system:
 - Editing actions - Amber
 - Negative actions (e.g. cancel/delete) - Red
 
+### WIREFRAMES ###
+
+#### HOME ####
+
+![index.html](/documentation/images/wireframes/home.png)
+
+#### CREATE ACCOUNT ####
+
+![create_account.html](/documentation/images/wireframes/create-account.png)
+
+#### LOG IN ####
+
+![login.html](/documentation/images/wireframes/login.png)
+
+#### CONTACT ####
+
+![contact.html](/documentation/images/wireframes/contact.png)
+
+#### ALL RESTAURANTS ####
+
+![restaurants.html](/documentation/images/wireframes/all-restaurants.png)
+
+#### INDIVIDUAL RESTAURANTS ####
+
+![view_restaurant.html](/documentation/images/wireframes/view-restaurant.png)
+
+#### USER PROFILE ####
+
+![user_profile.html](/documentation/images/wireframes/user-profile.png)
+
+#### ADD REVIEW ####
+
+![add_review.html](/documentation/images/wireframes/add-review.png)
+
+#### EDIT REVIEW ####
+
+![edit_review.html](/documentation/images/wireframes/edit-review.png)
+
+#### ADMIN PROFILE ####
+
+![user_profille/admin_profile.html](/documentation/images/wireframes/admin-profile.png)
+
+#### ADD RESTAURANT ####
+
+![add_restaurant.html](/documentation/images/wireframes/add-rest.png)
+
+#### EDIT RESTAURANT ####
+
+![edit_restaurant.html](/documentation/images/wireframes/edit-rest.png)
+
 ### FEATURES ###
 
 #### Existing features ####
