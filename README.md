@@ -418,28 +418,29 @@ This project uses the following programming languages:
 This project was built using [Gitpod](https://gitpod.io/).
 
 The creation of this website would not have been possible without:
-- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-- [Balsamiq](https://balsamiq.com/)
-- [GitHub](https://github.com/)
-- [GitPod](https://gitpod.io/)
-- [Heroku](https://www.heroku.com/)
-- [MongoDB](https://www.mongodb.com/atlas)
-- [PyMongo](https://pypi.org/project/pymongo/)
-- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
-- [Google Fonts](https://fonts.google.com/) 
-- [Font Awesome](https://fontawesome.com/) 
-- [AutoPrefixer](http://autoprefixer.github.io/)
-- [cdnjs](https://cdnjs.com/)
-- [W3C HTML Markup Valication service](https://validator.w3.org/)
-- [W3C CSS valication service](https://jigsaw.w3.org/css-validator/)
-- [TinyPNG](https://tinypng.com/)
-- [Coolors](https://coolors.co/)
-- [Color Tool - Material Design](https://material.io/)
-- [HTML Formatter](https://webformatter.com/html)
-- [Multi Device Website Mockup Generator](http://techsini.com/multi-mockup/index.php)
-- [markdown-toc](https://ecotrust-canada.github.io/markdown-toc/)
-- [dbdiagram.io](https://dbdiagram.io/home)
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/) - Used to quickly and effectively build the application. 
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) - Used for their navbar, grid layout, cards, modals and forms.
+- [Balsamiq](https://balsamiq.com/) - Used to create wireframes of the project.
+- [GitHub](https://github.com/) - Used to store and share all project code remotely.
+- [GitPod](https://gitpod.io/) - Used as the IDE for building the website.
+- [Heroku](https://www.heroku.com/) - Ysed to deploy and manage the project.
+- [MongoDB](https://www.mongodb.com/atlas) - Used as the cloud database for project data storage.
+- [PyMongo](https://pypi.org/project/pymongo/) - Used to link code between Python and MongoDB. 
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - Used for templating and writing quick Python code.
+- [Google Fonts](https://fonts.google.com/) - Used for font styles, namely Lobster and Muli.
+- [Font Awesome](https://fontawesome.com/) - Used for all icons featured throughout the site. 
+- [AutoPrefixer](http://autoprefixer.github.io/) - Used for auto generation of CSS prefixes.
+- [cdnjs](https://cdnjs.com/) - Used to deliver libraries such as jQuery for Bootstrap functions on items such as Modals.
+- [W3C HTML Markup Valication service](https://validator.w3.org/) - Used to validate HTML code.
+- [W3C CSS valication service](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code.
+- [PEP8 Online Checker](http://pep8online.com/checkresult) - Used to check Python code validity.
+- [TinyPNG](https://tinypng.com/) - Used to reduce the file sizes of all images.
+- [Coolors](https://coolors.co/) - Used to help generate a color palette for the site
+- [Color Tool - Material Design](https://material.io/) - Used to generate a color palette for the site.
+- [HTML Formatter](https://webformatter.com/html) - used to format all code.
+- [Multi Device Website Mockup Generator](http://techsini.com/multi-mockup/index.php) - Used for website mockup at top of README.
+- [markdown-toc](https://ecotrust-canada.github.io/markdown-toc/) - Used to generate README.md Table of Contents.
+- [dbdiagram.io](https://dbdiagram.io/home) - Used to generate the database diagram in the README.
 
 ### Testing ###
 
