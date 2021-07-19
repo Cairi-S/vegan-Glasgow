@@ -146,6 +146,7 @@ def profile():
     return redirect(url_for('login'))
 
 
+# restaurants.html page
 @app.route("/restaurants")
 def restaurants():
     # Retrieves all restaurants from the database
@@ -153,6 +154,7 @@ def restaurants():
     return render_template("restaurants.html", restaurants=restaurants)
 
 
+# view_restaurant.html page (individual restaurant page)
 @app.route("/restaurant/<restaurant_id>/view")
 def view_restaurant(restaurant_id):
     try:
@@ -172,8 +174,10 @@ def view_restaurant(restaurant_id):
         abort(404, description="Page not available")
 
 
+# add_restaurant.html page
 @app.route("/restaurant/add", methods=["GET", "POST"])
 def add_restaurant():
+    # session user check
     if not session['user'] == ADMIN_USER:
         abort(404, description="Page not available")
     elif request.method == "POST":
@@ -212,8 +216,10 @@ def add_restaurant():
     return render_template("add_restaurant.html")
 
 
+# edit_restaurant.html page
 @app.route("/restaurant/<restaurant_id>/edit", methods=["GET", "POST"])
 def edit_restaurant(restaurant_id):
+    # session.user check
     if not session['user'] == ADMIN_USER:
         abort(404, description="Page not available")
     elif request.method == "POST":
@@ -245,8 +251,10 @@ def edit_restaurant(restaurant_id):
     return render_template("edit_restaurant.html", restaurant=restaurant)
 
 
+# delete restaurant
 @app.route("/restaurant/<restaurant_id>/delete")
 def delete_restaurant(restaurant_id):
+    # session user check
     if not session['user'] == ADMIN_USER:
         abort(404, description="Page not available")
     else:
@@ -257,6 +265,7 @@ def delete_restaurant(restaurant_id):
         return redirect(url_for('profile', username=session['user']))
 
 
+# logout
 @app.route("/logout")
 def logout():
     # Removes session cookie and redirects to login
@@ -265,8 +274,10 @@ def logout():
     return redirect(url_for('login'))
 
 
+# add_review.html
 @app.route("/review/add", methods=["GET", "POST"])
 def add_review():
+    # check for logged in user
     if "user" in session:
         if request.method == "POST":
             # Creates a new instance of a review
@@ -290,6 +301,7 @@ def add_review():
     return render_template("add_review.html", restaurants=restaurants)
 
 
+# edit_review.html
 @app.route("/review/<review_id>/edit", methods=["GET", "POST"])
 def edit_review(review_id):
     try:
@@ -325,6 +337,7 @@ def edit_review(review_id):
         abort(404, description="Page doesn't exist")
 
 
+# deletes a review
 @app.route("/review/<review_id>/delete")
 def delete_review(review_id):
     # Deletes the review with corresponding id from db
@@ -334,8 +347,10 @@ def delete_review(review_id):
     return redirect(url_for('profile', username=session['user']))
 
 
+# contact.html
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
+    # check for logged in user
     loggedIn = True if 'user' in session else False
     if loggedIn:
         if request.method == "POST":
@@ -365,8 +380,10 @@ def contact():
         loggedIn=loggedIn)
 
 
+# allows admin users to delete user messages
 @app.route("/contact/<message_id>/delete")
 def delete_message(message_id):
+    # admin user check
     if not session['user'] == ADMIN_USER:
         abort(404, description="Page not available")
     else:
@@ -378,6 +395,7 @@ def delete_message(message_id):
         return redirect(url_for('profile', username=session['user']))
 
 
+# 404 redirect error if page/path does not exist
 @app.errorhandler(404)
 def not_found(error):
     return render_template('404.html', error=error), 404
