@@ -35,21 +35,21 @@
 
                                 <!--EDIT BTN-->
                                 <div class="btn btn-warning profile-btn review-edit-btn">
-                                    <a href="{{ url_for('edit_review', review_id=review._id) }}"><i class="fas fa-pen"></i></a>
+                                    <a href="{{ url_for('edit_review', review_id=review._id) }}" aria-label="Edit Review"><i class="fas fa-pen"></i></a>
                                 </div>
 
                                 <!--DELETE BTN-->
                                 <!-- Modal launch - code adapted from Bootstrap 5 -->
-                                <button type="button" class="btn btn-danger profile-btn review-edit-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <button type="button" class="btn btn-danger profile-btn review-edit-btn" data-bs-toggle="modal" data-bs-target="#deleteReview" aria-label="Delete Reivew">
                                     <i class="fas fa-trash"></i>
                                 </button>
                                 
                                 <!-- Modal -->
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="deleteReview" tabindex="-1" aria-labelledby="#deleteReviewModal" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">
+                                                <h5 class="modal-title" id="deleteReviewModal">
                                                     Are you sure you want to delete this review?
                                                 </h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
@@ -61,7 +61,7 @@
                                                 </button>
                                                 <div class="col-sm-3 d-flex justify-content-around align-items-center">
                                                     <div class="btn btn-danger profile-btn">
-                                                        <a href="{{ url_for('delete_review', review_id=review._id) }}"><i class="fas fa-trash"></i> Delete</a>
+                                                        <a href="{{ url_for('delete_review', review_id=review._id) }}" aria-label="Confirm Delete Review"><i class="fas fa-trash"></i> Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
