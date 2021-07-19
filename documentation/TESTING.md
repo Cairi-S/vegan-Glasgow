@@ -92,8 +92,6 @@ Logged out users:
 
 - Clicking the contact link text and ensure it does not load the Contact page, redirecting the user to the Log In screen.
 
-
-
 Logged in users:
 
 *Header*
@@ -327,8 +325,20 @@ Edit Restaurant
 
 ![Lighthouse Edit Restaurant Page Desktop results](/documentation/images/lighthouse/edit-rest-desk.png)
 
+### FURTHER TESTING ###
 
-BUGS
+As well as testing across the in-built mobile sizing on devTools I invited friends and family to view the site on their fevices and report any issues.  Devices included:
+
+- MacBook
+- MacBook Air
+- iPad
+- iPad Pro
+- Pocophone F1 Mio
+- Miaomi Mi 10T Lite
+
+There were no bugs or glitches reported.
+
+### BUGS ###
 
 - *FOOTER* not sticky on the bottom of the page on iPad/iPad Pro - showing quite a lot of whitespace.
 ![Footer whitespace](/documentation/images/bugs/footer-bug.png).
