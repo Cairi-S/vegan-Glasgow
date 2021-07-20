@@ -220,7 +220,9 @@
     padding: 0 10px 0;
 }
 
-/* ------------ SUBHEADERS */
+/* -- SUBTITLES/SUBHEADERS -- */
+
+/* ------------ Home/Restaurant page tagline */
 .tagline {
     padding: 20px 6px;
     font-size: 2.4rem;
@@ -229,12 +231,14 @@
     text-align: center;
 }
 
+/* ------------ flash messages */
 .flash-prompts h5 {
     line-height: 3;
     background-color: #96be8c;
     text-align: center;
 }
 
+/* ------------ Title within banner (separating page items) */
 .page-subtitle {
     padding: 10px 0;
     margin-bottom: 16px;
@@ -246,6 +250,7 @@
     text-align: center;
 }
 
+/* ------------ Admin profile subtitle/text */
 .profile-subheading {
     margin: 0 0 40px;
     font-size: 2rem;
@@ -261,12 +266,37 @@
     text-underline-position: under;
 }
 
-/* -- CARDS FOR RESTAURANTS -- */
-
+/* -- CARDS FOR RESTAURANTS AND FORMS -- */
+/* ------------ Container, form and card styling */
 .restaurant-card-style {
     border: 2px solid #243119;
     border-radius: 10px;
     background-color: rgba(224, 224, 224, 0.5);
+}
+
+.form-container,
+.ind-rest-container,
+.profile-container {
+    margin: 52px;
+    border: 2px solid #243119;
+    border-radius: 10px;
+    background-color: rgba(224, 224, 224, 0.5);
+}
+
+.review-card-style {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #96be8c;
+}
+
+/* ------------ Internal container and card styling */
+.form-container,
+.ind-rest-container {
+    padding: 20px 20px;
+}
+
+.profile-container {
+    padding: 20px 6px;
 }
 
 .restaurant-card-style a {
@@ -279,12 +309,6 @@
 
 .card-info-group {
     padding: 10px;
-}
-
-.review-card-style {
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    background-color: #96be8c;
 }
 
 .restaurant-card-text,
@@ -334,23 +358,6 @@
     padding: 0 20px 0;
 }
 
-/* -- FORMS -- */
-.form-container,
-.profile-container {
-    margin: 52px;
-    border: 2px solid #243119;
-    border-radius: 10px;
-    background-color: rgba(224, 224, 224, 0.5);
-}
-
-.form-container {
-    padding: 20px 20px;
-}
-
-.profile-container {
-    padding: 20px 6px;
-}
-
 .form-header,
 .restaurant-card-title {
     padding-top: 10px;
@@ -366,6 +373,8 @@
     padding-top: 14px;
     text-align: center;
 }
+
+/* ------------ Internal container/form/card font sizes */
 
 .page-title {
     margin: 30px 0;
@@ -387,11 +396,12 @@
     margin-top: 14px;
 }
 
-/* -------------------- Add a review/restaurant page -- */
+/* -- ADD A REVIEW/RESTAURANT PAGES -- */
 .review-form {
     margin: 40px 20px;
 }
 
+/* ------------ Styling of dropdown menu */
 .custom-select {
     margin: 10px 0;
 }
@@ -430,13 +440,7 @@
     padding: 0 10px 0 10px
 }
 
-/* --- VIEW_RESTAURANT STYLES -- */
-
-/*.restaurant-scoop-card,
-.restaurant-contact-card,
-.restaurant-info-card {
-    text-align: center;
-}*/
+/* -- VIEW_RESTAURANT STYLES -- */
 
 .info-card-margin {
     margin-top: 16px;
@@ -547,8 +551,8 @@
     text-underline-position: under;
 }
 
-/* --------- Media Queries ----------*/
-
+/* --------- MEDIA QUERIES ----------*/
+/* -- For smaller mobile devices (phones) --*/
 @media (min-width: 311px) and (max-width: 540px) and (orientation:portrait) {
     /*----------Footer--------*/
     .footer {
@@ -563,7 +567,9 @@
         padding-bottom: 20px;
     }
 
+    /*----------Containers--------*/
     .form-container,
+    .ind-rest-container,
     .profile-container {
         margin: 38px;
     }
@@ -571,7 +577,11 @@
     .restaurant-contact-container,
     .rest-reviews-container {
         margin-bottom: 16px;
-        /*padding: 0 20px 0;*/
+    }
+
+    /*----------Text--------*/
+    .review-form {
+        margin: 0 20px;
     }
 
     .view-rest-text {
@@ -584,14 +594,6 @@
 
     .restaurant-card-scoop-txt {
         padding: 10px 10px 50px 10px;
-    }
-
-    .restaurant-edit-btn {
-        margin: 40px 0 0 0;
-    }
-
-    .review-form {
-        margin: 0 20px;
     }
 
     .tagline {
@@ -611,6 +613,12 @@
         border-radius: 10px;
     }
 
+
+    /*----------Margins--------*/
+    .restaurant-edit-btn {
+        margin: 40px 0 0 0;
+    }
+
     .mobile-header-margin {
         margin-bottom: 20px;
     }
@@ -620,16 +628,19 @@
     }
 }
 
+/* -- For larger mobile devices (tablets) --*/
 @media (min-width: 540px) and (max-width: 1024px) and (orientation:portrait) {
     /*----------Footer--------*/
     .footer {
         height: 140px;
     }
 
+    /*----------view_restaurant socials--------*/
     .socials {
         padding: 0;
     }
 
+    /*----------view_restaurant scoop text--------*/
     .restaurant-card-scoop-txt {
         padding: 10px 10px 50px 10px;
     }
