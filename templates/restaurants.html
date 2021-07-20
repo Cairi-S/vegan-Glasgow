@@ -1,17 +1,16 @@
-{% extends "base.html" %}
-
+{% extends "base.html" %} 
 {% block content %}
 
 <!-- Tagline -->
 <h2 class="tagline">Vegan recommendations for Glasgows lively culinary scene.</h2>
-<!-- Page subtitle -->  
+<!-- Page subtitle -->
 <h3 class="page-title">Restaurants</h3>
 <div class="row g-0 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 d-flex justify-content-start">
     <!-- Generates a card for each restaurant in 'restaurants' db -->
     {% for restaurant in restaurants %}
-    <div class="d-flex justify-content-center info-card-cols">
-        {% include "info_card.html" %}
-    </div>
+        <div class="d-flex justify-content-center info-card-cols">
+            {% include "info_card.html" %}
+        </div>
     {% endfor %}
 </div>
 
