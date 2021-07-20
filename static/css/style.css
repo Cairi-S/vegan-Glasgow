@@ -150,7 +150,7 @@
     color: #243119;
 }
 
-.socials i:hover
+.socials i:hover,
 .socials i:focus {
     color: #e0e0e0;
 }
@@ -185,14 +185,21 @@
 
 /*---------------- Sticky footer */
 .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-  }
-  
-  .content-main {
+}
+
+.content-main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
-  }
+}
 
 /* ------------ All footer text */
 .footer-text,
@@ -437,7 +444,7 @@
 }
 
 .restaurant-review-info {
-    padding: 0 10px 0 10px
+    padding: 0 10px 0 10px;
 }
 
 /* -- VIEW_RESTAURANT STYLES -- */
@@ -511,7 +518,7 @@
 
 .form-button {
     margin-bottom: 10px;
-    color:#e0e0e0;
+    color: #e0e0e0;
 }
 
 .profile-btn a,
@@ -553,7 +560,7 @@
 
 /* --------- MEDIA QUERIES ----------*/
 /* -- For smaller mobile devices (phones) --*/
-@media (min-width: 311px) and (max-width: 540px) and (orientation:portrait) {
+@media (min-width: 311px) and (max-width: 540px) and (orientation: portrait) {
     /*----------Footer--------*/
     .footer {
         height: 170px;
@@ -613,7 +620,6 @@
         border-radius: 10px;
     }
 
-
     /*----------Margins--------*/
     .restaurant-edit-btn {
         margin: 40px 0 0 0;
@@ -624,12 +630,12 @@
     }
 
     .mob-sign-up {
-        font-size: 14px;;
+        font-size: 14px;
     }
 }
 
 /* -- For larger mobile devices (tablets) --*/
-@media (min-width: 540px) and (max-width: 1024px) and (orientation:portrait) {
+@media (min-width: 540px) and (max-width: 1024px) and (orientation: portrait) {
     /*----------Footer--------*/
     .footer {
         height: 140px;
