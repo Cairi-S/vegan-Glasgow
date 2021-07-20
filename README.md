@@ -61,7 +61,6 @@ As a visitor to Vegan Glasgow I would like:
 - To have quick access to price points so I know that I will be dining out within my budget.
 - To know where I can grab a "cheap and cheerful" bite to eat while maintaining my dietary choices.
 - To know where I can dine out locally when I am too tired to cook a meal at home.
-- To quickly find restaurants close to the area of the city I am exploring when hunger hits. 
 - To find rough mealtimes of restaurants so I know what will be open when I am looking to dine.
 - To be able to find cafe options as well as restaurants for those times I just want coffee and a cake.
 - To be able to express my thoughts on a restaurant and its menu.
@@ -105,8 +104,8 @@ User Specific Goals:
 - Find what mealtimes restaurants are open.
 - Be able to create an account and have an individual profile.
 - Be able to leave reviews to help advise others.
-- Be able to Edit my reviews if my opinions change.
-- Be able to Delete my review if I no longer wish to comment on a restaurant.
+- Be able to edit my reviews if my opinions change.
+- Be able to delete my review if I no longer wish to comment on a restaurant.
 - Be able to add restaurants to the website if I find somewhere which is not already listed.
 
 Why does Vegan Glasgow meet these user needs:
@@ -274,10 +273,11 @@ Individual Restaurants page:
 
 - The information on the restaurant's cards will be displayed clearly.
 - Users will be presented with a button prompting them to 'Add a review'.
-- User's are also presented with reviews that have been left for that restaurant.  If the review is written by the logged-in user they also have the opportunity to edit or delete that review.
-- The admin team is also able to add reviews, in addition, they are presented with buttons to edit the restaurant's information or delete the restaurant entirely.
+- User's are also presented with all reviews that have been left for that restaurant.  If the review is written by the logged-in user they also have the opportunity to edit or delete that review.
 - The edit button takes users to the corresponding edit page - most of the data will be prefilled from the database allowing the user to fully update their review or the restaurant information (depending on whether standard user or admin) or extend the information that has already been left.
 - The delete button prompts a modal that asks the user to confirm the deletion of that item.  They can close or cancel the request if preferred.
+- The admin team are presented with buttons to edit the restaurant's information or delete the restaurant entirely like the users edit/delete reivew buttons they are redirected to the corresponding edit page or a modal is triggered.
+
 
 Create Account page:
 
@@ -286,7 +286,7 @@ Create Account page:
 - The username will be checked to ensure the chosen username does not exist in the database and that it adheres to the chosen username requirements.
 - The password will be checked to ensure that it meets the chosen regex requirements.  In addition, the user is required to enter the password again and both passwords are checked to ensure a match.
 - Any issues will be flagged via flashed messages as detailed above.
-- A 'create account' button makes use of the '+' icon to prompt the user to create their account.  Once clicked this takes the user to their account page, provided there are no issues with their inputted information.
+- A 'create account' button makes use of an icon and text to prompt the user to create their account.  Once clicked this takes the user to their account page, provided there are no issues with their inputted information.
 - Should the user have an account already there is an additional link to the 'Log In' page.  When the user hovers over the words 'Log In!' the text becomes underlined to clearly show a clickable element.
 - All information is displayed upon a large card which is similar in styling to the restaurant cards for continuity.
 
@@ -322,7 +322,7 @@ My Account page (admin):
     * User who has made the request
     * Name of the restaurant to add
     * The rough location of that restaurant
-    * Why the user feels it would be a good addition to the side.
+    * Why the user feels it would be a good addition to the site.
     * A 'Restaurant added' button to remove the message once complete.  Clicking this button prompts a modal display asking the admin team to confirm the restaurant has been added.
 - Underneath User Messages the 'Add Restaurant' button is displayed to quickly take the admin to the add restaurant page.
 - Finally, the admin team can visit the Restaurants page to edit or delete restaurants information. A future feature would be for the admin team to be able to do this directly from their account page.
@@ -369,7 +369,21 @@ Unfortunately, due to time contraints, the initial design of the website was not
 - Pagination - The page will display 8 cards (2x4, desktop), 4 cards (2x2, tablet, 1x4, mobile). Users will be able to move through pages using the bottom page function, this minimises information overload, and scroll, on a single page.
 - Email authentication.
 
-Vegan Glasgow is currently only for private recommendations, however, there could be future scope to monetise the site and would be a future feature.
+Additional future features might be:
+
+- Ability for users to ‘favourite’ restaurants which show on their ‘My Account’ page.
+- Ability to add own photographs to reviews.
+- Edit profile option, e.g. change password.
+- Delete account.
+- Map API plotting the location of restaurants.
+- Additional information on restaurants
+- Have hyperlink on individual restaurant pages directing the user to that site rather than a text web address.
+- Have links to the restuarants social media sites (currently hard coded)
+- Have Superuser ability for restaurants to have/host their own page (paid feature). Superusers being able to advertise offers, online ordering and have direct business contact.
+- Filter menu option - Users will have the option to filter restaurant results by the most popular filter choices e.g. location, food category, group type, price and average reviews.
+- Remove 'our recommendation' option from admin and instead display the top 3 restaurants based on average user rating.
+
+Vegan Glasgow is currently only for private usage, however, there could be future scope to monetise the site and would be a future feature.
 
 If this were the case the target businesses for Vegan Glasgow would be:
 
@@ -383,18 +397,6 @@ Business user goals would be:
 - A well-designed website that is easy for the public to navigate that will benefit my business to be a part of.
 - A design that allows me to input and update my own restaurant's data easily and efficiently.
 - Value for money.
-
-Additional future features might be:
-
-- Ability for users to ‘favourite’ restaurants which show on their ‘My Account’ page.
-- Ability to add own photographs to reviews.
-- Edit profile option, e.g. change password.
-- Delete account.
-- Map API plotting the location of restaurants.
-- Additional information on restaurants
-- Have Superuser ability for restaurants to have/host their own page (paid feature). Superusers being able to advertise offers, online ordering and have direct business contact.
-- Filter menu option - Users will have the option to filter restaurant results by the most popular filter choices e.g. location, food category, group type, price and average reviews.
-- Remove 'our recommendation' option from admin and instead display the top 3 restaurants based on average user rating.
 
 ### DATABASE MODEL ###
 As this database will be unstructured and additional requirements may be added in the future MongoDB’s non-relational database has been chosen to create this site. In addition, mySQL is recommended for the final project so I am taking the chance to practice using MongoDB just now.
