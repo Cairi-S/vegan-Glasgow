@@ -373,6 +373,8 @@ In addition the Lighthouse feature has been used to test the Performance, Access
 
 ### FURTHER TESTING ###
 
+All pages were tested using [Google Chromes DevTools](https://developer.chrome.com/docs/devtools/) and the inbuilt mobile sizing -  all pages were tested across all available mock devices except Galaxy Fold.
+
 As well as testing across the in-built mobile sizing on devTools I invited friends and family to view the site on their devices and report any issues.  Devices included:
 
 - MacBook Pro
