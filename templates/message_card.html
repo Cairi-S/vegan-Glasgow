@@ -8,16 +8,16 @@
 </div>
 <div class="col-sm-3 d-flex align-items-center">
     <!-- TASK COMPLETED Modal launch - code adapted from Bootstrap 5 -->
-    <button type="button" class="btn btn-success profile-btn" data-bs-toggle="modal" data-bs-target="#restaurantAdded">
+    <button type="button" class="btn btn-success profile-btn" data-bs-toggle="modal" data-bs-target="#restaurantAdded-{{message._id}}">
         <i class="fas fa-check"></i> Restaurant added
     </button>
     
     <!-- Modal for confirmation of added restaurant -->
-    <div class="modal fade" id="restaurantAdded" tabindex="-1" aria-labelledby="#confirmRestaurantAdded" aria-hidden="true">
+    <div class="modal fade" id="restaurantAdded-{{message._id}}" tabindex="-1" aria-labelledby="#confirmAdded-{{message._id}}" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="confirmRestaurantAdded">
+                    <h5 class="modal-title" id="confirmAdded-{{message._id}}">
                         Please confirm you have added this restaurant.
                     </h5>
                     <!-- Modal 'x' btn (no action taken) -->
