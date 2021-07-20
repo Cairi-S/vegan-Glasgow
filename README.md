@@ -2,13 +2,84 @@
 # Vegan Glasgow #
 ![Vegan Glasgow Site Mockup](/documentation/images/vg-mockup.png)
 
-*TOC here*
+[A live preview of Vegan Glasgow is available here](https://vegan-glasgow.herokuapp.com/)
+
+- [Vegan Glasgow Table of Contents](#vegan-glasgow)
+    + [USER STORIES](#user-stories)
+    + [BUSINESS STORIES](#business-stories)
+    + [GOALS](#goals)
+      - [VISITOR GOALS](#visitor-goals)
+      - [USER GOALS](#user-goals)
+      - [WEBSITE GOALS](#website-goals)
+    + [WIREFRAMES](#wireframes)
+      - [HOME](#home)
+      - [CREATE ACCOUNT](#create-account)
+      - [LOG IN](#log-in)
+      - [CONTACT](#contact)
+      - [ALL RESTAURANTS](#all-restaurants)
+      - [INDIVIDUAL RESTAURANTS](#individual-restaurants)
+      - [USER PROFILE](#user-profile)
+      - [ADD REVIEW](#add-review)
+      - [EDIT REVIEW](#edit-review)
+      - [ADMIN PROFILE](#admin-profile)
+      - [ADD RESTAURANT](#add-restaurant)
+      - [EDIT RESTAURANT](#edit-restaurant)
+    + [DESIGN CHOICES](#design-choices)
+      - [FONTS](#fonts)
+      - [ICONS](#icons)
+      - [COLOR](#color)
+    + [FEATURES](#features)
+      - [EXISTING FEATURES](#existing-features)
+      - [FUTURE FEATURES](#future-features)
+    + [DATABASE MODEL](#database-model)
+    + [Technologies Used](#technologies-used)
+    + [Testing](#testing)
+    + [Deployment](#deployment)
+      - [Clone the repo](#clone-the-repo)
+      - [Deploy to Heroku](#deploy-to-heroku)
+    + [Credits](#credits)
+      - [Content](#content)
+      - [Images](#images)
+    + [Acknowledgements](#acknowledgements)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 
 As a vegetarian with a dairy allergy I’m an enforced vegan. However, I love food and am always on the lookout for restaurant recommendations in my local area that can cater to my dietary requirements. I’ll be honest, when dining out vegetarian options can be limited - we’ve all been served a mushy risotto or, my hands-down worst meal, a plate of boiled cauliflower and potatoes (which the restaurant charged £10 for).
 
 These personal experiences inspired me to create *Vegan Glasgow*, for locals and visitors to my home city of Glasgow, to share their experiences and help take the guesswork out of finding a great vegan meal.
 
-[A live preview of Vegan Glasgow is available here](https://vegan-glasgow.herokuapp.com/)
+### USER STORIES ### 
+Visitor Stories:
+
+As a visitor to Vegan Glasgow I would like:
+
+- To find menu item recommendations quickly and easily.
+- To quickly see what type of food is served so I can choose a restaurant based on my tastes. 
+- To know where I can buy alcoholic drinks that also cater to my dietary choices.
+- To have quick access to price points so I know that I will be dining out within my budget.
+- To know where I can grab a "cheap and cheerful" bite to eat while maintaining my dietary choices.
+- To know where I can dine out locally when I am too tired to cook a meal at home.
+- To quickly find restaurants close to the area of the city I am exploring when hunger hits. 
+- To find rough mealtimes of restaurants so I know what will be open when I am looking to dine.
+- To be able to find cafe options as well as restaurants for those times I just want coffee and a cake.
+- To be able to express my thoughts on a restaurant and its menu.
+- To be able to change my mind and update an earlier review if I return to a restaurant and the service and quality of food have changed.
+- To be able to contact the site about exciting new restaurants I have discovered.
+
+**The following is covered as a possible future feature**
+
+### BUSINESS STORIES ###
+
+If Vegan Glasgow were to be monetised, businesses may want to:
+- Quickly see information about competitors.
+- See that the various methods of contacting my restaurant are displayed clearly.
+- Have the ability to edit my own restaurant's page to keep all information up to date.
+- Use forms to quickly and efficiently log information.
+- Be able to advertise special offers and deals.
+
+**End of future feature**
 
 ### GOALS ###
 #### VISITOR GOALS ####
@@ -56,85 +127,6 @@ Admin Specific Goals:
 - A user-friendly site that allows foodies to find recommendations of places to eat based on their tastes.
 - An opportunity for the developer to further develop their frontend programming skills using HTML, CSS, Bootstrap and JavaScript.
 - An opportunity for the developer to practice their newfound backend programming skills using Python, MongoDB, Flask and Jinja.
-
-### USER STORIES ### 
-Visitor Stories:
-
-As a visitor to Vegan Glasgow I would like:
-
-- To find menu item recommendations quickly and easily.
-- To quickly see what type of food is served so I can choose a restaurant based on my tastes. 
-- To know where I can buy alcoholic drinks that also cater to my dietary choices.
-- To have quick access to price points so I know that I will be dining out within my budget.
-- To know where I can grab a "cheap and cheerful" bite to eat while maintaining my dietary choices.
-- To know where I can dine out locally when I am too tired to cook a meal at home.
-- To quickly find restaurants close to the area of the city I am exploring when hunger hits. 
-- To find rough mealtimes of restaurants so I know what will be open when I am looking to dine.
-- To be able to find cafe options as well as restaurants for those times I just want coffee and a cake.
-- To be able to express my thoughts on a restaurant and its menu.
-- To be able to change my mind and update an earlier review if I return to a restaurant and the service and quality of food have changed.
-- To be able to contact the site about exciting new restaurants I have discovered.
-
-**The following is covered as a possible future feature**
-
-### BUSINESS STORIES ###
-
-If Vegan Glasgow were to be monetised, businesses may want to:
-- Quickly see information about competitors.
-- See that the various methods of contacting my restaurant are displayed clearly.
-- Have the ability to edit my own restaurant's page to keep all information up to date.
-- Use forms to quickly and efficiently log information.
-- Be able to advertise special offers and deals.
-
-**End of future feature**
-
-### DESIGN CHOICES ### 
-#### FONTS ####
-All chosen fonts were taken from [Google Fonts](https://fonts.google.com/?preview.text=Vegan%20Glasgow&preview.text_type=custom)
-
-[Lobster](https://fonts.google.com/specimen/Lobster?preview.text=Vegan%20Glasgow&preview.text_type=custom)
-- All Logos, titles, subtitles and headers.
-![Google Fonts - Lobster](/documentation/images/lobster.png)
-
-[Muli](https://fonts.google.com/specimen/Muli?query=muli&preview.text=Vegan%20Glasgow&preview.text_type=custom)
-- Font used for all other text items.
-- *Please note* Since deciding on the font Muli it has been updated in Google Fonts to [Mulish](https://fonts.google.com/specimen/Mulish).  All research suggests this is only a rename and no other changes to the font have been made.
-![Google Fonts - Muli](/documentation/images/muli.png)
-
-
-#### ICONS ####
-Thanks to [Font Awesome](https://fontawesome.com/), the website utilises icons to make a large amount of information quickly identifiable and easy to absorb:
-
-e.g/
-- Plus sign = Add an item
-- Trash can = Delete an item
-- Pencil = Edit an item
-- Location marker = address
-- Telephone = contact number
-- Cheese = dairy options Meat(drumstick) = Meat options
-
-#### COLOR ####
-After researching color theory, shades of green were selected to suggest nature, freshness and safety.  
-
-Green is synonymous with veganism and, of course, we always want our food to be fresh.  Finally, the origins of the name 'Glasgow' are widely believed to be 'green hollow' or (dear)'green place'.
-
-[Coolors](https://coolors.co/) and [Color Tool Material Design](https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=560027&secondary.color=E0E0E0) were used to select the color palette.
-
-![Coolors color palette](/documentation/images/color-palette.png)
-
-1. Navbar, footer, internal sub-headings: #629490. 
-    - A green evoking natural and freshness.
-2. Main Background: White.
-    - Providing contrast and depth.
-3. Cards and navbar/footer text: #e0e0e0. 
-    - Providing depth and clearly sections information areas. 
-4. Card text and borders: #243119.
-    - Clearly stands out against all other colors used.
-
-Buttons use the easily identifiable traffic light system:
-- Positive actions (e.g. submit/add) - Green
-- Editing actions - Amber
-- Negative actions (e.g. cancel/delete) - Red
 
 ### WIREFRAMES ###
 
@@ -186,9 +178,57 @@ Buttons use the easily identifiable traffic light system:
 
 ![edit_restaurant.html](/documentation/images/wireframes/edit-rest.png)
 
+### DESIGN CHOICES ### 
+#### FONTS ####
+All chosen fonts were taken from [Google Fonts](https://fonts.google.com/?preview.text=Vegan%20Glasgow&preview.text_type=custom)
+
+[Lobster](https://fonts.google.com/specimen/Lobster?preview.text=Vegan%20Glasgow&preview.text_type=custom)
+- All Logos, titles, subtitles and headers.
+![Google Fonts - Lobster](/documentation/images/lobster.png)
+
+[Muli](https://fonts.google.com/specimen/Muli?query=muli&preview.text=Vegan%20Glasgow&preview.text_type=custom)
+- Font used for all other text items.
+- *Please note* Since deciding on the font Muli it has been updated in Google Fonts to [Mulish](https://fonts.google.com/specimen/Mulish).  All research suggests this is only a rename and no other changes to the font have been made.
+![Google Fonts - Muli](/documentation/images/muli.png)
+
+
+#### ICONS ####
+Thanks to [Font Awesome](https://fontawesome.com/), the website utilises icons to make a large amount of information quickly identifiable and easy to absorb:
+
+e.g/
+- Plus sign = Add an item
+- Trash can = Delete an item
+- Pencil = Edit an item
+- Location marker = address
+- Telephone = contact number
+- Cheese = dairy options Meat(drumstick) = Meat options
+
+#### COLOR ####
+After researching color theory, shades of green were selected to suggest nature, freshness and safety.  
+
+Green is synonymous with veganism and, of course, we always want our food to be fresh.  Finally, the origins of the name 'Glasgow' are widely believed to be 'green hollow' or (dear)'green place'.
+
+[Coolors](https://coolors.co/) and [Color Tool Material Design](https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=560027&secondary.color=E0E0E0) were used to select the color palette.
+
+![Coolors color palette](/documentation/images/color-palette.png)
+
+1. Navbar, footer, internal sub-headings: #629490. 
+    - A green evoking natural and freshness.
+2. Main Background: White.
+    - Providing contrast and depth.
+3. Cards and navbar/footer text: #e0e0e0. 
+    - Providing depth and clearly sections information areas. 
+4. Card text and borders: #243119.
+    - Clearly stands out against all other colors used.
+
+Buttons use the easily identifiable traffic light system:
+- Positive actions (e.g. submit/add) - Green
+- Editing actions - Amber
+- Negative actions (e.g. cancel/delete) - Red
+
 ### FEATURES ###
 
-#### Existing features ####
+#### EXISTING FEATURES ####
 
 All pages:
 
@@ -324,7 +364,7 @@ Contact page:
 404 page:
 - The custom 404 Page shows a cute image of a dropped ice cream, a link is displayed to return the user to the home page.
 
-### FUTURE FEATURES ###
+#### FUTURE FEATURES ####
 Unfortunately, due to time contraints, the initial design of the website was not able to be fully realised.  The features left to implement are:
 - Pagination - The page will display 8 cards (2x4, desktop), 4 cards (2x2, tablet, 1x4, mobile). Users will be able to move through pages using the bottom page function, this minimises information overload, and scroll, on a single page.
 - Email authentication.
