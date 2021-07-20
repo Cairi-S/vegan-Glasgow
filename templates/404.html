@@ -1,5 +1,4 @@
 {% extends "base.html" %} 
-
 {% block content %}
 
 <div class="row g-0">
@@ -7,7 +6,8 @@
         <!-- 404 img -->
         <img class="error-img" src="{{ url_for('static', filename='images/404-icecream.jpeg') }}" alt="Melted icecream cone" />
         <!-- 404 text-->
-        <h2 class="error-text">404! Yikes! When you're lost it's always best to
+        <h2 class="error-text">
+            404! Yikes! When you're lost it's always best to
             <a class="error-text" href="{{ url_for('home') }}"> return home...</a>
         </h2>
     </div>

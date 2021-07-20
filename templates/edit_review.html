@@ -1,6 +1,4 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <!-- Page title -->
 <h2 class="page-title">Edit a Review</h2>
 
@@ -14,22 +12,20 @@
                 Which restaurant will you review?
             </label>
         </div>
-            <!-- Select restaurant dropdown -->
+        <!-- Select restaurant dropdown -->
         <div class="row g-0">
             <select class="custom-select form-spacing col-sm-4" id="restaurant_name" name="restaurant_name" required>
                 <option class="form-instructions" value="" disabled>Select restaurant</option>
                 <!-- Select restaurant iteration for dropdown -->
-                {% for restaurant in restaurants %}
-                    {% if restaurant.name == review.restaurant_name %}
-                    <option value="{{ restaurant.name }}" selected>
-                        {{ restaurant.name }}
-                    </option>
-                    {% else %}
-                        <option value="{{ restaurant.name }}" disabled>
-                            {{ restaurant.name }}
-                        </option>
-                    {% endif %}
-                {% endfor %}
+                {% for restaurant in restaurants %} {% if restaurant.name == review.restaurant_name %}
+                <option value="{{ restaurant.name }}" selected>
+                    {{ restaurant.name }}
+                </option>
+                {% else %}
+                <option value="{{ restaurant.name }}" disabled>
+                    {{ restaurant.name }}
+                </option>
+                {% endif %} {% endfor %}
             </select>
         </div>
         <!-- Restaurant rating -->
@@ -38,11 +34,10 @@
                 How would you rate this restaurant?
             </label>
         </div>
-            <!-- Restaurant rating dropdown -->
+        <!-- Restaurant rating dropdown -->
         <div class="row g-0">
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="restaurant_rating" name="restaurant_rating" required>
-                <option class="form-instructions" value="" disabled selected>
-                    {{ review.restaurant_rating }} or choose a new rating</option>
+                <option class="form-instructions" value="" disabled selected> {{ review.restaurant_rating }} or choose a new rating</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -54,16 +49,13 @@
         <div class="form-group">
             <label class="form-instructions review-form-items form-spacing" for="review">What do you think?</label>
             <!-- input -->
-            <textarea class="form-control form-spacing" id="review" name="review"  placeholder="Tell us your highs and lows..." required>
+            <textarea class="form-control form-spacing" id="review" name="review" placeholder="Tell us your highs and lows..." required>
             {{- review.review -}}
             </textarea>
         </div>
         <!-- Restaurant review buttons submit and cancel -->
-        <button type="submit" class="btn btn-success review-form-items">
-            <i class="fas fa-edit"></i> Edit My Review
-        </button>
-        <a href="{{ url_for('profile') }}" 
-        class="btn btn-danger review-form-items">Cancel</a>
+        <button type="submit" class="btn btn-success review-form-items"><i class="fas fa-edit"></i> Edit My Review</button>
+        <a href="{{ url_for('profile') }}" class="btn btn-danger review-form-items">Cancel</a>
     </form>
     <!-- FORM END -->
 </div>
