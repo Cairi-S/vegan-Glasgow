@@ -1,25 +1,23 @@
-<div class="row g-0 justify-content-center ">
+<div class="row g-0 justify-content-center">
     <!-- User messages stored in db -->
     <h4 class="page-subtitle profile-subheading">User messages</h4>
     <!-- Checks for messages in db and displays them -->
-    {% for message in messages %}
-        {% include "message_card.html" %}
+    {% for message in messages %} 
+        {% include "message_card.html" %} 
     {% endfor %}
-    
+
     <!-- Add a restaurant -->
-    <div class="row g-0 justify-content-center ">
+    <div class="row g-0 justify-content-center">
         <h4 class="page-subtitle mob-admin-prof-subhead">Add a Restaurant</h4>
-    </div>  
+    </div>
     <div class="row g-0 justify-content-center">
         <!-- link to add_restaurant -->
-        <a href="{{ url_for('add_restaurant') }}" class="btn btn-success add-rest-btn">
-            <i class="fas fa-house-user"></i> Add a Restaurant
-        </a>
+        <a href="{{ url_for('add_restaurant') }}" class="btn btn-success add-rest-btn"> <i class="fas fa-house-user"></i> Add a Restaurant </a>
     </div>
 
     <!-- Edit/delete restaurant - link to restaurants page -->
     <h4 class="page-subtitle mob-admin-prof-subhead">Need to edit or delete a restaurant?</h4>
     <p class="admin-profile-text">To help avoid accidents, please select the restaurant to update directly from the 
-        <a href=" {{url_for('restaurants')}}"> Restaurants</a> page.
+        <a href=" {{url_for('restaurants')}}"> Restaurants page.</a> 
     </p>
 </div>
