@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
 {% block content %}
 <!-- Page title -->
@@ -9,28 +9,28 @@
     <!-- FORM START -->
     <form class="review-form" method="POST" action="{{ url_for('add_restaurant') }}">
         <!-- Restaurant name -->
-        <div class="form-group ">
+        <div class="form-group">
             <label class="form-instructions review-form-items" for="name">Restaurant Name</label>
             <!-- input -->
-            <input type="text" class="form-control form-spacing" id="name" name="name" placeholder="Restaurant name..." required>
+            <input type="text" class="form-control form-spacing" id="name" name="name" placeholder="Restaurant name..." required />
         </div>
         <!-- Restaurant phone number -->
-        <div class="form-group ">
+        <div class="form-group">
             <label class="form-instructions review-form-items" for="phone_number">Restaurant contact number</label>
             <!-- input -->
-            <input type="tel" class="form-control form-spacing" id="phone_number" name="phone_number" placeholder="Restaurant contact telephone number..." required>
+            <input type="tel" class="form-control form-spacing" id="phone_number" name="phone_number" placeholder="Restaurant contact telephone number..." required />
         </div>
         <!-- Restaurant street address -->
-        <div class="form-group ">
+        <div class="form-group">
             <label class="form-instructions review-form-items" for="address">Restaurant Street Address</label>
             <!-- input -->
-            <input type="text" class="form-control form-spacing" id="address" name="address" placeholder="Restaurant street address..." required>
+            <input type="text" class="form-control form-spacing" id="address" name="address" placeholder="Restaurant street address..." required />
         </div>
         <!-- Restaurant web address -->
-        <div class="form-group ">
+        <div class="form-group">
             <label class="form-instructions review-form-items" for="website">Restaurant Website</label>
             <!-- input -->
-            <input type="text" class="form-control form-spacing" id="website" name="website" placeholder="Restaurant website..." required>
+            <input type="text" class="form-control form-spacing" id="website" name="website" placeholder="Restaurant website..." required />
         </div>
         <!-- Restaurant price range -->
         <div class="row g-0">
@@ -48,10 +48,10 @@
             </select>
         </div>
         <!-- Restaurant cuisine -->
-        <div class="form-group ">
+        <div class="form-group">
             <label class="form-instructions review-form-items" for="cuisine">Cuisine</label>
             <!-- input -->
-            <input type="text" class="form-control form-spacing" id="cuisine" name="cuisine" placeholder="Cuisine type..." required>
+            <input type="text" class="form-control form-spacing" id="cuisine" name="cuisine" placeholder="Cuisine type..." required />
         </div>
         <!-- Restaurant opening hours -->
         <div class="row">
@@ -80,25 +80,22 @@
                 Whats the inside scoop on this restaurant?
             </label>
             <!-- input -->
-            <textarea class="form-control form-spacing" id="summary" name="summary" placeholder="Give us the scoop..." required>
-            </textarea>
+            <textarea class="form-control form-spacing" id="summary" name="summary" placeholder="Give us the scoop..." required> </textarea>
         </div>
         <!-- Admin restaurant recommendation radio button -->
         <div class="form-check form-switch form-spacing">
             <label class="form-check-label form-instructions" for="our_recommendation"> is a veganGlasgow recommended restaurant</label>
             <!-- input -->
-            <input class="form-check-input" type="checkbox" id="our_recommendation" name="our_recommendation">
+            <input class="form-check-input" type="checkbox" id="our_recommendation" name="our_recommendation" />
         </div>
         <!-- Restaurant image url -->
-        <div class="form-group ">
+        <div class="form-group">
             <label class="form-instructions review-form-items" for="restaurant_img_url">Restaurant Image</label>
             <!-- input -->
-            <input type="text" class="form-control form-spacing" id="restaurant_img_url" name="restaurant_img_url" placeholder="Add the URL of the image to add...">
+            <input type="text" class="form-control form-spacing" id="restaurant_img_url" name="restaurant_img_url" placeholder="Add the URL of the image to add..." />
         </div>
         <!-- Add Restaurant button submit -->
-        <button type="submit" class="btn btn-success review-form-items">
-            <i class="fas fa-plus-circle"></i> Add This Restaurant
-        </button>
+        <button type="submit" class="btn btn-success review-form-items"><i class="fas fa-plus-circle"></i> Add This Restaurant</button>
         <!-- Cancel btn -->
         <a href="{{ url_for('profile') }}" class="btn btn-danger review-form-items">Cancel</a>
     </form>

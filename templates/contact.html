@@ -1,5 +1,4 @@
-{% extends "base.html" %}
-
+{% extends "base.html" %} 
 {% block content %}
 
 <!-- Page title -->
@@ -15,8 +14,7 @@
                 What restaurant would you like to be added to Vegan Glasgow?
             </label>
             <!-- input -->
-            <input type="text" class="form-control" id="new_restaurant_name" name="new_restaurant_name" 
-            placeholder="Restaurants name" required>
+            <input type="text" class="form-control" id="new_restaurant_name" name="new_restaurant_name" placeholder="Restaurants name" required />
         </div>
         <!-- Restaurant location -->
         <div class="row g-0">
@@ -48,13 +46,10 @@
                 Why do you think this restaurant should be added?
             </label>
             <!-- input -->
-            <textarea class="form-control form-spacing" id="message" name="message" 
-            placeholder="Tell us why you think vegans in Glasgow should know about this restaurant" required></textarea>
+            <textarea class="form-control form-spacing" id="message" name="message" placeholder="Tell us why you think vegans in Glasgow should know about this restaurant" required></textarea>
         </div>
         <!-- Restaurant review buttons submit and cancel -->
-        <button type="submit" class="btn btn-success btn-margin"> 
-            <i class="fas fa-paper-plane"></i> Send my message
-        </button>
+        <button type="submit" class="btn btn-success btn-margin"><i class="fas fa-paper-plane"></i> Send my message</button>
         <button type="submit" class="btn btn-danger btn-margin">Cancel</button>
     </form>
     <!-- FORM END -->

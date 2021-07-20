@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
 {% block content %}
 <!-- Page title -->
@@ -17,12 +17,12 @@
         <div class="row g-0">
             <!-- Select restaurant dropdown -->
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="restaurant_name" name="restaurant_name" required>
-                <option class="form-instructions" value="" disabled selected >Select restaurant</option>
+                <option class="form-instructions" value="" disabled selected>Select restaurant</option>
                 <!-- Select restaurant iteration for dropdown -->
                 {% for restaurant in restaurants %}
-                    <option value="{{ restaurant.name }}">
-                        {{ restaurant.name }}
-                    </option>
+                <option value="{{ restaurant.name }}">
+                    {{ restaurant.name }}
+                </option>
                 {% endfor %}
             </select>
         </div>
@@ -32,7 +32,7 @@
                 How would you rate this restaurant?
             </label>
         </div>
-            <!-- Restaurant rating dropdown -->
+        <!-- Restaurant rating dropdown -->
         <div class="row g-0">
             <select class="custom-select form-spacing col-sm-4 review-form-items" id="restaurant_rating" name="restaurant_rating" required>
                 <option class="form-instructions" value="" disabled selected>Choose your rating</option>
@@ -54,9 +54,7 @@
             </div>
         </div>
         <!-- Add review buttons submit -->
-        <button type="submit" class="btn btn-success review-form-items">
-            <i class="fas fa-plus-circle"></i> Add My Review
-        </button>
+        <button type="submit" class="btn btn-success review-form-items"><i class="fas fa-plus-circle"></i> Add My Review</button>
         <!-- Cancel -->
         <button type="submit" class="btn btn-danger review-form-items">Cancel</button>
     </form>
