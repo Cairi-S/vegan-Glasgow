@@ -7,6 +7,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Muli&display=swap");
 
+/*-- IMAGES -- */
+
+/*---------------- hero img */
 .banner-img {
     background-position: center;
     background-size: cover;
@@ -14,6 +17,7 @@
     width: 100%;
 }
 
+/*---------------- card imgs */
 .card-img-size {
     height: 300px;
     -o-object-fit: cover;
@@ -21,6 +25,7 @@
     border-radius: 10px;
 }
 
+/*---------------- individual restaurant page img */
 .img-size {
     height: 300px;
     -o-object-fit: cover;
@@ -29,13 +34,14 @@
     border-radius: 10px;
 }
 
+/*---------------- 404 img */
 .error-img {
     height: auto;
     width: 100%;
     margin-top: 60px;
 }
 
-/* ------------ Text color */
+/* -- FONT COLOR --*/
 
 .tagline,
 .flash-prompts h5,
@@ -72,7 +78,7 @@
     color: #e0e0e0;
 }
 
-/* ------------ Fonts */
+/* -- FONTS --*/
 
 #logo,
 .tagline,
@@ -99,22 +105,24 @@
     font-family: "Muli", sans-serif;
 }
 
-/* -- HEADER/FOOTER color -- */
+/* -- NAVBAR/FOOTER COLOR -- */
 .navbar-style,
 .footer {
     background-color: #629490;
 }
 
-/* -- NAVBAR -- */
-.navbar {
-    padding: 0;
-}
+/* -- HEADER -- */
 
-/* ------------ Logo */
+/*---------------- Logo sizing */
 #logo {
     font-size: 2rem;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     padding-left: 20px;
+}
+
+/*---------------- navbar padding */
+.navbar {
+    padding: 0;
 }
 
 /* ------------ Menu items */
@@ -130,38 +138,41 @@
     padding: 8px 12px;
 }
 
-/* ------------ HOVER FUNCTION */
+/* -- HOVER/FOCUS FUNCTION --*/
 #navbar-menu-items a:hover,
-#logo a:hover,
+#navbar-menu-items a:focus,
 .footer-contact:hover,
 .footer-contact:focus,
 .footer-icons i:hover,
-.footer-icons i:focus {
+.footer-icons i:focus,
+.footer-contact a:hover,
+.footer-contact a:focus {
     color: #243119;
 }
 
-.socials i:hover {
+.socials i:hover
+.socials i:focus {
     color: #e0e0e0;
 }
 
 .form-instructions a:hover,
-.footer-contact:hover {
+.form-instructions a:focus {
     text-decoration: underline;
     text-underline-position: under;
 }
 
 .profile-search-prompt a:hover,
+.profile-search-prompt a:focus,
+.no-review-text a:hover,
 .no-review-text a:hover {
     text-decoration: none;
 }
 
-/* ------------ Menu items active */
-/* poss remove?
-.nav-menu .active {
-    text-decoration: underline;
-    text-underline-position: under;
-    text-shadow: none;
-}*/
+.error-text a:hover,
+.error-text a:focus {
+    color: #243119;
+    text-decoration: none;
+}
 
 /* -- FOOTER -- */
 .footer {
@@ -172,7 +183,7 @@
     height: 72px;
 }
 
-/* ------------ Sticky footer */
+/*---------------- Sticky footer */
 .content {
     display: flex;
     min-height: 100vh;
@@ -194,7 +205,7 @@
     text-align: center;
 }
 
-/* ------------ Footer icons */
+/* -- SOCIAL MEDIA ICONS -- */
 .footer-icons i {
     font-size: 1.6rem;
 }
@@ -203,15 +214,7 @@
     text-decoration: none;
 }
 
-/* ------------ Footer placement */
-.footer-nav-links {
-    margin: 0;
-}
-
-.footer-nav-links li {
-    padding: 0 2px 0;
-}
-
+/* ------------ Social media icon padding */
 .footer-socials,
 .socials {
     padding: 0 10px 0;
@@ -542,11 +545,6 @@
 .error-text a {
     text-decoration: underline;
     text-underline-position: under;
-}
-
-.error-text a:hover {
-    color: #243119;
-    text-decoration: none;
 }
 
 /* --------- Media Queries ----------*/
