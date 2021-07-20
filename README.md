@@ -118,7 +118,6 @@ remain relevant.
 
 Admin Specific Goals:
 
-- Be able to edit user reviews if inappropriate.
 - Be able to add, edit restaurant info or delete a restaurant should it close
 - Be able to receive notifications from users on new restaurants in the area.
 
@@ -367,10 +366,9 @@ Contact page:
 #### FUTURE FEATURES ####
 Unfortunately, due to time contraints, the initial design of the website was not able to be fully realised.  The features left to implement are:
 - Pagination - The page will display 8 cards (2x4, desktop), 4 cards (2x2, tablet, 1x4, mobile). Users will be able to move through pages using the bottom page function, this minimises information overload, and scroll, on a single page.
-- Email authentication.
 
 Additional future features might be:
-
+- Email authentication.
 - Ability for users to ‘favourite’ restaurants which show on their ‘My Account’ page.
 - Ability to add own photographs to reviews.
 - Edit profile option, e.g. change password.
@@ -399,7 +397,7 @@ Business user goals would be:
 - Value for money.
 
 ### DATABASE MODEL ###
-As this database will be unstructured and additional requirements may be added in the future MongoDB’s non-relational database has been chosen to create this site. In addition, mySQL is recommended for the final project so I am taking the chance to practice using MongoDB just now.
+As mySQL is recommended for the final project I have taking the chance to practice using MongoDB just now.  Having completed the project I do believe that mySQL may have been a better solution.
 
 ![DB diagram](/documentation/images/db-diagram/db-diagram.png)
 
@@ -417,7 +415,7 @@ Restaurants collection
 |open_times|String| |
 |summary|String| |
 |restaurant_img_url|String| |
-|our_recommendation|String| TO BE UPDATED TO BOOLEAN |
+|our_recommendation|String| The preferred data type for this key would be boolean and will be updated in future |
 
 Review collection
 
@@ -425,9 +423,9 @@ Review collection
 |---|----|-----|
 |_id|ObjectId| |
 |restaurant_name|String| |
-|restaurant_rating|String| In future this would be listed as an integer,  
-|review|String|
-|created_by|String|
+|restaurant_rating|String| In future this would be listed as an integer. | 
+|review|String| |
+|created_by|String| |
      
 
 User collection
@@ -437,7 +435,6 @@ User collection
 |_id|ObjectId|
 |username|String|
 |password|String|
-|message|String|
 
 Messages collection
 
