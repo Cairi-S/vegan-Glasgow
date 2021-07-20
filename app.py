@@ -32,62 +32,66 @@ def home():
 # create_account.html page
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
-    if request.method == "POST":
-        # Checks to see if unique username
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
+    if "user" in session:
+        return redirect(url_for("profile"))
+    else:
+        if request.method == "POST":
+            # Checks to see if unique username
+            existing_user = mongo.db.users.find_one(
+                {"username": request.form.get("username").lower()})
 
-        # Prompt notifying user to select another username
-        if existing_user:
-            flash("Username already exists, please choose another")
-            return redirect(url_for('signup'))
+            # Prompt notifying user to select another username
+            if existing_user:
+                flash("Username already exists, please choose another")
+                return redirect(url_for('signup'))
 
-        # Checks password against password confirmation,
-        # returns to create_account if don't match
-        password = request.form.get("password")
-        confirm_password = request.form.get("confirm-password")
+            # Checks password against password confirmation,
+            # returns to create_account if don't match
+            password = request.form.get("password")
+            confirm_password = request.form.get("confirm-password")
 
-        if confirm_password != password:
-            flash("Confirmation and password do not match, please try again.")
-            return render_template("create_account.html")
+            if confirm_password != password:
+                flash("Both passwords do not match, please try again.")
+                return render_template("create_account.html")
 
-        #  Many thanks to geeksforgeeks.org for Python pattern matching guide
-        def password_check(password):
-            val = True
-            if len(password) < 6:
-                val = False
-            if not any(char.isdigit() for char in password):
-                val = False
-            if not any(char.isupper() for char in password):
-                val = False
-            if not any(char.islower() for char in password):
-                val = False
-            if val:
-                return val
+            # Many thanks to geeksforgeeks.org for
+            # their Python pattern matching guide
+            def password_check(password):
+                val = True
+                if len(password) < 6:
+                    val = False
+                if not any(char.isdigit() for char in password):
+                    val = False
+                if not any(char.isupper() for char in password):
+                    val = False
+                if not any(char.islower() for char in password):
+                    val = False
+                if val:
+                    return val
 
-        if (password_check(password)):
-            print("Password is valid")
-        else:
-            print("Invalid Password !!")
+            if (password_check(password)):
+                print("Password is valid")
+            else:
+                print("Invalid Password !!")
 
-        # Gathers and inserts new user data to db
-        create_account = {
-            "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
-        }
-        mongo.db.users.insert_one(create_account)
+            # Gathers and inserts new user data to db
+            create_account = {
+                "username": request.form.get("username").lower(),
+                "password": generate_password_hash(
+                    request.form.get("password"))
+            }
+            mongo.db.users.insert_one(create_account)
 
-        # Creates session cookie for user and gives a prompt
-        session["user"] = request.form.get("username").lower()
-        flash("Welcome to vegan Glasgow!")
-        return redirect(url_for("profile", username=session["user"]))
+            # Creates session cookie for user and gives a prompt
+            session["user"] = request.form.get("username").lower()
+            flash("Welcome to vegan Glasgow!")
+            return redirect(url_for("profile", username=session["user"]))
     return render_template("create_account.html")
 
 
 # login.html page
 @app.route("/login", methods=["GET", "POST"])
 def login():
-
     if "user" in session:
         return redirect(url_for("profile"))
 
@@ -124,26 +128,29 @@ def login():
 # user_profile.html page
 @app.route("/profile/", methods=["GET", "POST"])
 def profile():
-    if not session['user']:
+    try:
+        if not session['user']:
+            return redirect(url_for('login'))
+
+        # Retrieves the session user's username from the database
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        reviews = list(mongo.db.reviews.find(
+            {"created_by": session["user"]}))
+        messages = mongo.db.messages.find()
+
+        # Makes sure the users page is only accessible if login details correct
+        if session["user"]:
+            return render_template(
+                "user_profile.html",
+                username=username,
+                reviews=reviews,
+                messages=messages)
+
+        # Redirects back to login if login details correct
         return redirect(url_for('login'))
-
-    # Retrieves the session user's username from the database
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    reviews = list(mongo.db.reviews.find(
-        {"created_by": session["user"]}))
-    messages = mongo.db.messages.find()
-
-    # Makes sure the users page is only accessible if login details correct
-    if session["user"]:
-        return render_template(
-            "user_profile.html",
-            username=username,
-            reviews=reviews,
-            messages=messages)
-
-    # Redirects back to login if login details correct
-    return redirect(url_for('login'))
+    except Exception:
+        abort(404, description="Page not available")
 
 
 # restaurants.html page
