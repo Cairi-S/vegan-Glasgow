@@ -1,6 +1,6 @@
 <div class="col-sm-9 restaurant-review-info">
     <!--Review data from DB-->
-    <hr>
+    <hr />
     <p><i class="fas fa-user"></i> {{ message.created_by }}</p>
     <p><i class="fas fa-home"></i> {{ message.restaurant_name }}</p>
     <p><i class="fas fa-map-marker-alt"></i> {{ message.location }}</p>
@@ -8,10 +8,8 @@
 </div>
 <div class="col-sm-3 d-flex align-items-center">
     <!-- TASK COMPLETED Modal launch - code adapted from Bootstrap 5 -->
-    <button type="button" class="btn btn-success profile-btn" data-bs-toggle="modal" data-bs-target="#restaurantAdded-{{message._id}}">
-        <i class="fas fa-check"></i> Restaurant added
-    </button>
-    
+    <button type="button" class="btn btn-success profile-btn" data-bs-toggle="modal" data-bs-target="#restaurantAdded-{{message._id}}"><i class="fas fa-check"></i> Restaurant added</button>
+
     <!-- Modal for confirmation of added restaurant -->
     <div class="modal fade" id="restaurantAdded-{{message._id}}" tabindex="-1" aria-labelledby="#confirmAdded-{{message._id}}" aria-hidden="true">
         <div class="modal-dialog">
@@ -21,8 +19,7 @@
                         Please confirm you have added this restaurant.
                     </h5>
                     <!-- Modal 'x' btn (no action taken) -->
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-footer justify-content-center">
                     <!-- Modal Close btn (no action taken) -->
@@ -31,9 +28,7 @@
                     </button>
                     <div class="btn btn-success profile-btn modal-btn">
                         <!-- Removes the message from the admin profile page -->
-                        <a href="{{ url_for('delete_message', message_id=message._id) }}">
-                            <i class="fas fa-check"></i> Restaurant added
-                        </a>
+                        <a href="{{ url_for('delete_message', message_id=message._id) }}"> <i class="fas fa-check"></i> Restaurant added </a>
                     </div>
                 </div>
             </div>
