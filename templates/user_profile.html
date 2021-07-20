@@ -37,7 +37,10 @@
                 </div>
                 <div class="row g-0 justify-content-evenly">
                     <!-- checks for session.user and displays their reviews -->
-                    {% for review in reviews if session.user|lower == review.created_by|lower %} {% include "review_card.html" %}
+                    {% for review in reviews if session.user|lower == review.created_by|lower %} 
+                        <div class="col-sm-9">
+                            {% include "review_card.html" %}
+                        </div>
                         <div class="col-sm-3 d-flex justify-content-evenly align-items-center">
                             <!-- Edit and delete reviews -->
 
