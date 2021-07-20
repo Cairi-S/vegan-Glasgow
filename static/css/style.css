@@ -257,7 +257,11 @@
     text-align: center;
 }
 
-/* ------------ Admin profile subtitle/text */
+/* ------------ Admin/user profile subtitle/text */
+.search-add-link {
+    font-size: 1.4rem;
+}
+
 .profile-subheading {
     margin: 0 0 40px;
     font-size: 2rem;
