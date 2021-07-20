@@ -1,5 +1,44 @@
-# Testing #
+- [VALIDATION](#validation)
+- [TESTING USER, ADMIN AND DEVELOPER GOALS FROM UX](#testing-user--admin-and-developer-goals-from-ux)
+  * [User Goals](#user-goals)
+  * [Admin Goals](#admin-goals)
+- [MANUAL TESTING](#manual-testing)
+  * [ALL PAGES](#all-pages)
+  * [HOME PAGE](#home-page)
+  * [RESTAURANTS](#restaurants)
+  * [INDIVIDUAL RESTAURANTS (view_restaurant.html)](#individual-restaurants--view-restauranthtml-)
+  * [CREATE ACCOUNT](#create-account)
+  * [LOG IN](#log-in)
+  * [LOG OUT](#log-out)
+  * [CONTACT](#contact)
+  * [404](#404)
+  * [MY PROFILE - *USER*](#my-profile----user-)
+  * [ADD REVIEW](#add-review)
+  * [EDIT REVIEW](#edit-review)
+  * [MY PROFILE - *ADMIN*](#my-profile----admin-)
+  * [ADD RESTAURANT - *ADMIN ONLY*](#add-restaurant----admin-only-)
+  * [EDIT RESTAURANT - *ADMIN ONLY*](#edit-restaurant----admin-only-)
+  * [DELETE RESTAURANT - *ADMIN ONLY*](#delete-restaurant----admin-only-)
+- [ADDITIONAL TESTING](#additional-testing)
+  * [Home](#home)
+  * [All Restaurants](#all-restaurants)
+  * [Individual Restaurants](#individual-restaurants)
+  * [Create Account](#create-account)
+  * [Log In](#log-in)
+  * [Contact](#contact)
+  * [Profile Page - User](#profile-page---user)
+  * [Add Review](#add-review)
+  * [Edit Review](#edit-review)
+  * [Profile Page - Admin](#profile-page---admin)
+  * [Add Restaurant](#add-restaurant)
+  * [Edit Restaurant](#edit-restaurant)
+- [BUGS](#bugs)
+- [FURTHER TESTING](#further-testing)
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
+### VALIDATION ### 
 All code has been run through validation services such as:
 - [W3C HTML Markup Valication service](https://validator.w3.org/) which returned the result:
 ![HTML validator result](/documentation/images/validation/html-validator.png)
@@ -10,6 +49,8 @@ This result was present across all pages despite an h5 element being present wit
 ![CSS validator result](/documentation/images/validation/css-validator.png)
 - [PEP8 Online Checker](http://pep8online.com/checkresult) which returned the result:
 ![PEP8 check result](/documentation/images/validation/pep8.png)
+
+### TESTING USER, ADMIN AND DEVELOPER GOALS FROM UX ###
 
 The most common path through the website would be:
 
@@ -24,8 +65,6 @@ The most common path through the website would be:
 
 **Admin**
 * Home > Log In > My Account > *then add restaurants/edit restaurants/restaurants as required*
-
-### TESTING USER, ADMIN AND DEVELOPER GOALS FROM UX ###
 
 #### User Goals ####
 - Have somewhere to quickly find restaurant recommendations.
@@ -69,7 +108,7 @@ The most common path through the website would be:
 
 ### MANUAL TESTING ###
 
-ALL PAGES
+#### ALL PAGES ####
 
 Favicon
 
@@ -109,7 +148,7 @@ Logged in users:
 
 - Change the screen size to various mobile devices using devTools to verify that the navigation bar and footer are responsive.  With the navbar becoming a burger menu and footer items stacking at the appropriate breakpoints.
 
-HOME PAGE
+#### HOME PAGE ####
 
 *This page is accessible to all so tests were repeated for when users were both logged in and logged out*
 
@@ -118,14 +157,14 @@ HOME PAGE
 - Cross-check with the database to make sure that the restaurant's information is being correctly taken from the database.
 - Cross-check with the database to make sure that the restaurants listed have "our_recommendation" marked as "on".
 
-RESTAURANTS
+#### RESTAURANTS ####
 
 *This page is accessible to all so tests were repeated for when users were both logged in and logged out*
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the images and cards are responsive.  With cards stacking at the appropriate breakpoints.
 - Click each individual restaurant card to make sure it takes you to the relevant individual restaurant page.
 
-INDIVIDUAL RESTAURANTS (view_restaurant.html)
+#### INDIVIDUAL RESTAURANTS (view_restaurant.html) ####
 
 *This page is accessible to all so tests were repeated for when users were both logged in and logged out*
 
@@ -147,7 +186,7 @@ INDIVIDUAL RESTAURANTS (view_restaurant.html)
 - Checks modal for deleting restaurants using the same methods as previously mentioned.
 
 
-CREATE ACCOUNT
+#### CREATE ACCOUNT ####
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the form is responsive.
 - Complete form filling in the username outside of the username requirements e.g. only 4 characters or over 12 characters, ensuring a warning is flagged on submission.
@@ -158,7 +197,7 @@ CREATE ACCOUNT
 - Cross-check that the newly created account has been added to the 'users' collection of the database.
 - Click the 'Log In' link at the bottom of the page making sure the user is redirected to the 'Log In' page.
 
-LOG IN
+#### LOG IN ####
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the form is responsive.
 - Complete form with a username that is not registered in the 'users' collection ensuring a developer written message is flashed notifying the user that that username or password does not exist.
@@ -167,11 +206,11 @@ LOG IN
 - Complete the form using the admin login details ensuring that they are redirected to the admin specific profile page.
 - Click the 'Sign Up' link at the bottom of the page making sure the user is redirected to the 'Create Account' page.
 
-LOG OUT
+#### LOG OUT ####
 
 - Click 'Log Out' navbar item ensuring the user is redirected to the 'Log In' page and a developer written message is flashed confirming that the user has been logged out.
 
-CONTACT
+#### CONTACT #### 
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
 - Load the contact page via the link in the footer and 'Let us know' link on the user profile.
@@ -181,14 +220,14 @@ CONTACT
 - Complete the form as expected and click cancel to ensure the page reloads - cross-check with 'messages' collection in the database to make sure the message has not been sent.
 - Complete the form as expected and click 'Send message' to ensure the page reloads and a developer written message is flashed confirming the message has been sent - cross-check with 'messages' collection in the database to make sure the message was successfully sent.
 
-404
+#### 404 ####
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
 - Hover over the 'home' link to ensure a change of color and cursor turns to a hand.
 - Click the 'home' link to ensure the user is returned to index.html.
 
 
-MY PROFILE - *USER*
+#### MY PROFILE - *USER* ####
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
 - On the initial log in ensure a message is flashed welcoming the user to the site.
@@ -206,7 +245,7 @@ MY PROFILE - *USER*
 - Click the visible 'leave a review' link and ensure it redirects the user to the 'Add a review' page.
 - Try force way on to admin account making sure only the user's own profile page is displayed or the custom 404 page is displayed.
 
-ADD REVIEW
+#### ADD REVIEW ####
 
 - Test that only logged in users can access the add review page by manually typing in the route e.g. /review/add
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the form is responsive.
@@ -217,7 +256,7 @@ ADD REVIEW
 - Fill in all details correctly and click the 'Add review' button making sure the 'Add a review' page reloads and a developer written message is flashed confirming the action.
 - Write a review and click the 'Cancel' button making sure that the page reloads and the form is blank.
 
-EDIT REVIEW
+#### EDIT REVIEW ####
 
 - Test that only logged in users can access the edit review page by manually typing in the route e.g. /review/edit
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
@@ -228,7 +267,7 @@ EDIT REVIEW
 - Edit review details and click the 'Cancel' button making sure that the user is redirected to their profile page and that the review remains unchanged.
 - Edit review details and click 'Edit my review' ensuring the user is redirected to their profile page and the corresponding review has been updated.
 
-MY PROFILE - *ADMIN*
+#### MY PROFILE - *ADMIN* ####
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
 - On the initial log in ensure a message is flashed welcoming the admin to the site.
@@ -242,7 +281,7 @@ MY PROFILE - *ADMIN*
 - Click the 'Restaurants' link to ensure the admin is redirected to the restaurant's page when wanting to edit/delete a restaurant.
 - Try forcing way on to a user profile page making sure only the admin profile page is displayed or the custom 404 page is displayed.
 
-ADD RESTAURANT - *ADMIN ONLY*
+#### ADD RESTAURANT - *ADMIN ONLY* ####
 
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
 - Log in as a standard user and attempt to navigate to the add restaurant page by manually adding /restaurant/add to the address.  Ensure that the user is not able and an appropriate response is given.
@@ -254,7 +293,7 @@ ADD RESTAURANT - *ADMIN ONLY*
 - Check the successful addition of the new restaurant on the 'restaurants' page.
 - Complete the form and hit the cancel button ensuring the admin user is redirected to their home page.
 
-EDIT RESTAURANT - *ADMIN ONLY*
+#### EDIT RESTAURANT - *ADMIN ONLY* ####
 
 - Test that only admin users can access the edit page by manually typing in the route e.g. /restaurant/edit STILL TO TEST WITH FAKE REST_ID
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
@@ -262,7 +301,7 @@ EDIT RESTAURANT - *ADMIN ONLY*
 - Edit restaurant details and click the 'Cancel' button making sure that the user is redirected to their profile page and that the restaurant information remains unchanged.
 - Edit restaurant details and click 'Edit' ensuring the user is redirected to the all restaurants page and the corresponding restaurant info has been updated.
 
-DELETE RESTAURANT - *ADMIN ONLY*
+#### DELETE RESTAURANT - *ADMIN ONLY* ####
 
 - Check that clicking the 'delete' button on individual restaurant pages triggers the 'Delete Restaurant' modal.
 prompting the user to confirm that they want to delete that review.
@@ -271,72 +310,59 @@ prompting the user to confirm that they want to delete that review.
 - Cross-check in the database that the restaurant has been deleted.
 - *PLEASE NOTE* it is intentional that reviews for the deleted restaurant remain in the database. Should the restaurant be re-added to the site, e.g. the restaurant re-opens after a brief spell of closure, the existing reviews will automatically be generated for the listing.
 
-ADDITIONAL TESTING
+### ADDITIONAL TESTING ###
 
 Throughout production this site has been tested using [Google Chrome's DevTools](https://developer.chrome.com/docs/devtools/).
 
 In addition the Lighthouse feature has been used to test the Performance, Accessibility, Best Practices and SEO.  The following results were returned for laptop devices.
 
-Home
+#### Home ####
 
 ![Lighthouse Home Page Desktop results](/documentation/images/lighthouse/home-desk.png)
 
-All Restaurants
+#### All Restaurants ####
 
 ![Lighthouse Restaurants Page Desktop results](/documentation/images/lighthouse/restaurants-desk.png)
 
-Individual Restaurants
+#### Individual Restaurants ####
 
 ![Lighthouse Individual Restaurants Page Desktop results](/documentation/images/lighthouse/indrest-desk.png)
 
-Create Account
+#### Create Account ####
 
 ![Lighthouse Create Account Page Desktop results](/documentation/images/lighthouse/create-desk.png)
 
-Log In
+#### Log In ####
 
 ![Lighthouse Log In Page Desktop results](/documentation/images/lighthouse/login-desk.png)
 
-Contact
+#### Contact ####
 
 ![Lighthouse Contact Page Desktop results](/documentation/images/lighthouse/contact-desk.png)
 
-Profile Page - User
+#### Profile Page - User ####
 
 ![Lighthouse User Profile Page Desktop results](/documentation/images/lighthouse/user-prof-desk.png)
 
-Add Review
+#### Add Review ####
 
 ![Lighthouse Add Review Page Desktop results](/documentation/images/lighthouse/add-review-desk.png)
 
-Edit Review
+#### Edit Review ####
 
 ![Lighthouse Edit Reivew Page Desktop results](/documentation/images/lighthouse/edit-review-desk.png)
 
-Profile Page - Admin
+#### Profile Page - Admin ####
 
 ![Lighthouse Admin Profile Page Desktop results](/documentation/images/lighthouse/admin-prof-desk.png)
 
-Add Restaurant
+#### Add Restaurant ####
 
 ![Lighthouse Add Restaurant Page Desktop results](/documentation/images/lighthouse/add-rest-desk.png)
 
-Edit Restaurant
+#### Edit Restaurant ####
 
 ![Lighthouse Edit Restaurant Page Desktop results](/documentation/images/lighthouse/edit-rest-desk.png)
-
-### FURTHER TESTING ###
-
-As well as testing across the in-built mobile sizing on devTools I invited friends and family to view the site on their fevices and report any issues.  Devices included:
-
-- MacBook
-- MacBook Air
-- iPad
-- iPad Pro
-- Pocophone F1 Mio
-- Miaomi Mi 10T Lite
-
-There were no bugs or glitches reported.
 
 ### BUGS ###
 
@@ -346,3 +372,16 @@ There were no bugs or glitches reported.
 
 - *EDIT REVIEW* and *EDIT RESTAURANT* pages, dropdown menus are not pre-filling the previously selected rating.
     - FIX - Not yet found.  For now, the text has been added reminding the user of their previous rating and prompting them to confirm their rating or select another.
+
+### FURTHER TESTING ###
+
+As well as testing across the in-built mobile sizing on devTools I invited friends and family to view the site on their devices and report any issues.  Devices included:
+
+- MacBook Pro
+- MacBook Air
+- iPad
+- iPad Pro
+- Pocophone F1 Mio
+- Xiaomi Mi 10T Lite
+
+There were no bugs or glitches reported from these tests.
