@@ -99,10 +99,8 @@ The most common path through the website would be:
 
 #### Admin Goals ####
 
-- Be able to delete user reviews if inappropriate.
-    - When logged in admin are met with a 'Delete' button in all areas where they encounter user reviews.  Like in all instances of the delete button it is red to show a negative effect and upon clicking it a modal is triggered to make sure the action is intentional.
 - Be able to add, edit restaurant info or delete a restaurant should it close.
-    - Admin can 'Add' restaurants from their 'My Account' page.  To edit and delete restaurants admin must visit the individual restaurant's page which is accessible via the 'Restaurant' link on their profile page or navbar.
+    - Admin can 'Add' restaurants from their 'My Account' page.  To edit and delete restaurants admin must visit the individual restaurant's page which is accessible via the 'Restaurant' link on their profile page or navbar in future they will be able to do this directly from their profile page.
 - Be able to recieve notifications from users on new restaurants in the area.
     - To help the growth of Vegan Glasgow users are able to message the admin via the contact page.  New messages are displayed on the admin profile page and once the admin have finished adding the user recommended restaurant the message can by deleted by clicking 'Restaurant added'.
 
