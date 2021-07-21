@@ -76,22 +76,22 @@ The most common path through the website would be:
 - Find out contact information for individual restaurants.
     - Every restaurant is initially displayed on a card which includes restaurant contact information such as address and contact telephone number.
 - Find external links to restaurants' homepages and social media where appropriate.
-    - On each restaurant card the restaurant's web address is displayed, in future this would be a clickable link.  
-    - Within the restaurants page users are able to access the restaurant's social media details.
+    - On each restaurant card the restaurant's web address is displayed - in future this would be included in a hyperlink.  
+    - Within the restaurants page users are able to access the restaurant's social media details - in future these would be direct links to the social media accounts, for not they just take the user to general social media homepages"
 - See attractive images of the restaurant so I can judge whether I might enjoy the food and atmosphere.
     - Each restaurant features an image of its interior, exterior or a dish served there, giving the user a glimpse of the restaurants theme. 
 - Find information on the cuisine ie/ Italian, Traditional Scottish, Japanese, Fusion.
     - Each restaurant card features a short breakdown of the type of food offered.
 - Find out the price range.
-    - Each restaurant card shows the price range, displayed using the easily recognised and understood £, ££ and £££.
+    - Each restaurant card shows the price range, displayed using the easily recognised and understood £, ££ and £££ symbols.
 - Find what mealtimes restaurants are open.
     - Each restaurant card displays which mealtimes that eatery would be open at, e.g. brunch/ lunch and dinner etc.
 - Be able to create an account and have an individual profile.
     - Users who are not logged in have the Create Account tab clearly displayed in the navbar.  Once an account is created they are automatically directed to their 'My Account' page whose link replaces the 'Create Account' tab.
 - Be able to leave reviews to help advise others.
-    - All logged-in users can leave a review quickly and easily by pressing the 'Add a review' button found on both the 'My Account' and individual restaurant pages, there users select a restaurant to review via a dropdown menu.  To be clear that this is a positive action the button is green.
+    - Logged-in users can leave a review quickly and easily by pressing the 'Add a review' button found on both the 'My Account' and individual restaurant pages, there users select a restaurant to review via a dropdown menu.  To be clear that this is a positive action the submit button is green.
 - Be able to Edit my reviews if my opinions change.
-    - Individual restaurants pages show all the reviews left for that restaurant.  Should the session username match the name of the user who created the review they are greeted by 'Edit' and 'Delete buttons.  These options are also shown on the user's reviews displayed on their 'My Account' page.  To be clear that this is an action the button is yellow. 
+    - Individual restaurants pages show all the reviews left for that restaurant.  Should the session username match the name of the user who created the review they are greeted by 'Edit' and 'Delete' buttons.  These options are also shown on the user's reviews displayed on their 'My Account' page.  To be clear that this button results in an action the button is yellow. 
 - Be able to Delete my review if I no longer wish to comment on a restaurant.
     - Logged-in users can delete reviews that they have written via the 'Delete' button.  Clicking the delete button triggers a modal to ensure no accidental deletions of items.  To be clear that clicking this button will have a negative effect the button is red.
 - Be able to add restaurants to the website if I find somewhere which is not already listed.
@@ -115,6 +115,8 @@ Check that Favicon shows on all pages
 Navigation Bar
 
 Hover over navigation items, contact page link and social media icons in the footer ensuring there is no discernable change other than the pointer turning to a hand and the item changing color from off white to dark green.
+
+Change the screen size to various mobile devices using devTools to verify that the navigation bar and footer are responsive.  With the navbar becoming a burger menu and footer items stacking at the appropriate breakpoints.
 
 Logged out users:
 *Header*
@@ -143,8 +145,6 @@ Logged in users:
 *Footer*
 
 - Clicking the contact link text and ensure it loads the Contact page.
-
-- Change the screen size to various mobile devices using devTools to verify that the navigation bar and footer are responsive.  With the navbar becoming a burger menu and footer items stacking at the appropriate breakpoints.
 
 #### HOME PAGE ####
 
@@ -175,11 +175,11 @@ Logged in users:
 
 - Check that the 'Edit' button is only visible for user's own reviews.
 - In the review section click 'Edit' button and check in redirects to the edit review button with the correct restaurant name and review body displayed.
-- Check that the 'delete a review' link is only visible for logged-in users.  If no user or admin user are logged in the link is not displayed.
+- Check that the 'delete a review' link is only visible for logged-in users.
 
 *For admin users only:*
 
-- Check that the edit and delete restaurant buttons are visible for logged-in admin users.
+- Check that the 'edit' and 'delete' restaurant buttons are visible for logged-in admin users.
 - Click the 'Edit Info' button in the Edit/Delete restaurant section checking that admin are redirected to the edit info page and the information from the corresponding page is auto-generated.
 - Checks modal for deleting restaurants using the same methods as previously mentioned.
 
@@ -293,7 +293,7 @@ Logged in users:
 
 #### EDIT RESTAURANT - *ADMIN ONLY* ####
 
-- Test that only admin users can access the edit page by manually typing in the route e.g. /restaurant/edit STILL TO TEST WITH FAKE REST_ID
+- Test that only admin users can access the edit page by manually typing in the route e.g. /restaurant/*restaurant_id*/edit.
 - Change the screen size manually and to various mobile device sizes using devTools to verify that the page is responsive.
 - Check that clicking edit buttons on individual restaurant pages re-routes user to the 'Edit Restaurant' page and that the majority of form information is auto-filled.  See bugs for exception to this.
 - Edit restaurant details and click the 'Cancel' button making sure that the user is redirected to their profile page and that the restaurant information remains unchanged.
@@ -301,12 +301,12 @@ Logged in users:
 
 #### DELETE RESTAURANT - *ADMIN ONLY* ####
 
-- Check that clicking the 'delete' button on individual restaurant pages triggers the 'Delete Restaurant' modal.
+- Check that clicking the 'delete' button on individual restaurant pages triggers the 'Delete Restaurant' modal
 prompting the user to confirm that they want to delete that review.
 - Re-open the 'Delete' modal and click the 'x' and 'Close' buttons to ensure that the modal is closed and no action is taken.
 - Re-open the 'Delete' modal and click the 'Delete' button making sure the user is redirected back to the admin profile page.
 - Cross-check in the database that the restaurant has been deleted.
-- *PLEASE NOTE* it is intentional that reviews for the deleted restaurant remain in the database. Should the restaurant be re-added to the site, e.g. the restaurant re-opens after a brief spell of closure, the existing reviews will automatically be generated for the listing.
+- *PLEASE NOTE* it is intentional that reviews for the deleted restaurant remain in the database. Should the restaurant be re-added to the site, e.g. the restaurant re-opens after a brief spell of closure or the restaurant was deleted accidentally despite double confirmation, the existing reviews will automatically be generated for the listing.
 
 ### ADDITIONAL TESTING ###
 
