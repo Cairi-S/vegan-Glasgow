@@ -199,7 +199,6 @@ e.g/
 - Pencil = Edit an item
 - Location marker = address
 - Telephone = contact number
-- Cheese = dairy options Meat(drumstick) = Meat options
 
 #### COLOR ####
 After researching color theory, shades of green were selected to suggest nature, freshness and safety.  
@@ -265,23 +264,23 @@ Home Page:
 
 All Restaurants page:
 
-- As per the Home page restaurants will be displayed on cards that link directly to the individual restaurant's page.
+- As per the Home page, restaurants will be displayed on cards that link directly to the individual restaurant's page.
 - Information displayed will be the same as on the Home page cards.
 
 Individual Restaurants page:
 
 - The information on the restaurant's cards will be displayed clearly.
 - Users will be presented with a button prompting them to 'Add a review'.
-- User's are also presented with all reviews that have been left for that restaurant.  If the review is written by the logged-in user they also have the opportunity to edit or delete that review.
-- The edit button takes users to the corresponding edit page - most of the data will be prefilled from the database allowing the user to fully update their review or the restaurant information (depending on whether standard user or admin) or extend the information that has already been left.
-- The delete button prompts a modal that asks the user to confirm the deletion of that item.  They can close or cancel the request if preferred.
-- The admin team are presented with buttons to edit the restaurant's information or delete the restaurant entirely like the users edit/delete reivew buttons they are redirected to the corresponding edit page or a modal is triggered.
+- User's are also presented with all reviews that have been left for that restaurant.  If the review is written by the logged-in user they also have the opportunity to edit or delete that review:
+  - The edit button takes users to the corresponding edit page - most of the data will be prefilled from the database allowing the user to fully update their review or the restaurant information (depending on whether standard user or admin) or extend the information that has already been left.
+  - The delete button prompts a modal that asks the user to confirm the deletion of that item.  They can close or cancel the request if preferred.
+- The admin team are presented with buttons to edit the restaurant's information or delete the restaurant entirely. Like the users edit/delete reivew buttons they are redirected to the corresponding edit page or a modal is triggered.
 
 
 Create Account page:
 
 - When users create an account they will be asked to enter a username, password and to confirm their password via a form.
-- The Create Account page utilises the icons user-plus, user-lock and user-check-double to clearly show the input area's purpose.
+- The Create Account page utilises the icons 'user-plus', 'user-lock' and 'check-double' to clearly show the input area's purpose.
 - The username will be checked to ensure the chosen username does not exist in the database and that it adheres to the chosen username requirements.
 - The password will be checked to ensure that it meets the chosen regex requirements.  In addition, the user is required to enter the password again and both passwords are checked to ensure a match.
 - Any issues will be flagged via flashed messages as detailed above.
@@ -397,7 +396,7 @@ Business user goals would be:
 - Value for money.
 
 ### DATABASE MODEL ###
-As mySQL is recommended for the final project I have taking the chance to practice using MongoDB just now.  Having completed the project I do believe that mySQL may have been a better solution.
+[MongoDB](https://www.mongodb.com/) was used as the cloud database for this project.
 
 ![DB diagram](/documentation/images/db-diagram/db-diagram.png)
 
@@ -462,7 +461,7 @@ The creation of this website would not have been possible without:
 - [Balsamiq](https://balsamiq.com/) - Used to create wireframes of the project.
 - [GitHub](https://github.com/) - Used to store and share all project code remotely.
 - [GitPod](https://gitpod.io/) - Used as the IDE for building the website.
-- [Heroku](https://www.heroku.com/) - Ysed to deploy and manage the project.
+- [Heroku](https://www.heroku.com/) - Used to deploy and manage the project.
 - [MongoDB](https://www.mongodb.com/atlas) - Used as the cloud database for project data storage.
 - [PyMongo](https://pypi.org/project/pymongo/) - Used to link code between Python and MongoDB. 
 - [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - Used for templating and writing quick Python code.
@@ -478,7 +477,7 @@ The creation of this website would not have been possible without:
 - [Color Tool - Material Design](https://material.io/) - Used to generate a color palette for the site.
 - [HTML Formatter](https://webformatter.com/html) - used to format all code.
 - [Multi Device Website Mockup Generator](http://techsini.com/multi-mockup/index.php) - Used for website mockup at top of README.
-- [markdown-toc](https://ecotrust-canada.github.io/markdown-toc/) - Used to generate README.md Table of Contents.
+- [markdown-toc](https://ecotrust-canada.github.io/markdown-toc/) - Used to generate Table of Contents for .md files.
 - [dbdiagram.io](https://dbdiagram.io/home) - Used to generate the database diagram in the README.
 
 ### Testing ###
@@ -504,9 +503,9 @@ In addition, you will need an account with [MongoDB Atlas](https://www.mongodb.c
 3. In the dropdown copy the URL displayed under the header CLONE with the HTTPS title underlined (in this instance https://github.com/Cairi-S/vegan-glasgow.git).
 4. Open your local IDE and launch Git Bash.
 5. Create a new folder or navigate to the folder where you want the clone to be stored.
-6. Once opened type 'git clone' and HTTPS URL copied earlier (e.g. git clone https://github.com/Cairi-S/vegan-glasgow.git)
+6. Once opened type 'git clone' and add the HTTPS URL copied earlier (e.g. git clone https://github.com/Cairi-S/vegan-glasgow.git)
 7. Once you press 'enter' the clone will be created.
-8. Created a new file to store your environmental variables named env.py.
+8. Create a new file to store your environmental variables named env.py.
 9. To the env.py file add the following environmental variables:
 
 ````console
@@ -518,7 +517,7 @@ os.environ.setdefault("SECRET_KEY", "<secret_key>")
 os.environ.setdefault("MONGO_URI", "mongodb+srv://<username>:<password>@myfirstcluster.8s17w.mongodb.net/<db_name>?retryWrites=true&w=majority")
 os.environ.setdefault("MONGO_DBNAME", "<db_name>")
 ````
-10. Add the env.py file to your .gitignore file.  ** THIS IS EXREMELY IMPORTANT TO ENSURE YOUR ENVIRONMENTAL VARIABLES ARE NOT PUSHED PUBLICALLY **.
+10. Add the env.py file to your .gitignore file.  **THIS IS EXREMELY IMPORTANT TO ENSURE YOUR ENVIRONMENTAL VARIABLES ARE NOT PUSHED PUBLICALLY**.
 11. Run your app locally using 
 ````console
 python3 app.py
@@ -551,7 +550,7 @@ echo web: python app.py > Procfile
 |IP|0.0.0.0|
 |PORT|5000|
 |SECRET_KEY|<secret_key>|
-|MONGO_URI|mongodb+srv://<username>:<password>@myfirstcluster.8s17w.mongodb.net/<db_name>?retryWrites=true&w=majority|
+|MONGO_URI|mongodb+srv://< username >:< password >@myfirstcluster.8s17w.mongodb.net/<db_name>?retryWrites=true&w=majority|
 |MONGO_DBNAME|<db_name>|
 15. Click 'Hide Config Vars' and return to the top of the dashboard navigating back to the 'Deploy' tab.
 16. Navigate to the 'Manual Deployment' section.
@@ -586,4 +585,4 @@ Individual restaurant images used in this project were found using [Google Image
 As always this project would not have been possible without the fine people of Code Institute and Slack.  In particular:
 - My mentor who has been a fantastic guide through this project.
 - Slackers BenKav, who has been an exceptional lead, and Christopher Undritz, who has been working on this Python journey at the same time.
-- The CI Tutor support team.
+- The CI Tutor support team - in particular John Traas.
